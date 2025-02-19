@@ -1,8 +1,181 @@
 * {
-  margin: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 
 body {
   font-family: "Lato", sans-serif;
+  background-color: #f8f8f8;
+}
+
+.headerWrapper .top-strip {
+  background: #000;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.headerWrapper .top-strip p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .headerWrapper .top-strip p {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+}
+
+.headerWrapper .header {
+  width: 100%;
+  height: auto;
+  padding: 25px 0px;
+}
+
+.logoWrapper img {
+  width: 100%;
+}
+
+header .headerSearch {
+  width: 60%;
+  height: 60px;
+  background: #f3f4f7;
+  padding: 5px;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header .headerSearch input {
+  background: transparent !important;
+  outline: none !important;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 45px;
+  border: 0px !important;
+  padding: 0px 20px !important;
+}
+
+header .headerSearch input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+header .headerSearch button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 100;
+  outline: none !important;
+  min-width: 40px !important;
+  height: 40px !important;
+  width: 40px !important;
+  border-radius: 50% !important;
+  color: #000;
+}
+
+header .headerSearch button svg {
+  font-size: 25px;
+}
+
+header .part3 .circle {
+  align-items: center;
+  justify-content: center;
+  min-width: 45px !important;
+  height: 45px !important;
+  width: 45px !important;
+  border-radius: 50% !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: #000;
+  outline: none !important;
+}
+
+header .part3 .circle svg {
+  font-size: 22px;
+}
+
+.cartTab button {
+  background: #fff1ee !important;
+}
+
+.cartTab button svg {
+  color: #ea2b0f !important;
+}
+
+.cartTab .price {
+  color: #ea2b0f;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.cartTab .count {
+  position: absolute;
+  top: -6px;
+  right: -4px;
+  background: #ea2b0f;
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+nav .allCateTab {
+  background: rgba(186, 0, 0, 0.8);
+  padding: 10px 15px !important;
+  border-radius: 20px;
+}
+
+nav .allCateTab:hover {
+  background: rgba(226, 54, 6, 0.8);
+}
+
+nav .allCateTab * {
+  color: #fff;
+}
+
+nav .allCateTab .text {
+  font-weight: 600;
+}
+
+nav .allCateTab:focus {
+  outline: none !important;
+}
+
+nav .allCateTab .icon1 svg {
+  font-size: 20px !important;
+}
+
+nav .allCateTab .icon1 svg {
+  font-size: 15px !important;
+}
+
+nav .navPart2 ul {
+  margin-bottom: 0px;
+}
+
+nav .navPart2 ul li a {
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 20px;
+}
+
+nav .navPart2 ul li a:hover {
+  background: rgb(255, 196, 196);
+  color: rgba(186, 0, 0, 0.8);
+}
+
+nav .navPart2 ul li a svg {
+  font-size: 20px;
 }

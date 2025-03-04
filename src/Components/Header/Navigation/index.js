@@ -3,17 +3,18 @@ import { IoIosMenu } from "react-icons/io";
 import { FaAngleDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { TbHome } from "react-icons/tb";
-import { HiOutlineNewspaper } from "react-icons/hi2";
 import { CiViewList } from "react-icons/ci";
 import { IoInformationCircleOutline } from "react-icons/io5";
 import { BiSupport } from "react-icons/bi";
+import { IoStorefrontOutline } from "react-icons/io5";
+import { HiOutlineFire } from "react-icons/hi";
 
 const Navigation = () => {
   return (
     <nav>
       <div className="container">
         <div className="row">
-          <div className="col-sm-3 navPart1">
+          <div className="col-sm-2 navPart1">
             <Button className="allCateTab align-items-center">
               <span className="icon1 mr-2">
                 <IoIosMenu />
@@ -25,16 +26,21 @@ const Navigation = () => {
             </Button>
           </div>
           <div className="col-sm-9 navPart2 d-flex align-items-center">
-            <ul className="list-list-inline mr-auto">
+            <ul className="list list-inline ml-auto">
               <li className="list-inline-item">
                 <Link to="/">
                   <TbHome /> &nbsp; Trang chủ
                 </Link>
               </li>
+              <li className="list-inline-item">
+                <Link to="/">
+                  <IoStorefrontOutline /> &nbsp; Có sẵn
+                </Link>
+              </li>
 
               <li className="list-inline-item">
                 <Link to="/">
-                  <HiOutlineNewspaper /> &nbsp; Tin tức
+                  <HiOutlineFire /> &nbsp; Sale
                 </Link>
               </li>
 
@@ -43,6 +49,14 @@ const Navigation = () => {
                   {" "}
                   <CiViewList /> &nbsp; Chính sách
                 </Link>
+                {/* <div className="submenu shadow">
+                  <Link to="/">
+                    <Button>Chính sách đổi trả</Button>
+                  </Link>
+                  <Link to="/">
+                    <Button>Chính sách mua hàng</Button>
+                  </Link>
+                </div> */}
               </li>
 
               <li className="list-inline-item">

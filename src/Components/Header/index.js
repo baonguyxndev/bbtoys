@@ -12,6 +12,7 @@ import { PiGlobe } from "react-icons/pi";
 import { FaMoneyBillTransfer } from "react-icons/fa6";
 import SearchBox from "./SearchBox";
 import Navigation from "./Navigation";
+import Banner from "./Banner";
 
 const Header = () => {
   return (
@@ -98,6 +99,8 @@ const Header = () => {
       </header>
 
       <Navigation />
+
+      <Banner />
     </div>
   );
 };

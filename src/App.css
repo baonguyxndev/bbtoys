@@ -158,6 +158,19 @@ nav .navPart2 ul {
   margin-bottom: 0px;
 }
 
+nav .navPart2 ul li {
+  position: relative;
+}
+
+nav .navPart2 ul li .submenu {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  min-width: 250px;
+  background: #fff;
+  z-index: 2;
+}
+
 nav .navPart2 ul li a {
   font-size: 15px;
   font-weight: 600;
@@ -166,7 +179,7 @@ nav .navPart2 ul li a {
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 15px;
   transition: all 0.2s ease-in-out;
   border-radius: 20px;
 }
@@ -178,4 +191,19 @@ nav .navPart2 ul li a:hover {
 
 nav .navPart2 ul li a svg {
   font-size: 20px;
+}
+
+.bannerWrapper {
+  position: relative;
+  padding: 60px;
+  z-index: 1;
+}
+
+.bannerWrapper img {
+  object-fit: cover;
+}
+
+.swiper {
+  border-radius: 10px;
+  box-shadow: 5px 10px rgba(0, 0, 0, 0.2);
 }

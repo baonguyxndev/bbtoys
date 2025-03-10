@@ -12,7 +12,6 @@ import { PiGlobe } from "react-icons/pi";
 import { FaMoneyBillTransfer } from "react-icons/fa6";
 import SearchBox from "./SearchBox";
 import Navigation from "./Navigation";
-import Banner from "./Banner";
 
 const Header = () => {
   return (
@@ -51,7 +50,6 @@ const Header = () => {
           </Swiper>
         </div>
       </div>
-
       <header className="header">
         <div className="container">
           <div className="row">
@@ -97,10 +95,8 @@ const Header = () => {
           </div>
         </div>
       </header>
-
       <Navigation />
-
-      <Banner />
+      <hr />
     </div>
   );
 };

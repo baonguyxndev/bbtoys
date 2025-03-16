@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 import ProductItem from "../../Components/ProductItem";
+import HomeCate from "../../Components/HomeCate";
 
 const products = [
   {
@@ -116,6 +117,7 @@ const Home = () => {
   return (
     <>
       <HomeBanner />
+      <HomeCate />
       <section className="homeProducts">
         <div className="container">
           <div className="row">

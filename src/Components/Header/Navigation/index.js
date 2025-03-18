@@ -3,29 +3,15 @@ import { IoIosMenu } from "react-icons/io";
 import { FaAngleDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { TbHome } from "react-icons/tb";
-import { CiViewList } from "react-icons/ci";
+import { MdOutlinePolicy } from "react-icons/md";
 import { IoInformationCircleOutline } from "react-icons/io5";
-import { BiSupport } from "react-icons/bi";
 import { IoStorefrontOutline } from "react-icons/io5";
-import { HiOutlineFire } from "react-icons/hi";
+import { BiSupport } from "react-icons/bi";
+import { BiCopyright } from "react-icons/bi";
 import { useState } from "react";
 
-const Navigation = () => {
-  const [isOpenSideBarNav, setisOpenSideBarNav] = useState(false);
-  const [isClosing, setIsClosing] = useState(false);
+const Navigation = ({ isOpenSideBarNav, isClosing, handleToggleMenu }) => {
   const [hoveredImage, setHoveredImage] = useState("");
-
-  const handleToggleMenu = () => {
-    if (isOpenSideBarNav) {
-      setIsClosing(true);
-      setTimeout(() => {
-        setisOpenSideBarNav(false);
-        setIsClosing(false);
-      }, 600);
-    } else {
-      setisOpenSideBarNav(true);
-    }
-  };
 
   return (
     <nav>
@@ -35,12 +21,12 @@ const Navigation = () => {
             <div className="cateWrapper">
               <Button
                 className="allCateTab align-items-center"
-                onClick={handleToggleMenu}
+                onClick={handleToggleMenu} // Nút "Danh mục" điều khiển sidebar
               >
                 <span className="icon1 mr-2">
                   <IoIosMenu />
                 </span>
-                <span className="text">Danh mục</span>
+                <span className="text">Categories</span>
                 <span className="icon2 ml-2">
                   <FaAngleDown />
                 </span>
@@ -158,7 +144,7 @@ const Navigation = () => {
                           img: "https://img.fantaskycdn.com/9f5a4204c95a53e4e858007ce6e30874.jpeg",
                         },
                         {
-                          name: "League Of Legends",
+                          name: "League Of Legends Kosovare",
                           img: "https://statics.pancake.vn/web-media/07/00/7f/22/504ae4d3dfe1049daedb613b522b3d2478c4695c7c64e75459cf8abf.jpg",
                         },
                         {
@@ -308,57 +294,40 @@ const Navigation = () => {
             <ul className="list list-inline ml-auto">
               <li className="list-inline-item">
                 <Link to="/">
-                  <TbHome /> &nbsp; Trang chủ
+                  <TbHome />   HOME
                 </Link>
               </li>
               <li className="list-inline-item">
                 <Link to="/">
-                  <IoStorefrontOutline /> &nbsp; Có sẵn
-                </Link>
-                <div className="submenu shadow">
-                  <Link to="/">
-                    <Button>Resin</Button>
-                  </Link>
-                  <Link to="/">
-                    <Button>PVC</Button>
-                  </Link>
-                  <Link to="/">
-                    <Button>Khác</Button>
-                  </Link>
-                </div>
-              </li>
-
-              <li className="list-inline-item">
-                <Link to="/">
-                  <HiOutlineFire /> &nbsp; Sale
+                  <IoStorefrontOutline />   SHOP
                 </Link>
               </li>
-
               <li className="list-inline-item">
                 <Link to="/">
-                  {" "}
-                  <CiViewList /> &nbsp; Chính sách
+                  <BiCopyright />   Licences
+                </Link>
+              </li>
+              <li className="list-inline-item">
+                <Link to="/">
+                  <BiSupport />   SUPPORT
+                </Link>
+              </li>
+              <li className="list-inline-item">
+                <Link to="/">
+                  <MdOutlinePolicy />   Policy
                 </Link>
                 <div className="submenu shadow">
                   <Link to="/">
-                    <Button>Chính sách đổi trả</Button>
+                    <Button>Return Policy</Button>
                   </Link>
                   <Link to="/">
-                    <Button>Chính sách mua hàng</Button>
+                    <Button>Purchasing Policy</Button>
                   </Link>
                 </div>
               </li>
-
               <li className="list-inline-item">
                 <Link to="/">
-                  {" "}
-                  <IoInformationCircleOutline /> &nbsp; Liện hệ
-                </Link>
-              </li>
-
-              <li className="list-inline-item">
-                <Link to="/">
-                  <BiSupport /> &nbsp; Hỗ trợ
+                  <IoInformationCircleOutline />   Contact
                 </Link>
               </li>
             </ul>

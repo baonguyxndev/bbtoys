@@ -12,22 +12,36 @@ import { PiGlobe } from "react-icons/pi";
 import { FaMoneyBillTransfer } from "react-icons/fa6";
 import SearchBox from "./SearchBox";
 import Navigation from "./Navigation";
+import { IoSearch } from "react-icons/io5";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showSmallHeader, setShowSmallHeader] = useState(false);
+  const [isOpenSideBarNav, setIsOpenSideBarNav] = useState(false); // Trạng thái sidebar
+  const [isClosing, setIsClosing] = useState(false); // Trạng thái đóng sidebar
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
+      setShowSmallHeader(window.scrollY > 200);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Hàm xử lý bật/tắt sidebar
+  const handleToggleMenu = () => {
+    if (isOpenSideBarNav) {
+      setIsClosing(true);
+      setTimeout(() => {
+        setIsOpenSideBarNav(false);
+        setIsClosing(false);
+      }, 600); // Thời gian khớp với animation
+    } else {
+      setIsOpenSideBarNav(true);
+    }
+  };
 
   return (
     <div className={`headerWrapper ${isScrolled ? "scrolled" : ""}`}>
@@ -69,30 +83,24 @@ const Header = () => {
         <div className="container">
           <div className="row">
             <div className="logoWrapper d-flex align-items-center col-sm-2">
-              <Link to={"/"}>
+              <Link to="/">
+                {" "}
                 <img src={Logo} alt="logo" />
               </Link>
             </div>
 
             <div className="col-sm-10 d-flex align-items-center part2">
               <SearchBox />
-
               <div className="d-flex align-items-center part3 mr-auto">
                 <Button className="circle ml-3">
                   <PiGlobe />
                 </Button>
-
                 <Button className="circle ml-3">
                   <FaMoneyBillTransfer />
                 </Button>
-
-                {/* User */}
                 <Button className="circle ml-3">
                   <FiUser />
                 </Button>
-                {/* User */}
-
-                {/* Cart */}
                 <div className="ml-auto cartTab d-flex align-items-center">
                   <span className="price ml-3">$0.00</span>
                   <div className="position-relative ml-3">
@@ -104,14 +112,42 @@ const Header = () => {
                     </span>
                   </div>
                 </div>
-                {/* Cart */}
               </div>
             </div>
           </div>
         </div>
       </header>
-      <Navigation />
+      <Navigation
+        isOpenSideBarNav={isOpenSideBarNav}
+        isClosing={isClosing}
+        handleToggleMenu={handleToggleMenu} // Truyền hàm xử lý xuống
+      />
       <hr />
+
+      {showSmallHeader && (
+        <div className="small-header">
+          <div className="left-content">
+            <Link to="/" onClick={handleToggleMenu}>
+              {" "}
+              {/* Logo nhỏ cũng điều khiển sidebar */}
+              <img src={Logo} alt="logo" className="small-logo" />
+            </Link>
+          </div>
+          <div className="center-content">
+            <nav className="small-nav">
+              <Link to="/">Home</Link>
+              <Link to="/shop">Shop</Link>
+              <Link to="/support">Support</Link>
+              <Link to="/policy">Policy</Link>
+              <Link to="/contact">Contact</Link>
+              <Link to="/licences">Licences</Link>
+            </nav>
+          </div>
+          <div className="right-content">
+            <IoSearch />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

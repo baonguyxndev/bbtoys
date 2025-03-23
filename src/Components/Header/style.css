@@ -1,0 +1,382 @@
+/* Header Wrapper */
+.headerWrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  background: #1f1f1f;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.headerWrapper.scrolled {
+  background: #111111;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Top Strip */
+.headerWrapper .top-strip {
+  background: #000;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.headerWrapper .top-strip p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .headerWrapper .top-strip p {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+}
+
+/* Shared Styles for Header and Small Header */
+.header,
+.small-header {
+  width: 100%;
+  padding: 20px;
+}
+
+.logoWrapper img {
+  max-width: 150px;
+  height: auto;
+}
+
+/* Part3 (Right-side icons) - Only in Header */
+.header .part3 .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.header .part3 .circle:focus {
+  outline: none;
+}
+
+.header .part3 .circle svg {
+  font-size: 22px;
+}
+
+.header .cartTab .price {
+  color: #ea2b0f;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.header .cartTab .count {
+  position: absolute;
+  top: -6px;
+  right: -4px;
+  background: #ea2b0f;
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* Shared Navigation Styles */
+.header .part2 .navPart2 ul,
+.small-header .part2 .navPart2 ul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.header .part2 .navPart2 ul li,
+.small-header .part2 .navPart2 ul li {
+  position: relative;
+}
+
+.header .part2 .navPart2 ul li a,
+.small-header .part2 .navPart2 ul li a {
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 20px;
+}
+
+.header .part2 .navPart2 ul li a:hover,
+.small-header .part2 .navPart2 ul li a:hover {
+  background: rgba(186, 186, 186, 0.3);
+}
+
+.header .part2 .navPart2 ul li a:active {
+  transform: scale(0.8);
+}
+
+.header .part2 .navPart2 ul li a svg,
+.small-header .part2 .navPart2 ul li a svg {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+/* Shared Categories Sidebar Styles */
+.header .cateWrapper,
+.small-header .cateWrapper {
+  position: relative;
+  z-index: 100;
+}
+
+.header .cateWrapper .sideBarNav,
+.small-header .cateWrapper .sideBarNav {
+  width: 100vw;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 22px 50px;
+  transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1),
+    opacity 0.6s ease-in-out;
+  opacity: 0;
+  transform: translateX(-100%);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.header .cateWrapper .sideBarNav.open,
+.small-header .cateWrapper .sideBarNav.open {
+  opacity: 1;
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.header .cateWrapper .sideBarNav.closing,
+.small-header .cateWrapper .sideBarNav.closing {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.header .cateWrapper .sideBarNav ul,
+.small-header .cateWrapper .sideBarNav ul {
+  padding: 0;
+  margin: 0;
+}
+
+.header .cateWrapper .sideBarNav ul li,
+.small-header .cateWrapper .sideBarNav ul li {
+  list-style: none;
+  padding: 5px 15px;
+  transition: all 0.3s ease;
+}
+
+.header .cateWrapper .sideBarNav .memuTitle,
+.small-header .cateWrapper .sideBarNav .memuTitle {
+  background: rgba(186, 186, 186, 0.3);
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.header .cateWrapper .sideBarNav ul li button,
+.small-header .cateWrapper .sideBarNav ul li button {
+  color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-size: 13px;
+}
+
+.header .cateWrapper .sideBarNav ul li button:hover,
+.small-header .cateWrapper .sideBarNav ul li button:hover {
+  background: rgba(186, 186, 186, 0.3);
+  margin-left: 10px;
+  color: #ea2b0f;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header .cateWrapper .sideBarNav ul li button:focus,
+.small-header .cateWrapper .sideBarNav ul li button:focus {
+  outline: none;
+}
+
+.header .cateWrapper .sideBarNav .imgSubMenu,
+.small-header .cateWrapper .sideBarNav .imgSubMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.header .cateWrapper .sideBarNav .imgSubMenu img.animated-image,
+.small-header .cateWrapper .sideBarNav .imgSubMenu img.animated-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Updated Categories Button with Light Sweep Effect */
+.header .allCateTab,
+.small-header .allCateTab {
+  background: rgba(186, 0, 0, 0.8);
+  padding: 10px 15px;
+  text-transform: none !important;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.header .allCateTab:hover,
+.small-header .allCateTab:hover {
+  color: #fff; /* Giữ màu chữ trắng khi hover */
+}
+
+.header .allCateTab svg,
+.small-header .allCateTab svg {
+  color: #fff;
+  font-size: 20px;
+}
+
+.header .allCateTab:focus,
+.small-header .allCateTab:focus {
+  outline: none;
+}
+
+.header .allCateTab::before,
+.small-header .allCateTab::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #fff, transparent);
+}
+
+.header .allCateTab:hover::before,
+.small-header .allCateTab:hover::before {
+  animation: lightSweep 1s ease forwards;
+}
+
+/* Specific Styles for Header */
+.header .cateWrapper .sideBarNav {
+  position: absolute;
+  top: 66px;
+  left: -200px;
+}
+
+/* Small Header Specific Styles */
+.small-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #1f1f1f;
+  z-index: 5;
+}
+
+.small-header .cateWrapper .sideBarNav {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  z-index: 4;
+}
+
+/* Search Icon in Small Header */
+.small-header .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.small-header .circle svg {
+  font-size: 22px;
+}
+
+.small-header .circle:focus {
+  outline: none;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  background: rgba(186, 0, 0, 0.8);
+  padding: 10px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  overflow: hidden;
+  transition: color 0.3s ease, font-size 0.3s ease;
+  color: #fff;
+  top: 40px;
+  right: 100px;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.close-btn svg {
+  font-size: 20px;
+}
+
+.close-btn:focus {
+  outline: none;
+}
+
+.allCateTab:active,
+.close-btn:active {
+  transform: scale(0.8);
+}
+
+.close-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #fff, transparent);
+}
+
+.close-btn:hover::before {
+  animation: lightSweep 1s ease forwards;
+}
+
+/* Shared Light Sweep Animation */
+@keyframes lightSweep {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}

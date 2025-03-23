@@ -1,0 +1,86 @@
+.topInfo {
+  color: #000;
+  background: #fff;
+  padding: 50px 0px;
+  border-top: 1px solid #aaa;
+}
+
+.topInfo .col {
+  justify-content: center;
+  max-width: 1240px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.topInfo .col:last-child {
+  border: none;
+}
+
+.topInfo .col svg {
+  font-size: 25px;
+}
+
+.topInfo .col span {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+footer {
+  margin-top: auto;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 81px;
+  min-height: 414px;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 164px;
+  background: url(../../assets/image/footer_pattern.svg) repeat-x;
+  background-position: top center;
+  background-size: auto 100%;
+}
+
+footer .footerInner {
+  position: relative;
+  min-height: 333px;
+  background-color: #ddd;
+  padding: 150px 100px 30px;
+  box-sizing: border-box;
+}
+
+footer .footerInner .col {
+  max-width: max-content;
+}
+
+footer .footerInner h6 {
+  border-bottom: solid 2px #aaa;
+  line-height: 2.25;
+}
+
+footer .footerInner ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+footer .footerInner ul li a {
+  color: #000;
+  font-size: 15px;
+}
+
+footer .footerInner ul li a:hover {
+  text-decoration: none;
+}
+
+footer .paymentMethod img {
+  width: 150px;
+  margin-right: 10px;
+}

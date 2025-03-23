@@ -1,0 +1,122 @@
+.homeCate {
+  padding: 35px 0px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  color: #000;
+}
+
+.sectionTitle h2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #aaa;
+}
+
+.sectionTitleMain {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.tabbed-content {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  font-size: 32;
+}
+
+.nav-pills {
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.nav-pills .nav-item {
+  margin: 0 10px;
+}
+
+.nav-pills .nav-link {
+  border-radius: 50px !important;
+  color: black;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1);
+}
+
+.nav-pills .nav-link:hover {
+  background-color: #f0f0f0;
+  color: #333;
+  transform: scale(1.05);
+}
+
+.nav-pills .nav-link.active {
+  background-color: #2d2d2d !important;
+  color: white;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+.homeCate .category-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeCate .category-item img {
+  width: 200px;
+}
+
+.viewAll a {
+  position: relative;
+  cursor: pointer;
+  color: #000;
+  transition: 0.3s all ease;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.viewAll a:hover {
+  color: #000;
+  transition: 0.3s all ease;
+  text-decoration: none;
+  font-size: 23px;
+}
+
+.viewAll a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #000;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.viewAll a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

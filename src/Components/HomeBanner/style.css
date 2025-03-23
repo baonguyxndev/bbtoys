@@ -1,0 +1,60 @@
+.homeBannerSection {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 80px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/image/background-universe.jpg");
+}
+
+.homeBannerSection .banner-image {
+  width: 70vw;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.homeBannerSection .swiper-slide {
+  opacity: 0.5;
+  transform: scale(0.8);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+.homeBannerSection .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.homeBannerSection .swiper-button-next,
+.homeBannerSection .swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.homeBannerSection .swiper-button-next {
+  right: 25px;
+}
+
+.homeBannerSection .swiper-button-prev {
+  left: 25px;
+}
+
+.homeBannerSection .swiper-button-prev:hover,
+.homeBannerSection .swiper-button-next:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.homeBannerSection .swiper-button-prev::after,
+.homeBannerSection .swiper-button-next::after {
+  font-size: 25px;
+}

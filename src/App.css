@@ -33,3 +33,47 @@ body {
 ::-webkit-scrollbar-track {
   background: transparent !important;
 }
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+/* Ẩn phần tử ban đầu */
+.hidden {
+  will-change: opacity, transform;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Khi phần tử xuất hiện */
+.animateIn {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Khi phần tử biến mất */
+.animateOut {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}

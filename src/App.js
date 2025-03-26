@@ -8,11 +8,14 @@ import Support from "./Pages/Support";
 import Policy from "./Pages/Policy";
 import Contact from "./Pages/Contact";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Footer from "./Components/Footer"; // Import từ src/Components
-
+import Footer from "./Components/Footer";
+import ScrollHandler from "./hooks/ScrollHandler";
+import ScrollToTop from "./hooks/ScrollToTop";
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
+      <ScrollHandler />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

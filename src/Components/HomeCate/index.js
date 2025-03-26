@@ -9,7 +9,7 @@ const HomeCate = () => {
   return (
     <section className="homeCate">
       <div className="container-full">
-        <div className="sectionTitle mt-2">
+        <div className="sectionTitle mt-2 hidden">
           <h2>
             <div className="line"></div>
             <span className="sectionTitleMain">
@@ -19,22 +19,24 @@ const HomeCate = () => {
           </h2>
         </div>
 
-        <ul className="nav nav-pills mb-3 justify-content-center">
-          {categories.map((category) => (
-            <li key={category.key} className="nav-item">
-              <button
-                className={`nav-link ${
-                  activeTab === category.key ? "active" : ""
-                }`}
-                onClick={() => setActiveTab(category.key)}
-              >
-                {category.name}
-              </button>
-            </li>
-          ))}
-        </ul>
+        <div className="hidden">
+          <ul className="nav nav-pills mb-3 justify-content-center">
+            {categories.map((category) => (
+              <li key={category.key} className="nav-item">
+                <button
+                  className={`nav-link ${
+                    activeTab === category.key ? "active" : ""
+                  }`}
+                  onClick={() => setActiveTab(category.key)}
+                >
+                  {category.name}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-        <div className="category-grid">
+        <div className="category-grid hidden">
           {categories
             .find((cat) => cat.key === activeTab)
             ?.items.map((category, index) => (

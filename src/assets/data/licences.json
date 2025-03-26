@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "One Piece",
+    "logo": "https://img.orzgk.com/wp-content/uploads/2023/11/One-piece-2048x748.png",
+    "background": "https://media.vov.vn/sites/default/files/styles/large/public/2022-10/4_6.jpeg.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Dragon Ball",
+    "logo": "https://img.orzgk.com/wp-content/uploads/2023/11/Dragon_Ball_Z_Logo_C.png",
+    "background": "https://www.hdvietnam.me/attachments/1724675959601-jpeg.372504/"
+  },
+  {
+    "id": 3,
+    "name": "Naruto",
+    "logo": "https://img.orzgk.com/wp-content/uploads/2024/11/pngimg.com-naruto_PNG47.png",
+    "background": "https://cdn2.tuoitre.vn/thumb_w/1200/471584752817336320/2024/5/8/tuoi-tre-cuoi-tram-hoat-hinh-7-1715157762957316917633.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Jujutsu Kaisen",
+    "logo": "https://img.orzgk.com/wp-content/uploads/2023/11/Jujutsu-Kaisen.png",
+    "background": "https://wibu.com.vn/wp-content/uploads/2024/09/jujutsu-kaisen-rotated.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Demon Slayer",
+    "logo": "https://img.orzgk.com/wp-content/uploads/2023/11/Demon-Slayer-Logo.png",
+    "background": "https://www.barbican.org.uk/sites/default/files/styles/hero_constrained_wide_2x_/public/images/2025-01/demon%20slayer%201600x900.png?itok=NXna2m37"
+  },
+  {
+    "id": 6,
+    "name": "Solo Leveling",
+    "logo": "https://media.themoviedb.org/t/p/w1280/auFfwbIGBYTU1eqzrV4aNCbUanI.png",
+    "background": "https://images.hdqwalls.com/download/sung-jin-woo-solo-leveling-8y-1440x900.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Fairy Tail",
+    "logo": "https://upload.wikimedia.org/wikipedia/fr/7/77/Fairy_Tail_%282014%29_Logo.png?20170523181914",
+    "background": "https://cdn.oneesports.vn/cdn-data/sites/4/2024/03/anime-fairy-tale-poster-game-1536x864.jpg"
+  }
+]

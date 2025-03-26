@@ -1,33 +1,3 @@
-.homeProducts {
-  padding: 25px 0;
-  width: 100%;
-  background: #f8f9fa;
-}
-
-.homeProducts .text-light {
-  color: rgba(0, 0, 0, 0.5) !important;
-}
-
-.productRow .hd {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.viewAllBtn {
-  padding: 8px 20px !important;
-  background: #ff4d4f !important;
-  border: none !important;
-  border-radius: 20px;
-  color: #fff !important;
-  font-weight: 600;
-  text-transform: capitalize;
-  transition: background 0.3s ease-in-out;
-}
-
-.viewAllBtn:hover {
-  background: #d9363e !important;
-}
-
 .productItem {
   margin-top: 20px;
   position: relative;
@@ -258,49 +228,4 @@
 .favBtn:focus,
 .cartBtn:focus {
   outline: none;
-}
-
-.homeProducts .swiper-pagination {
-  position: unset !important;
-}
-
-.homeProducts .swiper-button-prev,
-.homeProducts .swiper-button-next {
-  width: 30px;
-  height: 30px;
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 100%;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.homeProducts .swiper-button-prev:hover,
-.homeProducts .swiper-button-next:hover {
-  background-color: rgba(0, 0, 0, 1);
-}
-
-.homeProducts .swiper-button-prev::after,
-.homeProducts .swiper-button-next::after {
-  font-size: 15px;
-}
-
-.productRow2,
-.productRow3 {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.productRow2 > div,
-.productRow3 > div {
-  width: calc(25% - 7.5px);
-  box-sizing: border-box;
-}
-
-.productRow2 .productItem,
-.productRow3 .productItem {
-  width: 100%;
 }

@@ -16,41 +16,43 @@ const ProductItem = ({ product }) => {
     : 0;
 
   return (
-    <div className={`item productItem ${isSoldOut ? "Sold-Out" : ""}`}>
-      <div className="imgWrapper position-relative">
-        <img src={img1} alt={name} className="w-100 main-img" />
-        <img src={img2} alt={name} className="w-100 hover-img" />
+    <div className="hidden">
+      <div className={`item productItem ${isSoldOut ? "Sold-Out" : ""}`}>
+        <div className="imgWrapper position-relative">
+          <img src={img1} alt={name} className="w-100 main-img" />
+          <img src={img2} alt={name} className="w-100 hover-img" />
 
-        <div className="btnFullScreen">
-          <Button>
-            <LuScaling />
-          </Button>
-        </div>
-      </div>
-
-      <div className="productInfo">
-        <Button className="favBtn">
-          <MdFavorite />
-        </Button>
-        <span className={`status ${status}`}>{status}</span>
-        <Button className="cartBtn">
-          {isSoldOut ? <MdRemoveShoppingCart /> : <MdShoppingCart />}
-        </Button>
-
-        {oldPrice && (
-          <div className="saleTagWrapper">
-            <span className="saleTag">-{discount}%</span>
+          <div className="btnFullScreen">
+            <Button>
+              <LuScaling />
+            </Button>
           </div>
-        )}
+        </div>
 
-        <h4>{studio}</h4>
-        <h3>{name}</h3>
-        <p className="price">
+        <div className="productInfo">
+          <Button className="favBtn">
+            <MdFavorite />
+          </Button>
+          <span className={`status ${status}`}>{status}</span>
+          <Button className="cartBtn">
+            {isSoldOut ? <MdRemoveShoppingCart /> : <MdShoppingCart />}
+          </Button>
+
           {oldPrice && (
-            <span className="oldPrice">{oldPrice.toLocaleString()}đ</span>
+            <div className="saleTagWrapper">
+              <span className="saleTag">-{discount}%</span>
+            </div>
           )}
-          {price.toLocaleString()}đ
-        </p>
+
+          <h4>{studio}</h4>
+          <h3>{name}</h3>
+          <p className="price">
+            {oldPrice && (
+              <span className="oldPrice">{oldPrice.toLocaleString()}đ</span>
+            )}
+            {price.toLocaleString()}đ
+          </p>
+        </div>
       </div>
     </div>
   );

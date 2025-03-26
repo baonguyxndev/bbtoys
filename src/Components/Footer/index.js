@@ -10,9 +10,9 @@ import Wise from "../../assets/image/footer_payment_wise.png";
 
 const Footer = () => {
   return (
-    <>
-      <div className="topInfo row">
-        <div className="col d-flex align-items-center justify-content-center">
+    <div className="footer">
+      <div className="topInfo row ">
+        <div className="col d-flex align-items-center justify-content-center ">
           <span>
             <LuRefreshCcw />
           </span>
@@ -40,7 +40,7 @@ const Footer = () => {
       <footer>
         <div className="footerInner">
           <div className="footerBlock row justify-content-between mx-auto">
-            <div className="col">
+            <div className="col ">
               <h6>Our Product</h6>
               <ul>
                 <li>
@@ -61,7 +61,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="col">
+            <div className="col ">
               <h6>Help & Support</h6>
               <ul>
                 <li>
@@ -82,13 +82,13 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="col">
+            <div className="col ">
               <div className="imgLogoFooter">
                 <img src={Logo} alt="logo" />
               </div>
             </div>
 
-            <div className="col">
+            <div className="col ">
               <h6>Contact Us</h6>
               <ul>
                 <li>
@@ -109,7 +109,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="col">
+            <div className="col ">
               <h6>Payment Methods</h6>
               <ul className="paymentMethod">
                 <li>
@@ -123,7 +123,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 

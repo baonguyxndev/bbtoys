@@ -14,7 +14,7 @@
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-.btnFullScreen {
+.productItem .btnFullScreen {
   position: absolute;
   top: 10px;
   left: -50px;
@@ -23,13 +23,38 @@
   opacity: 0;
 }
 
-.imgWrapper {
-  overflow: hidden;
-  position: relative;
+.productItem:hover .btnFullScreen {
+  left: 10px;
+  opacity: 1;
 }
 
-.imgWrapper:hover .btnFullScreen {
-  left: 10px;
+.imgWrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.imgWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.imgWrapper .hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.productItem:hover .imgWrapper .main-img {
+  opacity: 0;
+}
+
+.productItem:hover .imgWrapper .hover-img {
   opacity: 1;
 }
 
@@ -59,36 +84,6 @@
   color: #000;
   opacity: 0.7;
   pointer-events: none;
-}
-
-.imgWrapper {
-  position: relative;
-  width: 100%;
-  height: 250px;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.imgWrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.imgWrapper .hover-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-
-.imgWrapper:hover .main-img {
-  opacity: 0;
-}
-
-.imgWrapper:hover .hover-img {
-  opacity: 1;
 }
 
 .productInfo {
@@ -146,31 +141,34 @@
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
-.status {
+.state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px; /* Tạo khoảng cách hai bên */
   font-size: 12px;
   font-weight: bold;
-  padding: 3px 8px;
   border-radius: 5px;
-  display: inline-block;
-  margin-bottom: 5px;
+  text-align: center;
+  white-space: nowrap; /* Tránh chữ xuống dòng */
 }
 
-.status.Pre-Order {
+.state.Pre-Order {
   background: yellow;
   color: #000;
 }
 
-.status.Order {
+.state.Order {
   background: blue;
   color: #fff;
 }
 
-.status.Available {
+.state.Available {
   background: green;
   color: #fff;
 }
 
-.status.Sold-Out {
+.state.Sold-Out {
   background: red;
   color: #000;
 }
@@ -181,7 +179,7 @@
   position: relative;
 }
 
-.productItem.Sold-Out .status {
+.productItem.Sold-Out .state {
   opacity: 1;
   color: white !important;
   background: red !important;

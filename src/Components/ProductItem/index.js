@@ -9,8 +9,10 @@ import {
 import { LuScaling } from "react-icons/lu";
 
 const ProductItem = ({ product }) => {
-  const { img1, img2, name, status, studio, price, oldPrice } = product;
-  const isSoldOut = status === "Sold-Out";
+  const { img: images, name, state, brand, details } = product;
+  // Lấy price và oldPrice từ details[0]
+  const { price, oldPrice } = details[0] || {};
+  const isSoldOut = state === "Sold-Out";
   const discount = oldPrice
     ? Math.round(((oldPrice - price) / oldPrice) * 100)
     : 0;
@@ -19,8 +21,8 @@ const ProductItem = ({ product }) => {
     <div className="hidden">
       <div className={`item productItem ${isSoldOut ? "Sold-Out" : ""}`}>
         <div className="imgWrapper position-relative">
-          <img src={img1} alt={name} className="w-100 main-img" />
-          <img src={img2} alt={name} className="w-100 hover-img" />
+          <img src={images[0]} alt={name} className="w-100 main-img" />
+          <img src={images[1]} alt={name} className="w-100 hover-img" />
 
           <div className="btnFullScreen">
             <Button>
@@ -30,13 +32,15 @@ const ProductItem = ({ product }) => {
         </div>
 
         <div className="productInfo">
-          <Button className="favBtn">
-            <MdFavorite />
-          </Button>
-          <span className={`status ${status}`}>{status}</span>
-          <Button className="cartBtn">
-            {isSoldOut ? <MdRemoveShoppingCart /> : <MdShoppingCart />}
-          </Button>
+          <div className="row justify-content-center align-conten-center">
+            <Button className="favBtn">
+              <MdFavorite />
+            </Button>
+            <span className={`state ${state}`}>{state}</span>
+            <Button className="cartBtn">
+              {isSoldOut ? <MdRemoveShoppingCart /> : <MdShoppingCart />}
+            </Button>
+          </div>
 
           {oldPrice && (
             <div className="saleTagWrapper">
@@ -44,7 +48,7 @@ const ProductItem = ({ product }) => {
             </div>
           )}
 
-          <h4>{studio}</h4>
+          <h4>{brand}</h4>
           <h3>{name}</h3>
           <p className="price">
             {oldPrice && (

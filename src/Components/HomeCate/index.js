@@ -22,14 +22,14 @@ const HomeCate = () => {
         <div className="hidden">
           <ul className="nav nav-pills mb-3 justify-content-center">
             {categories.map((category) => (
-              <li key={category.key} className="nav-item">
+              <li key={category.categoryKey} className="nav-item">
                 <button
                   className={`nav-link ${
-                    activeTab === category.key ? "active" : ""
+                    activeTab === category.categoryKey ? "active" : ""
                   }`}
-                  onClick={() => setActiveTab(category.key)}
+                  onClick={() => setActiveTab(category.categoryKey)}
                 >
-                  {category.name}
+                  {category.categoryName}
                 </button>
               </li>
             ))}
@@ -38,14 +38,14 @@ const HomeCate = () => {
 
         <div className="category-grid hidden">
           {categories
-            .find((cat) => cat.key === activeTab)
+            .find((cat) => cat.categoryKey === activeTab)
             ?.items.map((category, index) => (
               <a
                 key={index}
-                href={`/category/${activeTab}/${category.key}`}
+                href={`/category/${activeTab}/${category.itemKey}`}
                 className="category-item text-center"
               >
-                <img src={category.img} alt={category.name} />
+                <img src={category.itemImg} alt={category.itemName} />
               </a>
             ))}
           <div className="viewAll">

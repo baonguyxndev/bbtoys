@@ -6,7 +6,7 @@ const Licences = () => {
     <>
       {/* LICENCES */}
       <div className="licences">
-        <div className="sectionTitle mt-2">
+        <div className="sectionTitle mt-2 hidden">
           <h2>
             <div className="line"></div>
             <span className="sectionTitleMain">LICENCES</span>
@@ -25,7 +25,7 @@ const Licences = () => {
             <div className="licenceWrapper">
               <ul className="row row-cols-1 row-cols-sm-4 g-4 licenceRow">
                 {licences.map((licence) => (
-                  <li key={licence.id} className="col">
+                  <li key={licence.id} className="col hidden">
                     <div className="licenceCard">
                       <a
                         href={`/licences/${licence.name

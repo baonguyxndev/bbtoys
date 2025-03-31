@@ -4,6 +4,9 @@ import "./style.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
+import homeBanner1 from "../../assets/image/home-banner-1.jpg";
+
+import homeBanner2 from "../../assets/image/home-banner-2.webp";
 
 const HomeBanner = () => {
   return (
@@ -11,18 +14,22 @@ const HomeBanner = () => {
       <Swiper
         modules={[Navigation, Autoplay]}
         navigation={true}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        autoplay={{ delay: 3000, disableOnInteraction: true }}
         loop={true}
+        spaceBetween={20}
+        centeredSlides={true}
       >
-        {[
-          "https://file.hstatic.net/200000515997/file/1200x500_1_b0798332fcd3415ca9b2312cade52cd2.png",
-          "https://file.hstatic.net/200000515997/file/1200x500_2_a2c0eb05f3874967ab508da9c8df61cb.png",
-          "https://file.hstatic.net/200000515997/file/1200x500_1_b0798332fcd3415ca9b2312cade52cd2.png",
-          "https://file.hstatic.net/200000515997/file/1200x500_1_b0798332fcd3415ca9b2312cade52cd2.png",
-          "https://file.hstatic.net/200000515997/file/1200x500_1_b0798332fcd3415ca9b2312cade52cd2.png",
-        ].map((imgSrc, index) => (
+        {[homeBanner1, homeBanner2].map((imgSrc, index) => (
           <SwiperSlide key={index}>
-            <img src={imgSrc} alt={`homebanner-${index}`} className="w-80" />
+            <div className="banner-wrapper hidden">
+              <div className="banner-image-container">
+                <img
+                  src={imgSrc}
+                  alt={`Toy shop promotional banner ${index + 1}`}
+                  className="banner-image"
+                />
+              </div>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

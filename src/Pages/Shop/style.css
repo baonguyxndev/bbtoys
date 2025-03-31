@@ -52,34 +52,47 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 100px;
-  height: calc(100vh - 120px);
-  overflow-y: hidden;
-  transition: all 0.3s ease;
+  height: fit-content;
 }
 
-.shop .sidebar:hover {
-  overflow-y: auto;
-}
-
-/* Custom scrollbar cho sidebar */
-.shop .sidebar::-webkit-scrollbar {
-  width: 6px;
-  background: transparent;
-}
-
-.shop .sidebar::-webkit-scrollbar-track {
-  background: transparent;
-  border-radius: 3px;
-}
-
-.shop .sidebar::-webkit-scrollbar-thumb {
-  background: #ddd;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
-
+/* Bỏ các style không cần thiết */
+.shop .sidebar::-webkit-scrollbar,
+.shop .sidebar::-webkit-scrollbar-track,
+.shop .sidebar::-webkit-scrollbar-thumb,
 .shop .sidebar::-webkit-scrollbar-thumb:hover {
-  background: #bbb;
+  display: none;
+}
+
+.sidebar-section {
+  padding: 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.sidebar-section:last-child {
+  border-bottom: none;
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Products container */
+.shop .products-container {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  height: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-section {
@@ -513,6 +526,7 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   line-clamp: 2;
+
 }
 
 .product-brand {

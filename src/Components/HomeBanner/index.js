@@ -4,8 +4,8 @@ import "./style.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
-import homeBanner1 from "../../assets/image/home-banner-1.webp";
-import homeBanner2 from "../../assets/image/home-banner-2.jpg";
+import homeBanner1 from "../../assets/image/home-banner-1.jpg";
+import homeBanner2 from "../../assets/image/home-banner-2.webp";
 
 const HomeBanner = () => {
   return (

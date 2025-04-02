@@ -11,7 +11,7 @@ import { FiUser } from "react-icons/fi";
 import { IoBagOutline } from "react-icons/io5";
 import { PiGlobe } from "react-icons/pi";
 import { TbHome } from "react-icons/tb";
-import { MdOutlinePolicy } from "react-icons/md";
+import { FaQuestion } from "react-icons/fa6";
 import { IoInformationCircleOutline } from "react-icons/io5";
 import { IoStorefrontOutline } from "react-icons/io5";
 import { BiSupport } from "react-icons/bi";
@@ -354,9 +354,9 @@ const Header = () => {
                     </Link>
                   </li>
                   <li className="list-inline-item">
-                    <Link to="/policy">
-                      <MdOutlinePolicy />
-                      &nbsp;POLICY
+                    <Link to="/faqs">
+                      <FaQuestion />
+                      &nbsp;FAQs
                     </Link>
                   </li>
                   <li className="list-inline-item">
@@ -439,9 +439,9 @@ const Header = () => {
                       </Link>
                     </li>
                     <li className="list-inline-item">
-                      <Link to="/policy">
-                        <MdOutlinePolicy />
-                        &nbsp;POLICY
+                      <Link to="/faqs">
+                        <FaQuestion />
+                        &nbsp;FAQs
                       </Link>
                     </li>
                     <li className="list-inline-item">

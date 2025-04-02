@@ -1,9 +1,9 @@
 /* Base Layout */
-.policy {
+.faqs {
   padding: 20px 0;
 }
 
-.licences .title h2 {
+.faqs .title h2 {
   color: #000;
   font-size: 2.5rem;
   font-weight: bold;
@@ -11,16 +11,16 @@
   text-transform: uppercase;
 }
 
-.policy .title::after {
+.faqs .title::after {
   all: unset !important;
 }
 
-.policy .container-full {
+.faqs .container-full {
   max-width: 100%;
   padding: 0 20px;
 }
 
-.policy .title {
+.faqs .title {
   font-size: 2.5rem;
   font-weight: 700;
   color: #333;
@@ -28,15 +28,15 @@
 }
 
 /* Sidebar and Categories */
-.policy .sidebar .category-wrapper {
+.faqs .sidebar .category-wrapper {
   padding-bottom: 20px;
 }
 
-.policy .sidebar .category-wrapper:last-child {
+.faqs .sidebar .category-wrapper:last-child {
   padding-bottom: 0;
 }
 
-.policy-category {
+.faqs-category {
   padding: 15px;
   border-radius: 15px;
   background: #fff;
@@ -50,25 +50,25 @@
   justify-content: center;
 }
 
-.policy-category.active {
+.faqs-category.active {
   border: 1px solid #ba0000;
   box-shadow: 0 4px 12px rgba(186, 0, 0, 0.12);
 }
 
-.policy-category .icon {
+.faqs-category .icon {
   font-size: clamp(1.8rem, 4vw, 2.2rem);
   color: #ba0000;
   margin-bottom: 15px;
 }
 
-.policy-category h3 {
+.faqs-category h3 {
   font-size: clamp(1rem, 2vw, 1.1rem);
   color: #333;
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
-.policy-category p {
+.faqs-category p {
   font-size: clamp(0.85rem, 1.5vw, 0.9rem);
   color: #666;
   margin: 0;
@@ -77,7 +77,7 @@
 }
 
 /* Subcategories Section */
-.policy-subcategories {
+.faqs-subcategories {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
@@ -94,7 +94,7 @@
   scrollbar-color: #ba0000 #f1f1f1;
 }
 
-.policy-subcategories.show {
+.faqs-subcategories.show {
   opacity: 1;
   visibility: visible;
   border: 1px solid #e2e8f0;
@@ -102,7 +102,7 @@
   margin-bottom: 20px;
 }
 
-.policy-subcategory {
+.faqs-subcategory {
   flex: 1;
   min-width: 220px;
   display: flex;
@@ -115,7 +115,7 @@
   border: 1px solid #e2e8f0;
 }
 
-.policy-subcategory.active {
+.faqs-subcategory.active {
   border: 1px solid #ba0000;
   box-shadow: 0 4px 12px rgba(186, 0, 0, 0.12);
 }
@@ -126,7 +126,7 @@
   margin-right: 15px;
 }
 
-.policy-subcategory h4 {
+.faqs-subcategory h4 {
   font-size: clamp(0.9rem, 1.8vw, 1rem);
   color: #333;
   margin: 0;
@@ -135,7 +135,7 @@
 }
 
 /* Main Content */
-.policy-content.main-content {
+.faqs-content.main-content {
   background: #fff;
   border-radius: 15px;
   padding: 2rem;
@@ -144,14 +144,14 @@
   min-height: 300px;
 }
 
-.policy-detail-item {
+.faqs-detail-item {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
 /* Detail Section */
-.detail-section {
+.faqs .detail-section {
   background: rgba(220, 53, 69, 0.03);
   border-radius: 8px;
   padding: 15px;
@@ -159,20 +159,20 @@
   border: 1px solid #e2e8f0;
 }
 
-.detail-section h4 {
+.faqs .detail-section h4 {
   color: #333;
   font-size: 1.1rem;
   margin-bottom: 1rem;
   font-weight: 600;
 }
 
-.detail-section ul {
+.faqs .detail-section ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.detail-section ul li {
+.faqs .detail-section ul li {
   color: #333;
   font-size: 0.95rem;
   margin-bottom: 0.8rem;
@@ -181,7 +181,7 @@
   line-height: 1.5;
 }
 
-.detail-section ul li:before {
+.faqs .detail-section ul li:before {
   content: "•";
   color: #ba0000;
   position: absolute;
@@ -189,22 +189,22 @@
   font-weight: bold;
 }
 
-.detail-section ul li:last-child {
+.faqs .detail-section ul li:last-child {
   margin-bottom: 0;
 }
 
 /* Sub-detail Section */
-.sub-detail-section {
+.faqs .sub-detail-section {
   margin-bottom: 1.5rem;
 }
 
-.sub-detail-header {
+.faqs .sub-detail-header {
   display: flex;
   align-items: center;
   margin-bottom: 0.8rem;
 }
 
-.sub-detail-header h5 {
+.faqs .sub-detail-header h5 {
   font-size: 1rem;
   color: #333;
   font-weight: 600;
@@ -212,7 +212,7 @@
 }
 
 /* Button (nếu có item.buttonText) */
-.detail-button {
+.faqs .detail-button {
   background: #ba0000;
   color: white;
   border: none;

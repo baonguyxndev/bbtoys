@@ -5,12 +5,12 @@ import Home from "./Pages/Home";
 import Shop from "./Pages/Shop";
 import Licences from "./Pages/Licences";
 import Support from "./Pages/Support";
-import Policy from "./Pages/Policy";
 import Contact from "./Pages/Contact";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./Components/Footer";
 import ScrollHandler from "./hooks/ScrollHandler";
 import ScrollToTop from "./hooks/ScrollToTop";
+import FAQs from "./Pages/FAQs";
 function App() {
   return (
     <BrowserRouter>
@@ -22,7 +22,7 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/licences" element={<Licences />} />
         <Route path="/support" element={<Support />} />
-        <Route path="/policy" element={<Policy />} />
+        <Route path="/faqs" element={<FAQs />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />

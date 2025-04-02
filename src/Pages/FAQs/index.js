@@ -28,7 +28,7 @@ const CATEGORIES = [
   {
     id: 3,
     icon: <MdOutlinePolicy />,
-    title: "Policy",
+    title: "FAQs",
     description: "Purchase/Return policies and After-Sales service",
   },
 ];
@@ -439,22 +439,20 @@ const CATEGORY_CARDS = {
 };
 
 // Components
-const PolicyCategory = memo(
-  ({ icon, title, description, isActive, onClick }) => (
-    <div
-      className={`policy-category ${isActive ? "active" : ""}`}
-      onClick={onClick}
-    >
-      <div className="icon">{icon}</div>
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
-  )
-);
-
-const PolicySubcategory = memo(({ icon, title, isActive, onClick }) => (
+const FAQsCategory = memo(({ icon, title, description, isActive, onClick }) => (
   <div
-    className={`policy-subcategory ${isActive ? "active" : ""}`}
+    className={`faqs-category ${isActive ? "active" : ""}`}
+    onClick={onClick}
+  >
+    <div className="icon">{icon}</div>
+    <h3>{title}</h3>
+    <p>{description}</p>
+  </div>
+));
+
+const FAQsSubcategory = memo(({ icon, title, isActive, onClick }) => (
+  <div
+    className={`faqs-subcategory ${isActive ? "active" : ""}`}
     onClick={onClick}
   >
     <div className="subcategory-icon">{icon}</div>
@@ -463,9 +461,9 @@ const PolicySubcategory = memo(({ icon, title, isActive, onClick }) => (
 ));
 
 const DetailContent = memo(({ item }) => (
-  <div className="policy-details">
+  <div className="faqs-details">
     <h2>{item.title}</h2>
-    <div className="policy-detail-item">
+    <div className="faqs-detail-item">
       {item.description && (
         <p className="detail-description">{item.description}</p>
       )}
@@ -509,7 +507,7 @@ const DetailContent = memo(({ item }) => (
   </div>
 ));
 
-const Policy = () => {
+const FAQs = () => {
   const [activeCategory, setActiveCategory] = useState(null);
   const [activeItem, setActiveItem] = useState(null);
 
@@ -526,9 +524,9 @@ const Policy = () => {
     if (!activeCategory || !CATEGORY_CARDS[activeCategory]) return null;
 
     return (
-      <div className="policy-subcategories show">
+      <div className="faqs-subcategories show">
         {CATEGORY_CARDS[activeCategory].map((item, index) => (
-          <PolicySubcategory
+          <FAQsSubcategory
             key={index}
             icon={item.icon}
             title={item.title}
@@ -541,7 +539,7 @@ const Policy = () => {
   };
 
   return (
-    <div className="policy">
+    <div className="faqs">
       <div className="sectionTitle mt-2 hidden">
         <h2 className="title">
           <div className="line"></div>
@@ -557,7 +555,7 @@ const Policy = () => {
               {/*Category*/}
               {CATEGORIES.map((category) => (
                 <div key={category.id} className="category-wrapper hidden">
-                  <PolicyCategory
+                  <FAQsCategory
                     {...category}
                     isActive={activeCategory === category.id}
                     onClick={() => handleCategoryClick(category.id)}
@@ -569,10 +567,10 @@ const Policy = () => {
 
           {/* Main Content */}
           <div className="col-md-9 hidden">
-            <div className="policy-subcategories-wrapper hidden">
+            <div className="faqs-subcategories-wrapper hidden">
               {renderSubcategories()}
             </div>
-            <div className="policy-content main-content hidden">
+            <div className="faqs-content main-content hidden">
               {activeItem ? (
                 <DetailContent item={activeItem} />
               ) : (
@@ -592,4 +590,4 @@ const Policy = () => {
   );
 };
 
-export default Policy;
+export default FAQs;

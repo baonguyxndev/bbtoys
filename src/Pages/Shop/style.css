@@ -1,23 +1,15 @@
-/* Tiêu đề Shop */
-.shop .title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 2rem;
-}
-
-/* Khoảng cách giữa các phần tử */
-.shop .feature {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
-
 /* Container chính */
 .shop {
   padding: 20px 0;
   background: #f5f5f5;
   min-height: 100vh;
+}
+
+/* Tiêu đề Shop */
+.shop .title {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
 }
 
 .shop .container-full {
@@ -37,7 +29,7 @@
 /* Main content */
 .shop .row.g-4 {
   margin: 0;
-  --bs-gutter-x: 2rem;
+  --bs-gutter-x: 30px;
 }
 
 .shop .row.g-4 > [class*="col-"] {
@@ -130,7 +122,7 @@
   height: 45px;
   border: 2px solid #e0e0e0;
   border-radius: 30px;
-  padding: 0.5rem 2.5rem 0.5rem 1.5rem;
+  padding: 10px 40px 10px 40px;
 }
 
 /* Ô tìm kiếm */
@@ -173,7 +165,7 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  padding-right: 2.5rem;
+  padding-right: 40px;
   color: #999;
 }
 
@@ -195,8 +187,8 @@
 
 /* Tùy chỉnh các tùy chọn trong dropdown */
 .shop .sort .form-select option {
-  padding: 0.5rem;
-  font-size: 0.9rem;
+  padding: 10px;
+  font-size: 15px;
   color: #333;
   background-color: #fff;
 }
@@ -502,7 +494,7 @@
 }
 
 .product-title {
-  font-size: 1rem;
+  font-size: 15px;
   font-weight: 500;
   color: #333;
   margin: 0;
@@ -516,13 +508,13 @@
 }
 
 .product-brand {
-  font-size: 0.9rem;
+  font-size: 15px;
   color: #666;
   margin: 0;
 }
 
 .product-price {
-  font-size: 1.1rem;
+  font-size: 15px;
   font-weight: 600;
   color: #1890ff;
   margin: 0;
@@ -561,81 +553,9 @@
 
 /* Loading Spinner */
 .spinner-border {
-  width: 3rem;
-  height: 3rem;
+  width: 50px;
+  height: 50px;
   color: #333;
-}
-
-/* Responsive */
-@media (max-width: 1200px) {
-  .product-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .shop {
-    padding: 15px;
-  }
-
-  .shop .title {
-    font-size: 2rem;
-  }
-
-  .shop .feature {
-    flex-direction: column;
-    width: 100%;
-    gap: 1rem;
-  }
-
-  .shop .search .form-control,
-  .shop .sort .form-select {
-    width: 100%;
-  }
-
-  .sidebar {
-    margin-bottom: 20px;
-    position: static;
-  }
-
-  .product-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
-  }
-
-  .product-content {
-    padding: 12px;
-    gap: 8px;
-  }
-
-  .product-title {
-    font-size: 0.9rem;
-  }
-
-  .product-brand {
-    font-size: 0.8rem;
-  }
-
-  .product-price {
-    font-size: 1rem;
-  }
-
-  .category-tree {
-    max-height: 300px;
-  }
-}
-
-@media (max-width: 480px) {
-  .product-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 12px;
-  }
-
-  .product-content {
-    padding: 10px;
-    gap: 6px;
-  }
 }
 
 /* No Results Message */
@@ -657,24 +577,24 @@
 
 .text-center.w-100.py-5 h3 {
   color: #333;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-size: 25px;
 }
 
 .text-center.w-100.py-5 p {
   color: #666;
   margin: 0;
-  font-size: 1rem;
+  font-size: 15px;
 }
 
 /* Row spacing */
 .shop .row {
-  --bs-gutter-x: 2rem;
+  --bs-gutter-x: 30px;
 }
 
 /* Top content spacing */
 .topContent {
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
 }
 
 /* Search và Sort trong sidebar */
@@ -684,7 +604,7 @@
   height: 40px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 0.5rem 2rem 0.5rem 1rem;
+  padding: 10px 30px 10px 15px;
   font-size: 14px;
 }
 

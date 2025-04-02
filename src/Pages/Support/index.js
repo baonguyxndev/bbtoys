@@ -224,17 +224,24 @@ const Support = () => {
 
   return (
     <div className="support">
+      <div className="sectionTitle mt-2 hidden">
+        <h2 className="title">
+          <div className="line"></div>
+          <span className="sectionTitleMain">Support</span>
+          <div className="line"></div>
+        </h2>
+      </div>
       <div className="container">
         <div className="row">
-          <div className="col-md-8">
+          <div className="col-md-8 hidden">
             <div className="ticket-container bg-white rounded-3 shadow-sm p-4">
-              <h2>Submit a Ticket</h2>
+              <h2 className="hidden">Submit a Ticket</h2>
 
               <form onSubmit={handleSubmit}>
                 <div className="mb-4">
-                  <label className="form-label">Topic</label>
+                  <label className="form-label hidden">Topic</label>
                   <select
-                    className="form-select"
+                    className="form-select hidden hidden"
                     name="topic"
                     value={formData.topic}
                     onChange={handleChange}
@@ -250,9 +257,9 @@ const Support = () => {
                 </div>
 
                 <div className="mb-4">
-                  <label className="form-label">Subject</label>
+                  <label className="form-label hidden">Subject</label>
                   <select
-                    className="form-select"
+                    className="form-select hidden"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
@@ -268,9 +275,11 @@ const Support = () => {
                 </div>
 
                 <div className="mb-4">
-                  <label className="form-label optional">Sale order</label>
+                  <label className="form-label optional hidden">
+                    Sale order
+                  </label>
                   <select
-                    className="form-select"
+                    className="form-select hidden"
                     name="saleOrder"
                     value={formData.saleOrder}
                     onChange={handleChange}
@@ -285,7 +294,7 @@ const Support = () => {
                     ))}
                   </select>
                   {formData.saleOrder && (
-                    <div className="mt-2 text-muted">
+                    <div className="mt-2 text-muted hidden">
                       Selected order details:
                       {orders
                         .find((o) => o.id === formData.saleOrder)
@@ -297,9 +306,9 @@ const Support = () => {
                 </div>
 
                 <div className="mb-4">
-                  <label className="form-label">Description</label>
+                  <label className="form-label hidden">Description</label>
                   <textarea
-                    className="form-control"
+                    className="form-control hidden"
                     rows={5}
                     name="description"
                     value={formData.description}
@@ -310,24 +319,29 @@ const Support = () => {
                 </div>
 
                 <div className="mb-4">
-                  <label className="form-label optional">Attachment(s)</label>
+                  <label className="form-label optional hidden">
+                    Attachment(s)
+                  </label>
                   <div
-                    className="file-upload-container"
+                    className="file-upload-container hidden"
                     onClick={handleFileClick}
                   >
                     <input
                       ref={fileInputRef}
                       type="file"
-                      className="d-none"
+                      className="d-none hidden"
                       multiple
                       onChange={handleChange}
                       accept="image/*,.pdf,.doc,.docx"
                     />
                     <div className="d-flex align-items-center justify-content-center">
-                      <button type="button" className="file-upload-button">
+                      <button
+                        type="button"
+                        className="file-upload-button hidden"
+                      >
                         Choose Files
                       </button>
-                      <span className="file-upload-text">
+                      <span className="file-upload-text hidden">
                         {formData.files.length > 0
                           ? `${formData.files.length} file(s) selected`
                           : "No file chosen"}
@@ -362,7 +376,7 @@ const Support = () => {
 
                 <button
                   type="submit"
-                  className="btn btn-danger submit-btn"
+                  className="btn btn-danger submit-btn hidden"
                   disabled={isSubmitting}
                 >
                   {isSubmitting
@@ -374,18 +388,18 @@ const Support = () => {
               </form>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 hidden">
             <div className="ticket-list-container bg-white rounded-3 shadow-sm p-4">
-              <h3 className="border-bottom pb-2 mb-3 position-relative">
+              <h3 className="border-bottom pb-2 mb-3 position-relative hidden">
                 Support Tickets Are Created
               </h3>
-              <p className="text-muted mb-4">
+              <p className="text-muted mb-4 hidden">
                 All your support tickets will be displayed here. You can track
                 the status and content of each ticket.
               </p>
               <button
                 type="button"
-                className="btn btn-danger w-100 mb-4"
+                className="btn btn-danger w-100 mb-4 hidden"
                 onClick={() => setShowTickets(!showTickets)}
               >
                 {showTickets ? "Hide My Tickets" : "View My Tickets"}

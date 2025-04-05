@@ -2,12 +2,35 @@
   background: #f8f9fa;
 }
 
-.licences .title h2 {
+.licences .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
   color: #000;
-  font-size: 2.5rem;
+}
+
+.licences .title h2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.licences .line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #aaa;
+}
+
+.licences .titleMain {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0 20px;
+  font-size: 30px;
   font-weight: bold;
-  margin-bottom: 30px;
-  text-transform: uppercase;
 }
 
 .licences .licenceWrapper {
@@ -89,7 +112,7 @@
   outline-offset: 2px;
 }
 
-.licences .licenceCard-link .contactIcons {
+.licences .licenceCard-link .licencesIcons {
   position: absolute;
   top: 10px; /* Đặt cố định bên dưới logo, dựa trên chiều cao logo cố định */
   right: 15px; /* Cùng vị trí bên phải với logo */
@@ -98,13 +121,13 @@
   z-index: 2;
 }
 
-.licences .licenceCard-link .contactIcons svg {
+.licences .licenceCard-link .licencesIcons svg {
   font-size: 25px;
   color: #000;
   transition: all 0.2s ease;
 }
 
-.licences .licenceCard-link .contactIcons svg:hover {
+.licences .licenceCard-link .licencesIcons svg:hover {
   transform: scale(1.2);
 }
 

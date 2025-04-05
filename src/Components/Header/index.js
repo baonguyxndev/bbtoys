@@ -360,9 +360,9 @@ const Header = () => {
                     </Link>
                   </li>
                   <li className="list-inline-item">
-                    <Link to="/contact">
+                    <Link to="/info">
                       <IoInformationCircleOutline />
-                      &nbsp;CONTACT
+                      &nbsp;INFO
                     </Link>
                   </li>
                 </ul>
@@ -445,9 +445,9 @@ const Header = () => {
                       </Link>
                     </li>
                     <li className="list-inline-item">
-                      <Link to="/contact">
+                      <Link to="/info">
                         <IoInformationCircleOutline />
-                        &nbsp;CONTACT
+                        &nbsp;INFO
                       </Link>
                     </li>
                   </ul>

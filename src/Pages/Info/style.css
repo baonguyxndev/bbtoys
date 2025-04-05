@@ -1,0 +1,176 @@
+.contact .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  color: #000;
+}
+
+.contact .title h2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.contact .line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #aaa;
+}
+
+.contact .titleMain {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.contact .tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.contact .tab {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  background: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.contact .tab:focus {
+  outline: none;
+}
+
+.contact .tab.active {
+  border: 1px solid #ba0000;
+  box-shadow: 0 4px 12px rgba(186, 0, 0, 0.12);
+}
+
+.contact .tab-content {
+  background: #fff; /* Giống .faqs-content.main-content */
+  border-radius: 15px; /* Giống .faqs-content.main-content */
+  padding: 2rem; /* Giống .faqs-content.main-content */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Giống .faqs-content.main-content */
+  border: 1px solid #e2e8f0; /* Giống .faqs-content.main-content */
+  min-height: 300px; /* Giống .faqs-content.main-content */
+  text-align: left; /* Căn trái nội dung cho dễ đọc */
+}
+
+.contact .tab-content > div {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.contact .tab-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  text-align: center; /* Căn giữa tiêu đề */
+}
+
+.contact .content-section {
+  margin-bottom: 3rem;
+}
+
+.contact .content-section h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.contact .content-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.contact .content-section ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contact .content-section ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ba0000; /* Dấu đầu dòng màu đỏ giống FAQs */
+  font-weight: bold;
+}
+
+.contact .content-section img {
+  max-width: 100%; /* Đảm bảo hình ảnh không vượt quá container */
+  height: auto;
+  margin: 10px auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.contact .contact-media {
+  text-align: center;
+}
+
+.contact .media-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.contact .media-item {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  width: 160px;
+  height: 160px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #333;
+}
+
+.contact .media-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-color: #ba0000;
+}
+
+.contact .media-item .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.contact .media-item:hover .icon {
+  transform: scale(1.1);
+}
+
+.contact .media-item span {
+  font-size: 16px;
+  font-weight: 600;
+}

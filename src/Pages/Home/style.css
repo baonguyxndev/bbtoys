@@ -13,29 +13,39 @@
   padding: 40px 0;
 }
 
-.homeLicences .sectionTitle h2 {
-  color: #000;
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 30px;
-  text-transform: uppercase;
+.homeLicences .title {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  color: #000;
+}
+
+.homeLicences .title h2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.homeLicences .line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #aaa;
+}
+
+.homeLicences .titleMain {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0 20px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .homeLicences ul li {
   list-style: none;
-}
-
-.homeLicences .sectionTitleMain {
-  margin: 0 15px;
-}
-
-.homeLicences .line {
-  flex: 1;
-  height: 2px;
-  background: #000;
 }
 
 .homeLicences .licenceWrapper {
@@ -272,6 +282,37 @@
   padding: 25px 0;
   width: 100%;
   background: #f8f9fa;
+}
+
+.homeProducts .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  color: #000;
+}
+
+.homeProducts .title h2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.homeProducts .line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #aaa;
+}
+
+.homeProducts .titleMain {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0 20px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .homeProducts .text-light {

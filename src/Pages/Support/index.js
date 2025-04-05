@@ -224,10 +224,10 @@ const Support = () => {
 
   return (
     <div className="support">
-      <div className="sectionTitle mt-2 hidden">
+      <div className="title mt-2 hidden">
         <h2 className="title">
           <div className="line"></div>
-          <span className="sectionTitleMain">Support</span>
+          <span className="titleMain">Support</span>
           <div className="line"></div>
         </h2>
       </div>

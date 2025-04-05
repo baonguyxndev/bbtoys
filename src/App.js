@@ -5,7 +5,7 @@ import Home from "./Pages/Home";
 import Shop from "./Pages/Shop";
 import Licences from "./Pages/Licences";
 import Support from "./Pages/Support";
-import Contact from "./Pages/Contact";
+import Info from "./Pages/Info";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./Components/Footer";
 import ScrollHandler from "./hooks/ScrollHandler";
@@ -23,7 +23,7 @@ function App() {
         <Route path="/licences" element={<Licences />} />
         <Route path="/support" element={<Support />} />
         <Route path="/faqs" element={<FAQs />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/info" element={<Info />} />
       </Routes>
       <Footer />
     </BrowserRouter>

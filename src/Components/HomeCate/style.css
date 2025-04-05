@@ -4,7 +4,7 @@
   background-color: #fff;
 }
 
-.sectionTitle {
+.homeCate .title {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,19 +14,19 @@
   color: #000;
 }
 
-.sectionTitle h2 {
+.homeCate .title h2 {
   display: flex;
   align-items: center;
   width: 100%;
 }
 
-.line {
+.homeCate .line {
   flex-grow: 1;
   height: 1px;
   background-color: #aaa;
 }
 
-.sectionTitleMain {
+.homeCate .titleMain {
   display: flex;
   align-items: center;
   white-space: nowrap;

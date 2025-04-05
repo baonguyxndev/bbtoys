@@ -543,7 +543,7 @@ const FAQs = () => {
       <div className="sectionTitle mt-2 hidden">
         <h2 className="title">
           <div className="line"></div>
-          <span className="sectionTitleMain">Policies & Terms</span>
+          <span className="sectionTitleMain">FAQs</span>
           <div className="line"></div>
         </h2>
       </div>

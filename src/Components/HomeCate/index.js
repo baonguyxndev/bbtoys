@@ -9,10 +9,10 @@ const HomeCate = () => {
   return (
     <section className="homeCate">
       <div className="container-full">
-        <div className="sectionTitle mt-2 hidden">
+        <div className="title mt-2 hidden">
           <h2>
             <div className="line"></div>
-            <span className="sectionTitleMain">
+            <span className="titleMain">
               <BiSearchAlt /> &nbsp; FIND BY SOURCE
             </span>
             <div className="line"></div>

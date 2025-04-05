@@ -7,9 +7,35 @@
 
 /* Tiêu đề Shop */
 .shop .title {
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  color: #000;
+}
+
+.shop .title h2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.shop .line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #aaa;
+}
+
+.shop .titleMain {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .shop .container-full {

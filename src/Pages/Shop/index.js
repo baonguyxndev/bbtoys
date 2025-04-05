@@ -235,8 +235,14 @@ const Shop = () => {
 
   return (
     <div className="shop">
+      <div className="title mt-2 hidden">
+        <h2>
+          <div className="line"></div>
+          <span className="titleMain">Shop</span>
+          <div className="line"></div>
+        </h2>
+      </div>
       <div className="container-full mx-5">
-        <h1 className="title mb-4">Shop</h1>
         <div className="row g-4">
           <div className="col-md-3 pe-4">
             <div className="sidebar">

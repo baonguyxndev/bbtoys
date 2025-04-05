@@ -36,10 +36,10 @@ const Home = () => {
       {/* PRODUCTS */}
       <section className="homeProducts">
         {/* TITLE */}
-        <div className="sectionTitle mt-2 hidden">
+        <div className="title mt-2 hidden">
           <h2>
             <div className="line"></div>
-            <span className="sectionTitleMain">PRODUCTS</span>
+            <span className="titleMain">PRODUCTS</span>
             <div className="line"></div>
           </h2>
         </div>
@@ -124,10 +124,10 @@ const Home = () => {
 
       {/* LICENCES */}
       <section className="homeLicences">
-        <div className="sectionTitle mt-2 hidden">
+        <div className="title mt-2 hidden">
           <h2>
             <div className="line"></div>
-            <span className="sectionTitleMain">LICENCES</span>
+            <span className="titleMain">LICENCES</span>
             <div className="line"></div>
           </h2>
         </div>

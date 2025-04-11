@@ -5,7 +5,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 20px 0;
-  color: #000;
+  color: #fff;
 }
 
 .contact .title h2 {
@@ -43,13 +43,14 @@
   align-items: center;
   justify-content: center;
   padding: 15px 30px;
-  background: #fff;
+  background-color: #222;
   border-radius: 15px;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #333;
   font-size: 18px;
   transition: all 0.3s ease;
+  color: #fff;
 }
 
 .contact .tab:focus {
@@ -58,17 +59,18 @@
 
 .contact .tab.active {
   border: 1px solid #ba0000;
-  box-shadow: 0 4px 12px rgba(186, 0, 0, 0.12);
+  box-shadow: 0 4px 12px rgba(186, 0, 0, 0.3);
 }
 
 .contact .tab-content {
-  background: #fff; /* Giống .faqs-content.main-content */
-  border-radius: 15px; /* Giống .faqs-content.main-content */
-  padding: 2rem; /* Giống .faqs-content.main-content */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Giống .faqs-content.main-content */
-  border: 1px solid #e2e8f0; /* Giống .faqs-content.main-content */
-  min-height: 300px; /* Giống .faqs-content.main-content */
-  text-align: left; /* Căn trái nội dung cho dễ đọc */
+  background-color: #222;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid #333;
+  min-height: 300px;
+  text-align: left;
+  color: #ddd;
 }
 
 .contact .tab-content > div {
@@ -106,13 +108,14 @@
   margin-bottom: 0.8rem;
   font-size: 1rem;
   line-height: 1.6;
+  color: #ddd;
 }
 
 .contact .content-section ul li:before {
-  content: "•";
+  content: "-";
   position: absolute;
   left: 0;
-  color: #ba0000; /* Dấu đầu dòng màu đỏ giống FAQs */
+  color: #fff; /* Dấu đầu dòng màu đỏ giống FAQs */
   font-weight: bold;
 }
 
@@ -137,24 +140,24 @@
 }
 
 .contact .media-item {
-  background: #fff;
-  border: 1px solid #e2e8f0;
+  background-color: #333;
+  border: 1px solid #444;
   border-radius: 20px;
   width: 160px;
   height: 160px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
   text-decoration: none;
-  color: #333;
+  color: #fff;
 }
 
 .contact .media-item:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   border-color: #ba0000;
 }
 

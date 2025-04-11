@@ -10,8 +10,8 @@
 
 body {
   font-family: "Lato", sans-serif;
-  background-color: #f8f8f8;
-  color: rgba(0, 0, 0, 0.8);
+  background-color: #222 !important;
+  color: #fff !important;
   overflow-x: hidden;
 }
 
@@ -28,7 +28,7 @@ body {
   height: 8px !important;
 }
 ::-webkit-scrollbar-thumb {
-  background: #ccc !important;
+  background-color: #ccc !important;
 }
 ::-webkit-scrollbar-track {
   background: transparent !important;

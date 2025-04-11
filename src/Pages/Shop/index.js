@@ -242,9 +242,9 @@ const Shop = () => {
           <div className="line"></div>
         </h2>
       </div>
-      <div className="container-full mx-5">
+      <div className="container-full">
         <div className="row g-4">
-          <div className="col-md-3 pe-4">
+          <div className="col-md-2.5S">
             <div className="sidebar">
               {/* Search và Sort */}
               <div className="sidebar-section">
@@ -391,7 +391,7 @@ const Shop = () => {
             </div>
           </div>
 
-          <div className="col-md-9 ps-4">
+          <div className="col-md-9">
             {isLoading ? (
               <div className="text-center py-5">
                 <div className="spinner-border text-primary" role="status">

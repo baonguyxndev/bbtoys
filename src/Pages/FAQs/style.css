@@ -10,7 +10,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 20px 0;
-  color: #000;
+  color: #fff;
 }
 
 .faqs .title h2 {
@@ -47,20 +47,27 @@
 .faqs-category {
   padding: 15px;
   border-radius: 15px;
-  background: #fff;
+  background-color: #333;
   cursor: pointer;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #333;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+.faqs-category:hover {
+  box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
+    0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
 .faqs-category.active {
-  border: 1px solid #ba0000;
-  box-shadow: 0 4px 12px rgba(186, 0, 0, 0.12);
+  box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
+    0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
+  transform: scale(0.9);
 }
 
 .faqs-category .icon {
@@ -71,14 +78,14 @@
 
 .faqs-category h3 {
   font-size: clamp(1rem, 2vw, 1.1rem);
-  color: #333;
+  color: #fff;
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 .faqs-category p {
   font-size: clamp(0.85rem, 1.5vw, 0.9rem);
-  color: #666;
+  color: #aaa;
   margin: 0;
   line-height: 1.4;
   max-width: 90%;
@@ -91,21 +98,21 @@
   overflow-x: auto;
   gap: 15px;
   padding: 30px;
-  background: #fff;
+  background-color: #333;
   border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   width: 100%;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
   scrollbar-width: thin;
-  scrollbar-color: #ba0000 #f1f1f1;
+  scrollbar-color: #ba0000 #333;
 }
 
 .faqs-subcategories.show {
   opacity: 1;
   visibility: visible;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #333;
   min-height: 135px;
   margin-bottom: 20px;
 }
@@ -116,16 +123,23 @@
   display: flex;
   align-items: center;
   padding: 15px 30px;
-  background: #fff;
+  background-color: #444;
   border-radius: 15px;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #444;
+}
+
+.faqs-subcategory:hover {
+  box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
+    0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
+  transform: scale(1.05);
 }
 
 .faqs-subcategory.active {
-  border: 1px solid #ba0000;
-  box-shadow: 0 4px 12px rgba(186, 0, 0, 0.12);
+  box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
+    0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
+  transform: scale(0.9);
 }
 
 .subcategory-icon {
@@ -136,7 +150,7 @@
 
 .faqs-subcategory h4 {
   font-size: clamp(0.9rem, 1.8vw, 1rem);
-  color: #333;
+  color: #fff;
   margin: 0;
   font-weight: 500;
   text-align: center;
@@ -144,12 +158,12 @@
 
 /* Main Content */
 .faqs-content.main-content {
-  background: #fff;
+  background-color: #333;
   border-radius: 15px;
   padding: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e2e8f0;
-  min-height: 300px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid #333;
+  min-height: 370px;
 }
 
 .faqs-detail-item {
@@ -160,15 +174,15 @@
 
 /* Detail Section */
 .faqs .detail-section {
-  background: rgba(220, 53, 69, 0.03);
+  background: #444;
   border-radius: 8px;
   padding: 15px;
   margin-bottom: 15px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #333;
 }
 
 .faqs .detail-section h4 {
-  color: #333;
+  color: #fff;
   font-size: 1.1rem;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -181,7 +195,7 @@
 }
 
 .faqs .detail-section ul li {
-  color: #333;
+  color: #ddd;
   font-size: 0.95rem;
   margin-bottom: 0.8rem;
   padding-left: 1.5rem;
@@ -190,8 +204,8 @@
 }
 
 .faqs .detail-section ul li:before {
-  content: "•";
-  color: #ba0000;
+  content: "-";
+  color: #fff;
   position: absolute;
   left: 0;
   font-weight: bold;
@@ -214,14 +228,14 @@
 
 .faqs .sub-detail-header h5 {
   font-size: 1rem;
-  color: #333;
+  color: #fff;
   font-weight: 600;
   margin: 0;
 }
 
 /* Button (nếu có item.buttonText) */
 .faqs .detail-button {
-  background: #ba0000;
+  background-color: #ba0000;
   color: white;
   border: none;
   padding: 0.8rem 1.5rem;

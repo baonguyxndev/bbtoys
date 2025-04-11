@@ -4,7 +4,6 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { BiCopyright } from "react-icons/bi";
 import { TbPigMoney } from "react-icons/tb";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/image/logo-bb-toys-shop-big.png";
 import PayPal from "../../assets/image/footer_payment_paypal.png";
 import Wise from "../../assets/image/footer_payment_wise.png";
 
@@ -39,7 +38,7 @@ const Footer = () => {
       </div>
       <footer>
         <div className="footerInner">
-          <div className="footerBlock row justify-content-between mx-auto">
+          <div className="footerBlock row justify-content-between mx-auto align-items: center;">
             <div className="col ">
               <h6>Our Product</h6>
               <ul>
@@ -84,7 +83,7 @@ const Footer = () => {
 
             <div className="col ">
               <div className="imgLogoFooter">
-                <img src={Logo} alt="logo" />
+                <img src="/logo-bb-toys-shop.png" alt="logo" />
               </div>
             </div>
 

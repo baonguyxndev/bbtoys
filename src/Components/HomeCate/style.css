@@ -1,7 +1,7 @@
 .homeCate {
   padding: 35px 0px;
   text-align: center;
-  background-color: #fff;
+  background-color: #222;
 }
 
 .homeCate .title {
@@ -11,7 +11,6 @@
   width: 100%;
   margin: 0 auto;
   padding: 20px 0;
-  color: #000;
 }
 
 .homeCate .title h2 {
@@ -35,7 +34,7 @@
   font-weight: bold;
 }
 
-.tabbed-content {
+.tabbedContent {
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -45,37 +44,44 @@
   font-size: 32;
 }
 
-.nav-pills {
+.navPills {
   justify-content: center;
   margin-bottom: 20px;
 }
 
-.nav-pills .nav-item {
+.navPills .navItem {
   margin: 0 10px;
 }
 
-.nav-pills .nav-link {
-  border-radius: 50px !important;
-  color: black;
-  padding: 10px 20px;
-  font-weight: bold;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  transform: scale(1);
+.navPills .navBtnHomeCate {
+  padding: 10px 20px !important;
+  background-color: #444 !important;
+  border: none !important;
+  border-radius: 20px;
+  color: #fff !important;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: all 0.3s ease-in-out;
 }
 
-.nav-pills .nav-link:hover {
-  background-color: #f0f0f0;
-  color: #333;
-  transform: scale(1.05);
+.navPills .navBtnHomeCate:focus {
+  outline: none;
 }
 
-.nav-pills .nav-link.active {
-  background-color: #2d2d2d !important;
-  color: white;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+.navPills .navBtnHomeCate:hover {
+  box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
+    0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
+  background-color: #666 !important;
   transform: scale(1.1);
 }
-.homeCate .category-grid {
+
+.navPills .navBtnHomeCate.active {
+  box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
+    0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
+  transform: scale(0.9);
+}
+
+.homeCate .categoryGrid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 20px;
@@ -83,24 +89,25 @@
   align-items: center;
 }
 
-.homeCate .category-item img {
+.homeCate .categoryItem img {
   width: 200px;
 }
 
 .viewAll a {
   position: relative;
   cursor: pointer;
-  color: #000;
+  color: #fff;
   transition: 0.3s all ease;
   font-size: 20px;
   font-weight: 500;
+  transition: all 0.3s ease-in-out;
 }
 
 .viewAll a:hover {
-  color: #000;
-  transition: 0.3s all ease;
+  color: #fff;
   text-decoration: none;
-  font-size: 23px;
+  text-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
+    0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
 }
 
 .viewAll a::after {
@@ -111,9 +118,9 @@
   height: 2px;
   bottom: -5px;
   left: 0;
-  background-color: #000;
+  background-color: #fff;
   transform-origin: bottom right;
-  transition: transform 0.5s ease-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .viewAll a:hover::after {

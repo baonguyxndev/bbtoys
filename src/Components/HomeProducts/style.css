@@ -1,0 +1,233 @@
+/* HOME PRODUCTS */
+.homeProducts {
+  padding: 25px 0;
+  width: 100%;
+}
+
+.homeProducts .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.homeProducts .title h2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.homeProducts .line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #aaa;
+}
+
+.homeProducts .titleMain {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.homeProducts .subTitle {
+  margin: 30px 0px !important;
+}
+
+.homeProducts .text-light {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.homeProducts .viewAllBtn {
+  padding: 8px 20px !important;
+  background-color: #444 !important;
+  border: none !important;
+  border-radius: 20px;
+  color: #fff !important;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: all 0.3s ease-in-out;
+}
+
+.homeProducts .viewAllBtn:focus {
+  outline: none;
+}
+
+.homeProducts .viewAllBtn:hover {
+  box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
+    0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
+  background-color: #666 !important;
+  transform: scale(1.1);
+}
+
+/* General Swiper Styles (Keep these if used elsewhere, adjust if needed) */
+.homeProducts .swiper-pagination {
+  position: unset !important; /* Or adjust based on desired pagination position */
+  margin-top: 15px; /* Add some space above pagination */
+}
+
+/* --- Best Seller Section Specific Styles --- */
+
+.bestSellersWrapper {
+  display: flex;
+  gap: 30px; /* Increase gap for more separation */
+  margin-top: 20px;
+  align-items: center; /* Align items vertically centered */
+  position: relative; /* Needed for absolute pagination positioning */
+  padding-bottom: 40px; /* Add padding for pagination below */
+}
+
+.promoImageBox {
+  flex: 0 0 42%; /* Adjusted banner width */
+  position: relative; /* Needed for potential absolute positioning inside */
+  border-radius: 15px; /* Match image radius */
+  overflow: hidden; /* Ensure image stays within bounds */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  color: #fff; /* Default text color for overlay */
+}
+
+.promoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers the box */
+  display: block; /* Remove extra space below image */
+  filter: brightness(0.7); /* Slightly darken image for text visibility */
+}
+
+/* Styles for the text overlay */
+.promoTextOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px; /* Adjust padding as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  /* align-items: flex-start; Align text to the left */
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0) 100%
+  ); /* Gradient overlay */
+}
+
+.promoTitle {
+  font-size: 2.5rem; /* Adjust size */
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.promoDesc {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  max-width: 80%; /* Limit description width */
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.promoLink {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-color, #e0a800); /* Use accent color */
+  color: #111; /* Dark text on light button */
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  align-self: flex-start; /* Align button to the left */
+}
+
+.promoLink:hover {
+  background-color: #ffcc33; /* Lighter shade on hover */
+  color: #000;
+}
+
+.productSliderBox {
+  flex: 1; /* Take remaining space */
+  min-width: 0; /* Allow shrinking below basis */
+  position: relative; /* Needed for positioning swiper buttons */
+}
+
+/* Swiper custom: căn nút prev/next đều slide */
+.bestSellerSwiper {
+  position: static; /* Change from relative to allow buttons to be relative to productSliderBox */
+  /* padding: 0 50px; REMOVE or reduce significantly - buttons will be overlayed */
+  /* padding-bottom: 40px; Add padding for pagination */ /* REMOVE - Moved to wrapper */
+  /* height: 100%; Make swiper take full height of container */ /* REMOVE */
+  /* --- Attempt to fix clipped box-shadow --- */
+  /* overflow: visible !important; */ /* Apply to the main swiper container if needed */
+}
+
+/* Also target the wrapper inside */
+.bestSellerSwiper .swiper-wrapper {
+  overflow: visible !important;
+}
+
+/* And individual slides */
+.bestSellerSwiper .swiper-slide {
+  overflow: visible !important;
+  padding: 15px; /* Add padding around the slide for shadow */
+  box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+/* --- Pagination specific adjustments --- */
+/* Target the specific pagination element generated by Swiper within our context */
+.bestSellerSwiper .swiper-pagination-horizontal.swiper-pagination-bullets {
+  bottom: -60px;
+  position: absolute !important;
+  left: 200px !important;
+  width: auto !important;
+  transform: translateY(-30px) !important;
+  z-index: 5;
+  display: block !important;
+}
+
+/* Adjust bullet styles if needed */
+.bestSellerSwiper .swiper-pagination-bullet {
+  background-color: #aaa; /* Customize bullet color */
+  opacity: 0.5; /* Make inactive dots dimmer */
+  width: 40px; /* Make bullets wider */
+  height: 8px; /* Keep height */
+  border-radius: 4px; /* Make it capsule shaped */
+  margin: 0 4px !important; /* Adjust spacing */
+  transition: opacity 0.3s ease, background-color 0.3s ease, width 0.3s ease; /* Add transition */
+}
+
+.bestSellerSwiper .swiper-pagination-bullet-active {
+  background-color: var(
+    --primary-color,
+    #ba0000
+  ); /* Yellow color like image 1 */
+  opacity: 1; /* Full opacity for active */
+  width: 8px; /* Active bullet is a circle */
+  border-radius: 50%; /* Active bullet is a circle */
+}
+
+/* General Product Grid Styles (Keep or adjust as needed) */
+.homeProducts .productRow2,
+.homeProducts .productRow3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Adjust gap */
+}
+
+.homeProducts .productRow2 > div,
+.homeProducts .productRow3 > div {
+  width: calc(25% - 7.5px); /* Adjust based on gap for 4 columns */
+  box-sizing: border-box;
+}
+
+.homeProducts .productRow2 .productItem,
+.homeProducts .productRow3 .productItem {
+  width: 100%; /* Ensure item fills its container */
+}

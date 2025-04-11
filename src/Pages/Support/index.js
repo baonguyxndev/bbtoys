@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./style.css";
 import { TbPhotoCancel } from "react-icons/tb";
+import { IoIosArrowDown } from "react-icons/io";
 
 const Support = () => {
   const [formData, setFormData] = useState({
-    topic: "Account & Data safety",
+    topic: "",
     subject: "",
     saleOrder: "",
     description: "",
@@ -68,35 +69,35 @@ const Support = () => {
         id: "TK001",
         date: "2024-03-20",
         subject: "Vấn đề về đơn hàng ORD001",
-        status: "open",
+        status: "processing",
         topic: "Payment & Refund",
       },
       {
         id: "TK002",
         date: "2024-03-15",
-        subject: "Cập nhật thông tin cá nhân",
-        status: "closed",
+        subject: "Theo dõi đơn hàng ORD002",
+        status: "completed",
         topic: "Account & Data safety",
       },
       {
         id: "TK003",
         date: "2024-03-10",
         subject: "Theo dõi đơn hàng ORD003",
-        status: "pending",
+        status: "refused",
         topic: "Shipping",
       },
       {
         id: "TK004",
         date: "2024-03-20",
         subject: "Vấn đề về đơn hàng ORD004",
-        status: "open",
+        status: "wating reply",
         topic: "Payment & Refund",
       },
       {
         id: "TK005",
         date: "2024-03-20",
         subject: "Vấn đề về đơn hàng ORD005",
-        status: "open",
+        status: "sent",
         topic: "Payment & Refund",
       },
     ];
@@ -233,6 +234,13 @@ const Support = () => {
       </div>
       <div className="container">
         <div className="row">
+          <div className="desc hidden">
+            We are delighted to assist you with your concerns. Please complete
+            the form below and submit it to us. Should you have any questions or
+            require support, we will address them as promptly as possible,
+            within 24 hours of receiving your submission. Additionally, you may
+            contact us through our various social media channels.
+          </div>
           <div className="col-md-8 hidden">
             <div className="ticket-container bg-white rounded-3 shadow-sm p-4">
               <h2 className="hidden">Submit a Ticket</h2>
@@ -240,69 +248,78 @@ const Support = () => {
               <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                   <label className="form-label hidden">Topic</label>
-                  <select
-                    className="form-select hidden hidden"
-                    name="topic"
-                    value={formData.topic}
-                    onChange={handleChange}
-                    required
-                  >
-                    <option value="">Select a subject</option>
-                    {topics.map((topic) => (
-                      <option key={topic.value} value={topic.value}>
-                        {topic.label}
-                      </option>
-                    ))}
-                  </select>
+                  <div className="select-wrapper hidden">
+                    <select
+                      className="form-select"
+                      name="topic"
+                      value={formData.topic}
+                      onChange={handleChange}
+                      required
+                    >
+                      <option value="">Select a subject</option>
+                      {topics.map((topic) => (
+                        <option key={topic.value} value={topic.value}>
+                          {topic.label}
+                        </option>
+                      ))}
+                    </select>
+                    <IoIosArrowDown className="select-arrow" />
+                  </div>
                 </div>
 
                 <div className="mb-4">
                   <label className="form-label hidden">Subject</label>
-                  <select
-                    className="form-select hidden"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                  >
-                    <option value="">Please choose a subject first</option>
-                    {subjects[formData.topic]?.map((subject) => (
-                      <option key={subject.value} value={subject.value}>
-                        {subject.label}
-                      </option>
-                    ))}
-                  </select>
+                  <div className="select-wrapper hidden">
+                    <select
+                      className="form-select hidden"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      required
+                    >
+                      <option value="">Please choose a subject first</option>
+                      {subjects[formData.topic]?.map((subject) => (
+                        <option key={subject.value} value={subject.value}>
+                          {subject.label}
+                        </option>
+                      ))}
+                    </select>
+                    <IoIosArrowDown className="select-arrow" />
+                  </div>
                 </div>
 
                 <div className="mb-4">
                   <label className="form-label optional hidden">
                     Sale order
                   </label>
-                  <select
-                    className="form-select hidden"
-                    name="saleOrder"
-                    value={formData.saleOrder}
-                    onChange={handleChange}
-                  >
-                    <option value="">Select an order</option>
-                    {orders.map((order) => (
-                      <option key={order.id} value={order.id}>
-                        {`${order.id} - ${order.date} - ${
-                          order.total
-                        } - ${order.items.join(", ")}`}
-                      </option>
-                    ))}
-                  </select>
-                  {formData.saleOrder && (
-                    <div className="mt-2 text-muted hidden">
-                      Selected order details:
-                      {orders
-                        .find((o) => o.id === formData.saleOrder)
-                        ?.items.map((item, index) => (
-                          <div key={index}>• {item}</div>
-                        ))}
-                    </div>
-                  )}
+                  <div className="select-wrapper hidden">
+                    <select
+                      className="form-select hidden"
+                      name="saleOrder"
+                      value={formData.saleOrder}
+                      onChange={handleChange}
+                    >
+                      <option value="">Select an order</option>
+                      {orders.map((order) => (
+                        <option key={order.id} value={order.id}>
+                          {`${order.id} - ${order.date} - ${
+                            order.total
+                          } - ${order.items.join(", ")}`}
+                        </option>
+                      ))}
+                    </select>
+                    {formData.saleOrder && (
+                      <div className="mt-2 text-muted hidden">
+                        Selected order details:
+                        {orders
+                          .find((o) => o.id === formData.saleOrder)
+                          ?.items.map((item, index) => (
+                            <div key={index}>• {item}</div>
+                          ))}
+                      </div>
+                    )}
+                    <IoIosArrowDown className="select-arrow" />
+                  </div>
                 </div>
 
                 <div className="mb-4">
@@ -390,7 +407,7 @@ const Support = () => {
           </div>
           <div className="col-md-4 hidden">
             <div className="ticket-list-container bg-white rounded-3 shadow-sm p-4">
-              <h3 className="border-bottom pb-2 mb-3 position-relative hidden">
+              <h3 className="pb-2 mb-3 position-relative hidden">
                 Support Tickets Are Created
               </h3>
               <p className="text-muted mb-4 hidden">
@@ -425,11 +442,13 @@ const Support = () => {
                         <small className="text-secondary">{ticket.topic}</small>
                         <span
                           className={`badge ${
-                            ticket.status === "open"
-                              ? "bg-danger"
-                              : ticket.status === "closed"
-                              ? "bg-secondary"
-                              : "bg-warning"
+                            ticket.status === "processing"
+                              ? "bg-processing"
+                              : ticket.status === "completed"
+                              ? "bg-completed"
+                              : ticket.status === "refused"
+                              ? "bg-refused"
+                              : "bg-wait"
                           }`}
                         >
                           {ticket.status.charAt(0).toUpperCase() +

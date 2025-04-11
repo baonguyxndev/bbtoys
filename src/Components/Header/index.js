@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
-import Logo from "../../assets/image/logo-bb-toys-shop-big.png";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 import { FiUser } from "react-icons/fi";
@@ -273,6 +272,7 @@ const Header = () => {
     <div className={`headerWrapper ${isScrolled ? "scrolled" : ""}`}>
       <div className="top-strip bg-black py-2">
         <div className="container">
+          {/* Banner Top Header */}
           <Swiper
             modules={[Autoplay]}
             slidesPerView={1}
@@ -307,13 +307,13 @@ const Header = () => {
       </div>
 
       {/* Main Header */}
-      <header className="header py-3">
+      <header className="header">
         <div className="container-fluid">
           <div className="row align-items-center">
             {/* Left */}
             <div className="col-sm-2 logoWrapper d-flex align-items-center">
               <Link to="/">
-                <img src={Logo} alt="logo" />
+                <img src="/logo-bb-toys-shop.png" alt="logo" />
               </Link>
               {/* Categories Sidebar */}
               <div className="cateWrapper ml-3">
@@ -372,13 +372,15 @@ const Header = () => {
             {/* Right */}
             <div className="col-sm-2 part3 d-flex justify-content-end">
               <Button className="circle ml-3">
+                <IoSearch />
+              </Button>
+              <Button className="circle ml-3">
                 <PiGlobe />
               </Button>
               <Button className="circle ml-3">
                 <FiUser />
               </Button>
               <div className="cartTab d-flex align-items-center">
-                <span className="price mx-2">$0.00</span>
                 <div className="position-relative">
                   <Button className="circle">
                     <IoBagOutline />
@@ -393,13 +395,17 @@ const Header = () => {
 
       {/* Small Header */}
       {showSmallHeader && (
-        <div className="small-header py-2 shadow-sm">
+        <div className="small-header shadow-sm">
           <div className="container-fluid">
             <div className="row align-items-center">
               {/* Left */}
               <div className="col-sm-2 logoWrapper d-flex align-items-center">
                 <Link to="/">
-                  <img src={Logo} alt="logo" className="small-logo" />
+                  <img
+                    src="/logo-bb-toys-shop.png"
+                    alt="logo"
+                    className="small-logo"
+                  />
                 </Link>
                 <div className="cateWrapper ml-3">
                   <Button className="allCateTab" onClick={handleToggleMenu}>
@@ -411,7 +417,7 @@ const Header = () => {
               </div>
 
               {/* Center */}
-              <div className="col-sm-9 part2">
+              <div className="col-sm-8 part2">
                 <nav className="navPart2 d-flex justify-content-center">
                   <ul className="list list-inline">
                     <li className="list-inline-item">
@@ -454,11 +460,25 @@ const Header = () => {
                 </nav>
               </div>
 
-              {/* Right - Chỉ giữ icon Search */}
-              <div className="col-sm-1 d-flex justify-content-end">
-                <Button className="circle">
+              {/* Right */}
+              <div className="col-sm-2 part3 d-flex justify-content-end">
+                <Button className="circle ml-3">
                   <IoSearch />
                 </Button>
+                <Button className="circle ml-3">
+                  <PiGlobe />
+                </Button>
+                <Button className="circle ml-3">
+                  <FiUser />
+                </Button>
+                <div className="cartTab d-flex align-items-center">
+                  <div className="position-relative">
+                    <Button className="circle">
+                      <IoBagOutline />
+                    </Button>
+                    <span className="count">0</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

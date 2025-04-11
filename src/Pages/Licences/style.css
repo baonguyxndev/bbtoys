@@ -1,7 +1,3 @@
-.licences {
-  background: #f8f9fa;
-}
-
 .licences .title {
   display: flex;
   align-items: center;
@@ -9,7 +5,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 20px 0;
-  color: #000;
+  color: #fff;
 }
 
 .licences .title h2 {
@@ -31,6 +27,7 @@
   padding: 0 20px;
   font-size: 30px;
   font-weight: bold;
+  color: #fff;
 }
 
 .licences .licenceWrapper {
@@ -59,12 +56,13 @@
 
 .licences .licenceCard {
   position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease;
   width: 570px; /* Chiều rộng cố định */
   height: 300px; /* Chiều cao cố định */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .licences .licenceCard-link {
@@ -90,9 +88,9 @@
   bottom: 0;
   background: linear-gradient(
     150deg,
-    rgba(255, 255, 255, 0) 50%,
-    /* Góc trên-trái */ rgba(255, 255, 255, 0.7) 80%,
-    /* Giữa */ rgba(255, 255, 255, 0.9) 100% /* Góc dưới-phải */
+    rgba(70, 70, 70, 0) 50%,
+    /* Góc trên-trái */ rgba(70, 70, 70, 0.7) 80%,
+    /* Giữa */ rgba(70, 70, 70, 0.9) 100% /* Góc dưới-phải */
   );
   z-index: 1;
 }
@@ -123,7 +121,7 @@
 
 .licences .licenceCard-link .licencesIcons svg {
   font-size: 25px;
-  color: #000;
+  color: #fff;
   transition: all 0.2s ease;
 }
 

@@ -1,0 +1,278 @@
+.homeLicences .container {
+  margin: 0 auto !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+
+.homeLicences {
+  padding: 40px 0;
+}
+
+.homeLicences .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.homeLicences .title h2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.homeLicences .line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #aaa;
+}
+
+.homeLicences .titleMain {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.homeLicences ul li {
+  list-style: none;
+}
+
+.homeLicences .licenceWrapper {
+  width: 100%;
+}
+
+.homeLicences .licenceRow {
+  margin-bottom: 30px; /* Khoảng cách giữa các hàng */
+}
+
+/* Hàng 1: 4 card nhỏ */
+.homeLicences .licenceWrapper .licenceRow ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.homeLicences .licenceWrapper .licenceRow ul li {
+  padding: 0;
+}
+
+/* Hàng 2: 2 card nhỏ + 1 card lớn */
+.homeLicences .licenceRow--mixed {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* 2 card nhỏ trong hàng 2 */
+.homeLicences .licenceRow--mixed ul:first-child {
+  flex: 1;
+  max-width: 50%; /* Chiếm 50% chiều rộng */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.homeLicences .licenceRow--mixed ul:first-child li {
+  flex: 0 0 calc(50% - 15px); /* 2 card nhỏ trên một hàng */
+  max-width: calc(50% - 15px);
+}
+
+/* Card lớn trong hàng 2 */
+.homeLicences .licenceRow--mixed ul:last-child {
+  flex: 1;
+  max-width: 50%; /* Chiếm 50% chiều rộng */
+  padding: 0;
+  margin: 0;
+}
+
+/* Thẻ chung */
+.homeLicences .licenceCard,
+.homeLicences .allLicenceCard {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px; /* Chiều rộng tối đa của thẻ lớn */
+  height: 300px; /* Chiều cao cố định */
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow; /* Tối ưu hiệu suất cho hiệu ứng */
+}
+
+/* Bóng động cho thẻ */
+.homeLicences .licenceCard::after,
+.homeLicences .allLicenceCard::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  border-radius: 50%;
+  opacity: 1;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hiệu ứng hover cho thẻ */
+.homeLicences .licenceCard:hover,
+.homeLicences .allLicenceCard:hover {
+  transform: perspective(900px) translateY(-5%) rotateX(20deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(186, 0, 0, 0.3);
+}
+
+.homeLicences .licenceCard:hover::after {
+  opacity: 0;
+}
+
+.homeLicences .licenceCard-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.homeLicences .imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Ẩn phần màu trắng ban đầu */
+.homeLicences .imageWrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 0.7) 80%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+  z-index: 1;
+  opacity: 0; /* Ban đầu ẩn hoàn toàn */
+  transition: opacity 0.3s ease-in-out; /* Hiệu ứng mượt mà */
+}
+
+/* Khi hover, phần trắng xuất hiện cùng logo */
+.homeLicences .licenceCard:hover .imageWrapper::before {
+  opacity: 1; /* Hiện lên khi hover */
+}
+
+.homeLicences .licenceCard-link img,
+.homeLicences .allLicenceCard .img-fluid {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  z-index: 0;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.homeLicences .licenceCard-link:focus {
+  outline: 2px solid #ff4655;
+  outline-offset: 2px;
+}
+
+/* Logo Overlay */
+.homeLicences .logoOverlay {
+  position: absolute;
+  z-index: 2;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+  opacity: 0;
+}
+
+.homeLicences .licenceCard:hover .logoOverlay {
+  transform: translateX(-50%) translateZ(30px);
+  opacity: 1;
+}
+
+.homeLicences .logoOverlay img {
+  max-width: 100%; /* Đảm bảo logo không vượt quá khu vực */
+  max-height: 100%; /* Đảm bảo logo không vượt quá khu vực */
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Đảm bảo logo không bị méo */
+  display: block; /* Xóa khoảng trắng bên dưới ảnh */
+}
+
+.homeLicences .allLicenceCard {
+  width: 100%;
+  max-width: 570px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  height: 300px;
+  position: relative; /* Đảm bảo các phần tử con có thể dùng absolute */
+  overflow: hidden; /* Ngăn lớp phủ bị tràn ra ngoài */
+}
+
+.homeLicences .allLicenceCard a {
+  color: #fff;
+}
+
+.homeLicences .allLicenceCard .imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.homeLicences .allLicenceItem .imageWrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Lớp phủ đen mờ */
+}
+
+.homeLicences .allLicenceCard .img-fluid {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.homeLicences .allLicenceCard .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  z-index: 3; /* Đặt chữ trên lớp phủ */
+}

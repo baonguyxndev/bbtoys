@@ -1,61 +1,71 @@
 import React from "react";
 import "./style.css";
 import { Button } from "@mui/material";
-import {
-  MdFavorite,
-  MdShoppingCart,
-  MdRemoveShoppingCart,
-} from "react-icons/md";
+import { MdFavoriteBorder } from "react-icons/md";
 import { LuScaling } from "react-icons/lu";
 
 const ProductItem = ({ product }) => {
   const { img: images, name, state, brand, details } = product;
-  // Lấy price và oldPrice từ details[0]
   const { price, oldPrice } = details[0] || {};
   const isSoldOut = state === "Sold-Out";
-  const discount = oldPrice
-    ? Math.round(((oldPrice - price) / oldPrice) * 100)
-    : 0;
 
   return (
-    <div className="hidden">
-      <div className={`item productItem ${isSoldOut ? "Sold-Out" : ""}`}>
-        <div className="imgWrapper position-relative">
-          <img src={images[0]} alt={name} className="w-100 main-img" />
-          <img src={images[1]} alt={name} className="w-100 hover-img" />
+    <div className={`productCard ${isSoldOut ? "sold-out" : ""}`}>
+      <div className="imageWrapper">
+        <img src={images[0]} alt={name} className="productImageMain" />
+        <img src={images[1]} alt={name} className="productImageHover" />
+        <div className="btnFullScreen">
+          <Button>
+            <LuScaling />
+          </Button>
+        </div>
+      </div>
 
-          <div className="btnFullScreen">
-            <Button>
-              <LuScaling />
-            </Button>
+      <div className="contentWrapper">
+        <h4 className="productTitle">
+          <span
+            className={`stateTag ${state
+              ?.toLowerCase()
+              .replace("-", "")
+              .replace(" ", "")}`}
+          >
+            {state === "Available"
+              ? "【AVAILABLE】"
+              : state === "Order"
+              ? "【ORDER】"
+              : state === "Pre-Order"
+              ? "【PRE-ORDER】"
+              : "【SOLD-OUT】"}
+          </span>{" "}
+          {brand}
+        </h4>
+
+        <h3 className="productName">{name}</h3>
+
+        <div className="priceWrapper">
+          <div className="leftPart">
+            <span className="currentPrice">${price?.toFixed(2)}</span>
+            {oldPrice && (
+              <span className="oldPrice">${oldPrice.toFixed(2)}</span>
+            )}
           </div>
+          {oldPrice && (
+            <span className="discountTag">
+              -{Math.round(((oldPrice - price) / oldPrice) * 100)}%
+            </span>
+          )}
         </div>
 
-        <div className="productInfo">
-          <div className="row justify-content-center align-conten-center">
-            <Button className="favBtn">
-              <MdFavorite />
-            </Button>
-            <span className={`state ${state}`}>{state}</span>
-            <Button className="cartBtn">
-              {isSoldOut ? <MdRemoveShoppingCart /> : <MdShoppingCart />}
-            </Button>
-          </div>
-
-          {oldPrice && (
-            <div className="saleTagWrapper">
-              <span className="saleTag">-{discount}%</span>
-            </div>
-          )}
-
-          <h4>{brand}</h4>
-          <h3>{name}</h3>
-          <p className="price">
-            {oldPrice && (
-              <span className="oldPrice">{oldPrice.toLocaleString()}đ</span>
-            )}
-            {price.toLocaleString()}đ
-          </p>
+        <div className="bottomAction">
+          <Button
+            className={`actionButton ${isSoldOut ? "disabled" : ""}`}
+            disabled={isSoldOut}
+          >
+            {isSoldOut ? "Out of stock" : "Choose Options"}
+          </Button>
+          <Button className="iconBtn">
+            <MdFavoriteBorder />
+          </Button>
         </div>
       </div>
     </div>

@@ -20,11 +20,11 @@ const HomeCate = () => {
         </div>
 
         <div className="hidden">
-          <ul className="nav nav-pills mb-3 justify-content-center">
+          <ul className="nav navPills mb-3 justify-content-center">
             {categories.map((category) => (
-              <li key={category.categoryKey} className="nav-item">
+              <li key={category.categoryKey} className="navItem">
                 <button
-                  className={`nav-link ${
+                  className={`navBtnHomeCate ${
                     activeTab === category.categoryKey ? "active" : ""
                   }`}
                   onClick={() => setActiveTab(category.categoryKey)}
@@ -36,14 +36,14 @@ const HomeCate = () => {
           </ul>
         </div>
 
-        <div className="category-grid hidden">
+        <div className="categoryGrid hidden">
           {categories
             .find((cat) => cat.categoryKey === activeTab)
             ?.items.map((category, index) => (
               <a
                 key={index}
                 href={`/category/${activeTab}/${category.itemKey}`}
-                className="category-item text-center"
+                className="categoryItem text-center"
               >
                 <img src={category.itemImg} alt={category.itemName} />
               </a>

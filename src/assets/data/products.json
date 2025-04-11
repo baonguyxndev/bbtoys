@@ -18,42 +18,42 @@
                 "scale": "1/4",
                 "model": "Kaido (Fire Dragon) VS Luffy (Bajrang Gun)",
                 "version": "Regular",
-                "price": 27000000,
+                "price": 1050,
                 "oldPrice": null
               },
               {
                 "scale": "1/4",
                 "model": "Kaido (Fire Dragon) VS Luffy (Bajrang Gun)",
                 "version": "EX",
-                "price": 30000000,
+                "price": 1166,
                 "oldPrice": null
               },
               {
                 "scale": "1/4",
                 "model": "Kaido (Blue Dragon) VS Luffy (Red Roc)",
                 "version": "Regular",
-                "price": 28000000,
+                "price": 1088,
                 "oldPrice": null
               },
               {
                 "scale": "1/4",
                 "model": "Kaido (Blue Dragon) VS Luffy (Red Roc)",
                 "version": "EX",
-                "price": 31000000,
+                "price": 1204,
                 "oldPrice": null
               },
               {
                 "scale": "1/4",
                 "model": "Kaido (Fire Dragon) VS Luffy (Red Roc)",
                 "version": "Regular",
-                "price": 27500000,
+                "price": 1068,
                 "oldPrice": null
               },
               {
                 "scale": "1/4",
                 "model": "Kaido (Fire Dragon) VS Luffy (Red Roc)",
                 "version": "EX",
-                "price": 30500000,
+                "price": 1185,
                 "oldPrice": null
               }
             ],
@@ -76,8 +76,8 @@
                 "scale": "1/6",
                 "model": null,
                 "version": null,
-                "price": 55000000,
-                "oldPrice": 60000000
+                "price": 2137,
+                "oldPrice": 2331
               }
             ],
             "img": [
@@ -99,7 +99,7 @@
                 "scale": "1/6",
                 "model": null,
                 "version": null,
-                "price": 20000000,
+                "price": 777,
                 "oldPrice": null
               }
             ],
@@ -122,8 +122,8 @@
                 "scale": "1/6",
                 "model": null,
                 "version": null,
-                "price": 23400000,
-                "oldPrice": 29400000
+                "price": 910,
+                "oldPrice": 1142
               }
             ],
             "img": [
@@ -145,21 +145,21 @@
                 "scale": "1/6",
                 "model": null,
                 "version": "Low (no special effects)",
-                "price": 6000000,
+                "price": 233,
                 "oldPrice": null
               },
               {
                 "scale": "1/6",
                 "model": null,
                 "version": "Medium (body effects)",
-                "price": 6500000,
+                "price": 252,
                 "oldPrice": null
               },
               {
                 "scale": "1/6",
                 "model": null,
                 "version": "High (all special effects)",
-                "price": 7000000,
+                "price": 272,
                 "oldPrice": null
               }
             ],
@@ -182,36 +182,36 @@
                 "scale": "1/6",
                 "model": null,
                 "version": "Regular (black)",
-                "price": 7800000,
-                "oldPrice": 9000000
+                "price": 303,
+                "oldPrice": 350
               },
               {
                 "scale": "1/6",
                 "model": null,
                 "version": "Regular (Green)",
-                "price": 7900000,
-                "oldPrice": 9100000
+                "price": 310,
+                "oldPrice": 353
               },
               {
                 "scale": "1/6",
                 "model": null,
                 "version": "EX (black Yama armed color)",
-                "price": 8500000,
-                "oldPrice": 9700000
+                "price": 330,
+                "oldPrice": 377
               },
               {
                 "scale": "1/6",
                 "model": null,
                 "version": "EX (black ordinary armed color)",
-                "price": 8300000,
-                "oldPrice": 9500000
+                "price": 322,
+                "oldPrice": 370
               },
               {
                 "scale": "1/6",
                 "model": null,
                 "version": "EX (green ordinary armed color)",
-                "price": 8400000,
-                "oldPrice": 9600000
+                "price": 326,
+                "oldPrice": 373
               }
             ],
             "img": [
@@ -233,15 +233,15 @@
                 "scale": "1/7",
                 "model": null,
                 "version": "Standard",
-                "price": 9500000,
-                "oldPrice": 11000000
+                "price": 370,
+                "oldPrice": 427
               },
               {
                 "scale": "1/7",
                 "model": null,
                 "version": "EX",
-                "price": 10000000,
-                "oldPrice": 11500000
+                "price": 388,
+                "oldPrice": 447
               }
             ],
             "img": [
@@ -263,8 +263,8 @@
                 "scale": "1/6",
                 "model": null,
                 "version": null,
-                "price": 65000000,
-                "oldPrice": 120000000
+                "price": 2525,
+                "oldPrice": 4662
               }
             ],
             "img": [
@@ -286,7 +286,7 @@
                 "scale": "1/6",
                 "model": null,
                 "version": null,
-                "price": 25000000,
+                "price": 971,
                 "oldPrice": null
               }
             ],
@@ -309,7 +309,7 @@
                 "scale": "1/6",
                 "model": null,
                 "version": null,
-                "price": 22000000,
+                "price": 855,
                 "oldPrice": null
               }
             ],
@@ -332,7 +332,7 @@
                 "scale": "1/6",
                 "model": null,
                 "version": null,
-                "price": 45000000,
+                "price": 1748,
                 "oldPrice": null
               }
             ],
@@ -360,56 +360,56 @@
                 "scale": "1/6",
                 "model": null,
                 "version": "Regular",
-                "price": 20000000,
+                "price": 777,
                 "oldPrice": null
               },
               {
                 "scale": "1/6",
                 "model": null,
                 "version": "Regular + DLC",
-                "price": 22000000,
+                "price": 855,
                 "oldPrice": null
               },
               {
                 "scale": "1/6",
                 "model": null,
                 "version": "Deluxe",
-                "price": 25000000,
+                "price": 971,
                 "oldPrice": null
               },
               {
                 "scale": "1/6",
                 "model": null,
                 "version": "Deluxe + DLCDLC",
-                "price": 28000000,
+                "price": 1088,
                 "oldPrice": null
               },
               {
                 "scale": "1/4",
                 "model": null,
                 "version": "Regular",
-                "price": 30000000,
+                "price": 1166,
                 "oldPrice": null
               },
               {
                 "scale": "1/4",
                 "model": null,
                 "version": "Regular + DLC",
-                "price": 32000000,
+                "price": 1243,
                 "oldPrice": null
               },
               {
                 "scale": "1/4",
                 "model": null,
                 "version": "Deluxe",
-                "price": 35000000,
+                "price": 1360,
                 "oldPrice": null
               },
               {
                 "scale": "1/4",
                 "model": null,
                 "version": "Deluxe + DLCDLC",
-                "price": 38000000,
+                "price": 1476,
                 "oldPrice": null
               }
             ],
@@ -432,7 +432,7 @@
                 "scale": "1/1",
                 "model": null,
                 "version": null,
-                "price": 58000000,
+                "price": 2253,
                 "oldPrice": null
               }
             ],
@@ -455,7 +455,7 @@
                 "scale": "1/1",
                 "model": null,
                 "version": null,
-                "price": 80000000,
+                "price": 3108,
                 "oldPrice": null
               }
             ],
@@ -478,7 +478,7 @@
                 "scale": "1/4",
                 "model": null,
                 "version": null,
-                "price": 18000000,
+                "price": 699,
                 "oldPrice": null
               }
             ],
@@ -501,7 +501,7 @@
                 "scale": "1/4",
                 "model": null,
                 "version": null,
-                "price": 15000000,
+                "price": 583,
                 "oldPrice": null
               }
             ],
@@ -524,8 +524,8 @@
                 "scale": "1/4",
                 "model": null,
                 "version": null,
-                "price": 10000000,
-                "oldPrice": 12000000
+                "price": 389,
+                "oldPrice": 466
               }
             ],
             "img": [
@@ -550,28 +550,28 @@
                 "scale": "1/6",
                 "model": null,
                 "version": "Base",
-                "price": 10000000,
+                "price": 388,
                 "oldPrice": null
               },
               {
                 "scale": "1/6",
                 "model": null,
                 "version": "EX",
-                "price": 13000000,
+                "price": 505,
                 "oldPrice": null
               },
               {
                 "scale": "1/4",
                 "model": null,
                 "version": "Base",
-                "price": 20000000,
+                "price": 777,
                 "oldPrice": null
               },
               {
                 "scale": "1/4",
                 "model": null,
                 "version": "EX",
-                "price": 23000000,
+                "price": 893,
                 "oldPrice": null
               }
             ],
@@ -594,14 +594,14 @@
                 "scale": "1/6",
                 "model": null,
                 "version": null,
-                "price": 5000000,
+                "price": 194,
                 "oldPrice": null
               },
               {
                 "scale": "1/4",
                 "model": null,
                 "version": null,
-                "price": 6000000,
+                "price": 233,
                 "oldPrice": null
               }
             ],
@@ -629,14 +629,14 @@
                 "scale": "1/4",
                 "model": null,
                 "version": "Regular",
-                "price": 27000000,
+                "price": 1048,
                 "oldPrice": null
               },
               {
                 "scale": "1/4",
                 "model": null,
                 "version": "EX",
-                "price": 31000000,
+                "price": 1204,
                 "oldPrice": null
               }
             ],
@@ -659,7 +659,7 @@
                 "scale": "1/7",
                 "model": null,
                 "version": null,
-                "price": 23000000,
+                "price": 893,
                 "oldPrice": null
               }
             ],
@@ -682,7 +682,7 @@
                 "scale": "1/8",
                 "model": null,
                 "version": null,
-                "price": 102000000,
+                "price": 450,
                 "oldPrice": null
               }
             ],
@@ -705,7 +705,7 @@
                 "scale": "1/7",
                 "model": null,
                 "version": null,
-                "price": 11000000,
+                "price": 427,
                 "oldPrice": null
               }
             ],
@@ -728,8 +728,8 @@
                 "scale": "1/8",
                 "model": null,
                 "version": null,
-                "price": 8900000,
-                "oldPrice": 12400000
+                "price": 345,
+                "oldPrice": 484
               }
             ],
             "img": [
@@ -751,8 +751,8 @@
                 "scale": "1/7",
                 "model": null,
                 "version": null,
-                "price": 8900000,
-                "oldPrice": 12400000
+                "price": 345,
+                "oldPrice": 484
               }
             ],
             "img": [
@@ -778,42 +778,42 @@
                 "scale": "1/7",
                 "model": "Regular",
                 "version": null,
-                "price": 12000000,
+                "price": 515,
                 "oldPrice": null
               },
               {
                 "scale": "1/7",
                 "model": "Combo A (Regular + Sitting)",
                 "version": null,
-                "price": 13000000,
+                "price": 565,
                 "oldPrice": null
               },
               {
                 "scale": "1/7",
                 "model": "Combo B (Regular + Dead)",
                 "version": null,
-                "price": 14000000,
+                "price": 589,
                 "oldPrice": null
               },
               {
                 "scale": "1/7",
                 "model": "Combo C (Regular + Sitting + Dead)",
                 "version": null,
-                "price": 15000000,
+                "price": 635,
                 "oldPrice": null
               },
               {
                 "scale": "1/7",
                 "model": "Sitting",
                 "version": null,
-                "price": 2500000,
+                "price": 115,
                 "oldPrice": null
               },
               {
                 "scale": "1/7",
                 "model": "Dead",
                 "version": null,
-                "price": 3300000,
+                "price": 145,
                 "oldPrice": null
               }
             ],
@@ -839,14 +839,14 @@
                 "scale": "1/8",
                 "model": "",
                 "version": "Regular",
-                "price": 4000000,
+                "price": 155,
                 "oldPrice": null
               },
               {
                 "scale": "1/8",
                 "model": "",
                 "version": "EX",
-                "price": 6200000,
+                "price": 240,
                 "oldPrice": null
               }
             ],
@@ -874,7 +874,7 @@
                 "scale": "1/6",
                 "model": null,
                 "version": null,
-                "price": 14000000,
+                "price": 543,
                 "oldPrice": null
               }
             ],
@@ -897,7 +897,7 @@
                 "scale": "1/6",
                 "model": null,
                 "version": null,
-                "price": 11500000,
+                "price": 447,
                 "oldPrice": null
               }
             ],
@@ -920,7 +920,7 @@
                 "scale": "1/6",
                 "model": null,
                 "version": null,
-                "price": 11000000,
+                "price": 427,
                 "oldPrice": null
               }
             ],
@@ -946,14 +946,14 @@
                 "scale": "1/1",
                 "model": "Full body",
                 "version": null,
-                "price": 33000000,
+                "price": 1282,
                 "oldPrice": null
               },
               {
                 "scale": "1/1",
                 "model": "Bust",
                 "version": null,
-                "price": 15000000,
+                "price": 583,
                 "oldPrice": null
               }
             ],
@@ -980,21 +980,21 @@
                 "scale": "1/6",
                 "model": null,
                 "version": "A",
-                "price": 10000000,
+                "price": 388,
                 "oldPrice": null
               },
               {
                 "scale": "1/6",
                 "model": null,
                 "version": "B",
-                "price": 10000000,
+                "price": 388,
                 "oldPrice": null
               },
               {
                 "scale": "1/6",
                 "model": null,
                 "version": "EX",
-                "price": 13500000,
+                "price": 524.5,
                 "oldPrice": null
               }
             ],
@@ -1017,14 +1017,14 @@
                 "scale": "1/6",
                 "model": null,
                 "version": null,
-                "price": 8900000,
+                "price": 345.77,
                 "oldPrice": null
               },
               {
                 "scale": "1/4",
                 "model": null,
                 "version": null,
-                "price": 11500000,
+                "price": 446.78,
                 "oldPrice": null
               }
             ],
@@ -1050,14 +1050,14 @@
                 "scale": "1/6",
                 "model": null,
                 "version": null,
-                "price": 8700000,
+                "price": 338,
                 "oldPrice": null
               },
               {
                 "scale": "1/4",
                 "model": null,
                 "version": null,
-                "price": 12000000,
+                "price": 460.2,
                 "oldPrice": null
               }
             ],
@@ -1085,14 +1085,14 @@
                 "scale": "1/8",
                 "model": null,
                 "version": null,
-                "price": 12000000,
+                "price": 466.2,
                 "oldPrice": null
               },
               {
                 "scale": "1/4",
                 "model": null,
                 "version": null,
-                "price": 29000000,
+                "price": 1126.65,
                 "oldPrice": null
               }
             ],
@@ -1115,7 +1115,7 @@
                 "scale": "1/6",
                 "model": null,
                 "version": null,
-                "price": 18000000,
+                "price": 699.3,
                 "oldPrice": null
               }
             ],
@@ -1139,7 +1139,7 @@
                 "scale": "1/6",
                 "model": null,
                 "version": null,
-                "price": 20000000,
+                "price": 777,
                 "oldPrice": null
               }
             ],
@@ -1163,7 +1163,7 @@
                 "scale": "1/4",
                 "model": null,
                 "version": null,
-                "price": 18000000,
+                "price": 699,
                 "oldPrice": null
               }
             ],
@@ -1187,7 +1187,7 @@
                 "scale": "1/4",
                 "model": null,
                 "version": null,
-                "price": 135000000,
+                "price": 52447.55,
                 "oldPrice": null
               }
             ],
@@ -1211,7 +1211,7 @@
                 "scale": "1/1",
                 "model": null,
                 "version": null,
-                "price": 25000000,
+                "price": 971.25,
                 "oldPrice": null
               }
             ],

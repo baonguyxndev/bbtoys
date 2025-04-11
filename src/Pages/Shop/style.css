@@ -1,7 +1,6 @@
 /* Container chính */
 .shop {
   padding: 20px 0;
-  background: #f5f5f5;
   min-height: 100vh;
 }
 
@@ -13,7 +12,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 20px 0;
-  color: #000;
+  color: #fff;
 }
 
 .shop .title h2 {
@@ -36,19 +35,15 @@
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
-}
-
-.shop .container-full {
-  max-width: 100%;
-  padding: 0 20px;
+  color: #fff;
 }
 
 /* Shop header */
 .shop .topContent {
-  background: #fff;
+  background-color: #222;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   margin-bottom: 20px;
 }
 
@@ -64,19 +59,21 @@
 
 /* Sidebar */
 .shop .sidebar {
-  background: #fff;
+  background-color: #121212;
   border-radius: 8px;
   padding: 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   position: sticky;
-  top: 100px;
-  height: calc(100vh - 120px);
-  overflow-y: hidden;
-  transition: all 0.3s ease;
-}
-
-.shop .sidebar:hover {
+  top: 130px;
+  height: fit-content;
+  max-height: calc(100vh - 120px);
   overflow-y: auto;
+  transition: all 0.3s ease;
+  width: 280px;
+  min-width: 280px;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Custom scrollbar cho sidebar */
@@ -91,24 +88,30 @@
 }
 
 .shop .sidebar::-webkit-scrollbar-thumb {
-  background: #ddd;
+  background-color: #ddd;
   border-radius: 3px;
   transition: all 0.3s ease;
 }
 
 .shop .sidebar::-webkit-scrollbar-thumb:hover {
-  background: #bbb;
+  background-color: #bbb;
 }
 
+/* Sidebar sections */
 .sidebar-section {
   padding: 15px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #333;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar-section:last-child {
   border-bottom: none;
 }
 
+/* Sidebar title */
 .sidebar-title {
   display: flex;
   justify-content: space-between;
@@ -116,20 +119,12 @@
   padding: 15px 20px;
   cursor: pointer;
   font-weight: 600;
-  color: #333;
-  background: #fff;
-  border-bottom: 1px solid #f0f0f0;
+  color: #fff;
+  background-color: #121212;
+  border-bottom: 1px solid #333;
   font-size: 16px;
   transition: all 0.3s ease;
-}
-
-/* Products container */
-.shop .products-container {
-  background: #fff;
-  border-radius: 8px;
-  padding: 20px;
-  height: 100%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 /* Product grid */
@@ -157,13 +152,13 @@
 }
 
 .shop .search .form-control::placeholder {
-  color: #999;
+  color: #fff;
 }
 
 .shop .search .form-control:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.1);
-  border-color: #1890ff;
+  border-color: #ba0000;
 }
 
 /* Biểu tượng kính lúp */
@@ -260,6 +255,8 @@
   overflow-y: visible;
   padding-right: 5px;
   margin-top: 0;
+  width: 100%;
+  flex: 1;
 }
 
 .category-tree::-webkit-scrollbar {
@@ -267,12 +264,12 @@
 }
 
 .category-tree::-webkit-scrollbar-track {
-  background: #f5f5f5;
+  background-color: #f5f5f5;
   border-radius: 3px;
 }
 
 .category-tree::-webkit-scrollbar-thumb {
-  background: #ddd;
+  background-color: #ddd;
   border-radius: 3px;
 }
 
@@ -302,7 +299,7 @@
   justify-content: space-between;
   width: 100%;
   font-size: 14px;
-  color: #333;
+  color: #fff;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -322,6 +319,7 @@
 /* Price range */
 .price-range {
   padding: 0 5px;
+  width: 100%;
 }
 
 .price-input-group {
@@ -329,39 +327,40 @@
   flex-direction: column;
   gap: 5px;
   flex: 1;
+  width: 100%;
 }
 
 .price-input-group label {
   font-size: 13px;
-  color: #666;
+  color: #fff;
 }
 
 .price-inputs {
   display: flex;
   gap: 15px;
+  width: 100%;
 }
 
 .price-input {
   width: 100%;
   padding: 8px 12px;
-  border: 1px solid #e0e0e0;
   border-radius: 8px;
   font-size: 14px;
   text-align: left;
   transition: all 0.3s ease;
+  background-color: #666;
+  color: #fff;
 }
 
 .price-input:focus {
   outline: none;
-  border-color: #1890ff;
-  box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.1);
 }
 
 .price-slider {
   width: 100%;
   margin: 20px 0 10px;
   height: 4px;
-  background: #e0e0e0;
+  background-color: #fff;
   border-radius: 2px;
   appearance: none;
 }
@@ -370,8 +369,8 @@
   appearance: none;
   width: 20px;
   height: 20px;
-  background: #fff;
-  border: 2px solid #1890ff;
+  background-color: #fff;
+  border: 2px solid #ba0000;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -386,13 +385,15 @@
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
-  color: #666;
+  color: #fff;
   font-size: 13px;
 }
 
 /* Selected Filters */
 .selected-filters {
-  background: #fafafa;
+  background-color: #222;
+  width: 100%;
+  flex: 1;
 }
 
 .selected-filters h6 {
@@ -414,6 +415,8 @@
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 10px;
+  width: 100%;
+  flex: 1;
 }
 
 .selected-category {
@@ -421,7 +424,7 @@
   align-items: center;
   gap: 6px;
   padding: 4px 10px;
-  background: #fff;
+  background-color: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 16px;
   font-size: 13px;
@@ -477,10 +480,10 @@
 
 /* Product Item */
 .product-item {
-  background: white;
+  background: #333;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   height: fit-content;
   display: flex;
@@ -489,7 +492,7 @@
 
 .product-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 /* Product Image Container */
@@ -517,12 +520,13 @@
   flex-direction: column;
   flex-grow: 1;
   gap: 10px;
+  background-color: #333;
 }
 
 .product-title {
   font-size: 15px;
   font-weight: 500;
-  color: #333;
+  color: #fff;
   margin: 0;
   line-height: 1.4;
   max-height: 2.8em;
@@ -535,7 +539,7 @@
 
 .product-brand {
   font-size: 15px;
-  color: #666;
+  color: #ccc;
   margin: 0;
 }
 
@@ -628,15 +632,17 @@
 .shop .sidebar .sort .form-select {
   width: 100%;
   height: 40px;
-  border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 10px 30px 10px 15px;
   font-size: 14px;
+  background-color: #666;
+  border: none;
+  color: #fff;
 }
 
 .shop .sidebar .search .form-control:focus,
 .shop .sidebar .sort .form-select:focus {
-  border-color: #1890ff;
+  border-color: #ba0000;
   box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.1);
 }
 
@@ -646,7 +652,7 @@
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: #999;
+  color: #fff;
 }
 
 .shop .sidebar .search-icon button {
@@ -654,5 +660,19 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: #999;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .shop .sidebar {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    margin-bottom: 20px;
+    max-height: none;
+  }
 }

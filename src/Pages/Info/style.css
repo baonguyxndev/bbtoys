@@ -43,7 +43,7 @@
   align-items: center;
   justify-content: center;
   padding: 15px 30px;
-  background-color: #222;
+  background-color: #333;
   border-radius: 15px;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -57,13 +57,19 @@
   outline: none;
 }
 
+.contact .tab:hover {
+  box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
+    0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
+}
+
 .contact .tab.active {
-  border: 1px solid #ba0000;
-  box-shadow: 0 4px 12px rgba(186, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
+    0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
+  transform: scale(0.9);
 }
 
 .contact .tab-content {
-  background-color: #222;
+  background-color: #333;
   border-radius: 15px;
   padding: 2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);

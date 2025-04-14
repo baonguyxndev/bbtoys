@@ -662,17 +662,3 @@
   cursor: pointer;
   color: #fff;
 }
-
-/* Responsive */
-@media (max-width: 991px) {
-  .shop .sidebar {
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    height: auto;
-    position: relative;
-    top: 0;
-    margin-bottom: 20px;
-    max-height: none;
-  }
-}

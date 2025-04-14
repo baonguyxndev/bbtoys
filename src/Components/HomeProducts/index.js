@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Pagination, Navigation } from "swiper/modules";
 import ProductItem from "../../Components/ProductItem";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -10,6 +11,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import BannerResin from "../../assets/image/banner-resin-image.jpeg";
 import BannerPVC from "../../assets/image/banner-pvc-image.jpeg";
+import ProductModal from "../ProductModal";
 
 const HomeProducts = () => {
   const flattenProducts = () => {
@@ -23,6 +25,24 @@ const HomeProducts = () => {
   };
 
   const allProducts = flattenProducts();
+
+  {
+    /*Product Modal*/
+  }
+  const [selectedProductId, setSelectedProductId] = useState(null);
+
+  const handleOpenProductModal = (id) => {
+    setSelectedProductId(id);
+  };
+
+  const handleCloseProductModal = () => {
+    setSelectedProductId(null);
+  };
+
+  const selectedProduct = allProducts.find(
+    (product) => product.id === selectedProductId
+  );
+
   return (
     <div className="homeProducts">
       {/* TITLE */}
@@ -81,7 +101,10 @@ const HomeProducts = () => {
                 >
                   {allProducts.slice(0, 10).map((product) => (
                     <SwiperSlide key={product.id}>
-                      <ProductItem product={product} />
+                      <ProductItem
+                        product={product}
+                        onOpenModal={handleOpenProductModal}
+                      />
                     </SwiperSlide>
                   ))}
                 </Swiper>
@@ -111,7 +134,10 @@ const HomeProducts = () => {
                 >
                   {allProducts.slice(0, 10).map((product) => (
                     <SwiperSlide key={product.id}>
-                      <ProductItem product={product} />
+                      <ProductItem
+                        product={product}
+                        onOpenModal={handleOpenProductModal}
+                      />
                     </SwiperSlide>
                   ))}
                 </Swiper>
@@ -168,7 +194,10 @@ const HomeProducts = () => {
         <div className="product_row productRow2 w-100 d-flex hidden">
           {allProducts.slice(0, 8).map((product) => (
             <div key={product.id}>
-              <ProductItem product={product} />
+              <ProductItem
+                product={product}
+                onOpenModal={handleOpenProductModal}
+              />
             </div>
           ))}
         </div>
@@ -188,11 +217,20 @@ const HomeProducts = () => {
         <div className="product_row productRow3 w-100 d-flex hidden">
           {allProducts.slice(0, 8).map((product) => (
             <div key={product.id}>
-              <ProductItem product={product} />
+              <ProductItem
+                product={product}
+                onOpenModal={handleOpenProductModal}
+              />
             </div>
           ))}
         </div>
       </div>
+      {/* MODAL SẢN PHẨM */}
+      <ProductModal
+        product={selectedProduct}
+        isOpen={!!selectedProductId}
+        onClose={handleCloseProductModal}
+      />
     </div>
   );
 };

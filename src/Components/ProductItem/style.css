@@ -17,7 +17,7 @@
     0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
 }
 
-.imageWrapper {
+.productCard .imageWrapper {
   width: 100%;
   height: 220px;
   overflow: hidden;
@@ -30,25 +30,25 @@
   margin-bottom: 16px;
 }
 
-.imageWrapper img {
+.productCard .imageWrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: opacity 0.3s ease-in-out;
 }
 
-.imageWrapper .productImageHover {
+.productCard .imageWrapper .productImageHover {
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
 }
 
-.imageWrapper .productImageMain {
+.productCard .imageWrapper .productImageMain {
   opacity: 1;
 }
 
-.imageWrapper .productImageHover {
+.productCard .imageWrapper .productImageHover {
   opacity: 0;
 }
 
@@ -74,7 +74,7 @@
   opacity: 1;
 }
 
-.btnFullScreen button {
+.productCard .btnFullScreen button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,15 +86,15 @@
   box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%) !important;
 }
 
-.btnFullScreen:hover button {
+.productCard .btnFullScreen:hover button {
   background: #444 !important;
 }
 
-.btnFullScreen button:focus {
+.productCard .btnFullScreen button:focus {
   outline: none;
 }
 
-.btnFullScreen svg {
+.productCard .btnFullScreen svg {
   font-size: 17px;
   color: #fff;
   opacity: 0.7;
@@ -106,19 +106,19 @@
   opacity: 1;
 }
 
-.productImage {
+.productCard .productImage {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
 
-.contentWrapper {
+.productCard .contentWrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.productTitle {
+.productCard .productTitle {
   font-size: 13px;
   font-weight: 500;
   margin-bottom: 8px;
@@ -131,23 +131,23 @@
 
 /* Các trạng thái tương ứng */
 /* Đúng theo class được render từ JS */
-.available {
+.productCard .available {
   color: #22c55e; /* xanh lá */
 }
 
-.order {
+.productCard .order {
   color: #3b82f6; /* xanh dương */
 }
 
-.preorder {
+.productCard .preorder {
   color: #facc15; /* vàng */
 }
 
-.soldout {
+.productCard .soldout {
   color: #ef4444; /* đỏ */
 }
 
-.productName {
+.productCard .productName {
   font-size: 15px;
   font-weight: 600;
   color: #ffffff;
@@ -159,14 +159,14 @@
   width: 100%;
 }
 
-.productDetails {
+.productCard .productDetails {
   font-size: 13px;
   color: #cccccc;
   line-height: 1.5;
   margin-bottom: 12px;
 }
 
-.priceWrapper {
+.productCard .priceWrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -174,25 +174,25 @@
   width: 100%;
 }
 
-.priceWrapper .leftPart {
+.productCard .priceWrapper .leftPart {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.currentPrice {
+.productCard .currentPrice {
   font-size: 16px;
   font-weight: bold;
   color: #ba0000;
 }
 
-.oldPrice {
+.productCard .oldPrice {
   font-size: 14px;
   color: #888;
   text-decoration: line-through;
 }
 
-.discountTag {
+.productCard .discountTag {
   font-size: 12px;
   background-color: #ba0000;
   color: #fff;
@@ -201,14 +201,14 @@
   font-weight: bold;
 }
 
-.bottomAction {
+.productCard .bottomAction {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
-.actionButton {
+.productCard .actionButton {
   background-color: #666 !important;
   color: #fff !important;
   font-weight: 600 !important;
@@ -220,16 +220,16 @@
   transition: background-color 0.3s ease;
 }
 
-.actionButton:hover {
+.productCard .actionButton:hover {
   background-color: #ba0000 !important;
 }
 
-.actionButton.disabled {
+.productCard .actionButton.disabled {
   background-color: #a0aec0 !important;
   color: #2d3748 !important;
 }
 
-.iconBtn {
+.productCard .iconBtn {
   background-color: #666 !important;
   color: #fff !important;
   border-radius: 10px !important;

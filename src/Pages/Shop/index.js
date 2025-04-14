@@ -5,6 +5,7 @@ import { IoSearch } from "react-icons/io5";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { FiMinus, FiPlus } from "react-icons/fi";
 import ProductItem from "../../Components/ProductItem";
+import ProductModal from "../../Components/ProductModal";
 import products from "../../assets/data/products.json";
 import { useSearchParams } from "react-router-dom";
 
@@ -45,6 +46,9 @@ const Shop = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showPrice, setShowPrice] = useState(true);
   const [showCategory, setShowCategory] = useState(true);
+
+  // Thêm state cho Product Modal
+  const [selectedProductId, setSelectedProductId] = useState(null);
 
   // Tạo cấu trúc category tree từ products.json
   const categoryTree = useMemo(() => {
@@ -192,6 +196,20 @@ const Shop = () => {
       [type]: value,
     }));
   };
+
+  // Thêm xử lý mở và đóng modal
+  const handleOpenProductModal = (id) => {
+    setSelectedProductId(id);
+  };
+
+  const handleCloseProductModal = () => {
+    setSelectedProductId(null);
+  };
+
+  // Tìm sản phẩm được chọn để hiển thị trong modal
+  const selectedProduct = filteredProducts.find(
+    (product) => product.id === selectedProductId
+  );
 
   // Render category item
   const renderCategoryItem = (category, level = 0, parentKey = "") => {
@@ -407,7 +425,10 @@ const Shop = () => {
                         key={`${product.categoryKey}-${product.category}-${product.id}`}
                         className="col-xl-3 col-lg-4 col-md-4 col-sm-6"
                       >
-                        <ProductItem product={product} />
+                        <ProductItem
+                          product={product}
+                          onOpenModal={handleOpenProductModal}
+                        />
                       </div>
                     ))
                   ) : (
@@ -424,6 +445,13 @@ const Shop = () => {
           </div>
         </div>
       </div>
+
+      {/* Thêm ProductModal Component */}
+      <ProductModal
+        product={selectedProduct}
+        isOpen={!!selectedProductId}
+        onClose={handleCloseProductModal}
+      />
     </div>
   );
 };

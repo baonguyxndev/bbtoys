@@ -4,18 +4,21 @@ import { Button } from "@mui/material";
 import { MdFavoriteBorder } from "react-icons/md";
 import { LuScaling } from "react-icons/lu";
 
-const ProductItem = ({ product }) => {
-  const { img: images, name, state, brand, details } = product;
+const ProductItem = ({ product, onOpenModal }) => {
+  const { img: images, id, name, state, brand, details } = product;
   const { price, oldPrice } = details[0] || {};
   const isSoldOut = state === "Sold-Out";
 
   return (
-    <div className={`productCard ${isSoldOut ? "sold-out" : ""}`}>
+    <div
+      className={`productCard ${isSoldOut ? "sold-out" : ""}`}
+      onClick={() => onOpenModal && onOpenModal(product.id)}
+    >
       <div className="imageWrapper">
         <img src={images[0]} alt={name} className="productImageMain" />
         <img src={images[1]} alt={name} className="productImageHover" />
         <div className="btnFullScreen">
-          <Button>
+          <Button onClick={() => onOpenModal(id)}>
             <LuScaling />
           </Button>
         </div>

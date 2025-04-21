@@ -1,0 +1,151 @@
+@import "../../../shared/styles/variables.css";
+
+.licenses .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  color: #fff;
+}
+
+.licenses .title h2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.licenses .line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #aaa;
+}
+
+.licenses .titleMain {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.licenses .licenseWrapper {
+  width: 100%;
+}
+
+.licenses .licenseWrapper ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.licenses .licenseWrapper ul li {
+  flex: 0 0 calc(50% - 15px); /* 2 mục trên một hàng */
+  max-width: calc(50% - 15px);
+  list-style: none;
+  padding: 0;
+}
+
+.licenses .licenseWrapper .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.licenses .licenseCard {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 570px; /* Chiều rộng cố định */
+  height: 300px; /* Chiều cao cố định */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.licenses .licenseCard-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.licenses .imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Tạo dải trắng chéo kéo dài qua toàn bộ thẻ, từ dưới-phải đến trên-trái */
+.licenses .imageWrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    150deg,
+    rgba(70, 70, 70, 0) 50%,
+    /* Góc trên-trái */ rgba(70, 70, 70, 0.7) 80%,
+    /* Giữa */ rgba(70, 70, 70, 0.9) 100% /* Góc dưới-phải */
+  );
+  z-index: 1;
+}
+
+.licenses .licenseCard-link img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  z-index: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.licenses .licenseCard-link:focus {
+  outline: 2px solid #ff4655;
+  outline-offset: 2px;
+}
+
+.licenses .licenseCard-link .licensesIcons {
+  position: absolute;
+  top: 10px; /* Đặt cố định bên dưới logo, dựa trên chiều cao logo cố định */
+  right: 15px; /* Cùng vị trí bên phải với logo */
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.licenses .licenseCard-link .licensesIcons svg {
+  font-size: 25px;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.licenses .licenseCard-link .licensesIcons svg:hover {
+  transform: scale(1.2);
+}
+
+.licenses .logoOverlay {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  z-index: 2;
+  width: 200px; /* Chiều rộng cố định cho vùng chứa logo */
+  height: 100px; /* Chiều cao cố định cho vùng chứa logo */
+  display: flex;
+  align-items: center; /* Căn giữa logo theo chiều dọc */
+  justify-content: flex-end; /* Căn logo sát bên phải */
+}
+
+.licenses .logoOverlay img {
+  max-width: 100%; /* Đảm bảo logo không vượt quá vùng chứa */
+  max-height: 100%; /* Đảm bảo logo không vượt quá vùng chứa */
+  width: auto;
+  height: auto;
+}

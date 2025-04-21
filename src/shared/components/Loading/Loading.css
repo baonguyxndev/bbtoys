@@ -1,0 +1,7 @@
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Chiều cao cố định để căn giữa */
+  width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
+}

@@ -1,0 +1,28 @@
+:root {
+  /* Font*/
+  --font-type: "Lato", sans-serif;
+  --font-size-title-page: 30px;
+  --font-size-sub-title: 35px;
+  --font-size-h3: 30px;
+
+  /* Colors */
+  --color-primary: rgb(186, 0, 0); /* #ba0000 */
+  --color-background-primary: rgb(34, 34, 34); /* #222 */
+  --color-background-secondary: rgb(51, 51, 51); /* #333 */
+  --color-text-primary: rgb(255, 255, 255); /* #fff */
+  --color-text-light: rgba(255, 255, 255, 0.5); /* #fff 50% */
+  --color-line: rgb(255, 255, 255, 0.7); /* #fff 70% */
+
+  /* Animation */
+  --box-shadow-primary: 0 0 5px var(--color-background-secondary),
+    0 0 10px rgb(186, 0, 0, 0.7), 0 0 20px rgba(186, 0, 0, 0.5),
+    0 0 30px rgba(186, 0, 0, 0.3);
+
+  --transition-primary: all 0.3s ease;
+  --transform-hover: scale(1.05);
+  --transfrom-active: scale(0.95);
+
+  /* Border */
+  --border: 1px solid var(--color-background-secondary);
+  --border-radius-primary: 20px;
+}

@@ -1,0 +1,662 @@
+.blockScroll {
+  overflow: hidden !important;
+  padding-right: 17px; /* Thêm padding để bù đắp cho scrollbar biến mất */
+}
+
+.productModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modalProduct {
+  background-color: #222;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+  animation: slideUp 0.3s ease-in-out;
+  overflow: hidden;
+  padding: 30px;
+  border: 1px solid #333;
+}
+
+.btnCloseProductModal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.btnCloseProductModal:hover {
+  color: #ba0000;
+}
+
+.productTitle {
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.productMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #333;
+}
+
+.metaLeft,
+.metaRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.metaLabel {
+  color: #999;
+  font-size: 18px;
+}
+
+.metaValue {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.productModalContent {
+  display: flex;
+  gap: 40px;
+}
+
+.modalLeft {
+  width: 45%;
+  position: relative;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ba0000;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.recommended-badge {
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  background-color: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.mainImage {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: #333;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.mainImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 5px;
+  background-color: #333;
+}
+
+.thumbnail.active {
+  border-color: #ba0000;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.modalRight {
+  width: 55%;
+  padding-right: 20px;
+  max-height: 70vh;
+  overflow-y: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.modalRight::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.price-section {
+  margin-bottom: 15px;
+}
+
+.currentPrice {
+  font-size: 24px;
+  color: #ba0000;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.oldPrice {
+  font-size: 16px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.stock-status {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: rgba(46, 125, 50, 0.1);
+  color: #4caf50;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+.description {
+  color: #999;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.quantity-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.quantity-btn {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #333;
+  background: #333;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.quantity-btn:hover {
+  background: #444;
+}
+
+.quantity-value {
+  font-size: 16px;
+  min-width: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.add-to-cart {
+  flex: 1;
+  background-color: #ba0000;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #8b0000;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #999;
+  font-size: 13px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.action-button:hover {
+  color: #ba0000;
+}
+
+.product-details {
+  margin-bottom: 30px;
+  background-color: #333;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 12px;
+}
+
+.detail-item:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.detail-icon {
+  color: #4caf50;
+  font-size: 18px;
+}
+
+.detail-label {
+  color: #999;
+  font-size: 14px;
+  min-width: 120px;
+  font-weight: 500;
+}
+
+.detail-value {
+  color: #fff;
+  font-size: 14px;
+  flex: 1;
+}
+
+.product-meta-footer {
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+
+.product-meta-footer > div {
+  margin-bottom: 10px;
+}
+
+.meta-label {
+  color: #999;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.meta-value {
+  color: #fff;
+  font-size: 14px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.version-selector {
+  margin-bottom: 20px;
+}
+
+.version-label {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.version-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 0px 10px;
+}
+
+.version-option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px 15px;
+  border-radius: 4px;
+  background-color: #333;
+  border: 1px solid #444;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #fff;
+  text-align: left;
+  height: 100%;
+}
+
+.version-option:hover {
+  background-color: #444;
+  border-color: #555;
+}
+
+.version-option.selected {
+  border-color: #ba0000;
+  background-color: rgba(186, 0, 0, 0.1);
+}
+
+.option-details {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.scale {
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}
+
+.model,
+.version {
+  font-size: 12px;
+  color: #fff;
+  margin-top: 2px;
+}
+
+.option-price {
+  font-weight: 600;
+  color: #ba0000;
+  font-size: 16px;
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+/* Stock status variations */
+.stock-status.available {
+  background-color: rgba(46, 125, 50, 0.1);
+  color: #4caf50;
+}
+
+.stock-status.order {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+.stock-status.preorder {
+  background-color: rgba(250, 204, 21, 0.1);
+  color: #facc15;
+}
+
+.stock-status.soldout {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+/* Disabled add to cart button */
+.add-to-cart.disabled {
+  background-color: #555;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Quantity button disabled */
+.quantity-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.option-selector {
+  margin-bottom: 20px;
+}
+
+.option-label {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.option-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.option-button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #333;
+  border: 1px solid #444;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  font-weight: 400;
+  min-width: 80px;
+  text-align: center;
+}
+
+.option-button:hover {
+  background-color: #444;
+  border-color: #555;
+}
+
+.option-button.selected {
+  border-color: #ba0000;
+  background-color: rgba(186, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+.option-button.disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Fullscreen styles */
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.fullscreen-image {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreen-image img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.fullscreen-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 10001;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.fullscreen-close:hover {
+  transform: scale(1.1);
+}
+
+.fullscreen-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 20px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.fullscreen-nav:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.fullscreen-nav.prev {
+  left: 20px;
+}
+
+.fullscreen-nav.next {
+  right: 20px;
+}
+
+.fullscreen-counter {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* Zoom hint styles */
+.mainImage {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.zoom-hint {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.mainImage:hover .zoom-hint {
+  transform: translateY(0);
+}
+
+/* Animation cho fullscreen */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Bỏ outline cho tất cả các button và input trong modal */
+.productModalOverlay *:focus,
+.productModalOverlay button:focus,
+.productModalOverlay input:focus,
+.modalProduct *:focus,
+.modalProduct button:focus,
+.modalProduct input:focus,
+.fullscreen-overlay *:focus,
+.fullscreen-overlay button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Bỏ outline cho các button cụ thể */
+.btnCloseProductModal:focus,
+.fullscreen-close:focus,
+.fullscreen-nav:focus,
+.option-button:focus,
+.quantity-btn:focus,
+.add-to-cart:focus,
+.action-button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Bỏ outline cho các button trong thumbnails */
+.thumbnail:focus,
+.mainImage:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Bỏ outline cho các button Material-UI */
+.MuiButton-root:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}

@@ -1,12 +1,10 @@
 import "../info/styles/Info.css";
 import { useState } from "react";
-import {
-  SiFacebook,
-  SiInstagram,
-  SiTiktok,
-  SiWechat,
-  SiGmail,
-} from "react-icons/si";
+import { SiGmail } from "react-icons/si";
+import Facebook from "../../shared/components/SVG/SocialMedia/Facebook.js";
+import Instagram from "../../shared/components/SVG/SocialMedia/Instagram.js";
+import TikTok from "../../shared/components/SVG/SocialMedia/TikTok.js";
+import Wechat from "../../shared/components/SVG/SocialMedia/Wechat.js";
 
 // Giả lập hình ảnh (thay thế bằng URL thực tế nếu có)
 const images = {
@@ -83,7 +81,7 @@ const Info = () => {
             aria-selected={activeTab === "media"}
             aria-controls="media-tab"
           >
-            Contact
+            Social Media
           </button>
         </div>
 
@@ -250,56 +248,55 @@ const Info = () => {
           )}
           {activeTab === "media" && (
             <div className="contact-media content-section">
-              <h1>CONTACT</h1>
-              <p>We are present on the following social platforms:</p>
+              <h4>We are present on the following social platforms</h4>
               <div className="media-grid">
                 <a
-                  href="https://facebook.com/nztoys"
+                  href="https://example.com"
+                  onClick={(e) => e.preventDefault()}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="media-item"
                 >
-                  <SiFacebook />
-                  <span>Facebook</span>
+                  <Facebook size={40} />
                 </a>
 
                 <a
-                  href="https://instagram.com/nztoys"
+                  href="https://example.com"
+                  onClick={(e) => e.preventDefault()}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="media-item"
                 >
-                  <SiInstagram />
-                  <span>Instagram</span>
+                  <Instagram size={40} />
                 </a>
 
                 <a
-                  href="https://tiktok.com/@nztoys"
+                  href="https://example.com"
+                  onClick={(e) => e.preventDefault()}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="media-item"
                 >
-                  <SiTiktok />
-                  <span>TikTok</span>
+                  <TikTok size={40} />
                 </a>
 
                 <a
-                  href="https://wechat.com/nztoys"
+                  href="https://example.com"
+                  onClick={(e) => e.preventDefault()}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="media-item"
                 >
-                  <SiWechat />
-                  <span>WeChat</span>
+                  <Wechat size={40} />
                 </a>
                 <a
-                  href="https://wechat.com/nztoys"
+                  href="https://example.com"
+                  onClick={(e) => e.preventDefault()}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="media-item"
                 >
-                  <SiGmail />
-                  <span>Mail</span>
+                  <SiGmail className="mailIcon" />
                 </a>
               </div>
             </div>

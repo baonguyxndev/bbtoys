@@ -1,4 +1,6 @@
 /* NEW LETTER */
+@import "../../../shared/styles/variables.css";
+
 .newLetter {
   width: 100%;
   height: auto;
@@ -49,6 +51,7 @@
   left: 10px;
   font-size: 30px;
   opacity: 0.8;
+  color: var(--color-secondary);
 }
 
 .newLetter form input {
@@ -65,7 +68,7 @@
   position: absolute;
   top: 5px;
   right: 5px;
-  background-color: #000 !important;
+  background-color: var(--color-secondary) !important;
   font-size: 15px !important;
   padding: 8px 20px !important;
   color: #fff !important;

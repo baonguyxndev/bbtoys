@@ -4,12 +4,27 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { BiCopyright } from "react-icons/bi";
 import { TbPigMoney } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import Vietnam from "../SVG/Flag/Vietnam.js";
+import China from "../SVG/Flag/China.js";
+import Canada from "../SVG/Flag/Canada.js";
+import Singapore from "../SVG/Flag/Singapore.js";
+import Japan from "../SVG/Flag/Japan.js";
+import Facebook from "../SVG/SocialMedia/Facebook.js";
+import Instagram from "../SVG/SocialMedia/Instagram.js";
+import TikTok from "../SVG/SocialMedia/TikTok.js";
+import WeChat from "../SVG/SocialMedia/Wechat.js";
+import ApplePay from "../SVG/PaymentMethod/ApplePay.js";
+import GooglePay from "../SVG/PaymentMethod/GooglePay.js";
+import MasterCard from "../SVG/PaymentMethod/MasterCard.js";
+import Paypal from "../SVG/PaymentMethod/Paypal.js";
+import Visa from "../SVG/PaymentMethod/Visa.js";
+import WechatPay from "../SVG/PaymentMethod/WechatPay.js";
 
 const Footer = () => {
   return (
     <div className="footer">
-      <div className="topInfo row ">
-        <div className="col d-flex align-items-center justify-content-center ">
+      <div className="topInfo row">
+        <div className="col d-flex align-items-center justify-content-center">
           <span>
             <LuRefreshCcw />
           </span>
@@ -36,92 +51,93 @@ const Footer = () => {
       </div>
       <footer>
         <div className="footerInner">
-          <div className="footerBlock row justify-content-between mx-auto align-items: center;">
-            <div className="col ">
-              <h6>Our Product</h6>
+          <div className="footerBlock">
+            <div className="col">
+              <h6>BB Toys</h6>
+              <p className="shortIntroduction">
+                BB Toys specializes in supplying and sourcing authentic
+                collectible figures from around the world. We also offer
+                tailored purchasing services based on customer requests.
+              </p>
+            </div>
+
+            <div className="col">
+              <h6>Page</h6>
               <ul>
                 <li>
-                  <Link to="#">Anime</Link>
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="#">Game</Link>
+                  <Link to="/shop">Shop now</Link>
                 </li>
                 <li>
-                  <Link to="#">Super Hero</Link>
+                  <Link to="/support">Sent ticket</Link>
                 </li>
                 <li>
-                  <Link to="#">NSFW</Link>
+                  <Link to="/faqs">FAQs</Link>
                 </li>
                 <li>
-                  <Link to="#">State</Link>
+                  <Link to="/info">More Info</Link>
                 </li>
               </ul>
             </div>
 
-            <div className="col ">
-              <h6>Help & Support</h6>
-              <ul>
-                <li>
-                  <Link to="#">Terms of Service</Link>
-                </li>
-                <li>
-                  <Link to="#">Private Policy</Link>
-                </li>
-                <li>
-                  <Link to="#">Cancelations and Returns</Link>
-                </li>
-                <li>
-                  <Link to="#">FAQ</Link>
-                </li>
-                <li>
-                  <Link to="#">After-Sales Service</Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className="col ">
+            <div className="col">
               <div className="imgLogoFooter">
                 <img src="/logo-bb-toys-shop.png" alt="logo" />
               </div>
             </div>
 
-            <div className="col ">
-              <h6>Contact Us</h6>
-              <ul>
-                <li>
-                  <Link to="#">Facebook</Link>
-                </li>
-                <li>
-                  <Link to="#">Instagram</Link>
-                </li>
-                <li>
-                  <Link to="#">Wechat</Link>
-                </li>
-                <li>
-                  <Link to="#">TikTok</Link>
-                </li>
-                <li>
-                  <Link to="#">Mail</Link>
-                </li>
-              </ul>
+            <div className="col">
+              <h6>Our Warehouses/Showrooms</h6>
+              <div className="iconFlag">
+                <Vietnam size={40} />
+                <China size={40} />
+                <Japan size={40} />
+                <Canada size={40} />
+                <Singapore size={40} />
+              </div>
             </div>
 
-            <div className="col ">
-              <h6>Payment Methods</h6>
-              <ul className="paymentMethod">
-                <li>
-                  <img
-                    src="/assets/image/footer_payment_paypal.png"
-                    alt="imgPaypal"
-                  />
-                </li>
-                <li>
-                  <img
-                    src="/assets/image/footer_payment_wise.png"
-                    alt="imWise"
-                  />
-                </li>
+            <div className="col">
+              <h6>Hotline/Mail</h6>
+              <ul>
+                <li>Phone: 0123456789</li>
+                <li>Mail: example@gmail.com</li>
               </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="footerWrapper">
+          <div className="footerEnd">
+            <div className="footerRights">
+              <p className="copyrightText">
+                Copyright © 2025{" "}
+                <a className="brandLink" href="/">
+                  BB Toys.
+                </a>{" "}
+                All Rights Reserved
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="footerWrapper">
+          <div className="footerEnd">
+            <div className="socialIcons">
+              <Facebook size={20} />
+              <Instagram size={20} />
+              <TikTok size={20} />
+              <WeChat size={20} />
+            </div>
+            <div className="paymentIcons">
+              <ApplePay size={40} />
+              <GooglePay size={40} />
+              <MasterCard size={40} />
+              <Paypal size={40} />
+              <Visa size={40} />
+              <WechatPay size={40} />
             </div>
           </div>
         </div>

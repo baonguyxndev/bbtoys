@@ -4,15 +4,24 @@
 
 .topInfo {
   color: #fff;
-  padding: 50px 0px;
+  padding: 50px 0;
   border-top: 1px solid #303030;
 }
 
-.topInfo .col {
-  justify-content: center;
+.topInfo .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   max-width: 1240px;
   margin-right: auto;
   margin-left: auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.topInfo .col {
+  flex: 1;
+  min-width: 200px;
 }
 
 .topInfo .col:last-child {
@@ -28,55 +37,141 @@
   font-weight: 600;
 }
 
-footer .footerInner {
+.footerInner {
   position: relative;
-  min-height: 333px;
   background-color: #000;
   padding: 50px 100px 30px;
   box-sizing: border-box;
 }
 
-footer .footerInner .col {
-  max-width: max-content;
+.footerBlock {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
 }
 
-footer .footerInner h6 {
+.footerBlock .col {
+  flex: 1 1 18%;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerBlock .col h6 {
   border-bottom: solid 2px #aaa;
   line-height: 2.25;
+  margin-bottom: 10px;
+  color: #fff;
 }
 
-footer .footerInner ul li {
+.footerBlock .col p,
+.footerBlock .col ul {
+  margin: 0;
+  padding: 0;
+}
+
+.footerBlock .col ul li {
   list-style: none;
   margin-bottom: 10px;
 }
 
-footer .footerInner ul li a {
+.footerBlock .col ul li a {
   color: #fff;
   font-size: 15px;
-}
-
-footer .footerInner ul li a:hover {
   text-decoration: none;
 }
 
-.footer .footerInner .imgLogoFooter img {
-  width: 350px;
+.footerBlock .col ul li a:hover {
+  text-decoration: underline;
 }
 
-footer .paymentMethod img {
-  width: 150px;
-  margin-right: 10px;
+.footerBlock .shortIntroduction {
+  font-size: 15px;
+  color: #ccc;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
+.footerBlock .imgLogoFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 100%;
 }
 
-.dropdown-icon {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
+.footerBlock .imgLogoFooter img {
+  width: 100%;
+  max-width: 350px;
+}
+
+.footerBlock .iconFlag {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.paymentIcons {
+  display: flex;
+  gap: 10px;
+}
+
+.paymentIcons img {
+  width: 120px;
+}
+
+.footerWrapper {
+  border-top: var(--border);
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footerEnd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  min-width: 150px;
+}
+
+.paymentIcons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-width: 200px;
+}
+
+.footerRights {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  min-width: 200px;
+}
+
+.footerRights p {
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.brandLink {
+  color: var(--color-primary, #ff0000);
+  text-decoration: none;
+}
+
+.brandLink:hover {
+  text-decoration: underline;
 }

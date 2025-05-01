@@ -1,0 +1,33 @@
+.layoutOptions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.layoutOptionBtn {
+  min-width: 40px !important;
+  height: 40px !important;
+  width: 40px !important;
+  border-radius: 40% !important;
+  font-size: 20px !important;
+  opacity: 0.5;
+}
+
+.layoutOptionBtn:hover {
+  box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
+  opacity: 1;
+}
+
+.layoutOptionBtn:active {
+  box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-active);
+}
+
+.layoutOptionBtn svg {
+  color: var(--color-btn-primary);
+}
+
+.layoutOptionBtn.active {
+  opacity: 1;
+  box-shadow: var(--box-shadow-primary) !important;
+}

@@ -4,13 +4,13 @@ import { Button } from "@mui/material";
 import { MdFavoriteBorder } from "react-icons/md";
 import { LuScaling } from "react-icons/lu";
 
-const ProductItem = ({ product, onOpenModal }) => {
+const ProductItem = ({ product, onOpenModal, layout }) => {
   const { img: images, id, name, state, brand, details } = product;
   const { price, oldPrice } = details[0] || {};
   const isSoldOut = state === "Sold-Out";
 
   return (
-    <div className={`productCard ${isSoldOut ? "sold-out" : ""}`}>
+    <div className={`productCard ${layout} ${isSoldOut ? "sold-out" : ""}`}>
       <div className="imageWrapper">
         <img src={images[0]} alt={name} className="productImageMain" />
         <img src={images[1]} alt={name} className="productImageHover" />

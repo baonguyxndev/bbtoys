@@ -1,3 +1,4 @@
+// productUtils.js
 export const flattenProducts = (productsData) => {
   if (!Array.isArray(productsData)) return [];
   let allProducts = [];
@@ -30,87 +31,123 @@ export const getPriceRange = (products) => {
   };
 };
 
-export const filterAndSortProducts = (
+export const hasFiltersApplied = (
   products,
   selectedCategories,
+  selectedItems,
+  selectedStudios,
+  selectedPhases,
+  selectedScales,
+  selectedStates,
+  searchQuery,
+  sortOption,
+  priceRange
+) => {
+  const { min: minPrice, max: maxPrice } = getPriceRange(products);
+  return (
+    selectedCategories.size > 0 ||
+    selectedItems.size > 0 ||
+    selectedStudios.size > 0 ||
+    selectedPhases.size > 0 ||
+    selectedScales.size > 0 ||
+    selectedStates.size > 0 ||
+    searchQuery ||
+    sortOption !== "latest" ||
+    priceRange.min !== minPrice ||
+    priceRange.max !== maxPrice
+  );
+};
+
+export const filterAndSortProducts = (
+  products,
+  filters,
   searchQuery,
   sortOption,
   priceRange,
   hasActiveFilters
 ) => {
-  let result = products
-    .flatMap((category) =>
-      category.items.flatMap((item) =>
-        (item.products || []).map((product) => ({
-          ...product,
-          category: item.itemKey,
-          categoryKey: category.categoryKey,
-        }))
-      )
-    )
-    .filter((product) => {
-      if (!product?.details?.length) return false;
+  let filteredProducts = [];
 
-      if (!hasActiveFilters) return true;
+  // Duyệt qua từng category
+  products.forEach((category) => {
+    const { categoryKey, items } = category;
 
-      const matchesCategory =
-        selectedCategories.size === 0 ||
-        selectedCategories.has(product.categoryKey);
+    // Lọc theo categoryKey (nếu có trong selectedCategories)
+    if (filters.categories.size === 0 || filters.categories.has(categoryKey)) {
+      // Duyệt qua từng item trong category
+      items.forEach((item) => {
+        const { itemKey, products: itemProducts } = item;
 
-      const matchesSearch =
-        !searchQuery ||
-        product.name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        product.brand?.toLowerCase().includes(searchQuery.toLowerCase());
+        // Lọc theo itemKey (nếu có trong selectedItems hoặc categoryKey được chọn)
+        if (filters.items.size === 0 || filters.items.has(itemKey)) {
+          // Lọc sản phẩm trong item
+          const filteredItemProducts = itemProducts.filter((product) => {
+            // Lọc theo các tiêu chí khác (studio, phase, scale, state, price, search)
+            const matchesStudio =
+              filters.studios.size === 0 || filters.studios.has(product.brand);
+            const matchesPhase =
+              filters.phases.size === 0 || filters.phases.has(product.phase);
+            const matchesScale =
+              filters.scales.size === 0 ||
+              (Array.isArray(product.details) &&
+                product.details.some((detail) =>
+                  filters.scales.has(detail.scale)
+                ));
+            const matchesState =
+              filters.states.size === 0 || filters.states.has(product.state);
+            const matchesPrice =
+              Array.isArray(product.details) &&
+              product.details.some(
+                (detail) =>
+                  detail.price >= priceRange.min &&
+                  detail.price <= priceRange.max
+              );
+            const matchesSearch =
+              !searchQuery ||
+              product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+              product.brand.toLowerCase().includes(searchQuery.toLowerCase());
 
-      const { min: minProductPrice, max: maxProductPrice } =
-        getPriceRange(products);
-      const matchesPrice =
-        (priceRange.min === minProductPrice &&
-          priceRange.max === maxProductPrice) ||
-        product.details.some(
-          (d) => d.price >= priceRange.min && d.price <= priceRange.max
-        );
+            return (
+              matchesStudio &&
+              matchesPhase &&
+              matchesScale &&
+              matchesState &&
+              matchesPrice &&
+              matchesSearch
+            );
+          });
 
-      return matchesCategory && matchesSearch && matchesPrice;
+          filteredProducts = [...filteredProducts, ...filteredItemProducts];
+        }
+      });
+    }
+  });
+
+  // Sắp xếp sản phẩm
+  if (sortOption === "price-low-high") {
+    filteredProducts.sort((a, b) => {
+      const aMinPrice = Array.isArray(a.details)
+        ? Math.min(...a.details.map((d) => d.price))
+        : Infinity; // Giá trị mặc định nếu details không tồn tại
+      const bMinPrice = Array.isArray(b.details)
+        ? Math.min(...b.details.map((d) => d.price))
+        : Infinity;
+      return aMinPrice - bMinPrice;
     });
-
-  if (sortOption !== "latest") {
-    result.sort((a, b) => {
-      if (sortOption === "price-low-high") {
-        return (
-          Math.min(...a.details.map((d) => d.price)) -
-          Math.min(...b.details.map((d) => d.price))
-        );
-      }
-      if (sortOption === "price-high-low") {
-        return (
-          Math.max(...b.details.map((d) => d.price)) -
-          Math.max(...a.details.map((d) => d.price))
-        );
-      }
-      return 0;
+  } else if (sortOption === "price-high-low") {
+    filteredProducts.sort((a, b) => {
+      const aMinPrice = Array.isArray(a.details)
+        ? Math.min(...a.details.map((d) => d.price))
+        : -Infinity; // Giá trị mặc định nếu details không tồn tại
+      const bMinPrice = Array.isArray(b.details)
+        ? Math.min(...b.details.map((d) => d.price))
+        : -Infinity;
+      return bMinPrice - aMinPrice;
     });
+  } else {
+    // Mặc định: latest (có thể dựa vào id hoặc ngày thêm)
+    filteredProducts.sort((a, b) => b.id - a.id);
   }
 
-  return result;
-};
-
-export const hasFiltersApplied = (
-  products,
-  selectedCategories,
-  searchQuery,
-  sortOption,
-  priceRange
-) => {
-  if (!products.length) return false;
-  const { min: minProductPrice, max: maxProductPrice } =
-    getPriceRange(products);
-
-  return (
-    selectedCategories.size > 0 ||
-    searchQuery.trim() !== "" ||
-    sortOption !== "latest" ||
-    priceRange.min !== minProductPrice ||
-    priceRange.max !== maxProductPrice
-  );
+  return filteredProducts;
 };

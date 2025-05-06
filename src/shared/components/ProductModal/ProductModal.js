@@ -194,12 +194,12 @@ const ProductModal = ({ product, isOpen, onClose }) => {
 
   return (
     <div className="productModalOverlay" onClick={onClose}>
-      <div className="modalProduct" onClick={(e) => e.stopPropagation()}>
+      <div className="productModal" onClick={(e) => e.stopPropagation()}>
         <button className="btnCloseProductModal" onClick={onClose}>
           <IoClose />
         </button>
 
-        <h1 className="productTitle">{product.name}</h1>
+        <h1 className="productName">{product.name}</h1>
 
         <div className="productMeta">
           <div className="metaLeft">

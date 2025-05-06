@@ -1,0 +1,101 @@
+.relatedProducts {
+  width: 100%;
+  margin-top: 100px;
+}
+
+.relatedProducts .related-products-section {
+  margin-top: 40px;
+  position: relative;
+}
+
+.relatedProducts .section-title {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.relatedProducts .section-title::before,
+.relatedProducts .section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: #aaa;
+}
+
+.relatedProducts .swiper-container {
+  position: static;
+  max-width: 80%;
+}
+
+.relatedProducts .swiper-slide {
+  overflow: visible !important;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* Swiper Navigation */
+/* Swiper Navigation */
+.relatedProducts .swiper-button-next {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.3s ease;
+  right: 80px;
+}
+
+.relatedProducts .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.3s ease;
+  left: 80px;
+}
+
+.relatedProducts .swiper-button-next:hover,
+.relatedProducts .swiper-button-prev:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.relatedProducts .swiper-button-next:after,
+.relatedProducts .swiper-button-prev:after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Swiper Pagination */
+.relatedProducts .swiper-pagination {
+  position: absolute !important;
+  bottom: -20px;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: auto !important;
+  display: flex !important;
+  gap: 8px;
+  justify-content: center;
+}
+
+.relatedProducts .swiper-pagination-bullet {
+  width: 40px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #aaa;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  margin: 0 !important;
+}
+
+.relatedProducts .swiper-pagination-bullet-active {
+  width: 8px;
+  border-radius: 50%;
+  background-color: #ba0000;
+  opacity: 1;
+}

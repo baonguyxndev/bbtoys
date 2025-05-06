@@ -271,7 +271,7 @@ const Header = () => {
   return (
     <div className={`headerWrapper ${isScrolled ? "scrolled" : ""}`}>
       <div className="top-strip bg-black py-2">
-        <div className="container">
+        <div className="containerBannerHeader">
           {/* Banner Top Header */}
           <Swiper
             modules={[Autoplay]}

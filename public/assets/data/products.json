@@ -59,6 +59,10 @@
             ],
             "img": [
               "https://product.hstatic.net/200000515997/product/f15ece37-567b-42ed-af4e-5c034cf23810_48c0ee711d4f40018130b1f354088be0_master.jpg",
+              "https://product.hstatic.net/200000515997/product/7ab63b1d-0ec0-4035-87a7-3cf0b98ca9ea_7e641bd158804b4e80272ebbbaf55a04_master.jpg",
+              "https://product.hstatic.net/200000515997/product/f15ece37-567b-42ed-af4e-5c034cf23810_48c0ee711d4f40018130b1f354088be0_master.jpg",
+              "https://product.hstatic.net/200000515997/product/7ab63b1d-0ec0-4035-87a7-3cf0b98ca9ea_7e641bd158804b4e80272ebbbaf55a04_master.jpg",
+              "https://product.hstatic.net/200000515997/product/f15ece37-567b-42ed-af4e-5c034cf23810_48c0ee711d4f40018130b1f354088be0_master.jpg",
               "https://product.hstatic.net/200000515997/product/7ab63b1d-0ec0-4035-87a7-3cf0b98ca9ea_7e641bd158804b4e80272ebbbaf55a04_master.jpg"
             ],
             "nsfw": null
@@ -966,7 +970,7 @@
           {
             "id": 32,
             "name": "Satoru Gojo",
-            "brand": "ZanyJo./ke Studio",
+            "brand": "ZanyJoke Studio",
             "state": "Available",
             "phase": "Released",
             "estSize": ["H65 x W55 x D45 cm"],

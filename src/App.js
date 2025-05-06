@@ -11,7 +11,7 @@ import Footer from "./shared/components/Footer/Footer";
 import ScrollHandler from "./shared/hooks/ScrollHandler";
 import ScrollToTop from "./shared/hooks/ScrollToTop";
 import FAQs from "./features/faqs/FAQs";
-import ProductModal from "./shared/components/ProductModal/ProductModal";
+import ProductDetail from "./features/product/ProductDetail";
 
 function App() {
   return (
@@ -22,13 +22,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/license" element={<License />} />
         <Route path="/support" element={<Support />} />
         <Route path="/faqs" element={<FAQs />} />
         <Route path="/info" element={<Info />} />
       </Routes>
       <Footer />
-      <ProductModal />
     </BrowserRouter>
   );
 }

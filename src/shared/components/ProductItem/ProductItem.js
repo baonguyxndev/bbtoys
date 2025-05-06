@@ -3,11 +3,17 @@ import "./ProductItem.css";
 import { Button } from "@mui/material";
 import { MdFavoriteBorder } from "react-icons/md";
 import { LuScaling } from "react-icons/lu";
+import { useNavigate } from "react-router-dom";
 
 const ProductItem = ({ product, onOpenModal, layout }) => {
+  const navigate = useNavigate();
   const { img: images, id, name, state, brand, details } = product;
   const { price, oldPrice } = details[0] || {};
   const isSoldOut = state === "Sold-Out";
+
+  const handleChooseOptions = () => {
+    navigate(`/product/${id}`);
+  };
 
   return (
     <div className={`productCard ${layout} ${isSoldOut ? "sold-out" : ""}`}>
@@ -60,6 +66,7 @@ const ProductItem = ({ product, onOpenModal, layout }) => {
           <Button
             className={`actionButton ${isSoldOut ? "disabled" : ""}`}
             disabled={isSoldOut}
+            onClick={handleChooseOptions}
           >
             {isSoldOut ? "Out of stock" : "Choose Options"}
           </Button>

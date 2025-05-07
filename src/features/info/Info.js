@@ -34,7 +34,7 @@ const Info = () => {
   const [activeTab, setActiveTab] = useState("about");
 
   return (
-    <div className="contact">
+    <div className="info">
       <div className="title mt-2">
         <h2>
           <div className="line"></div>
@@ -247,7 +247,7 @@ const Info = () => {
             </div>
           )}
           {activeTab === "media" && (
-            <div className="contact-media content-section">
+            <div className="info-media content-section">
               <h4>We are present on the following social platforms</h4>
               <div className="media-grid">
                 <a

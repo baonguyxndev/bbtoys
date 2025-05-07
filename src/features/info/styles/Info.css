@@ -1,4 +1,4 @@
-.contact .title {
+.info .title {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,19 +8,19 @@
   color: #fff;
 }
 
-.contact .title h2 {
+.info .title h2 {
   display: flex;
   align-items: center;
   width: 100%;
 }
 
-.contact .line {
+.info .line {
   flex-grow: 1;
   height: 1px;
   background-color: #aaa;
 }
 
-.contact .titleMain {
+.info .titleMain {
   display: flex;
   align-items: center;
   white-space: nowrap;
@@ -29,14 +29,14 @@
   font-weight: bold;
 }
 
-.contact .tabs {
+.info .tabs {
   display: flex;
   justify-content: center;
   gap: 15px;
   padding: 20px 0;
 }
 
-.contact .tab {
+.info .tab {
   flex: 1;
   min-width: 220px;
   display: flex;
@@ -53,22 +53,22 @@
   color: #fff;
 }
 
-.contact .tab:focus {
+.info .tab:focus {
   outline: none;
 }
 
-.contact .tab:hover {
+.info .tab:hover {
   box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
     0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
 }
 
-.contact .tab.active {
+.info .tab.active {
   box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
     0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
   transform: scale(0.9);
 }
 
-.contact .tab-content {
+.info .tab-content {
   background-color: #333;
   border-radius: 15px;
   padding: 2rem;
@@ -79,11 +79,11 @@
   color: #ddd;
 }
 
-.contact .tab-content > div {
+.info .tab-content > div {
   animation: fadeIn 0.3s ease-in;
 }
 
-.contact .tab-content h1 {
+.info .tab-content h1 {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
@@ -91,24 +91,24 @@
   text-align: center; /* Căn giữa tiêu đề */
 }
 
-.contact .content-section {
+.info .content-section {
   margin-bottom: 3rem;
 }
 
-.contact .content-section h2 {
+.info .content-section h2 {
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
 
-.contact .content-section ul {
+.info .content-section ul {
   list-style: none;
   padding: 0;
   margin-bottom: 1.5rem;
 }
 
-.contact .content-section ul li {
+.info .content-section ul li {
   position: relative;
   padding-left: 1.5rem;
   margin-bottom: 0.8rem;
@@ -117,7 +117,7 @@
   color: #ddd;
 }
 
-.contact .content-section ul li:before {
+.info .content-section ul li:before {
   content: "-";
   position: absolute;
   left: 0;
@@ -125,7 +125,7 @@
   font-weight: bold;
 }
 
-.contact .content-section img {
+.info .content-section img {
   max-width: 100%; /* Đảm bảo hình ảnh không vượt quá container */
   height: auto;
   margin: 10px auto;
@@ -133,11 +133,11 @@
   border-radius: 8px;
 }
 
-.contact .contact-media {
+.info .info-media {
   text-align: center;
 }
 
-.contact .media-grid {
+.info .media-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -145,7 +145,7 @@
   margin-top: 30px;
 }
 
-.contact .media-item {
+.info .media-item {
   background-color: #333;
   border: 1px solid #444;
   border-radius: 20px;
@@ -161,13 +161,13 @@
   color: #fff;
 }
 
-.contact .media-item:hover {
+.info .media-item:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   border-color: #ba0000;
 }
 
-.contact .media-item .icon {
+.info .media-item .icon {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -175,10 +175,10 @@
   transition: transform 0.3s;
 }
 
-.contact .media-item:hover .icon {
+.info .media-item:hover .icon {
   transform: scale(1.1);
 }
 
-.contact .media-item .mailIcon {
+.info .media-item .mailIcon {
   font-size: 30px;
 }

@@ -15,7 +15,7 @@ const RelatedProducts = ({ products }) => {
   return (
     <div className="relatedProducts">
       <div className="related-products-section">
-        <h2 className="section-title">Sản phẩm liên quan</h2>
+        <h2 className="section-title">Related Products</h2>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={20}

@@ -365,59 +365,40 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  display: table;
-  width: 100%;
 }
 
 .productDetail .specs-list li {
-  display: table-row;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px 0;
   border-bottom: 1px solid #333;
-  position: relative;
 }
 
 .productDetail .specs-list li:last-child {
   border-bottom: none;
 }
 
-.productDetail .specs-list li::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  background: linear-gradient(to right, #333, #444, #333);
-}
-
-.productDetail .specs-list li:last-child::after {
-  display: none;
-}
-
 .productDetail .spec-label {
-  display: table-cell;
-  padding: 12px 15px;
   color: #999;
-  width: 150px;
-  border-right: 1px solid #333;
-  background-color: #1a1a1a;
-  position: relative;
-}
-
-.productDetail .spec-label::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 1px;
-  background: linear-gradient(to bottom, #333, #444, #333);
+  font-size: 0.95rem;
+  font-weight: 500;
+  flex: 0 0 120px;
 }
 
 .productDetail .spec-value {
-  display: table-cell;
-  padding: 12px 15px;
-  font-weight: 500;
   color: #fff;
+  font-size: 0.95rem;
+  flex: 1;
+  text-align: center;
+}
+
+.productDetail .spec-value div {
+  margin-bottom: 5px;
+}
+
+.productDetail .spec-value div:last-child {
+  margin-bottom: 0;
 }
 
 /* Fullscreen Image View */
@@ -611,4 +592,321 @@
   min-height: 400px;
   color: #fff;
   font-size: 20px;
+}
+
+.productDetail .tabs-info-service {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.productDetail .tab {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  background-color: #333;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #333;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.productDetail .tab:focus {
+  outline: none;
+}
+
+.productDetail .tab:hover {
+  box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
+    0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
+}
+
+.productDetail .tab.active {
+  box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
+    0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
+  transform: scale(0.9);
+}
+
+.productDetail .tab-content {
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid #333;
+  min-height: 300px;
+  text-align: left;
+  color: #ddd;
+}
+
+.productDetail .tab-content > div {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.productDetail .tab-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  text-align: center; /* Căn giữa tiêu đề */
+}
+
+.productDetail .shipping-cost-table {
+  background-color: #121212;
+  border-radius: 6px;
+  padding: 15px;
+  border: 1px solid #333;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/* Fees Tab Styles */
+.productDetail .fees {
+  margin-top: 30px;
+}
+
+.productDetail .fees h3 {
+  color: #fff;
+  font-size: 30px;
+  margin: 20px;
+  font-weight: bold;
+}
+
+/* Cost Shipping Table Styles */
+.cost-shipping-table {
+  width: fit-content;
+  margin: 50px auto;
+  background: #222;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.cost-shipping-table table {
+  border-collapse: collapse;
+  min-width: 400px;
+  background: transparent;
+}
+.cost-shipping-table th,
+.cost-shipping-table td {
+  padding: 12px 24px;
+  text-align: left;
+  border-right: 1px solid #333;
+}
+.cost-shipping-table th:last-child,
+.cost-shipping-table td:last-child {
+  border-right: none;
+}
+.cost-shipping-table th {
+  background: #444;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+.cost-shipping-table table th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.cost-shipping-table table th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.cost-shipping-table tr:not(:last-child) td {
+  border-bottom: 1px solid #333;
+}
+.cost-shipping-table td {
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.payment-plan {
+  margin-top: 30px;
+}
+
+.payment-plan h3 {
+  color: #fff;
+  font-size: 30px;
+  margin: 20px;
+  font-weight: bold;
+}
+
+.payment-conditions {
+  margin: 20px 0;
+  padding: 20px;
+  background: #222;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.payment-conditions h4 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.payment-conditions ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.payment-conditions li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.payment-conditions li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ba0000;
+}
+
+.payment-plan-table {
+  width: 100%;
+  margin: 20px 0;
+  background: #222;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.payment-plan-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.payment-plan-table th,
+.payment-plan-table td {
+  padding: 15px;
+  text-align: center;
+  border-right: 1px solid #333;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.payment-plan-table th:last-child,
+.payment-plan-table td:last-child {
+  border-right: none;
+}
+
+.payment-plan-table th {
+  background: #444;
+  font-weight: 600;
+}
+
+.payment-plan-table tr:not(:last-child) td {
+  border-bottom: 1px solid #333;
+}
+
+.payment-plan-table td:last-child {
+  text-align: left;
+  color: #ccc;
+}
+
+.payment-notes {
+  margin-top: 20px;
+  padding: 20px;
+  background: #222;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.payment-notes h4 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.note-item {
+  margin-bottom: 20px;
+}
+
+.note-item:last-child {
+  margin-bottom: 0;
+}
+
+.note-item p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.note-item strong {
+  color: #ba0000;
+}
+
+.sub-notes {
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 2px solid #333;
+}
+
+.sub-notes p {
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.sub-notes ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.sub-notes li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #222;
+  overflow: hidden;
+  font-size: 15px;
+}
+.specs-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid #333;
+  color: #fff;
+}
+.specs-table tr:last-child td {
+  border-bottom: none;
+}
+.specs-table .spec-label {
+  font-weight: 600;
+  background: #444;
+  color: #fff;
+  width: 120px;
+}
+.specs-table .spec-value {
+  color: #eee;
+}
+
+.highlight-note {
+  background: #232323;
+  border-radius: 8px;
+  border: 1px solid #333;
+  padding: 0 0 10px 0;
+  margin-bottom: 20px;
+}
+.highlight-note h3 {
+  background: #444;
+  color: #fff;
+  margin: 0;
+  padding: 12px 18px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-size: 20px;
+}
+.note-content {
+  color: #eee;
+  padding: 16px 18px;
+  font-size: 15px;
+  line-height: 1.7;
 }

@@ -342,9 +342,9 @@ const Header = () => {
                     </Link>
                   </li>
                   <li className="list-inline-item">
-                    <Link to="/license">
+                    <Link to="/licenses">
                       <BiCopyright />
-                      &nbsp;LICENSE
+                      &nbsp;LICENSES
                     </Link>
                   </li>
                   <li className="list-inline-item">

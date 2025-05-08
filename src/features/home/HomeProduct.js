@@ -11,6 +11,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./styles/HomeProduct.css";
+import Loading from "../../shared/components/Loading/Loading";
 
 const HomeProduct = () => {
   const { products, loading, error } = useFetchProducts();
@@ -32,8 +33,8 @@ const HomeProduct = () => {
     [allProducts, selectedProductId]
   );
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>{error}</div>;
+  if (loading) return <Loading />;
+  if (error) return <div className="error-message">{error}</div>;
 
   return (
     <div className="homeProducts">

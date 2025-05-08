@@ -1,0 +1,257 @@
+@import "../../styles/variables.css";
+
+/* Container Styles */
+.must-read-section {
+  max-width: 80%;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #121212;
+  border-radius: 10px;
+  border: var(--border-primary);
+}
+
+.must-read-title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+/* Tab Navigation */
+.tabs-info-service {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+.tab {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  background-color: #222;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: var(--border-primary);
+  font-size: 18px;
+  color: var(--color-text-primary);
+  transition: var(--transition-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.tab:focus {
+  outline: none;
+}
+
+.tab:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(186, 0, 0, 0.2);
+}
+
+.tab.active {
+  background-color: #ba0000;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(186, 0, 0, 0.3);
+}
+
+/* Content Container */
+.tab-content {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 2rem;
+  border: 1px solid #666;
+  min-height: 300px;
+  text-align: left;
+  color: #ddd;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content > div {
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* Typography */
+.tab-content h3 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.tab-content h3:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: #ba0000;
+  border-radius: 5px;
+}
+
+.tab-content h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem;
+  color: #fff;
+}
+
+.tab-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+  font-size: 18px;
+}
+
+/* Lists */
+.tab-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.tab-content li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.tab-content li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ba0000;
+  font-size: 1.2rem;
+}
+
+/* Tables */
+.tab-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  table-layout: auto;
+}
+
+.tab-content th {
+  background: #444;
+  color: #fff;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  border: 1px solid #666;
+  border-bottom: 2px solid #ba0000;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.tab-content td {
+  padding: 20px;
+  border: 1px solid #666;
+  color: #fff;
+  text-align: center;
+  white-space: normal;
+}
+
+.tab-content tr:nth-child(even) {
+  background: #2a2a2a;
+}
+
+/* Highlight Boxes */
+.highlight-box {
+  background: #333;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid #ba0000;
+}
+
+.highlight-box h4 {
+  color: #fff;
+  margin-top: 0;
+}
+
+.highlight-box p {
+  margin-bottom: 0;
+}
+
+/* Notes */
+.shipping-note {
+  color: #ba0000;
+  font-style: italic;
+  margin: 10px 0;
+}
+
+.table-note {
+  color: #ba0000;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .must-read-section {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  .tabs-info-service {
+    flex-direction: column;
+  }
+
+  .tab {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .tab-content {
+    padding: 1rem;
+  }
+
+  .tab-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .tab-content table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 15px 0;
+  }
+
+  .tab-content th,
+  .tab-content td {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

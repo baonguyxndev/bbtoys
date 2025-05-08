@@ -1,9 +1,9 @@
-import "../license/styles/License.css";
+import "./styles/Licenses.css";
 import React from "react";
 import useFetchLicenses from "../../shared/hooks/useFetchLicenses";
 import Loading from "../../shared/components/Loading/Loading";
 
-const License = () => {
+const Licenses = () => {
   const { licenses, loading, error } = useFetchLicenses();
 
   return (
@@ -29,8 +29,8 @@ const License = () => {
         {!loading && !error && (
           <div className="container">
             <div className="row">
-              <div className="licenseWrapper">
-                <div className="licenseRow">
+              <div className="licensesWrapper">
+                <div className="licensesRow">
                   <ul className="row row-cols-1 row-cols-sm-4 g-4">
                     {licenses.map((license) => (
                       <li key={license.id} className="col">
@@ -69,4 +69,4 @@ const License = () => {
   );
 };
 
-export default License;
+export default Licenses;

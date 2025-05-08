@@ -2,6 +2,7 @@ import "../support/styles/Support.css";
 import React, { useState, useEffect, useRef } from "react";
 import { TbPhotoCancel } from "react-icons/tb";
 import { IoIosArrowDown } from "react-icons/io";
+import Loading from "../../shared/components/Loading/Loading";
 
 const Support = () => {
   const [formData, setFormData] = useState({
@@ -18,6 +19,7 @@ const Support = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [orders, setOrders] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const fileInputRef = useRef(null);
 
@@ -102,6 +104,15 @@ const Support = () => {
       },
     ];
     setTickets(mockTickets);
+  }, []);
+
+  useEffect(() => {
+    // Giả lập loading
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   const handleSubmit = async (e) => {
@@ -223,6 +234,8 @@ const Support = () => {
     return new Date(dateString).toLocaleDateString("vi-VN", options);
   };
 
+  if (loading) return <Loading />;
+
   return (
     <div className="support">
       <div className="title mt-2">
@@ -306,6 +319,9 @@ const Support = () => {
                         </option>
                       ))}
                     </select>
+                    <IoIosArrowDown className="select-arrow" />
+                  </div>
+                  <div className="orders-selected">
                     {formData.saleOrder && (
                       <div className="mt-2 text-muted">
                         Selected order details:
@@ -316,7 +332,6 @@ const Support = () => {
                           ))}
                       </div>
                     )}
-                    <IoIosArrowDown className="select-arrow" />
                   </div>
                 </div>
 
@@ -486,7 +501,9 @@ const Support = () => {
           }}
         >
           <div className="spinner-border text-light" role="status">
-            <span className="visually-">Loading...</span>
+            <span className="visually-">
+              <Loading />
+            </span>
           </div>
         </div>
       )}

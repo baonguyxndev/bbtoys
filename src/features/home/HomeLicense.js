@@ -96,7 +96,7 @@ const HomeLicense = () => {
                         <div className="text">OTHER</div>
                         <div className="imageWrapper">
                           <img
-                            src="https://e1.pxfuel.com/desktop-wallpaper/894/350/desktop-wallpaper-anime-digital-anime-crossover-accel-world-another-crossover-anime.jpg"
+                            src="/assets/image/all-licences-anime.png"
                             alt={`img-all-licenses`}
                             className="img-fluid"
                           />

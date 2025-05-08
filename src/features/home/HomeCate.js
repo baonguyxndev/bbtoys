@@ -9,7 +9,7 @@ const HomeCate = () => {
   const { categories, loading, error } = useFetchCategories();
 
   if (loading) return <Loading />;
-  if (error) return <div>{error}</div>;
+  if (error) return <div className="error-message">{error}</div>;
 
   return (
     <section className="homeCate">

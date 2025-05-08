@@ -32,25 +32,25 @@
   color: #fff;
 }
 
-.licenses .licenseWrapper {
+.licenses .licensesWrapper {
   width: 100%;
 }
 
-.licenses .licenseWrapper ul {
+.licenses .licensesWrapper ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
 
-.licenses .licenseWrapper ul li {
+.licenses .licensesWrapper ul li {
   flex: 0 0 calc(50% - 15px); /* 2 mục trên một hàng */
   max-width: calc(50% - 15px);
   list-style: none;
   padding: 0;
 }
 
-.licenses .licenseWrapper .row {
+.licenses .licensesWrapper .row {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -15px;

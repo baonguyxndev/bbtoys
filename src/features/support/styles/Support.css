@@ -62,7 +62,8 @@
   padding: 2rem !important;
   border: 1px solid #333;
   margin-top: 50px;
-  max-height: 850px;
+  height: auto;
+  overflow: visible;
 }
 
 .support .ticket-list-container {

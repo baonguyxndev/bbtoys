@@ -65,7 +65,6 @@ const ProductItem = ({ product, onOpenModal, layout }) => {
         <div className="bottomAction">
           <Button
             className={`actionButton ${isSoldOut ? "disabled" : ""}`}
-            disabled={isSoldOut}
             onClick={handleChooseOptions}
           >
             {isSoldOut ? "Out of stock" : "Choose Options"}

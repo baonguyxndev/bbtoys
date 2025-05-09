@@ -34,7 +34,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease-in-out;
   position: absolute;
   top: 0;
   left: 0;
@@ -45,7 +45,7 @@
 }
 
 .product-detail .main-image:hover img {
-  transform: scale(1.5);
+  transform: scale(2);
   transform-origin: var(--mouse-x) var(--mouse-y);
   object-fit: cover;
 }
@@ -58,9 +58,8 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   gap: 10px;
-  max-height: 360px; /* Giảm chiều cao xuống */
+  max-height: 300px;
   overflow-y: auto;
   transition: all 0.3s ease;
   padding: 20px;
@@ -88,6 +87,19 @@
 
 .product-detail .thumbnails-wrap {
   margin-bottom: 20px;
+}
+
+.product-detail .discount-badge {
+  position: absolute;
+  top: 35px;
+  left: 30px;
+  z-index: 2;
+  background-color: #ba0000;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .product-detail .product-header {
@@ -170,16 +182,7 @@
   text-decoration: line-through;
 }
 
-.product-detail .discount-badge {
-  background-color: #ba0000;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 500;
-}
-
-.product-detail .product-description {
+.product-detail .product-note {
   margin-bottom: 20px;
   border: 1px solid #666;
   border-radius: 8px;
@@ -187,7 +190,7 @@
   background-color: #222;
 }
 
-.product-detail .product-description h3 {
+.product-detail .product-note h3 {
   margin: 0;
   padding: 20px;
   font-weight: bold;
@@ -198,7 +201,7 @@
   text-align: center;
 }
 
-.product-detail .product-description p {
+.product-detail .product-note p {
   margin: 0;
   padding: 15px;
   color: #999;
@@ -207,7 +210,7 @@
   position: relative;
 }
 
-.product-detail .product-description p::after {
+.product-detail .product-note p::after {
   content: "";
   position: absolute;
   left: 0;
@@ -344,8 +347,8 @@
   font-weight: 500;
   background-color: #ba0000;
   border-radius: 4px;
-  color: white;
-  cursor: pointer;
+  color: white !important;
+  cursor: pointer !important;
   transition: all 0.3s ease;
 }
 

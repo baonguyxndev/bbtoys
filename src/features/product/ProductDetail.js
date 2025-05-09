@@ -473,10 +473,17 @@ const ProductDetail = () => {
           </div>
           <div className="col-md-6">
             <div className="product-info">
-              <div className="product-description highlight-note">
+              <div className="product-note highlight-note">
                 <h3>Note</h3>
                 <div className="note-content">
-                  {product.description || "No description available"}
+                  {Array.isArray(product.note)
+                    ? product.note.map((note, index) => (
+                        <React.Fragment key={note}>
+                          {note}
+                          {index < product.note.length - 1 && <br />}
+                        </React.Fragment>
+                      ))
+                    : product.note || "No note..."}
                 </div>
               </div>
               <div className="product-price">
@@ -540,14 +547,14 @@ const ProductDetail = () => {
       <MustRead />
 
       {/* Related Products Section */}
-      <div className="related-product-section">
+      <section className="related-product-section">
         <RelatedProducts currentProduct={product} />
-      </div>
+      </section>
 
       {/* Latest Products Section */}
-      <div className="latest-product-section">
+      <section className="latest-product-section">
         <LatestProducts />
-      </div>
+      </section>
     </div>
   );
 };

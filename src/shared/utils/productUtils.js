@@ -63,8 +63,7 @@ export const filterAndSortProducts = (
   filters,
   searchQuery,
   sortOption,
-  priceRange,
-  hasActiveFilters
+  priceRange
 ) => {
   let filteredProducts = [];
 
@@ -78,7 +77,7 @@ export const filterAndSortProducts = (
       items.forEach((item) => {
         const { itemKey, products: itemProducts } = item;
 
-        // Lọc theo itemKey (nếu có trong selectedItems hoặc categoryKey được chọn)
+        // Lọc theo itemKey (nếu có trong selectedItems)
         if (filters.items.size === 0 || filters.items.has(itemKey)) {
           // Lọc sản phẩm trong item
           const filteredItemProducts = itemProducts.filter((product) => {
@@ -117,37 +116,51 @@ export const filterAndSortProducts = (
             );
           });
 
+          // Thêm sản phẩm đã lọc vào mảng kết quả
           filteredProducts = [...filteredProducts, ...filteredItemProducts];
         }
       });
     }
   });
 
+  // Loại bỏ sản phẩm trùng id (nếu có)
+  const uniqueProducts = [];
+  const seenIds = new Set();
+  for (const product of filteredProducts) {
+    if (!seenIds.has(product.id)) {
+      uniqueProducts.push(product);
+      seenIds.add(product.id);
+    }
+  }
+
   // Sắp xếp sản phẩm
   if (sortOption === "price-low-high") {
-    filteredProducts.sort((a, b) => {
+    uniqueProducts.sort((a, b) => {
       const aMinPrice = Array.isArray(a.details)
         ? Math.min(...a.details.map((d) => d.price))
-        : Infinity; // Giá trị mặc định nếu details không tồn tại
+        : Infinity;
       const bMinPrice = Array.isArray(b.details)
         ? Math.min(...b.details.map((d) => d.price))
         : Infinity;
       return aMinPrice - bMinPrice;
     });
   } else if (sortOption === "price-high-low") {
-    filteredProducts.sort((a, b) => {
+    uniqueProducts.sort((a, b) => {
       const aMinPrice = Array.isArray(a.details)
         ? Math.min(...a.details.map((d) => d.price))
-        : -Infinity; // Giá trị mặc định nếu details không tồn tại
+        : -Infinity;
       const bMinPrice = Array.isArray(b.details)
         ? Math.min(...b.details.map((d) => d.price))
         : -Infinity;
       return bMinPrice - aMinPrice;
     });
   } else {
-    // Mặc định: latest (có thể dựa vào id hoặc ngày thêm)
-    filteredProducts.sort((a, b) => b.id - a.id);
+    // Mặc định: latest (sắp xếp theo ID đặc trưng của sản phẩm)
+    uniqueProducts.sort((a, b) => {
+      // So sánh ID dưới dạng chuỗi để đảm bảo sắp xếp chính xác
+      return b.id.localeCompare(a.id);
+    });
   }
 
-  return filteredProducts;
+  return uniqueProducts;
 };

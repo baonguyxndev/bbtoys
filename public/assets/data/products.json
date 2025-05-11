@@ -6,10 +6,10 @@
         "itemKey": "one-piece",
         "products": [
           {
-            "id": 1,
+            "id": "OP1",
             "name": "Kaido vs Luffy",
             "brand": "Venus Studio",
-            "state": "Pre-Order",
+            "state": "Available",
             "phase": "Released",
             "estSize": "H59/64 x W62/72 x D55/64 cm",
             "material": "Resin",
@@ -69,7 +69,7 @@
             "nsfw": null
           },
           {
-            "id": 2,
+            "id": "OP2",
             "name": "Monkey.D.Luffy Red Roc",
             "brand": "Monkey.D Studio",
             "state": "Available",
@@ -102,10 +102,10 @@
             "nsfw": null
           },
           {
-            "id": 3,
+            "id": "OP3",
             "name": "Portgas D. Ace",
             "brand": "Monkey.D Studio",
-            "state": "Order",
+            "state": "Pre-Order",
             "phase": "Pre-Order Close",
             "estSize": "H68 x W48 x D45 cm",
             "material": "Resin",
@@ -138,7 +138,7 @@
             "nsfw": null
           },
           {
-            "id": 4,
+            "id": "OP4",
             "name": "Roronoa Zoro",
             "brand": "LX Studio",
             "state": "Order",
@@ -169,7 +169,7 @@
             "nsfw": null
           },
           {
-            "id": 5,
+            "id": "OP5",
             "name": "Vinsmoke Sanji",
             "brand": "TH Studio",
             "state": "Available",
@@ -209,7 +209,7 @@
             "nsfw": null
           },
           {
-            "id": 6,
+            "id": "OP6",
             "name": "Roronoa Zoro",
             "brand": "TH Studio",
             "state": "Available",
@@ -268,7 +268,7 @@
             "nsfw": null
           },
           {
-            "id": 7,
+            "id": "OP7",
             "name": "Monkey.D.Luffy",
             "brand": "TH Studio",
             "state": "Available",
@@ -305,7 +305,7 @@
             "nsfw": null
           },
           {
-            "id": 8,
+            "id": "OP8",
             "name": "Aokiji Kuzan",
             "brand": "Jimei Palace",
             "state": "Available",
@@ -335,7 +335,7 @@
             "nsfw": null
           },
           {
-            "id": 9,
+            "id": "OP9",
             "name": "Akainu Sakazuki",
             "brand": "Jimei Palace",
             "state": "Available",
@@ -361,7 +361,7 @@
             "nsfw": null
           },
           {
-            "id": 10,
+            "id": "OP10",
             "name": "Kizaru Borsalino",
             "brand": "Jimei Palace",
             "state": "Available",
@@ -392,7 +392,7 @@
             "nsfw": null
           },
           {
-            "id": 11,
+            "id": "OP11",
             "name": "Aokiji Kuzan VS Akainu Sakazuki",
             "brand": "Jimei Palace",
             "state": "Available",
@@ -432,7 +432,7 @@
         "itemKey": "dragon-ball",
         "products": [
           {
-            "id": 12,
+            "id": "DB1",
             "name": "Son Goku Super Saiyan",
             "brand": "White Hole Studio",
             "state": "Sold-Out",
@@ -506,7 +506,7 @@
             "nsfw": null
           },
           {
-            "id": 13,
+            "id": "DB2",
             "name": "Son Goku Infinity 1:1",
             "brand": "Infinity Studio X CM Studio",
             "state": "Available",
@@ -543,7 +543,7 @@
             "nsfw": null
           },
           {
-            "id": 14,
+            "id": "DB3",
             "name": "Vegeta 1:1",
             "brand": "LX Studio",
             "state": "Available",
@@ -576,7 +576,7 @@
             "nsfw": null
           },
           {
-            "id": 15,
+            "id": "DB4",
             "name": "Broly VS Vegeta",
             "brand": "Revenge Studio",
             "state": "Available",
@@ -611,7 +611,7 @@
             "nsfw": null
           },
           {
-            "id": 16,
+            "id": "DB5",
             "name": "Son Goku VS Freezer",
             "brand": "Figure class",
             "state": "Available",
@@ -645,7 +645,7 @@
             "nsfw": null
           },
           {
-            "id": 17,
+            "id": "DB6",
             "name": "Son Goku SSJ3",
             "brand": "Infinite Studio",
             "state": "Available",
@@ -675,7 +675,7 @@
             "nsfw": null
           },
           {
-            "id": 18,
+            "id": "DB7",
             "name": "Vegeta Shoulder Armor Combat Suit",
             "brand": "WhiteHole Studio",
             "state": "Available",
@@ -754,7 +754,7 @@
             "nsfw": null
           },
           {
-            "id": 19,
+            "id": "DB8",
             "name": "Trunks",
             "brand": "Infinite Studio",
             "state": "Available",
@@ -795,7 +795,7 @@
         "itemKey": "naruto",
         "products": [
           {
-            "id": 20,
+            "id": "N1",
             "name": "Senju Hashirama",
             "brand": "Light Year Studio",
             "state": "Available",
@@ -838,7 +838,7 @@
             "nsfw": null
           },
           {
-            "id": 21,
+            "id": "N2",
             "name": "Uchiha Sasuke",
             "brand": "Hex Collectibles",
             "state": "Sold-Out",
@@ -869,7 +869,7 @@
             "nsfw": null
           },
           {
-            "id": 22,
+            "id": "N3",
             "name": "Uchiha Itachi",
             "brand": "Hex Collectibles",
             "state": "Sold-Out",
@@ -899,7 +899,7 @@
             "nsfw": null
           },
           {
-            "id": 23,
+            "id": "N4",
             "name": "Pain",
             "brand": "YOYO Studio",
             "state": "Available",
@@ -925,7 +925,7 @@
             "nsfw": null
           },
           {
-            "id": 24,
+            "id": "N5",
             "name": "Uchiha Madara",
             "brand": "ThreeArtisan",
             "state": "Sold-Out",
@@ -961,7 +961,7 @@
             "nsfw": null
           },
           {
-            "id": 25,
+            "id": "N6",
             "name": "Uzimaki Naruto",
             "brand": "X1ART Studio",
             "state": "Sold-Out",
@@ -997,7 +997,7 @@
             "nsfw": null
           },
           {
-            "id": 26,
+            "id": "N7",
             "name": "Jiraya",
             "brand": "Ventus Studio",
             "state": "Sold-Out",
@@ -1068,7 +1068,7 @@
             "nsfw": null
           },
           {
-            "id": 27,
+            "id": "N8",
             "name": "Uchiha Sasuke",
             "brand": "OKR Studio",
             "state": "Sold-Out",
@@ -1119,7 +1119,7 @@
         "itemKey": "jujutsu-kaisen",
         "products": [
           {
-            "id": 28,
+            "id": "JK1",
             "name": "Satoru Gojo VS Fushiguro Toji",
             "brand": "Niren Studio",
             "state": "Available",
@@ -1148,7 +1148,7 @@
             "nsfw": null
           },
           {
-            "id": 29,
+            "id": "JK2",
             "name": "Geto Suguru",
             "brand": "Niren Studio",
             "state": "Available",
@@ -1178,7 +1178,7 @@
             "nsfw": null
           },
           {
-            "id": 30,
+            "id": "JK3",
             "name": "Okkotsu Yuta",
             "brand": "TIME X Dream Boat",
             "state": "Available",
@@ -1228,7 +1228,7 @@
             "nsfw": null
           },
           {
-            "id": 31,
+            "id": "JK4",
             "name": "Satoru Gojo 1:1",
             "brand": "REAL Studio",
             "state": "Available",
@@ -1268,7 +1268,7 @@
             "nsfw": null
           },
           {
-            "id": 32,
+            "id": "JK5",
             "name": "Satoru Gojo",
             "brand": "ZanyJoke Studio",
             "state": "Available",
@@ -1320,7 +1320,7 @@
             "nsfw": null
           },
           {
-            "id": 33,
+            "id": "JK6",
             "name": "Sukuna Flame Arrow",
             "brand": "Real Creation",
             "state": "Available",
@@ -1360,7 +1360,7 @@
             "nsfw": null
           },
           {
-            "id": 34,
+            "id": "JK7",
             "name": "Fushiguro Toji",
             "brand": "RD Studio",
             "state": "Available",
@@ -1409,7 +1409,7 @@
         "itemKey": "fairy-tail",
         "products": [
           {
-            "id": 35,
+            "id": "FT1",
             "name": "Natsu Dragneel",
             "brand": "Jade Toys Studios",
             "state": "Available",
@@ -1448,7 +1448,7 @@
             "nsfw": null
           },
           {
-            "id": 36,
+            "id": "FT2",
             "name": "Majin Mirajane Strauss",
             "brand": "TPA Studio",
             "state": "Available",
@@ -1475,7 +1475,7 @@
             "nsfw": null
           },
           {
-            "id": 37,
+            "id": "FT3",
             "name": "Erza Scarlet",
             "brand": "Monkey.D Studio",
             "state": "Available",
@@ -1507,7 +1507,7 @@
             "nsfw": null
           },
           {
-            "id": 38,
+            "id": "FT4",
             "name": "Natsu Dragneel",
             "brand": "Krazy Art",
             "state": "Available",
@@ -1538,7 +1538,7 @@
             "nsfw": null
           },
           {
-            "id": 39,
+            "id": "FT5",
             "name": "Natsu Dragneel",
             "brand": "Tsume Art",
             "state": "Available",
@@ -1570,7 +1570,7 @@
             "nsfw": null
           },
           {
-            "id": 40,
+            "id": "FT6",
             "name": "Bust Natsu Dragneel",
             "brand": "Tsume Art",
             "state": "Available",
@@ -1608,51 +1608,1453 @@
       },
       {
         "itemKey": "hunter-x-hunter",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+        "products": [
+          {
+            "id": "HxH1",
+            "name": "Gon Freecss",
+            "brand": "RD Studio",
+            "state": "Available",
+            "phase": "Released",
+            "estSize": "H53 x W33 x D30 cm",
+            "material": "Resin + PU",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 1155,
+                "oldPrice": null
+              }
+            ],
+            "note": ["* Two head (Anger + Cry)"],
+            "img": [
+              "https://product.hstatic.net/200000515997/product/5faeecfa-269c-44bd-95bb-0c5c84fb3e81_1da1c7fbb3d347b7b95b8a2ed4da1dcf_master.jpg",
+              "https://cdn.store-assets.com/s/379799/i/36987274.jpg?width=1024&format=webp",
+              "https://product.hstatic.net/200000740923/product/258953172_1267932813709787_8796787325415943302_n_c83f55297e184e8ea8833ff92b4c15ce_master.jpg",
+              "https://product.hstatic.net/200000740923/product/259199948_1267932783709790_7595426149534520720_n_fd63964d861944b7b40c7a264fff580e_master.jpg"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "HxH2",
+            "name": "Zoldyck Killua",
+            "brand": "RD Studio",
+            "state": "Available",
+            "phase": "Released",
+            "estSize": "H53 x W46 x D45 cm",
+            "material": "Resin + PU",
+            "feature": "LED Lighting",
+            "details": [
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": null,
+                "price": 1155,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://product.hstatic.net/200000515997/product/4506a1ad-6da9-4f6a-a9ab-38906f4b041c_5bd414f738f048c0aeb7296e2dff396d_master.jpg",
+              "https://product.hstatic.net/200000515997/product/e7ff8710-07e2-4273-a5c7-1eb08070a3e1_227a9b48dad44c8ab148c53413659330_master.jpg",
+              "https://product.hstatic.net/200000515997/product/408212c8-8099-4bc5-a7b9-f50a38f52755_b929badf0b614d02ab7444a37ff499ed_master.jpg",
+              "https://product.hstatic.net/200000515997/product/938daae3-87e7-46a2-b84a-fb4b496cb74c_0f3c3af6c0ca46279736407dcb04f168_master.jpg",
+              "https://product.hstatic.net/200000515997/product/d806320d-c9ba-4c8b-910e-9aed8ccd09e5_ca0bb355bc2b4f10ad025f9e13e20f5f_master.jpg"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "HxH3",
+            "name": "Kurapika",
+            "brand": "RD Studio",
+            "state": "Available",
+            "phase": "Released",
+            "estSize": "H68 x W52 x D43 cm",
+            "material": "Resin + PU",
+            "feature": "LED Lighting",
+            "details": [
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": null,
+                "price": 1155,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://product.hstatic.net/200000515997/product/c06ee571-c91d-4b2f-b045-847f51c0201d_b3d4218dc69b4d1bb5aed6b7f0d3beee_master.jpg",
+              "https://product.hstatic.net/200000515997/product/af09908b-0dea-4289-bcfd-0d996f2a3611_1dc16386bb734387af66984ea1682aa3_master.jpg",
+              "https://product.hstatic.net/200000515997/product/e9b0a0e4-36a6-46ad-b6c7-c0a0c7629a70_0490626ee8a341acbfa85a4883ade184_master.jpg",
+              "https://product.hstatic.net/200000515997/product/b26c1e14-1098-4025-8000-17ed5b30052d_d62f7be99b89456ead80ca230f6040a0_master.jpg",
+              "https://product.hstatic.net/200000515997/product/5ad3974c-2ade-4568-b955-0fdd18f8bc44_50bb0eccb95449f68e6d053eff9915ed_master.jpg",
+              "https://product.hstatic.net/200000515997/product/86a02ae5-c3e4-496c-b8a4-3682516a682e_ee85fb60d8dd435696b80e2f43c41069_master.jpg",
+              "https://product.hstatic.net/200000515997/product/33995018-7d8b-48c2-a251-9f7793659e8c_8f2f5d93109445f38fe6d2d174d6d90b_master.jpg",
+              "https://product.hstatic.net/200000515997/product/d096ffd4-de78-426b-8d5f-fdf7b037b553_85fede948d334f65936eb063b4c97c27_master.jpg",
+              "https://product.hstatic.net/200000515997/product/309a1fcf-b6c2-40e5-a73d-0ad1388a729f_48cce8b4419e4a2bb0d37003761426a6_master.jpg"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "HxH4",
+            "name": "Shizuku Murasaki",
+            "brand": "Zenkai Studio",
+            "state": "Available",
+            "phase": "Released",
+            "estSize": "H34 x W20 x D15 cm",
+            "material": "Resin + PU",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 305,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/10150/182700/WX20240710-0000282x__49887.1720540843.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/10150/182698/WX20240709-2359432x__85610.1720540794.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/10150/182699/WX20240709-2359362x__66769.1720540796.png?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "HxH5",
+            "name": "Killua Zoldyck",
+            "brand": "PG Studio",
+            "state": "Available",
+            "phase": "Released",
+            "estSize": "H28 x W16 x D17 cm",
+            "material": "Resin + PU",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 159,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12759/239503/17b8d6bc34c0c3bc7583734e4be1e4af__56528.1740395895.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12759/239506/7d7db7ab15db041e4af59fdf7feb1841__78303.1740395895.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12759/239504/19ae423585af424a42de28f4ae0b0f00__03670.1740395895.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12759/239507/38d2015790aefc4f9c6402453875580b__02622.1740395895.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12759/239505/345f2e5a988bb1002f5c33c6a633e1ea__98541.1740395895.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12759/239508/dc24772b6e3a8c7982c5a3e1dd22462e__06658.1740395901.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "HxH6",
+            "name": "Alluka & Nanika",
+            "brand": "PG Studio",
+            "state": "Available",
+            "phase": "Released",
+            "estSize": "H28 x W16 x D17 cm",
+            "material": "Polystone + PU",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/6",
+                "model": "Alluka Zoldyck",
+                "version": "Alluka Zoldyck With Killua Doll (Calm face)",
+                "price": 160,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/6",
+                "model": "Alluka Zoldyck",
+                "version": "Alluka Zoldyck With Killua Doll (Scared face)",
+                "price": 160,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/6",
+                "model": "Alluka Zoldyck",
+                "version": "Alluka Zoldyck With 2 Killua Doll (Calm face + Scared face)",
+                "price": 200,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/6",
+                "model": "Nanika",
+                "version": "Nanika With Killua Doll (Calm face)",
+                "price": 160,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/6",
+                "model": "Nanika",
+                "version": "Nanika With Killua Doll (Scared face)",
+                "price": 160,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/6",
+                "model": "Nanika",
+                "version": "Nanika With 2 Killua Doll (Calm face + Scared face)",
+                "price": 200,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12927/242964/2025-03-14_18.10.36__05308.1741947830.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12927/242965/2025-03-14_18.10.30__31315.1741947831.png?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "HxH7",
+            "name": "Kurapika",
+            "brand": "Hunter Fan Studio",
+            "state": "Available",
+            "phase": "Released",
+            "estSize": [
+              "1/6 : H37 x W21.5 x D16.5 cm",
+              "1/4 : H55 x W31.7 x D24.4 cm"
+            ],
+            "material": "Resin + PU",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 229,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": null,
+                "price": 319,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11291/203615/16511726732349_.pic_hd__80716.1726746094.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11291/203614/16521726732350_.pic_hd__35436.1726746094.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11291/203616/16531726732351_.pic_hd__71814.1726746143.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/11291/203613/16541726732352_.pic_hd__28797.1726746094.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "HxH8",
+            "name": "Killua Zoldyck",
+            "brand": "Hunter Fan Studio",
+            "state": "Available",
+            "phase": "Released",
+            "estSize": [
+              "1/6 : H27 x W24.8 x D18 cm",
+              "1/4 : H40 x W36.8 x D26.7cm"
+            ],
+            "material": "Resin + PU",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 169,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": null,
+                "price": 245,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12791/240136/a7b770be33d72a03e778d13546671bf9__55242.1740830174.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12791/240133/3bde7cffc71822e0eb42169a753d273a__68746.1740830170.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12791/240133/3bde7cffc71822e0eb42169a753d273a__68746.1740830170.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12791/240134/eb5d8ccf94fa559caa39034869421245__19222.1740830173.jpg?c=2"
+            ],
+            "nsfw": null
+          }
+        ]
       },
       {
         "itemKey": "demon-slayer",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+        "products": [
+          {
+            "id": "DS1",
+            "name": "Kanroji Mitsuri / Hantengu",
+            "brand": "Fantasy Studio",
+            "state": "Available",
+            "phase": "Released",
+            "estSize": "H62 x W58 x D50 cm",
+            "material": "Resin + PU",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/6",
+                "model": "Kanroji Mitsuri",
+                "version": null,
+                "price": 499,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/7850/134676/IMG_9430__55278.1694606257.JPG?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/7850/134679/IMG_9433__51966.1694606268.JPG?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/7850/134682/IMG_9436__30130.1694606295.JPG?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/7850/134684/IMG_9435__24075.1694606295.JPG?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/7850/134681/IMG_9437__42478.1694606291.JPG?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/7850/134680/IMG_9429__09216.1694606268.JPG?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "DS2",
+            "name": "Akaza",
+            "brand": "Zodiakos Studio",
+            "state": "Available",
+            "phase": "Released",
+            "estSize": "H50 x W42 x D42 cm",
+            "material": "Resin + PU + ABS",
+            "feature": "Licensed",
+            "details": [
+              {
+                "scale": "1/6",
+                "model": "Kanroji Mitsuri",
+                "version": null,
+                "price": 879,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12556/233817/67cda6407de9a2ecc13490a8d7d1b883__84084.1737113055.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12556/233815/e76c6c65b078b2e7191089ecc231193c__70121.1737113054.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12556/233814/d5e76f82032c8dca5ed031f70a693fa1__72473.1737113053.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12556/233816/ecd7a84ccc52a41c2ddfdf9bffbfdcc0__13546.1737113055.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12556/233819/63feed6870b4f8ba3ab8e1625c873a48__97756.1737113055.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12556/233811/0ab87ed2fa96984d8b0127f0b878f714__19806.1737113074.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12556/233810/8964af41d61533a9aa716cd8f3707719__09413.1737113040.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12556/233820/52e68610379d0f7ac98bd3110bdca309__83680.1737113056.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12556/233813/937295f4ba12898b46c7c599284572dc__76807.1737113052.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12556/233809/4849cb677684d4b22a5e697364f36957__81911.1737113079.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "DS3",
+            "name": "Rengoku",
+            "brand": "Zodiakos Studio",
+            "state": "Available",
+            "phase": "Released",
+            "estSize": "H53 x W46 x D40 cm",
+            "material": "Resin + PU + ABS",
+            "feature": "Licensed, LED Lighting",
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 869,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/11783/215523/WechatIMG9817__83679.1731049354.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11783/215519/WechatIMG9814__40883.1731049328.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11783/215518/WechatIMG9818__99738.1731049327.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11783/215520/WechatIMG9815__11070.1731049330.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/11783/215520/WechatIMG9815__11070.1731049330.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/11783/215522/WechatIMG9820__77470.1731049331.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/11783/215525/WechatIMG9821__62350.1731049334.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/11783/215521/WechatIMG9819__66466.1731049330.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "DS4",
+            "name": "Kamado Nezuko",
+            "brand": "YOYO Studio",
+            "state": "Available",
+            "phase": "Released",
+            "estSize": [
+              "Nezuko : H53 x W46 x D40 cm",
+              "Kid Nezuko : H30 x W25 x D20 cm"
+            ],
+            "material": "Resin + PU + ABS",
+            "feature": "LED Lighting",
+            "details": [
+              {
+                "scale": "1/6",
+                "model": "Nezuko",
+                "version": null,
+                "price": 325,
+                "oldPrice": 425
+              },
+              {
+                "scale": "1/6",
+                "model": "Kid Nezuko",
+                "version": null,
+                "price": 89,
+                "oldPrice": null
+              }
+            ],
+            "note": [
+              "* Nezuko with 2 heads,base with LED",
+              "Kid Nezuko with  free plush cushions"
+            ],
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/5007/76529/64891652180469_.pic__63004.1652180774.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/5007/76537/64931652180470_.pic_hd__01841.1652180788.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/5007/76524/64941652180471_.pic__78524.1652180758.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/5007/76533/64951652180471_.pic__32685.1652180758.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/5007/76531/64911652180470_.pic__14433.1652180758.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/5007/76532/65021652180477_.pic_hd__45741.1652180794.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/5007/76534/64991652180476_.pic_hd__84285.1652180758.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/5007/76527/65001652180477_.pic_hd__99302.1652180777.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "DS5",
+            "name": "Agatsuma Zenitsu",
+            "brand": "YOYO Studio",
+            "state": "Available",
+            "phase": "Released",
+            "estSize": "H55 x W38 x D30 cm",
+            "material": "Resin",
+            "feature": "LED Lighting",
+            "details": [
+              {
+                "scale": "1/6",
+                "model": "Nezuko",
+                "version": null,
+                "price": 669,
+                "oldPrice": 769
+              }
+            ],
+            "note": [
+              "* Nezuko with 2 heads,base with LED",
+              "* Kid Nezuko with free plush cushions"
+            ],
+            "img": [
+              "https://product.hstatic.net/200000515997/product/92e17ff8-f408-40b7-8c54-70a5c3838794_616426f57ad34ac38e9fe8ae29b8bc0c_master.jpg",
+              "https://product.hstatic.net/200000515997/product/444024ca-dca2-4f02-bd91-35188458805d_9ec23f41e9fa4286b701fd40cb2884fc_master.jpg",
+              "https://product.hstatic.net/200000515997/product/447eedb6-8e58-4869-a883-8d45d16be2c0_91b5b0fecb504114b5b5acfc9e79de25_master.jpg",
+              "https://content.pancake.vn/1/s1400x1400/56/ed/71/8f/27699c8416eadc619d993f2381f2bc520430dbacfdafd79c643b2891.jpg",
+              "https://content.pancake.vn/1/s1400x1400/fb/12/68/77/793712fc1d8a5d52c7ddf0a2fde06e8bd1723ba7f0e5f67b5bd90b45.jpg",
+              "https://content.pancake.vn/1/s1400x1400/58/81/ca/d9/032bf727d4f7074656cb76200385008debd34a14ab0393176e23b35b.jpg",
+              "https://product.hstatic.net/200000515997/product/59192147-e776-456d-bb7f-d34eb426d7b4_a2d05a61335a49839e0368f1e0609bd4_master.jpg"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "DS6",
+            "name": "Okitou Muichirou",
+            "brand": "ZTH Studio",
+            "state": "Sold-Out",
+            "phase": "Released",
+            "estSize": "H39 x W27 x D24 cm",
+            "material": "Resin",
+            "feature": "LED Lighting",
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": "Regular",
+                "price": 389,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": "EX",
+                "price": 425,
+                "oldPrice": null
+              }
+            ],
+            "note": "* EX version with extra head+replace bust",
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/4950/75633/611651317177_.pic__22678.1651317656.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/4950/75635/651651317179_.pic__14569.1651317654.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/4950/75630/661651317180_.pic__78560.1651317595.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/4950/75631/631651317179_.pic__02443.1651317595.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/4950/75632/641651317179_.pic__74755.1651317596.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/4950/75634/621651317178_.pic__07129.1651317652.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "DS7",
+            "name": "Demon Slayer",
+            "brand": "HW Studio",
+            "state": "Sold-Out",
+            "phase": "Released",
+            "estSize": "H53 x W47 x D53 cm",
+            "material": "Resin",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 759,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/3661/54995/132151629366855_.pic__67814.1629367952.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/3661/55000/132201629366858_.pic__15386.1629367950.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/3661/54997/132131629366853_.pic__40133.1629367962.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/3661/54998/132181629366857_.pic__45714.1629367949.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/3661/54994/132161629366856_.pic__16632.1629367949.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/3661/54993/132171629366856_.pic__82662.1629367948.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/3661/54999/132191629366857_.pic__61050.1629367949.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "DS8",
+            "name": "Kochou Shinobu",
+            "brand": "OKS Studio",
+            "state": "Sold-Out",
+            "phase": "Released",
+            "estSize": "H53 x W47 x D53 cm",
+            "material": "Resin",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 325,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/3647/54801/129421629033481_.pic__85922.1629034044.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/3647/54800/129411629033481_.pic__11812.1629034061.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/3647/54803/129441629033482_.pic__95795.1629034045.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/3647/54804/129451629033482_.pic__06396.1629034045.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/3647/54799/129461629033482_.pic__20697.1629034062.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/3647/54802/129431629033482_.pic__80037.1629034044.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "DS9",
+            "name": "Kibutsuji Muzan",
+            "brand": "Jiumei Studio",
+            "state": "Sold-Out",
+            "phase": "Released",
+            "estSize": "H47 x W35 x D46 cm",
+            "material": "Resin",
+            "feature": "LED Lighting",
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 429,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/3000/45406/17891619021577_.pic_hd__97282.1619021934.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/3000/45410/17951619021612_.pic_hd__05281.1619021941.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/3000/45410/17951619021612_.pic_hd__05281.1619021941.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/3000/45404/17921619021592_.pic_hd__23764.1619021882.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/3000/45402/17911619021585_.pic_hd__67165.1619021936.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/3000/45403/17881619021566_.pic_hd__94003.1619021922.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/3000/45407/17961619021620_.pic_hd__42867.1619021927.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/3000/45408/17931619021600_.pic_hd__99417.1619021883.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/3000/45409/17901619021579_.pic_hd__98675.1619021883.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "DS10",
+            "name": "Tokitou Muichirou",
+            "brand": "U King Studio",
+            "state": "Sold-Out",
+            "phase": "Released",
+            "estSize": "H41.5 x W39 x D19.5 cm",
+            "material": "Resin",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 169,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/7704/131502/2371693035289_.pic_hd__06767.1693044070.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/7704/131498/2391693035313_.pic_hd__40686.1693044043.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/7704/131500/2381693035301_.pic_hd__01340.1693044068.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/7704/131499/2401693035326_.pic_hd__53530.1693044043.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/7704/131501/2361693035274_.pic_hd__92240.1693044044.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "DS11",
+            "name": "Sanemi Shinazugawa",
+            "brand": "U King Studio",
+            "state": "Sold-Out",
+            "phase": "Released",
+            "estSize": "H45 x W41 x D34 cm",
+            "material": "Resin",
+            "feature": "LED Lighting",
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 399,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://product.hstatic.net/200000515997/product/953ba70f-1111-4eeb-b6df-38ef5cb768e9_8f5143a6fb5a44c0864f0f0a8bf73345_master.jpg",
+              "https://media.karousell.com/media/photos/products/2023/3/2/fantasy_studio_tanjiro_16_1677771646_eb6095e5_progressive.jpg",
+              "https://static.wixstatic.com/media/ba66cf_1d68c8581c284f119a834c8eaf7c442b~mv2.jpg/v1/fill/w_1276,h_593,al_c,q_85,usm_0.66_1.00_0.01/ba66cf_1d68c8581c284f119a834c8eaf7c442b~mv2.jpg",
+              "https://static.wixstatic.com/media/ba66cf_158fef4229bc4c3fbe1f8a31d97306a9~mv2.jpg/v1/fill/w_891,h_414,al_c,q_85/ba66cf_158fef4229bc4c3fbe1f8a31d97306a9~mv2.jpg",
+              "https://static.wixstatic.com/media/ba66cf_71a45f793fa045e884273ef19d868b7d~mv2.jpg/v1/fill/w_1276,h_593,al_c,q_85,usm_0.66_1.00_0.01/ba66cf_71a45f793fa045e884273ef19d868b7d~mv2.jpg",
+              "https://static.wixstatic.com/media/ba66cf_26edba666a99460d8a5879eabf6631ac~mv2.jpg/v1/fill/w_821,h_616,al_c,q_85,usm_0.66_1.00_0.01/ba66cf_26edba666a99460d8a5879eabf6631ac~mv2.jpg"
+            ],
+            "nsfw": null
+          }
+        ]
       },
       {
         "itemKey": "attack-on-titan",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+        "products": [
+          {
+            "id": "AoT1",
+            "name": "Levi Ackerman 1:1",
+            "brand": "LX Studio",
+            "state": "Sold-Out",
+            "phase": "Released",
+            "estSize": "H168 x W117 x D90 cm",
+            "material": "Resin",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/1",
+                "model": null,
+                "version": null,
+                "price": 2500,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://product.hstatic.net/200000515997/product/ce8ee4de-39e9-4e34-b6b0-759dab099b18_05f0eacbca0a4ccc9610ea8f04c3ed39_master.jpg",
+              "https://product.hstatic.net/200000515997/product/1533bcfc-1537-41a3-81a8-002db2e6f26a_f721f3e188384f3095ad5c739c0da4f7_master.jpg",
+              "https://product.hstatic.net/200000515997/product/6b1a44f4-0b48-4916-9e56-20a99f54e58a_04173fd429dc4958852b6d50351e1145_master.jpg",
+              "https://product.hstatic.net/200000515997/product/0194d48c-ae5f-4155-ba70-18c0d7ac3c6d_c578952393ad4ed9b3fed488b5b66da0_master.jpg"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "AoT2",
+            "name": "Levi Ackerman 1:3",
+            "brand": "LX Studio",
+            "state": "Available",
+            "phase": "Released",
+            "estSize": "H62 x W39 x D30 cm",
+            "material": "Resin",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/3",
+                "model": null,
+                "version": null,
+                "price": 699,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://product.hstatic.net/200000515997/product/ce8ee4de-39e9-4e34-b6b0-759dab099b18_05f0eacbca0a4ccc9610ea8f04c3ed39_master.jpg",
+              "https://product.hstatic.net/200000515997/product/1533bcfc-1537-41a3-81a8-002db2e6f26a_f721f3e188384f3095ad5c739c0da4f7_master.jpg",
+              "https://product.hstatic.net/200000515997/product/6b1a44f4-0b48-4916-9e56-20a99f54e58a_04173fd429dc4958852b6d50351e1145_master.jpg",
+              "https://product.hstatic.net/200000515997/product/0194d48c-ae5f-4155-ba70-18c0d7ac3c6d_c578952393ad4ed9b3fed488b5b66da0_master.jpg"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "AoT3",
+            "name": "Armored Titan",
+            "brand": "Chikara Studio",
+            "state": "Available",
+            "phase": "Released",
+            "estSize": "H47 x W52 x D60 cm",
+            "material": "Resin + PU",
+            "feature": "Large Statue",
+            "details": [
+              {
+                "scale": "1/1",
+                "model": null,
+                "version": null,
+                "price": 2222,
+                "oldPrice": 3333
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://www.senseitoy.com/image/catalog/CHIKARA/reiner/Chikara-Reiner-Titan-resin-statue-07.jpg",
+              "https://www.senseitoy.com/image/catalog/CHIKARA/reiner/Chikara-Reiner-Titan-resin-statue-08.jpg",
+              "https://www.senseitoy.com/image/catalog/CHIKARA/reiner/Chikara-Reiner-Titan-resin-statue-12.jpg",
+              "https://www.senseitoy.com/image/catalog/CHIKARA/reiner/Chikara-Reiner-Titan-resin-statue-03.jpg",
+              "https://www.senseitoy.com/image/catalog/CHIKARA/reiner/Chikara-Reiner-Titan-resin-statue-05.jpg",
+              "https://www.senseitoy.com/image/catalog/CHIKARA/reiner/Chikara-Reiner-Titan-resin-statue-01.jpg",
+              "https://www.senseitoy.com/image/catalog/CHIKARA/reiner/Chikara-Reiner-Titan-resin-statue-06.jpg",
+              "https://www.senseitoy.com/image/catalog/CHIKARA/reiner/Chikara-Reiner-Titan-resin-statue-09.jpg",
+              "https://www.senseitoy.com/image/catalog/CHIKARA/reiner/Chikara-Reiner-Titan-resin-statue-02.jpg"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "AoT4",
+            "name": "Annie Leonhart & Female Titan",
+            "brand": "Freedom Studio",
+            "state": "Available",
+            "phase": "Released",
+            "estSize": "H52 x W50 x D52 cm",
+            "material": "Resin",
+            "feature": "LED Lighting, Large Statue",
+            "details": [
+              {
+                "scale": "1/1",
+                "model": null,
+                "version": null,
+                "price": 705,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12999/244444/71501717735594_.pic_hd__12583.1742550817.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12999/244445/71481717735578_.pic_hd__02514.1742550817.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12999/244446/71511717735597_.pic_hd__21953.1742550817.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12999/244447/71491717735581_.pic_hd__75241.1742550817.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12999/244448/71451717735572_.pic_hd__45719.1742550818.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12999/244449/WX20240607-1300362x__95397.1742550818.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12999/244450/WX20240607-1301082x__35061.1742550818.png?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "AoT5",
+            "name": "Zeke Jaeger & Beast titan",
+            "brand": "JR Studio",
+            "state": "Available",
+            "phase": "Released",
+            "estSize": "H50 x W70 x D60 cm",
+            "material": "Resin",
+            "feature": "LED Lighting, Large Statue",
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 399,
+                "oldPrice": 689
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/10575/190094/113961626348173_.pic_hd__80932.1722184176.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/10575/190100/114011626349380_.pic_hd__04633.1722184177.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/10575/190095/113981626349377_.pic_hd__25378.1722184177.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/10575/190096/113971626348177_.pic_hd__44889.1722184177.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/10575/190098/114021626349381_.pic_hd__64017.1722184177.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/10575/190097/114041626349383_.pic_hd__39004.1722184177.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/10575/190102/114031626349382_.pic_hd__81483.1722184177.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/10575/190099/113991626349378_.pic_hd__79384.1722184177.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/10575/190103/114051626349384_.pic_hd__19736.1722184178.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/10575/190101/114001626349379_.pic_hd__78621.1722184177.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "AoT6",
+            "name": "Mikasa Ackerman",
+            "brand": "Model Power Studio",
+            "state": "Pre-Order",
+            "phase": "Pre-Order Open",
+            "estSize": "H30 x W17 x D13 cm",
+            "material": "Resin + PU + Metal",
+            "feature": "LED Lighting",
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 205,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12736/239091/fe1ef7d0391c06a4d80c7f8c77ac7126__60527.1740127156.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12736/239088/809f5df6e97ab8feba029242436ba13d__29123.1740127149.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12736/239088/809f5df6e97ab8feba029242436ba13d__29123.1740127149.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12736/239089/69014b91028d329bfd478533d30434e2__02883.1740127149.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12736/239087/4b4fe01eb0e246fb7a9309125a22ccaf__45882.1740127158.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "AoT7",
+            "name": "Mikasa Ackerman VS Female Titan",
+            "brand": "Hertz Studio",
+            "state": "Pre-Order",
+            "phase": "Pre-Order Open",
+            "estSize": "H75 x W69 x D49 cm",
+            "material": "Resin + PU + Metal Sword",
+            "feature": "Large Statue",
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 745,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/13329/252658/2025-04-22_16.45.38__50517.1745311646.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13329/252634/2025-04-22_16.33.53__39767.1745310939.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13329/252638/2025-04-22_16.34.01__66354.1745310965.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/13329/252659/2025-04-22_16.45.30__17600.1745311646.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/13329/252636/2025-04-22_16.34.14__21989.1745310949.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13329/252639/2025-04-22_16.34.28__06978.1745310957.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13329/252637/2025-04-22_16.34.08__49029.1745310964.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/13329/252635/2025-04-22_16.34.20__64197.1745310966.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/13329/252657/2025-04-22_16.45.44__71134.1745311645.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13329/252661/2025-04-22_16.45.50__57852.1745311654.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13329/252657/2025-04-22_16.45.44__71134.1745311645.png?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "AoT8",
+            "name": "Eren Jaeger",
+            "brand": "AZ Studio",
+            "state": "Pre-Order",
+            "phase": "Pre-Order Close",
+            "estSize": "H34 x W16 x D16 cm",
+            "material": "PU",
+            "feature": "LED Lighting",
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 169,
+                "oldPrice": null
+              }
+            ],
+            "note": "* Name on base will change to 'Eren Jaeger'",
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/13409/254728/05aa43e30e8f3936ee27cc255eea80e7__49535.1745908611.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13409/254726/11464098f2074480e434f4103d7a0f9f__38393.1745908611.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13409/254723/3215087bbcbff881f25024879ad76e37__45212.1745908611.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/13409/254724/6a1a1ce60588bfc019f6b993da177b3a__28840.1745908611.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/13409/254725/662b5ab7b6161af80cb572cf9035b65e__63135.1745908611.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/13409/254730/546530f5437f1e2cd6e08b86cf56f038__08458.1745908612.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/13409/254729/6377f62cd2ab7754083809a4b50c583a__26600.1745908611.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/13409/254727/1545da90fdb95c7064e3ed0b0544f483__41821.1745908611.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "AoT9",
+            "name": "Declaration Of War | Attack Titan & Armored Titan & Jaw Titan & Colossal Titan",
+            "brand": "ZaoHua Studio",
+            "state": "Pre-Order",
+            "phase": "Pre-Order Close",
+            "estSize": "H56 x W46 x D40 cm",
+            "material": "Resin",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": "Regular",
+                "price": 505,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": "EX",
+                "price": 605,
+                "oldPrice": null
+              }
+            ],
+            "note": "* EX version : Regular version + Eyes & body & base with LED",
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/10153/182740/7801720600669_.pic_hd__86028.1720621176.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/10153/182736/7821720600670_.pic_hd__52119.1720603184.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/10153/182740/7801720600669_.pic_hd__86028.1720621176.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/10153/182741/7841720600673_.pic_hd__79665.1720603185.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/10153/182734/7851720600674_.pic_hd__75715.1720603183.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/10153/182739/7861720600675_.pic_hd__53222.1720603185.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/10153/182742/7811720600670_.pic_hd__35152.1720603186.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "AoT10",
+            "name": "Beast titan",
+            "brand": "Hertz Studio",
+            "state": "Pre-Order",
+            "phase": "Pre-Order Close",
+            "estSize": "H80 x W54 x D44 cm",
+            "material": "Resin",
+            "feature": "Large Statue",
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 625,
+                "oldPrice": null
+              }
+            ],
+            "note": "* Free 1 head bonus & 1 display base",
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/10796/193611/371723024198_.pic_hd__87371.1723037222.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/10796/193606/351723024195_.pic_hd__65893.1723037194.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/10796/193613/381723024199_.pic_hd__07293.1723037225.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/10796/193612/411723024204_.pic_hd__84780.1723037222.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/10796/193610/421723024206_.pic_hd__22592.1723037221.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/10796/193610/421723024206_.pic_hd__22592.1723037221.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/10796/193608/401723024203_.pic_hd__30434.1723037212.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/10796/193608/401723024203_.pic_hd__30434.1723037212.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/10796/193605/361723024196_.pic_hd__26896.1723037179.jpg?c=2"
+            ],
+            "nsfw": null
+          }
+        ]
       },
       {
         "itemKey": "berserk",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+        "products": [
+          {
+            "id": "B1",
+            "name": "Guts",
+            "brand": "HunDian studio",
+            "state": "Available",
+            "phase": "Display",
+            "estSize": "H56 x W46 x D40 cm",
+            "material": "Resin",
+            "feature": [
+              "* Double heads (human head is Realistic style)",
+              "* Only 38 ES in the world"
+            ],
+            "details": [
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": null,
+                "price": 966,
+                "oldPrice": 1066
+              }
+            ],
+            "note": "* EX version : Regular version + Eyes & body & base with LED",
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/8839/156049/6011704442580_.pic_hd__76088.1704454637.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/8839/156051/6001704442578_.pic_hd__40339.1704454642.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/8839/156050/6021704442582_.pic_hd__38370.1704454641.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/8839/156050/6021704442582_.pic_hd__38370.1704454641.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/8839/156053/5991704442577_.pic_hd__98159.1704454647.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/8839/156052/5981704442575_.pic_hd__61249.1704454650.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "B2",
+            "name": "Griffith",
+            "brand": "Coolbear Studio",
+            "state": "Pre-Order",
+            "phase": "Pre-Order Close",
+            "estSize": [
+              "Regular : H66 x W42 x D45 cm",
+              "EX : H65 x W40 x D36 cm"
+            ],
+            "material": "Resin",
+            "feature": "Low ES",
+            "details": [
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": "Regular",
+                "price": 459,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": "EX",
+                "price": 599,
+                "oldPrice": null
+              }
+            ],
+            "note": [
+              "* Double heads (human head is Realistic style)",
+              "* Only 38 ES in the world"
+            ],
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/11922/219591/27a31bae4a01d04736f64699030e85ea__96020.1732527853.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11922/219592/ffb9728ef998134197b0f191b079cf25__09564.1732527853.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11922/219599/ca723fc2de05a5966f0e82ac153f2522__95403.1732527867.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11922/219593/0253902cd7cc54a511d59f1ec0c6c90d__61155.1732527853.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11922/219594/25f0fa8bdddbd0e58bb6a29e01f7613c__79570.1732527873.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/11922/219597/900626d0ae9566d7dc6642efab803806__28910.1732527859.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11922/219598/df3a50bcceb09ab632130d8127a94743__78370.1732527859.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11922/219598/df3a50bcceb09ab632130d8127a94743__78370.1732527859.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "B3",
+            "name": "Berserk Second Wave | Golden Age Arc | Guts The Protector",
+            "brand": "Bihs Studio",
+            "state": "Available",
+            "phase": "Early Bird",
+            "estSize": "H43 x W42 x D57 cm (holding the sword)",
+            "material": "Resin",
+            "feature": "Low ES",
+            "details": [
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": null,
+                "price": 505,
+                "oldPrice": null
+              }
+            ],
+            "note": [
+              "* Configurations: Disk base, grassland platform, sword sheath, character body, greatsword, resin head sculpture",
+              "* Early - bird reservation: A customized Guts illustration (with a wooden oil painting frame) will be given as a gift."
+            ],
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12765/239618/2a5fcf1a022c61615941ba7fc48ce018__35699.1740475790.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12765/239622/819062fbd738632ab3aa5b7ad6b6089e__08428.1740475817.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12765/239622/819062fbd738632ab3aa5b7ad6b6089e__08428.1740475817.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12765/239619/e957465efbb5ef39c81c6e32b67f48b8__01739.1740475792.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12765/239621/b05d834f4f7ddcad3dba82bb950f9c30__83844.1740475810.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12765/239623/b61ab66adbf033d8c4814f9a37c67936__92288.1740475822.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12765/239624/c27cb55ed744aa26e7782d381a1b1a90__04181.1740475831.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "B4",
+            "name": "Fearless Casca",
+            "brand": "Bihs Studio",
+            "state": "Available",
+            "phase": "Early Bird",
+            "estSize": "H40.5 x W33 x D48 cm (holding the sword)",
+            "material": "Resin",
+            "feature": "Low ES",
+            "details": [
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": null,
+                "price": 429,
+                "oldPrice": null
+              }
+            ],
+            "note": "* Configuration: disc base, grass platform, sword set, character body, metal sword, resin head sculpture",
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13449/255821/25f47627a3f5e588cf041b270a66d1d3__45289.1746437351.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13449/255826/d50b6664c56734ce246779ac68da782f__48603.1746437351.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13449/255824/6334ba8ac872a82846751963c24fdf2c__27751.1746437351.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13449/255824/6334ba8ac872a82846751963c24fdf2c__27751.1746437351.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13449/255822/e145915aaf86ee84312b707ac4e29684__54713.1746437351.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "B5",
+            "name": "Guts & Fearless Casca",
+            "brand": "Bihs Studio",
+            "state": "Available",
+            "phase": "Early Bird",
+            "estSize": [
+              "Guts : H40.5 x W33 x D48 cm (holding the sword)",
+              "Casca : H43 x W42 x D57 cm (holding the sword)"
+            ],
+            "material": "Resin",
+            "feature": "Low ES",
+            "details": [
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": null,
+                "price": 900,
+                "oldPrice": null
+              }
+            ],
+            "note": "* Configuration: disc base, grass platform, sword set, character body, metal sword, resin head sculpture",
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13449/255823/ccc5fcc3993b959058495309443897ec__86242.1746437351.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/13449/255827/e8b921f8394dac72a9f613b93767279f__84415.1746437351.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13449/255828/3007b510fcdf9057fdb9b58e58998818__35132.1746437351.jpg?c=2"
+            ],
+            "nsfw": null
+          }
+        ]
       },
       {
         "itemKey": "spy-x-family",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
-      },
-      {
-        "itemKey": "pokemon",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
-      },
-      {
-        "itemKey": "digimon",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
-      },
-      {
-        "itemKey": "howl's-moving-castle",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
-      },
-      {
-        "itemKey": "spirited-away",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
-      },
-      {
-        "itemKey": "my-neighbor-totoro",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
-      },
-      {
-        "itemKey": "ponyo",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
-      },
-      {
-        "itemKey": "mononoke-hime",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+        "products": [
+          {
+            "id": "SxF1",
+            "name": "Anya cosplay Zetsu",
+            "brand": "ZH Studio",
+            "state": "Pre-Order",
+            "phase": "Pre-Order Open",
+            "estSize": "H12-13CM",
+            "material": "Resin + PU",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/10",
+                "model": "Pink hair with scare face",
+                "version": null,
+                "price": 99,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/10",
+                "model": "Green hair with sinister face",
+                "version": null,
+                "price": 99,
+                "oldPrice": null
+              }
+            ],
+            "note": "* Can replace left hand",
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13523/257625/ad07929ecf209ecac5a3ce4a2cf19005__86217.1746799208.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13523/257627/12a261d08dd6d8df162d3cc1e28044ed__51055.1746799208.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13523/257626/3eaafd620515353baeb1535d760bf475__40988.1746799208.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "SxF2",
+            "name": "Anya cosplay Uchiha Sasuke",
+            "brand": "ZH Studio",
+            "state": "Pre-Order",
+            "phase": "Pre-Order Open",
+            "estSize": "H21-13CM",
+            "material": "Resin + PU",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/6",
+                "model": "Pink Hair",
+                "version": null,
+                "price": 119,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/6",
+                "model": "Black Hair",
+                "version": null,
+                "price": 119,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/13361/253404/8d6e612638ffb062f64424cbe8739d82__87956.1745500385.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13361/253403/dbc4c31a6d6b72a593034b4883fe0842__90650.1745500385.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13361/253402/b73f10a09ebb6bd55b8b13830fae50c8__02272.1745500454.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13361/253405/67d4e8e2455caa34d795c44ed1ba2c38__22958.1745500449.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/13361/253401/57cdcd1195fdeea9d51e29a9a3c7f8b4__92093.1745500451.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "SxF3",
+            "name": "Anya cosplay Hashirama Senju",
+            "brand": "ZH Studio",
+            "state": "Pre-Order",
+            "phase": "Pre-Order Open",
+            "estSize": "H12-13CM",
+            "material": "Resin + PU",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/6",
+                "model": "Pink hair",
+                "version": "Regular",
+                "price": 119,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/6",
+                "model": "Pink hair",
+                "version": "EX",
+                "price": 164,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/6",
+                "model": "Black hair",
+                "version": "Regular",
+                "price": 119,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/6",
+                "model": "Black hair",
+                "version": "EX",
+                "price": 164,
+                "oldPrice": null
+              }
+            ],
+            "note": [
+              "* EX : Regular + DLC (wood dragon)",
+              "* Free bonus : Buddha acrylic standing plate"
+            ],
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/13220/250067/68fd7fef2486676ad258ac5f0ba78cea__48330.1744376275.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13220/250061/43425d91f98989187c58d78cde83cff4__18866.1744376287.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13220/250068/5dccbd12114ad26669948b0d7ce02833__29713.1744376275.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13220/250065/b801d41efeea54f69d403df2b3b62e7a__77446.1744376274.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13220/250063/8fc726c8ce43fdddc8ba542c67994d4e__03224.1744376274.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/13220/250060/4a9f04343ef38755e635ca5eacd67078__09181.1744376585.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/13220/250064/ec5b8f1f17bd268af3959592b90691f1__27831.1744376274.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "SxF4",
+            "name": "Anya cosplay Gojo Satoru",
+            "brand": "Chou Xiang Studio",
+            "state": "Pre-Order",
+            "phase": "Pre-Order Open",
+            "estSize": "H17-20CM",
+            "material": "Resin + PU",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/6",
+                "model": "Pink hair",
+                "version": "With blindfold",
+                "price": 129,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/6",
+                "model": "Pink hair",
+                "version": "Without blindfold",
+                "price": 129,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/6",
+                "model": "White hair",
+                "version": "With blindfold",
+                "price": 129,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/6",
+                "model": "White hair",
+                "version": "Without blindfold",
+                "price": 129,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12888/242076/df52fc277e278751703bd3ca0a6595d9__65436.1741686572.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12888/242078/25883bde685bf34517e0a08c0485c81c__17974.1741686572.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12888/242070/44081e44da937ff085de6b824ae9bb3c__52323.1741686756.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12888/242079/a6baa433ecb764687156798486b56ddb__42058.1741686772.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12888/242069/7a8c7153224a5d1861942e377667b535__02381.1741686567.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12888/242073/3a3ebd9eff5eaa4b6a675795ca5fbb56__43475.1741686571.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12888/242075/8066822d0daad8f15c98d2be9d05738a__12058.1741686571.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12888/242080/d27f834ac029d77a6c73ab2f67fd585c__57660.1741686580.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12888/242080/d27f834ac029d77a6c73ab2f67fd585c__57660.1741686580.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "SxF5",
+            "name": "Anya cosplay Uchiha Obito",
+            "brand": "Cosplay Studio",
+            "state": "Pre-Order",
+            "phase": "Pre-Order Open",
+            "estSize": "H23CM",
+            "material": "Resin + PU",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/6",
+                "model": "Pink hair",
+                "version": null,
+                "price": 109,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/6",
+                "model": "Black hair",
+                "version": null,
+                "price": 109,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12832/240994/58e0c96a0abc9076cd442e71fac67015__12765.1741248843.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12832/240992/9191fa2f02c5b64c7572ccdec7c942ca__47783.1741248581.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12832/240993/0b9dc3d4935964f067b5e395e7e2c0a4__56788.1741248845.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12832/240991/8ed4c95c7f935de7fa701de5bbab2bec__51443.1741248581.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "SxF6",
+            "name": "Yor Forger",
+            "brand": "Wakuwaku Studio",
+            "state": "Pre-Order",
+            "phase": "Pre-Order Close",
+            "estSize": "H32 x W17 x D15 cm",
+            "material": "Resin",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 189,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/11170/200234/WechatIMG1317__17279.1725440803.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11170/200242/WechatIMG1319__30781.1725440807.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11170/200239/WechatIMG1318__19956.1725440807.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/11170/200236/WechatIMG1324__78151.1725440806.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11170/200240/WechatIMG1320__21723.1725440807.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11170/200238/WechatIMG1321__08167.1725440807.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11170/200235/WechatIMG1323__51752.1725440806.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "SxF7",
+            "name": "Yor Forger",
+            "brand": "Harem Studio",
+            "state": "Pre-Order",
+            "phase": "Pre-Order Close",
+            "estSize": ["A : H51 x W26 x D23 cm", "B : H61 x W26 x D23 cm"],
+            "material": "Resin",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": "A",
+                "price": 359,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": "B",
+                "price": 389,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": "EX (A + B)",
+                "price": 449,
+                "oldPrice": null
+              }
+            ],
+            "note": [
+              "* A version: 2 heads + simply base",
+              "* B version: 2 heads + regular base",
+              "* EX version: 2 heads + 2 bases + 2 bodies"
+            ],
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/6581/160995/WechatIMG174__27815.1708005880.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/6581/160994/WechatIMG172__84714.1708005873.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/6581/160987/WechatIMG160__84687.1708005869.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/6581/160992/WechatIMG158__77575.1708005871.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/6581/160988/WechatIMG161__85175.1708005869.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/6581/160991/WechatIMG167__25276.1708005871.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/6581/160989/WechatIMG162__94517.1708005869.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "SxF8",
+            "name": "Pink MaMa Yor Forger Dance Battle",
+            "brand": "Wakuwaku Studio",
+            "state": "Pre-Order",
+            "phase": "Pre-Order Close",
+            "estSize": "H31 x W13 x H19 cm",
+            "material": "Resin",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": null,
+                "price": 145,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12848/241245/54f18161dedb81b5d21891027670cafd__74678.1741336094.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12848/241238/5a8805f0ccbea689bfffb1f03e8ae333__05722.1741336098.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12848/241240/ecbd5fb0234ef115079b736f1c8512db__61646.1741336100.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12848/241244/11bad821a52aeaea8d5624f913657cb4__11845.1741336084.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12848/241244/11bad821a52aeaea8d5624f913657cb4__11845.1741336084.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12848/241241/a7247a09607c8cd0700a4d65cb0dfdba__81506.1741336083.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12848/241241/a7247a09607c8cd0700a4d65cb0dfdba__81506.1741336083.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12848/241239/a019516aa8a3acfb95671acb6d4bd47f__41822.1741336099.jpg?c=2"
+            ],
+            "nsfw": null
+          }
+        ]
       }
     ]
   },
@@ -1663,12 +3065,13 @@
         "itemKey": "elden-ring",
         "products": [
           {
-            "id": 41,
+            "id": "ER1",
             "name": "Malenia",
             "brand": "HunDian Studio",
             "state": "Pre-Order",
-            "phase": "Phase 1",
+            "phase": "Pre-Order Open",
             "estSize": "H25-35 cm",
+            "material": "Resin",
             "feature": "Detailed Sculpt",
             "details": [
               {
@@ -1686,12 +3089,13 @@
             "nsfw": null
           },
           {
-            "id": 42,
+            "id": "ER2",
             "name": "Midra Lord Of Frenzied Flame",
             "brand": "CHIKARA Studio",
             "state": "Pre-Order",
-            "phase": "Phase 1",
+            "phase": "Pre-Order Open",
             "estSize": "H40-50 cm",
+            "material": "Resin",
             "feature": "Fire Effects",
             "details": [
               {
@@ -1709,12 +3113,13 @@
             "nsfw": null
           },
           {
-            "id": 43,
+            "id": "ER3",
             "name": "Guard Tree Sentinel",
             "brand": "Xing Ji Studio",
             "state": "Pre-Order",
-            "phase": "Phase 2",
+            "phase": "Pre-Order Open",
             "estSize": "H35-45 cm",
+            "material": "Resin",
             "feature": "Metallic Finish",
             "details": [
               {
@@ -1732,12 +3137,13 @@
             "nsfw": null
           },
           {
-            "id": 44,
+            "id": "ER4",
             "name": "Messmer",
             "brand": "HunDian Studio",
             "state": "Pre-Order",
-            "phase": "Phase 1",
+            "phase": "Pre-Order Open",
             "estSize": "H30-40 cm",
+            "material": "Resin",
             "feature": "Spear Accessory",
             "details": [
               {
@@ -1755,12 +3161,13 @@
             "nsfw": null
           },
           {
-            "id": 45,
+            "id": "ER5",
             "name": "Starscourge Radahn",
             "brand": "Sword & Wing Studio",
-            "state": "Order",
-            "phase": "Phase 2",
+            "state": "Pre-Order",
+            "phase": "Pre-Order Close",
             "estSize": "H50-60 cm",
+            "material": "Resin",
             "feature": "Giant Sword",
             "details": [
               {
@@ -1778,12 +3185,13 @@
             "nsfw": null
           },
           {
-            "id": 46,
+            "id": "ER6",
             "name": "Bust Malenia",
             "brand": "Haregumo Studio",
-            "state": "Order",
-            "phase": "Phase 1",
+            "state": "Pre-Order",
+            "phase": "Pre-Order Open",
             "estSize": "H20-25 cm",
+            "material": "Resin",
             "feature": "Bust Display",
             "details": [
               {
@@ -1804,39 +3212,603 @@
       },
       {
         "itemKey": "resident-evil",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+        "products": [
+          {
+            "id": "RE1",
+            "name": "Bust Nemesis 1:1",
+            "brand": "PureArts",
+            "state": "Pre-Order",
+            "phase": "Pre-Order Open",
+            "estSize": "H89 x W79 x D63 cm",
+            "material": "Resin",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/1",
+                "model": null,
+                "version": null,
+                "price": 2222,
+                "oldPrice": null
+              }
+            ],
+            "note": "* Bonus : Umbrella's vaccine scale 1/1 has LED light",
+            "img": [
+              "https://product.hstatic.net/200000515997/product/15358520-1e9e-4a9a-8a55-2bd4cfa8350f_7f281d78eb544f7aaaa01c941b74ce25_master.jpg",
+              "https://product.hstatic.net/200000515997/product/cfe54548-3083-4d57-b5ea-cb19b45fbce7_1007c42f3c6c4a4a8896c3fdf38930ec_master.jpg",
+              "https://product.hstatic.net/200000515997/product/77936cca-5b30-4979-b3c9-c5da619ad34f_883636a985b64e628c6e1c4af6257c72_master.jpg",
+              "https://product.hstatic.net/200000515997/product/cbfab8fb-7c05-45f6-b726-5701f12fa5e1_e61d74d45a5a45458a0ca8e4772c8702_master.jpg",
+              "https://product.hstatic.net/200000515997/product/2ed18d17-effa-4375-ab45-759a5d4b675e_8d754f039a824bb8913bd788005e77d3_master.jpg",
+              "https://product.hstatic.net/200000515997/product/85ec58c9-015c-4450-aee2-e66bc688562e_aeced32c7a6b49e0a18693dc6a557e5e_master.jpg",
+              "https://product.hstatic.net/200000515997/product/85ec58c9-015c-4450-aee2-e66bc688562e_aeced32c7a6b49e0a18693dc6a557e5e_master.jpg",
+              "https://product.hstatic.net/200000515997/product/40e1d5b8-0947-48a2-8061-ca8971401b13_5974007853b243039ff4d7d48f08fe6f_master.jpg",
+              "https://product.hstatic.net/200000515997/product/40e1d5b8-0947-48a2-8061-ca8971401b13_5974007853b243039ff4d7d48f08fe6f_master.jpg"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "RE2",
+            "name": "Nemesis",
+            "brand": "Prime 1 Studio",
+            "state": "Available",
+            "phase": "Released",
+            "material": "Resin",
+            "estSize": [
+              "Regular (With Tentacle) : H82 x W51 x D63 cm",
+              "Deluxe (With Rocket Launcher) : H92 x W51 xD57 cm"
+            ],
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": "Regular",
+                "price": 1499,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": "Deluxe",
+                "price": 1399,
+                "oldPrice": null
+              }
+            ],
+            "note": "* Bonus : Umbrella's vaccine scale 1/1 has LED light",
+            "img": [
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw6d3d1de4/images/UPMRE3-02DX/catalog/upmre3_02dx_nemesis_os_b30.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw80336b01/images/UPMRE3-02DX/catalog/upmre3_02dx_nemesis_os_a09.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dwf121ea85/images/UPMRE3-02/catalog/upmre3_02_nemesis_os_a08.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dwf121ea85/images/UPMRE3-02/catalog/upmre3_02_nemesis_os_a08.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw1830fd4d/images/UPMRE3-02/catalog/upmre3_02_nemesis_os_a10.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dwfd26c255/images/UPMRE3-02/catalog/upmre3_02_nemesis_os_a11.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw54f3ff87/images/UPMRE3-02/catalog/upmre3_02_nemesis_os_a12.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dwd9428ef4/images/UPMRE3-02/catalog/upmre3_02_nemesis_os_a13.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw17f96d0c/images/UPMRE3-02/catalog/upmre3_02_nemesis_os_a14.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw565d6593/images/UPMRE3-02/catalog/upmre3_02_nemesis_os_a15.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw969e2074/images/UPMRE3-02/catalog/upmre3_02_nemesis_os_a16.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw6745d966/images/UPMRE3-02/catalog/upmre3_02_nemesis_os_a18.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw4c810047/images/UPMRE3-02/catalog/upmre3_02_nemesis_os_b01.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw73108040/images/UPMRE3-02/catalog/upmre3_02_nemesis_os_b02.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw73108040/images/UPMRE3-02/catalog/upmre3_02_nemesis_os_b02.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw04545617/images/UPMRE3-02/catalog/upmre3_02_nemesis_os_a07.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw4796eb86/images/UPMRE3-02/catalog/upmre3_02_nemesis_os_a05.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dwda4646cd/images/UPMRE3-02DX/catalog/upmre3_02dx_nemesis_os_a11.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dwf7af7b39/images/UPMRE3-02DX/catalog/upmre3_02dx_nemesis_os_a12.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dwa472ab1b/images/UPMRE3-02DX/catalog/upmre3_02dx_nemesis_os_a10.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dwaf4aa347/images/UPMRE3-02DX/catalog/upmre3_02dx_nemesis_os_a19.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw14a2177b/images/UPMRE3-02DX/catalog/upmre3_02dx_nemesis_os_a20.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw421e25f0/images/UPMRE3-02DX/catalog/upmre3_02dx_nemesis_os_a08.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw909df46a/images/UPMRE3-02DX/catalog/upmre3_02dx_nemesis_os_a05.jpg"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "RE3",
+            "name": "Jill Valentine",
+            "brand": "Prime 1 Studio",
+            "state": "Available",
+            "phase": "Released",
+            "material": "Resin",
+            "estSize": [
+              "Regular (Jill) : H50 x W41 x D46 cm",
+              "Deluxe (Zombie Dog) : H35 x W16 x D45 cm"
+            ],
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": "Regular",
+                "price": 1154,
+                "oldPrice": 1462
+              },
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": "Deluxe",
+                "price": 1254,
+                "oldPrice": 1562
+              }
+            ],
+            "note": "* Bonus : Umbrella's vaccine scale 1/1 has LED light",
+            "img": [
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dwc3d81fec/images/UPMRE3-01/catalog/upmre3_01_jillvalentaine_os_a01.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw20350340/images/UPMRE3-01DX/catalog/upmre3dx_01_jillvalentaine_os_a01.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw58370939/images/UPMRE3-01/catalog/upmre3_01_jillvalentaine_os_a06.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dwc62a5449/images/UPMRE3-01/catalog/upmre3_01_jillvalentaine_os_a07.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dwa07e54c4/images/UPMRE3-01/catalog/upmre3_01_jillvalentaine_os_a09.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dwa07e54c4/images/UPMRE3-01/catalog/upmre3_01_jillvalentaine_os_a09.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw8013774f/images/UPMRE3-01/catalog/upmre3_01_jillvalentaine_os_a11.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw8013774f/images/UPMRE3-01/catalog/upmre3_01_jillvalentaine_os_a11.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dwb5b290a0/images/UPMRE3-01/catalog/upmre3_01_jillvalentaine_os_b33.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dwb5b290a0/images/UPMRE3-01/catalog/upmre3_01_jillvalentaine_os_b33.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw0d34b567/images/UPMRE3-01/catalog/upmre3_01_jillvalentaine_os_b36.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dwb5f2d7a3/images/UPMRE3-01/catalog/upmre3_01_jillvalentaine_os_b38.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw302102b0/images/UPMRE3-01/catalog/upmre3_01_jillvalentaine_os_a08.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw6687c107/images/UPMRE3-01/catalog/upmre3_01_jillvalentaine_os_a05.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dwce10d1a1/images/UPMRE3-01DX/catalog/upmre3dx_01_jillvalentaine_os_a08.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw99cf509e/images/UPMRE3-01DX/catalog/upmre3dx_01_jillvalentaine_os_a16.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dwbc9f2e98/images/UPMRE3-01DX/catalog/upmre3dx_01_jillvalentaine_os_a17.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw81ef25be/images/UPMRE3-01DX/catalog/upmre3dx_01_jillvalentaine_os_a18.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw56384818/images/UPMRE3-01DX/catalog/upmre3dx_01_jillvalentaine_os_a19.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw56384818/images/UPMRE3-01DX/catalog/upmre3dx_01_jillvalentaine_os_a19.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dwa287dccb/images/UPMRE3-01DX/catalog/upmre3dx_01_jillvalentaine_os_a02.jpg",
+              "https://www.prime1studio.com/on/demandware.static/-/Sites-p1s-master-catalog/default/dw6a715541/images/UPMRE3-01DX/catalog/upmre3dx_01_jillvalentaine_os_a04.jpg"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "RE4",
+            "name": "Village Mother Miranda",
+            "brand": "PureArts",
+            "state": "Pre-Order",
+            "phase": "Pre-Order Open",
+            "material": "Resin",
+            "estSize": "H66 x W35 x L56 cm",
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": "Regular",
+                "price": 1000,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://product.hstatic.net/200000515997/product/38a76b68-fdb5-4801-8553-43441c050fba_638fb4d0ebcc41e9900664eeb55a8614_master.jpg",
+              "https://product.hstatic.net/200000515997/product/6bc0df02-f467-4405-a386-ba15c2e05524_e5fd691367ca494eb406aaaf365baf7e_master.jpg",
+              "https://product.hstatic.net/200000515997/product/6efddfbd-8d4b-4e01-a358-011b172c0326_1897ff3bd749414292e830b0f5c1cf7d_master.jpg",
+              "https://product.hstatic.net/200000515997/product/0e0d386f-6af0-4ce3-8e23-847f219055c1_e581b341694b45b088c71ccb7011c6a1_master.jpg",
+              "https://product.hstatic.net/200000515997/product/2afb3436-8061-4595-97e6-2187113f8023_7bf34a575d8142fe8516a7b2efedae42_master.jpg",
+              "https://product.hstatic.net/200000515997/product/3e41cbb9-f26b-4eef-a42f-b703e8f6a67e_68e6eb0e8c7c4495ac9482c56f50cec1_master.jpg",
+              "https://product.hstatic.net/200000515997/product/3e41cbb9-f26b-4eef-a42f-b703e8f6a67e_68e6eb0e8c7c4495ac9482c56f50cec1_master.jpg",
+              "https://product.hstatic.net/200000515997/product/b597235a-2661-43af-8ced-b205663d3b70_f7527276f84541ac99343384e2d587e1_master.jpg"
+            ],
+            "nsfw": null
+          }
+        ]
       },
       {
         "itemKey": "zelda",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+        "products": [
+          {
+            "id": "Z1",
+            "name": "Twilight Link",
+            "brand": "Wake Studio",
+            "state": "Order",
+            "phase": "Released",
+            "material": "Resin",
+            "estSize": ["1/6 : H30 x W23 x D14 cm", "1/4 : H46 x W36 x D22 cm"],
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 445,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": null,
+                "price": 589,
+                "oldPrice": null
+              }
+            ],
+            "note": "* Two heads with bust , bust support",
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/11655/212356/WechatIMG11267__19263.1729842026.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11655/212360/WechatIMG11272__45454.1729842029.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11655/212362/WechatIMG11268__57525.1729842029.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11655/212358/WechatIMG11269__05771.1729842028.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11655/212363/WechatIMG11270__45093.1729842029.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11655/212359/WechatIMG11271__36678.1729842029.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/11655/212364/WechatIMG11274__58104.1729842030.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11655/212365/WechatIMG11273__43479.1729842030.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/11655/212357/WechatIMG11275__48522.1729842026.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "Z2",
+            "name": "Twilight Princess",
+            "brand": "Wake Studio",
+            "state": "Order",
+            "phase": "Released",
+            "material": "Resin",
+            "estSize": [
+              "1/6 : H30 x W19.8 x D25.3 cm",
+              "1/4 : H46.6 x W30 x D39.5 cm"
+            ],
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 459,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": null,
+                "price": 639,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/10899/195250/WechatIMG8829__42504.1723197438.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/10899/195248/WechatIMG8835__70979.1723197434.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/10899/195251/WechatIMG8830__78614.1723197439.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/10899/195246/WechatIMG8834__40125.1723197433.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/10899/195247/WechatIMG8831__47738.1723197434.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/10899/195249/WechatIMG8833__50151.1723197435.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/10899/195245/WechatIMG8836__38616.1723197430.png?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "Z3",
+            "name": "Zant",
+            "brand": "Wake Studio",
+            "state": "Order",
+            "phase": "Released",
+            "material": "Resin",
+            "estSize": ["1/6 : H30 x W23 x D14 cm", "1/4 : H46 x W36 x D22 cm"],
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 389,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": null,
+                "price": 525,
+                "oldPrice": null
+              }
+            ],
+            "note": "* Base with LED",
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13399/254427/bc70e53d381799cc609e036c51ee5db6__62265.1745825946.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/13399/254426/9d1371ccd144a8de8f31cd1755acb8d9__08724.1745825936.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/13399/254421/202bb06ced5df7dc3993f5091d365b94__31316.1745825947.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/13399/254422/991ada550a56f1794bb9898d890a8ad0__42254.1745825925.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13399/254423/5867b23430ee7d8780cedbb04703a0a6__92220.1745825925.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/13399/254425/99f792824824aad7a8b31f6eec026553__32672.1745825936.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13399/254428/0c14f8589445417335f12fdfa9c1d917__45301.1745825941.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13399/254429/9ce7234eeda7e8a279e0188837475997__79036.1745825941.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/13399/254424/be3dd4410cb2b419c426b9fdf525d1f4__48012.1745825950.png?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "Z4",
+            "name": "Combo Twilight Link & Twilight Princess",
+            "brand": "Wake Studio",
+            "state": "Order",
+            "phase": "Released",
+            "material": "Resin",
+            "estSize": [
+              "1/6 Twilight Link : H32.3 x W34.2 x D26.9 cm",
+              "1/4 Twilight Link : H48.5 x W51.3 x D40.4 cm",
+              "1/6 Twilight Princess : H30 x W19.8 x D25.3 cm",
+              "1/4 Twilight Princess : H46.6 x W30 x D39.5 cm"
+            ],
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 888,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": null,
+                "price": 1111,
+                "oldPrice": null
+              }
+            ],
+            "note": "* Free Zant (same scale)",
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/11655/212356/WechatIMG11267__19263.1729842026.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/10899/195250/WechatIMG8829__42504.1723197438.png?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "Z5",
+            "name": "Zelda OOT",
+            "brand": "Dream Studio",
+            "state": "Pre-Order",
+            "phase": "Pre-Order Close",
+            "material": "Resin",
+            "estSize": ["1/6 : H34 x W23 x D23 cm", "1/4 : H50 x W36 x D36 cm"],
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 599,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": null,
+                "price": 315,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12175/224944/WechatIMG144__86403.1733929159.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12175/224948/WechatIMG145__78488.1733929159.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12175/224952/WechatIMG143__64510.1733929160.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12175/224952/WechatIMG143__64510.1733929160.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12175/224952/WechatIMG143__64510.1733929160.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12175/224947/WechatIMG151__70035.1733929159.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12175/224950/WechatIMG146__57017.1733929159.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12175/224949/WechatIMG148__57138.1733929159.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12175/224951/WechatIMG147__33741.1733929160.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12175/224953/WechatIMG152__05952.1733929160.jpg?c=2"
+            ],
+            "nsfw": null
+          }
+        ]
       },
       {
         "itemKey": "final-fantasy",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+        "products": [
+          {
+            "id": "FF1",
+            "name": "Terra",
+            "brand": "Joy Station",
+            "state": "Sold-Out",
+            "phase": "Released",
+            "material": "Resin",
+            "estSize": ["H85 x W65 x D53 cm"],
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": null,
+                "price": 1035,
+                "oldPrice": null
+              }
+            ],
+            "note": [
+              "* More details on Terra cloth's texture details",
+              "* Little revising on Terra's face",
+              "* Terra's weapon will be made of metal"
+            ],
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/7816/133868/WechatIMG481__96324.1694260566.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/7816/133874/WechatIMG485__78985.1694260534.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/7816/133871/WechatIMG482__57847.1694260533.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/7816/133872/WechatIMG476__04357.1694260533.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/7816/133873/WechatIMG483__54988.1694260533.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/7816/133875/WechatIMG484__85434.1694260534.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/7816/133876/WechatIMG498__37196.1694260554.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/7816/133877/WechatIMG487__74782.1694260554.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/7816/133879/WechatIMG489__77832.1694260554.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/7816/133880/WechatIMG488__82123.1694260555.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/7816/133881/WechatIMG486__54846.1694260555.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "FF2",
+            "name": "OG Cloud FFVII",
+            "brand": "Dream Studio",
+            "state": "Pre-Order",
+            "phase": "Released",
+            "material": "Resin",
+            "estSize": ["1/6 : H35 x W29 x D17 cm", "1/4: H50 x W36 xD36cm"],
+            "feature": null,
+            "details": [
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": null,
+                "price": 359,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/6",
+                "model": null,
+                "version": null,
+                "price": 485,
+                "oldPrice": null
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12534/233269/WechatIMG284__78965.1736950948.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12534/233271/WechatIMG286__18323.1736951015.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12534/233272/WechatIMG287__63446.1736951044.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12534/233274/2025-01-15_22.26.13__07358.1736951201.png?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12534/233277/WechatIMG291__56896.1736951307.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12534/233278/WechatIMG293__76178.1736951309.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/12534/233276/WechatIMG292__81807.1736951305.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12534/233279/WechatIMG295__19049.1736951309.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/12534/233280/WechatIMG296__83275.1736951309.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "FF3",
+            "name": "FF10 JECHT",
+            "brand": "Joy Station",
+            "state": "Available",
+            "phase": "Released",
+            "material": "Resin",
+            "estSize": "1/4: H60 x W25 xD22cm",
+            "feature": "LED Lighting",
+            "details": [
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": null,
+                "price": 479,
+                "oldPrice": null
+              }
+            ],
+            "note": "* Bonus : Huge sword with base, small Tidus",
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/9310/165986/1__79063.1710945675.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/9310/165991/4__05489.1710945622.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/9310/165989/2__80396.1710945622.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/9310/165988/6__50073.1710945621.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/9310/165990/5__64221.1710945622.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/9310/165992/3__23348.1710945623.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/9310/165995/7__20949.1710945623.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/9310/165993/8__29872.1710945623.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/9310/165994/9__02645.1710945623.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/9310/165987/10__58736.1710945672.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/9310/165985/11__12828.1710945662.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "FF4",
+            "name": "Tidus LEDS",
+            "brand": "Joy Station",
+            "state": "Available",
+            "phase": "Released",
+            "material": "Resin",
+            "estSize": "1/4: H63 x W35 xD29 cm",
+            "feature": "LED Lighting",
+            "details": [
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": null,
+                "price": 299,
+                "oldPrice": 435
+              }
+            ],
+            "note": null,
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/4472/67810/WechatIMG27694__94336.1642529157.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/4472/67813/WechatIMG27698__86038.1642529158.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/4472/67812/WechatIMG27693__79746.1642529158.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/4472/67811/WechatIMG27695__30230.1642529157.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/4472/67814/WechatIMG27711__14799.1642529158.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/4472/67816/WechatIMG27696__12530.1642529159.jpg?c=2"
+            ],
+            "nsfw": null
+          },
+          {
+            "id": "FF5",
+            "name": "Sephiroth",
+            "brand": "Dragon Studio",
+            "state": "Sold-Out",
+            "phase": "Released",
+            "material": "Resin",
+            "estSize": [
+              "Regular : H:76 W:37 D:64 cm",
+              "EX : H:115 W:78 D:66 cm"
+            ],
+            "feature": "LED Lighting",
+            "details": [
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": "Regular",
+                "price": 855,
+                "oldPrice": null
+              },
+              {
+                "scale": "1/4",
+                "model": null,
+                "version": "EX",
+                "price": 1055,
+                "oldPrice": null
+              }
+            ],
+            "note": [
+              "* Regular version(without wings):",
+              "1 solemn head+replace 2 hands(normal hand + LED effect hand) + All-metal sword+noctilucent base.",
+              "* EX version(with wings):",
+              "1 smile head+replace 2 hands(normal hand + LED effect hand) + replace right shoulder armor + Acrylic support rod (support wings)+All-metal sword + noctilucent base."
+            ],
+            "img": [
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/9693/174145/27151693476964_.pic_hd__32095.1715862010.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/9693/174140/27001693384317_.pic_hd__47798.1715862009.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/9693/174149/27121693476960_.pic_hd__42083.1715862011.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/9693/174148/27171693476967_.pic_hd__14149.1715862010.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/9693/174144/27161693476966_.pic_hd__89385.1715862010.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/9693/174147/27141693476963_.pic_hd__83109.1715862010.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/9693/174143/26921693384311_.pic_hd__72935.1715862010.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/9693/174139/26951693384313_.pic_hd__86316.1715862009.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/9693/174136/26971693384316_.pic_hd__49598.1715862009.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/9693/174137/26941693384312_.pic_hd__78437.1715862009.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/640w/products/9693/174135/26961693384313_.pic_hd__48193.1715862009.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/9693/174141/26991693384317_.pic_hd__72878.1715862010.jpg?c=2",
+              "https://cdn11.bigcommerce.com/s-5s1ah0hhi7/images/stencil/1280x1280/products/9693/174132/27181693476968_.pic_hd__55567.1715862008.jpg?c=2"
+            ],
+            "nsfw": null
+          }
+        ]
       },
       {
         "itemKey": "dark-souls",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+        "products": []
       },
       {
         "itemKey": "nier-automata",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+        "products": []
       },
       {
         "itemKey": "street fighters",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+        "products": []
       },
       {
         "itemKey": "king-of-fighter",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+        "products": []
       },
       {
         "itemKey": "league-of-legends",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+        "products": []
       },
       {
         "itemKey": "overwatch",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+        "products": []
       }
     ]
   },
@@ -1845,19 +3817,19 @@
     "items": [
       {
         "itemKey": "dc-comics",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+        "products": []
       },
       {
         "itemKey": "marvel",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+        "products": []
       },
       {
         "itemKey": "kamen-raider",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+        "products": []
       },
       {
         "itemKey": "ultraman",
-        "products": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+        "products": []
       }
     ]
   }

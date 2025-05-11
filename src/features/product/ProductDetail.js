@@ -15,8 +15,11 @@ import Loading from "../../shared/components/Loading/Loading.js";
 const ProductDetail = () => {
   const { id } = useParams();
   const { products, loading, error } = useFetchProducts();
-  const allProducts = flattenProducts(products);
-  const product = allProducts.find((p) => p.id === parseInt(id));
+  const allProducts = useMemo(() => flattenProducts(products), [products]);
+  const product = useMemo(
+    () => allProducts.find((p) => p.id === id),
+    [allProducts, id]
+  );
 
   // Các state cơ bản
   const [selectedImage, setSelectedImage] = useState(0);
@@ -191,14 +194,14 @@ const ProductDetail = () => {
     image.style.setProperty("--mouse-y", `${y}%`);
   };
 
-  if (loading)
+  if (loading) return <Loading />;
+  if (error) return <div className="error-state">{error}</div>;
+  if (!product)
     return (
-      <div>
-        <Loading />
+      <div className="not-found-state">
+        Không tìm thấy sản phẩm với ID: {id}
       </div>
     );
-  if (error) return <div>{error}</div>;
-  if (!product) return <div>Không tìm thấy sản phẩm</div>;
 
   return (
     <div className="product-detail">

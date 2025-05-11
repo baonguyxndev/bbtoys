@@ -105,12 +105,8 @@ const Header = () => {
                 img: "https://i1.wp.com/img.elevengk.com/Big_Feeler_Studio_-_SPY%C3%97FAMILY_CODE:_White_Family_Portrait-3.jpg?ssl=1",
               },
               {
-                name: "Pokemon",
+                name: "Order Anime",
                 img: "http://product.hstatic.net/200000707011/product/350823777_984522842547855_5690819540553544334_n_995b81cf07674283af76d947fbaa3a0a_master.jpg",
-              },
-              {
-                name: "Digimon",
-                img: "https://www.hobbymodel.net/web/board/2021/e0fbtayrbnannynsmqtv1511202172619513.jpg",
               },
             ].map((item, index) => (
               <li key={index} onMouseEnter={() => setHoveredImage(item.img)}>
@@ -163,6 +159,10 @@ const Header = () => {
               },
               {
                 name: "Overwatch",
+                img: "https://www.hobbymodel.net/web/board/2022/tee2UURS03XGO2832022207.jpg",
+              },
+              {
+                name: "Order Game",
                 img: "https://www.hobbymodel.net/web/board/2022/tee2UURS03XGO2832022207.jpg",
               },
             ].map((item, index) => (

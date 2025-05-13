@@ -1,0 +1,138 @@
+.nsfw-warning-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(17, 17, 17, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.nsfw-warning-box {
+  background: linear-gradient(
+    145deg,
+    var(--color-background-primary),
+    var(--color-background-secondary)
+  );
+  border-radius: var(--border-radius-primary);
+  padding: 50px 40px;
+  box-shadow: var(--box-shadow-primary);
+  max-width: 90vw;
+  width: 600px;
+  text-align: center;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-primary);
+  transform: translateY(0);
+  animation: slideUp 0.4s ease-out;
+}
+
+.nsfw-warning-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nsfw-warning-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 36px;
+  color: var(--color-text-light);
+  font-weight: 400;
+}
+
+.nsfw-warning-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.nsfw-warning-actions button {
+  padding: 14px 32px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 200px;
+}
+
+.nsfw-warning-actions .enter-btn {
+  background: var(--color-background-secondary);
+  color: var(--color-text-primary);
+  border: 1px solid #666;
+}
+
+.nsfw-warning-actions .exit-btn {
+  background: var(--color-primary);
+  color: var(--color-text-primary);
+  box-shadow: 0 4px 15px rgba(186, 0, 0, 0.3);
+}
+
+.nsfw-warning-actions .exit-btn:hover {
+  transform: var(--transform-hover);
+  box-shadow: var(--box-shadow-primary);
+}
+
+.nsfw-warning-actions .enter-btn:hover {
+  transform: var(--transform-hover);
+  box-shadow: var(--box-shadow-primary);
+}
+
+.nsfw-warning-actions button:active {
+  transform: var(--transfrom-active);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nsfw-warning-box {
+    width: 90%;
+    padding: 36px 24px;
+  }
+
+  .nsfw-warning-title {
+    font-size: 24px;
+  }
+
+  .nsfw-warning-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nsfw-warning-actions button {
+    width: 100%;
+    min-width: unset;
+  }
+}

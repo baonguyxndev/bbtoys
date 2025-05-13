@@ -11,6 +11,8 @@ import LatestProducts from "../../shared/components/LatestProducts/LatestProduct
 import RelatedProducts from "../../shared/components/RelatedProducts/RelatedProducts";
 import MustRead from "../../shared/components/MustRead/MustRead.js";
 import Loading from "../../shared/components/Loading/Loading.js";
+import useNsfwGuard from "../../shared/hooks/useNsfwGuard.js";
+import NsfwWarningOverlay from "../../shared/components/NsfwWarningOverlay/NsfwWarningOverlay.js";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -29,6 +31,9 @@ const ProductDetail = () => {
   const [selectedVersion, setSelectedVersion] = useState(null);
   const [selectedDetail, setSelectedDetail] = useState(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
+
+  const { showNsfwWarning, handleEnterNsfw, handleExitNsfw } =
+    useNsfwGuard(product);
 
   // Xử lý các lựa chọn sản phẩm
   const productOptions = useMemo(() => {
@@ -202,6 +207,12 @@ const ProductDetail = () => {
         Không tìm thấy sản phẩm với ID: {id}
       </div>
     );
+
+  if (showNsfwWarning) {
+    return (
+      <NsfwWarningOverlay onEnter={handleEnterNsfw} onExit={handleExitNsfw} />
+    );
+  }
 
   return (
     <div className="product-detail">

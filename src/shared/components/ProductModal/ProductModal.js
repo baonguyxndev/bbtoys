@@ -5,6 +5,8 @@ import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { FiHeart } from "react-icons/fi";
 import { BiGitCompare } from "react-icons/bi";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import useNsfwGuard from "../../hooks/useNsfwGuard";
+import NsfwWarningOverlay from "../NsfwWarningOverlay/NsfwWarningOverlay";
 
 const ProductModal = ({ product, isOpen, onClose }) => {
   // Quản lý trạng thái scroll của body
@@ -28,6 +30,15 @@ const ProductModal = ({ product, isOpen, onClose }) => {
   const [selectedVersion, setSelectedVersion] = useState(null);
   const [selectedDetail, setSelectedDetail] = useState(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
+
+  const { showNsfwWarning, handleEnterNsfw, handleExitNsfw } =
+    useNsfwGuard(product);
+
+  // Xử lý khi người dùng chọn Under 18
+  const handleExitNsfwAndCloseModal = () => {
+    handleExitNsfw();
+    onClose();
+  };
 
   // Xử lý chuyển ảnh với useCallback
   const handleNextImage = useCallback(() => {
@@ -189,6 +200,15 @@ const ProductModal = ({ product, isOpen, onClose }) => {
     setSelectedModel(model);
     setSelectedVersion(null);
   };
+
+  if (showNsfwWarning) {
+    return (
+      <NsfwWarningOverlay
+        onEnter={handleEnterNsfw}
+        onExit={handleExitNsfwAndCloseModal}
+      />
+    );
+  }
 
   if (!isOpen || !product) return null;
 

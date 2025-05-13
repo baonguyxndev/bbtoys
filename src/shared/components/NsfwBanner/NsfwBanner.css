@@ -1,0 +1,15 @@
+.nsfw-banner {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  background: rgba(186, 0, 0, 0.95);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 6px 16px;
+  border-radius: 8px;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

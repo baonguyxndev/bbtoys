@@ -274,24 +274,25 @@ const ProductModal = ({ product, isOpen, onClose }) => {
 
           <div className="modalRight">
             {/* Scale Selection */}
-            {productOptions.hasMultipleScales && (
-              <div className="option-selector">
-                <div className="option-label">Scale</div>
-                <div className="option-buttons">
-                  {productOptions.scales.map((scale, index) => (
-                    <button
-                      key={index}
-                      className={`option-button ${
-                        selectedScale === scale ? "selected" : ""
-                      }`}
-                      onClick={() => handleScaleChange(scale)}
-                    >
-                      {scale}
-                    </button>
-                  ))}
+            {productOptions.hasMultipleScales &&
+              productOptions.scales.length > 0 && (
+                <div className="option-selector">
+                  <div className="option-label">Scale</div>
+                  <div className="option-buttons">
+                    {productOptions.scales.map((scale, index) => (
+                      <button
+                        key={index}
+                        className={`option-button ${
+                          selectedScale === scale ? "selected" : ""
+                        }`}
+                        onClick={() => handleScaleChange(scale)}
+                      >
+                        {scale}
+                      </button>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
 
             {/* Model Selection */}
             {productOptions.hasMultipleModels &&

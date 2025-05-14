@@ -281,62 +281,65 @@ const ProductDetail = () => {
               </div>
               <div className="options-wrap">
                 <div className="line"></div>
-                {productOptions.hasMultipleScales && (
-                  <div className="option-group">
-                    <label>Scale</label>
-                    <div className="scale-options">
-                      {productOptions.scales.map((scale) => (
-                        <button
-                          key={scale}
-                          className={`scale-option ${
-                            selectedScale === scale ? "selected" : ""
-                          }`}
-                          onClick={() => handleScaleChange(scale)}
-                        >
-                          {scale}
-                        </button>
-                      ))}
+                {productOptions.hasMultipleScales &&
+                  productOptions.scales.length > 0 && (
+                    <div className="option-group">
+                      <label>Scale</label>
+                      <div className="scale-options">
+                        {productOptions.scales.map((scale) => (
+                          <button
+                            key={scale}
+                            className={`scale-option ${
+                              selectedScale === scale ? "selected" : ""
+                            }`}
+                            onClick={() => handleScaleChange(scale)}
+                          >
+                            {scale}
+                          </button>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
 
-                {productOptions.hasMultipleModels && (
-                  <div className="option-group">
-                    <label>Model</label>
-                    <div className="model-options">
-                      {productOptions.availableModels.map((model) => (
-                        <button
-                          key={model}
-                          className={`model-option ${
-                            selectedModel === model ? "selected" : ""
-                          }`}
-                          onClick={() => handleModelChange(model)}
-                        >
-                          {model}
-                        </button>
-                      ))}
+                {productOptions.hasMultipleModels &&
+                  productOptions.availableModels.length > 0 && (
+                    <div className="option-group">
+                      <label>Model</label>
+                      <div className="model-options">
+                        {productOptions.availableModels.map((model) => (
+                          <button
+                            key={model}
+                            className={`model-option ${
+                              selectedModel === model ? "selected" : ""
+                            }`}
+                            onClick={() => handleModelChange(model)}
+                          >
+                            {model}
+                          </button>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
 
-                {productOptions.hasMultipleVersions && (
-                  <div className="option-group">
-                    <label>Version</label>
-                    <div className="version-options">
-                      {productOptions.availableVersions.map((version) => (
-                        <button
-                          key={version}
-                          className={`version-option ${
-                            selectedVersion === version ? "selected" : ""
-                          }`}
-                          onClick={() => setSelectedVersion(version)}
-                        >
-                          {version}
-                        </button>
-                      ))}
+                {productOptions.hasMultipleVersions &&
+                  productOptions.availableVersions.length > 0 && (
+                    <div className="option-group">
+                      <label>Version</label>
+                      <div className="version-options">
+                        {productOptions.availableVersions.map((version) => (
+                          <button
+                            key={version}
+                            className={`version-option ${
+                              selectedVersion === version ? "selected" : ""
+                            }`}
+                            onClick={() => setSelectedVersion(version)}
+                          >
+                            {version}
+                          </button>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
               </div>
             </div>
           </div>

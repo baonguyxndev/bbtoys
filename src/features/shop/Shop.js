@@ -45,6 +45,7 @@ const Shop = () => {
   const [selectedPhases, setSelectedPhases] = useState(new Set());
   const [selectedScales, setSelectedScales] = useState(new Set());
   const [selectedStates, setSelectedStates] = useState(new Set());
+  const [selectedNsfw, setSelectedNsfw] = useState(new Set());
 
   // Trạng thái mở rộng cho các danh mục
   const [expandedCategories, setExpandedCategories] = useState(
@@ -62,6 +63,7 @@ const Shop = () => {
   const [showPhase, setShowPhase] = useState(true);
   const [showScale, setShowScale] = useState(true);
   const [showState, setShowState] = useState(true);
+  const [showNsfw, setShowNsfw] = useState(true);
   const [selectedProductId, setSelectedProductId] = useState(null);
 
   // Tính toán min/max price
@@ -177,6 +179,27 @@ const Shop = () => {
     }));
   }, [products]);
 
+  const nsfwTree = useMemo(() => {
+    if (!Array.isArray(products) || !products.length) return [];
+    const nsfwOptions = new Set(
+      products
+        .flatMap((category) =>
+          Array.isArray(category.items)
+            ? category.items.flatMap((item) =>
+                Array.isArray(item.products)
+                  ? item.products.map((product) => product.nsfw)
+                  : []
+              )
+            : []
+        )
+        .filter(Boolean) // Lọc bỏ các giá trị null
+    );
+    return Array.from(nsfwOptions).map((nsfw) => ({
+      key: nsfw,
+      items: [],
+    }));
+  }, [products]);
+
   // Kiểm tra bộ lọc được áp dụng
   const hasActiveFilters = useMemo(() => {
     return hasFiltersApplied(
@@ -187,6 +210,7 @@ const Shop = () => {
       selectedPhases,
       selectedScales,
       selectedStates,
+      selectedNsfw,
       searchQuery,
       sortOption,
       priceRange
@@ -199,6 +223,7 @@ const Shop = () => {
     selectedPhases,
     selectedScales,
     selectedStates,
+    selectedNsfw,
     searchQuery,
     sortOption,
     priceRange,
@@ -215,6 +240,7 @@ const Shop = () => {
         phases: selectedPhases,
         scales: selectedScales,
         states: selectedStates,
+        nsfw: selectedNsfw,
       },
       searchQuery,
       sortOption,
@@ -229,6 +255,7 @@ const Shop = () => {
     selectedPhases,
     selectedScales,
     selectedStates,
+    selectedNsfw,
     searchQuery,
     sortOption,
     priceRange,
@@ -355,6 +382,17 @@ const Shop = () => {
         }
         return newSet;
       });
+    } else if (type === "nsfw") {
+      setSelectedNsfw((prev) => {
+        const newSet = new Set(prev);
+        if (newSet.has(key)) {
+          newSet.delete(key);
+        } else {
+          newSet.add(key);
+        }
+        console.log("Updated selectedNsfw:", Array.from(newSet));
+        return newSet;
+      });
     } else {
       const setSelected = {
         studios: setSelectedStudios,
@@ -406,6 +444,7 @@ const Shop = () => {
       phases: expandedPhases,
       scales: expandedScales,
       states: expandedStates,
+      nsfw: expandedStates,
     }[type].has(category.key);
     const isSelected =
       type === "items"
@@ -416,6 +455,7 @@ const Shop = () => {
             phases: selectedPhases,
             scales: selectedScales,
             states: selectedStates,
+            nsfw: selectedNsfw,
           }[type].has(category.key);
     console.log(`Rendering ${category.key} (${type}), parentKey:`, parentKey);
     console.log(`isSelected for ${category.key} (${type}):`, isSelected);
@@ -638,6 +678,24 @@ const Shop = () => {
                     <div className="category-tree">
                       {stateTree.map((state) =>
                         renderCategoryItem(state, 0, null, "states")
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {/* Product NSFW */}
+                <div
+                  className={`sidebar-title ${!showNsfw ? "collapsed" : ""}`}
+                  onClick={() => setShowNsfw(!showNsfw)}
+                >
+                  <span>Product NSFW</span>
+                  {showNsfw ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                </div>
+                {showNsfw && (
+                  <div className="sidebar-section">
+                    <div className="category-tree">
+                      {nsfwTree.map((nsfw) =>
+                        renderCategoryItem(nsfw, 0, null, "nsfw")
                       )}
                     </div>
                   </div>

@@ -39,6 +39,7 @@ export const hasFiltersApplied = (
   selectedPhases,
   selectedScales,
   selectedStates,
+  selectedNsfw,
   searchQuery,
   sortOption,
   priceRange
@@ -51,6 +52,7 @@ export const hasFiltersApplied = (
     selectedPhases.size > 0 ||
     selectedScales.size > 0 ||
     selectedStates.size > 0 ||
+    selectedNsfw.size > 0 ||
     searchQuery ||
     sortOption !== "latest" ||
     priceRange.min !== minPrice ||
@@ -81,7 +83,7 @@ export const filterAndSortProducts = (
         if (filters.items.size === 0 || filters.items.has(itemKey)) {
           // Lọc sản phẩm trong item
           const filteredItemProducts = itemProducts.filter((product) => {
-            // Lọc theo các tiêu chí khác (studio, phase, scale, state, price, search)
+            // Lọc theo các tiêu chí khác (studio, phase, scale, state, price, search, nsfw)
             const matchesStudio =
               filters.studios.size === 0 || filters.studios.has(product.brand);
             const matchesPhase =
@@ -94,6 +96,9 @@ export const filterAndSortProducts = (
                 ));
             const matchesState =
               filters.states.size === 0 || filters.states.has(product.state);
+            const matchesNsfw =
+              filters.nsfw.size === 0 ||
+              (product.nsfw && filters.nsfw.has(product.nsfw));
             const matchesPrice =
               Array.isArray(product.details) &&
               product.details.some(
@@ -111,6 +116,7 @@ export const filterAndSortProducts = (
               matchesPhase &&
               matchesScale &&
               matchesState &&
+              matchesNsfw &&
               matchesPrice &&
               matchesSearch
             );

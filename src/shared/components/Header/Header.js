@@ -81,7 +81,11 @@ const Header = () => {
                 img: "https://cdn.toyokoku.com.au/app/uploads/2024/12/25082715/Image_20241225064446.jpg",
               },
               {
-                name: "Fairy Tail",
+                name: "Chainsaw Man",
+                img: "https://i.redd.it/j8aamsp2u1r31.jpg",
+              },
+              {
+                name: "Pokemon",
                 img: "https://product.hstatic.net/200000915561/product/z5906405582552_d037b0b6c91b0a5a60e4b9b66872e7b5_acd260ec5d68463cac5cf879032ac3d5_master.jpg",
               },
               {
@@ -154,11 +158,15 @@ const Header = () => {
                 img: "https://img.fantaskycdn.com/9f5a4204c95a53e4e858007ce6e30874.jpeg",
               },
               {
-                name: "League Of Legends",
-                img: "https://statics.pancake.vn/web-media/07/00/7f/22/504ae4d3dfe1049daedb613b522b3d2478c4695c7c64e75459cf8abf.jpg",
+                name: "Overwatch",
+                img: "https://www.hobbymodel.net/web/board/2022/tee2UURS03XGO2832022207.jpg",
               },
               {
-                name: "Overwatch",
+                name: "Blue Archive",
+                img: "https://www.hobbymodel.net/web/board/2022/tee2UURS03XGO2832022207.jpg",
+              },
+              {
+                name: "Azur Lane",
                 img: "https://www.hobbymodel.net/web/board/2022/tee2UURS03XGO2832022207.jpg",
               },
               {
@@ -180,12 +188,8 @@ const Header = () => {
               <li className="memuTitle">Super hero</li>
               {[
                 {
-                  name: "DC Comics",
+                  name: "DC / Marvel",
                   img: "https://img.orzgk.com/wp-content/uploads/2024/08/UPMDC-10_b37.jpg",
-                },
-                {
-                  name: "Marvel",
-                  img: "https://product.hstatic.net/200000707011/product/image_20231209215701_ff09c48402ef4dbe95933b8624e962f7_master.jpg",
                 },
                 {
                   name: "Kamen Rider",

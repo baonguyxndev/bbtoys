@@ -246,75 +246,113 @@
 .category-tree {
   max-height: none;
   overflow-y: visible;
-  padding-right: 5px;
+  padding: 10px;
   margin-top: 0;
-  width: 100%;
-  flex: 1;
 }
 
 .category-tree.scrollable {
   max-height: 300px;
   overflow-y: auto;
-  padding-right: 8px;
-}
-
-/* Đảm bảo category-tree không có margin/padding dư thừa */
-.category-tree {
-  margin: 0;
-  padding: 0;
 }
 
 .category-item {
   display: flex;
   align-items: center;
-  padding: 8px 0;
-  cursor: pointer;
+  padding: 8px 12px;
+  margin: 4px 0;
+  border-radius: 6px;
   transition: all 0.3s ease;
-  width: 100%;
+  position: relative;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+}
+
+.category-item:hover {
+  background-color: #2a2a2a;
+  border-color: #ba0000;
 }
 
 .category-checkbox {
-  margin-right: 20px;
-  width: 25px;
-  height: 20px;
-  border-radius: 5px;
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
   cursor: pointer;
-}
-
-input[type="checkbox"] {
+  position: relative;
   appearance: none;
-  background-color: #666;
+  -webkit-appearance: none;
+  border: 2px solid #666;
+  border-radius: 4px;
+  background-color: #1a1a1a;
+  transition: all 0.3s ease;
 }
 
-input[type="checkbox"]:checked::before {
-  content: "-";
-  font-size: 25px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-weight: bold;
-  box-shadow: var(--box-shadow-primary);
-  border-radius: 5px;
+.category-checkbox:checked {
+  background-color: #ba0000;
+  border-color: #ba0000;
+}
+
+.category-checkbox:checked::before {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
 }
 
 .category-label {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  font-size: 14px;
+  flex: 1;
+  font-size: 15px;
   color: #fff;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  cursor: pointer;
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
 }
 
-/* Subcategories */
+.expand-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.expand-icon:hover {
+  color: #ba0000;
+  background-color: rgba(186, 0, 0, 0.1);
+}
+
 .subcategory-list {
-  padding-left: 28px;
-  margin: 0;
+  margin-left: 32px;
+  position: relative;
+  padding-left: 12px;
+  border-left: 2px solid #333;
+}
+
+.subcategory-list .category-item {
+  margin-left: 0;
+  background-color: #222;
+}
+
+.subcategory-list .category-item:hover {
+  background-color: #2a2a2a;
+}
+
+.subcategory-list .category-item::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  width: 12px;
+  height: 2px;
+  background-color: #333;
 }
 
 /* Price range */
@@ -460,23 +498,6 @@ input[type="checkbox"]:checked::before {
 .selected-category button:hover {
   color: #ff4d4f;
   transform: var(--transform-hover);
-}
-
-/* Expand/Collapse icons */
-.expand-icon {
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-  color: #999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-  transition: all 0.3s ease;
-}
-
-.expand-icon:hover {
-  color: #1890ff;
 }
 
 /* Product Grid */

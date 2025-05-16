@@ -57,13 +57,13 @@ const Shop = () => {
   const [expandedStates, setExpandedStates] = useState(new Set());
 
   // Trạng thái hiển thị cho các phần
-  const [showPrice, setShowPrice] = useState(true);
-  const [showCategory, setShowCategory] = useState(true);
-  const [showStudio, setShowStudio] = useState(true);
-  const [showPhase, setShowPhase] = useState(true);
-  const [showScale, setShowScale] = useState(true);
-  const [showState, setShowState] = useState(true);
-  const [showNsfw, setShowNsfw] = useState(true);
+  const [showPrice, setShowPrice] = useState(false);
+  const [showCategory, setShowCategory] = useState(false);
+  const [showStudio, setShowStudio] = useState(false);
+  const [showPhase, setShowPhase] = useState(false);
+  const [showScale, setShowScale] = useState(false);
+  const [showState, setShowState] = useState(false);
+  const [showNsfw, setShowNsfw] = useState(false);
   const [selectedProductId, setSelectedProductId] = useState(null);
 
   // Tính toán min/max price
@@ -82,6 +82,7 @@ const Shop = () => {
     if (!Array.isArray(products) || !products.length) return [];
     return products.map((category) => ({
       key: category.categoryKey || "Unknown",
+      name: category.categoryName || "Unknown",
       items: Array.isArray(category.items)
         ? category.items.map((item) => ({
             key: item.itemKey || "Unknown",
@@ -457,8 +458,6 @@ const Shop = () => {
             states: selectedStates,
             nsfw: selectedNsfw,
           }[type].has(category.key);
-    console.log(`Rendering ${category.key} (${type}), parentKey:`, parentKey);
-    console.log(`isSelected for ${category.key} (${type}):`, isSelected);
 
     const uniqueKey = parentKey ? `${parentKey}-${category.key}` : category.key;
 
@@ -485,7 +484,7 @@ const Shop = () => {
             </span>
           )}
           <div className="category-label">
-            <span>{category.key}</span>
+            <span>{type === "categories" ? category.name : category.key}</span>
           </div>
           <input
             type="checkbox"
@@ -495,10 +494,6 @@ const Shop = () => {
               if (el) el.indeterminate = isIndeterminate;
             }}
             onChange={() => {
-              console.log(
-                `Calling toggleSelection for ${category.key} (${type}), parentKey:`,
-                parentKey
-              );
               type === "items"
                 ? toggleSelection(type, category.key, parentKey)
                 : toggleSelection(type, category.key);

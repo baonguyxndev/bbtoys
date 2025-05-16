@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const useLayout = (defaultLayout = "grid4") => {
   const [selectedLayout, setSelectedLayout] = useState(defaultLayout);
-  const [showLayout, setShowLayout] = useState(true);
+  const [showLayout, setShowLayout] = useState(false);
 
   const handleLayoutChange = (layout) => {
     setSelectedLayout(layout);

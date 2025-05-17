@@ -1,0 +1,24 @@
+{
+  "materials": [
+    {
+      "key": "resin",
+      "name": "Resin"
+    },
+    {
+      "key": "pvc",
+      "name": "PVC"
+    },
+    {
+      "key": "polystone",
+      "name": "Polystone"
+    },
+    {
+      "key": "silicon",
+      "name": "Silicon"
+    },
+    {
+      "key": "pu",
+      "name": "PU"
+    }
+  ]
+}

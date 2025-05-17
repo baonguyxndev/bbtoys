@@ -8,6 +8,7 @@ import ProductItem from "../../shared/components/ProductItem/ProductItem";
 import ProductModal from "../../shared/components/ProductModal/ProductModal";
 import { useSearchParams } from "react-router-dom";
 import useFetchProducts from "../../shared/hooks/useFetchProducts.js";
+import useFetchMaterials from "../../shared/hooks/useFetchMaterials.js";
 import useLayout from "../../shared/hooks/useLayout.js";
 import usePagination from "../../shared/hooks/usePagination.js";
 import Loading from "../../shared/components/Loading/Loading.js";
@@ -22,7 +23,16 @@ import {
 
 const Shop = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const { products, loading, error } = useFetchProducts();
+  const {
+    products,
+    loading: productsLoading,
+    error: productsError,
+  } = useFetchProducts();
+  const {
+    materials,
+    loading: materialsLoading,
+    error: materialsError,
+  } = useFetchMaterials();
   const {
     selectedLayout,
     showLayout,
@@ -30,6 +40,9 @@ const Shop = () => {
     toggleLayoutVisibility,
   } = useLayout();
   const [searchQuery, setSearchQuery] = useState(
+    searchParams.get("search") || ""
+  );
+  const [searchInput, setSearchInput] = useState(
     searchParams.get("search") || ""
   );
   const [sortOption, setSortOption] = useState(
@@ -42,6 +55,8 @@ const Shop = () => {
   const [selectedCategories, setSelectedCategories] = useState(new Set());
   const [selectedItems, setSelectedItems] = useState(new Set());
   const [selectedStudios, setSelectedStudios] = useState(new Set());
+  const [selectedFeatures, setSelectedFeatures] = useState(new Set());
+  const [selectedMaterials, setSelectedMaterials] = useState(new Set());
   const [selectedPhases, setSelectedPhases] = useState(new Set());
   const [selectedScales, setSelectedScales] = useState(new Set());
   const [selectedStates, setSelectedStates] = useState(new Set());
@@ -52,18 +67,22 @@ const Shop = () => {
     new Set(["PRODUCTS"])
   );
   const [expandedStudios, setExpandedStudios] = useState(new Set());
+  const [expandedFeatures, setExpandedFeatures] = useState(new Set());
   const [expandedPhases, setExpandedPhases] = useState(new Set());
+  const [expandedMaterials, setExpandedMaterials] = useState(new Set());
   const [expandedScales, setExpandedScales] = useState(new Set());
   const [expandedStates, setExpandedStates] = useState(new Set());
 
   // Trạng thái hiển thị cho các phần
-  const [showPrice, setShowPrice] = useState(false);
-  const [showCategory, setShowCategory] = useState(false);
-  const [showStudio, setShowStudio] = useState(false);
-  const [showPhase, setShowPhase] = useState(false);
-  const [showScale, setShowScale] = useState(false);
-  const [showState, setShowState] = useState(false);
-  const [showNsfw, setShowNsfw] = useState(false);
+  const [showPrice, setShowPrice] = useState(true);
+  const [showCategory, setShowCategory] = useState(true);
+  const [showStudio, setShowStudio] = useState(true);
+  const [showFeature, setShowFeature] = useState(true);
+  const [showMaterial, setShowMaterial] = useState(true);
+  const [showPhase, setShowPhase] = useState(true);
+  const [showScale, setShowScale] = useState(true);
+  const [showState, setShowState] = useState(true);
+  const [showNsfw, setShowNsfw] = useState(true);
   const [selectedProductId, setSelectedProductId] = useState(null);
 
   // Tính toán min/max price
@@ -77,6 +96,15 @@ const Shop = () => {
     }
   }, [products, searchParams]);
 
+  // Xử lý tham số material từ URL
+  useEffect(() => {
+    const material = searchParams.get("material");
+    if (material) {
+      setSelectedMaterials(new Set([material]));
+      setShowMaterial(true);
+    }
+  }, [searchParams]);
+
   // Tạo cấu trúc cây cho các danh mục
   const categoryTree = useMemo(() => {
     if (!Array.isArray(products) || !products.length) return [];
@@ -86,6 +114,7 @@ const Shop = () => {
       items: Array.isArray(category.items)
         ? category.items.map((item) => ({
             key: item.itemKey || "Unknown",
+            name: item.itemName || "Unknown",
             items: [],
           }))
         : [],
@@ -109,6 +138,81 @@ const Shop = () => {
     );
     return Array.from(studios).map((studio) => ({
       key: studio,
+      items: [],
+    }));
+  }, [products]);
+
+  const materialTree = useMemo(() => {
+    if (
+      !Array.isArray(products) ||
+      !products.length ||
+      !Array.isArray(materials)
+    ) {
+      return [];
+    }
+
+    // Tạo một Map để lưu trữ tất cả các material
+    const materialMap = new Map();
+
+    products.forEach((category) => {
+      if (Array.isArray(category.items)) {
+        category.items.forEach((item) => {
+          if (Array.isArray(item.products)) {
+            item.products.forEach((product) => {
+              // Xử lý material có thể là string hoặc array
+              const productMaterials = Array.isArray(product.material)
+                ? product.material
+                : [product.material];
+
+              // Thêm mỗi material vào Map
+              productMaterials.forEach((material) => {
+                if (material) {
+                  // Tìm material trong materials array
+                  const materialInfo = materials.find(
+                    (m) => m.key === material
+                  );
+
+                  if (materialInfo && !materialMap.has(material)) {
+                    materialMap.set(material, {
+                      key: material,
+                      name: materialInfo.name,
+                      items: [],
+                    });
+                  }
+                }
+              });
+            });
+          }
+        });
+      }
+    });
+
+    const result = Array.from(materialMap.values());
+    return result;
+  }, [products, materials]);
+
+  const featureTree = useMemo(() => {
+    if (!Array.isArray(products) || !products.length) return [];
+    const features = new Set(
+      products
+        .flatMap((category) =>
+          Array.isArray(category.items)
+            ? category.items.flatMap((item) =>
+                Array.isArray(item.products)
+                  ? item.products.flatMap((product) =>
+                      Array.isArray(product.feature)
+                        ? product.feature
+                        : [product.feature]
+                    )
+                  : []
+              )
+            : []
+        )
+        .filter(Boolean)
+    );
+    return Array.from(features).map((feature) => ({
+      key: feature,
+      name: feature,
       items: [],
     }));
   }, [products]);
@@ -208,6 +312,8 @@ const Shop = () => {
       selectedCategories,
       selectedItems,
       selectedStudios,
+      selectedFeatures,
+      selectedMaterials,
       selectedPhases,
       selectedScales,
       selectedStates,
@@ -219,8 +325,10 @@ const Shop = () => {
   }, [
     products,
     selectedCategories,
+    selectedFeatures,
     selectedItems,
     selectedStudios,
+    selectedMaterials,
     selectedPhases,
     selectedScales,
     selectedStates,
@@ -237,7 +345,9 @@ const Shop = () => {
       {
         categories: selectedCategories,
         items: selectedItems,
+        features: selectedFeatures,
         studios: selectedStudios,
+        materials: selectedMaterials,
         phases: selectedPhases,
         scales: selectedScales,
         states: selectedStates,
@@ -252,7 +362,9 @@ const Shop = () => {
     products,
     selectedCategories,
     selectedItems,
+    selectedFeatures,
     selectedStudios,
+    selectedMaterials,
     selectedPhases,
     selectedScales,
     selectedStates,
@@ -265,13 +377,18 @@ const Shop = () => {
 
   // Đảm bảo nội dung hiển thị khi dữ liệu sẵn sàng
   useEffect(() => {
-    if (!loading && Array.isArray(products) && products.length > 0) {
+    if (
+      !productsLoading &&
+      !materialsLoading &&
+      Array.isArray(products) &&
+      products.length > 0
+    ) {
       const timer = setTimeout(() => {
         setIsReady(true);
       }, 100);
       return () => clearTimeout(timer);
     }
-  }, [loading, products]);
+  }, [productsLoading, materialsLoading, products]);
 
   // Cập nhật URL params
   useEffect(() => {
@@ -291,9 +408,51 @@ const Shop = () => {
     setSearchParams(params);
   }, [searchQuery, sortOption, priceRange, setSearchParams, products]);
 
+  // Scroll to top when filters, search or sort changes
+  useEffect(() => {
+    // Chỉ scroll khi có filter được active hoặc có search query hoặc sort khác mặc định
+    const hasActiveFilters =
+      selectedCategories.size > 0 ||
+      selectedItems.size > 0 ||
+      selectedStudios.size > 0 ||
+      selectedFeatures.size > 0 ||
+      selectedMaterials.size > 0 ||
+      selectedPhases.size > 0 ||
+      selectedScales.size > 0 ||
+      selectedStates.size > 0 ||
+      selectedNsfw.size > 0 ||
+      searchQuery ||
+      sortOption !== "latest";
+
+    if (hasActiveFilters) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  }, [
+    selectedCategories,
+    selectedItems,
+    selectedStudios,
+    selectedFeatures,
+    selectedMaterials,
+    selectedPhases,
+    selectedScales,
+    selectedStates,
+    selectedNsfw,
+    searchQuery,
+    sortOption,
+  ]);
+
   // Event handlers
   const handleSearchChange = (e) => {
-    setSearchQuery(e.target.value);
+    setSearchInput(e.target.value);
+  };
+
+  const handleSearchKeyDown = (e) => {
+    if (e.key === "Enter") {
+      setSearchQuery(searchInput);
+    }
   };
 
   const handleSortChange = (e) => {
@@ -304,6 +463,8 @@ const Shop = () => {
     const setExpanded = {
       categories: setExpandedCategories,
       studios: setExpandedStudios,
+      features: setExpandedFeatures,
+      materials: setExpandedMaterials,
       phases: setExpandedPhases,
       scales: setExpandedScales,
       states: setExpandedStates,
@@ -320,8 +481,6 @@ const Shop = () => {
   };
 
   const toggleSelection = (type, key, parentCategoryKey = null) => {
-    console.log("toggleSelection called:", { type, key, parentCategoryKey });
-
     if (type === "categories") {
       setSelectedCategories((prev) => {
         const newSet = new Set(prev);
@@ -332,16 +491,12 @@ const Shop = () => {
             products
               .find((cat) => cat.categoryKey === key)
               ?.items?.forEach((item) => newItems.delete(item.itemKey));
-            console.log(
-              "Updated selectedItems after category deselection:",
-              Array.from(newItems)
-            );
+
             return newItems;
           });
         } else {
           newSet.add(key);
         }
-        console.log("Updated selectedCategories:", Array.from(newSet));
         return newSet;
       });
     } else if (type === "items") {
@@ -353,8 +508,6 @@ const Shop = () => {
         } else {
           newSet.delete(key);
         }
-        console.log("Updated selectedItems:", Array.from(newSet));
-
         if (parentCategoryKey && products.length > 0) {
           setSelectedCategories((prevCats) => {
             const newCats = new Set(prevCats);
@@ -370,16 +523,10 @@ const Shop = () => {
                 newCats.delete(parentCategoryKey);
               }
             }
-            console.log(
-              "Updated selectedCategories after item change:",
-              Array.from(newCats)
-            );
+
             return newCats;
           });
         } else {
-          console.log(
-            "Skipping selectedCategories update: parentCategoryKey is null or products empty"
-          );
         }
         return newSet;
       });
@@ -391,12 +538,13 @@ const Shop = () => {
         } else {
           newSet.add(key);
         }
-        console.log("Updated selectedNsfw:", Array.from(newSet));
         return newSet;
       });
     } else {
       const setSelected = {
         studios: setSelectedStudios,
+        features: setSelectedFeatures,
+        materials: setSelectedMaterials,
         phases: setSelectedPhases,
         scales: setSelectedScales,
         states: setSelectedStates,
@@ -408,7 +556,6 @@ const Shop = () => {
         } else {
           newSet.add(key);
         }
-        console.log(`Updated selected (${type}):`, Array.from(newSet));
         return newSet;
       });
     }
@@ -442,6 +589,8 @@ const Shop = () => {
       categories: expandedCategories,
       items: expandedCategories,
       studios: expandedStudios,
+      features: expandedFeatures,
+      materials: expandedMaterials,
       phases: expandedPhases,
       scales: expandedScales,
       states: expandedStates,
@@ -452,7 +601,9 @@ const Shop = () => {
         ? selectedItems.has(category.key)
         : {
             categories: selectedCategories,
+            features: selectedFeatures,
             studios: selectedStudios,
+            materials: selectedMaterials,
             phases: selectedPhases,
             scales: selectedScales,
             states: selectedStates,
@@ -474,17 +625,35 @@ const Shop = () => {
 
     return (
       <div key={uniqueKey} style={{ marginLeft: `${level * 20}px` }}>
-        <div className="category-item">
+        <div
+          className="category-item"
+          onClick={() => {
+            type === "items"
+              ? toggleSelection(type, category.key, parentKey)
+              : toggleSelection(type, category.key);
+          }}
+        >
           {hasChildren && (
             <span
               className="expand-icon"
-              onClick={() => toggleCategory(type, category.key)}
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleCategory(type, category.key);
+              }}
             >
               {isExpanded ? <IoIosArrowUp /> : <IoIosArrowDown />}
             </span>
           )}
           <div className="category-label">
-            <span>{type === "categories" ? category.name : category.key}</span>
+            <span>
+              {type === "materials"
+                ? category.name
+                : type === "categories"
+                ? category.name
+                : type === "items"
+                ? category.name
+                : category.key}
+            </span>
           </div>
           <input
             type="checkbox"
@@ -493,6 +662,7 @@ const Shop = () => {
             ref={(el) => {
               if (el) el.indeterminate = isIndeterminate;
             }}
+            onClick={(e) => e.stopPropagation()}
             onChange={() => {
               type === "items"
                 ? toggleSelection(type, category.key, parentKey)
@@ -522,10 +692,12 @@ const Shop = () => {
         </h2>
       </div>
 
-      {loading || !isReady ? (
+      {productsLoading || materialsLoading || !isReady ? (
         <Loading />
-      ) : error ? (
-        <div className="text-center py-5">{error}</div>
+      ) : productsError || materialsError ? (
+        <div className="text-center py-5">
+          {productsError || materialsError}
+        </div>
       ) : filteredProducts.length === 0 ? (
         <div className="text-center py-5">
           Oops!!! Sorry. No Matching Products Found!
@@ -541,11 +713,15 @@ const Shop = () => {
                       type="text"
                       className="form-control"
                       placeholder="Search by name or studio..."
-                      value={searchQuery}
+                      value={searchInput}
                       onChange={handleSearchChange}
+                      onKeyDown={handleSearchKeyDown}
                     />
                     <span className="search-icon">
-                      <button type="button">
+                      <button
+                        type="button"
+                        onClick={() => setSearchQuery(searchInput)}
+                      >
                         <IoSearch />
                       </button>
                     </span>
@@ -623,13 +799,50 @@ const Shop = () => {
                     </div>
                   </div>
                 )}
+                {/* Product Feature */}
+                <div
+                  className={`sidebar-title ${!showFeature ? "collapsed" : ""}`}
+                  onClick={() => setShowFeature(!showFeature)}
+                >
+                  <span>Product Feature</span>
+                  {showFeature ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                </div>
+                {showFeature && (
+                  <div className="sidebar-section">
+                    <div className="category-tree scrollable">
+                      {featureTree.map((feature) =>
+                        renderCategoryItem(feature, 0, null, "features")
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {/* Product Material */}
+                <div
+                  className={`sidebar-title ${
+                    !showMaterial ? "collapsed" : ""
+                  }`}
+                  onClick={() => setShowMaterial(!showMaterial)}
+                >
+                  <span>Product Material</span>
+                  {showMaterial ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                </div>
+                {showMaterial && (
+                  <div className="sidebar-section">
+                    <div className="category-tree">
+                      {materialTree.map((material) =>
+                        renderCategoryItem(material, 0, null, "materials")
+                      )}
+                    </div>
+                  </div>
+                )}
 
                 {/* Product Phase */}
                 <div
                   className={`sidebar-title ${!showPhase ? "collapsed" : ""}`}
                   onClick={() => setShowPhase(!showPhase)}
                 >
-                  <span>Product State</span>
+                  <span>Product Phase</span>
                   {showPhase ? <IoIosArrowUp /> : <IoIosArrowDown />}
                 </div>
                 {showPhase && (
@@ -637,24 +850,6 @@ const Shop = () => {
                     <div className="category-tree">
                       {phaseTree.map((phase) =>
                         renderCategoryItem(phase, 0, null, "phases")
-                      )}
-                    </div>
-                  </div>
-                )}
-
-                {/* Product Scale */}
-                <div
-                  className={`sidebar-title ${!showScale ? "collapsed" : ""}`}
-                  onClick={() => setShowScale(!showScale)}
-                >
-                  <span>Product Scale</span>
-                  {showScale ? <IoIosArrowUp /> : <IoIosArrowDown />}
-                </div>
-                {showScale && (
-                  <div className="sidebar-section">
-                    <div className="category-tree">
-                      {scaleTree.map((scale) =>
-                        renderCategoryItem(scale, 0, null, "scales")
                       )}
                     </div>
                   </div>
@@ -673,6 +868,24 @@ const Shop = () => {
                     <div className="category-tree">
                       {stateTree.map((state) =>
                         renderCategoryItem(state, 0, null, "states")
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {/* Product Scale */}
+                <div
+                  className={`sidebar-title ${!showScale ? "collapsed" : ""}`}
+                  onClick={() => setShowScale(!showScale)}
+                >
+                  <span>Product Scale</span>
+                  {showScale ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                </div>
+                {showScale && (
+                  <div className="sidebar-section">
+                    <div className="category-tree">
+                      {scaleTree.map((scale) =>
+                        renderCategoryItem(scale, 0, null, "scales")
                       )}
                     </div>
                   </div>
@@ -785,6 +998,8 @@ const Shop = () => {
                 {(selectedCategories.size > 0 ||
                   selectedItems.size > 0 ||
                   selectedStudios.size > 0 ||
+                  selectedFeatures.size > 0 ||
+                  selectedMaterials.size > 0 ||
                   selectedPhases.size > 0 ||
                   selectedScales.size > 0 ||
                   selectedStates.size > 0) && (
@@ -796,6 +1011,8 @@ const Shop = () => {
                         onClick={() => {
                           setSelectedCategories(new Set());
                           setSelectedItems(new Set());
+                          setSelectedFeatures(new Set());
+                          setSelectedMaterials(new Set());
                           setSelectedStudios(new Set());
                           setSelectedPhases(new Set());
                           setSelectedScales(new Set());

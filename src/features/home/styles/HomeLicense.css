@@ -1,3 +1,5 @@
+@import "../../../shared/styles/variables.css";
+
 .homeLicenses .container {
   margin: 0 auto !important;
   display: flex;
@@ -275,4 +277,115 @@
   font-weight: bold;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
   z-index: 3; /* Đặt chữ trên lớp phủ */
+}
+
+.homeLicense {
+  padding: 60px 0;
+  background-color: var(--background-color);
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--text-color);
+}
+
+.licenseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.licenseItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.licenseItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  color: var(--text-color);
+}
+
+.licenseLogo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.licenseLogo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.licenseName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.licenseDescription {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .homeLicense {
+    padding: 40px 0;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .licenseGrid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+  }
+
+  .licenseLogo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .licenseName {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+
+  .licenseGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .licenseLogo {
+    width: 80px;
+    height: 80px;
+  }
 }

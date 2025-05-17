@@ -3,6 +3,7 @@ import { Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import ProductItem from "../../shared/components/ProductItem/ProductItem.js";
 import ProductModal from "../../shared/components/ProductModal/ProductModal.js";
 import useFetchProducts from "../../shared/hooks/useFetchProducts.js";
@@ -14,8 +15,33 @@ import "./styles/HomeProduct.css";
 import Loading from "../../shared/components/Loading/Loading";
 
 const HomeProduct = () => {
+  const navigate = useNavigate();
   const { products, loading, error } = useFetchProducts();
   const allProducts = useMemo(() => flattenProducts(products), [products]);
+
+  // Lọc sản phẩm mới nhất và sản phẩm đang giảm giá
+  const latestProducts = useMemo(() => {
+    return [...allProducts]
+      .sort((a, b) => (b.stt || 0) - (a.stt || 0))
+      .slice(0, 8);
+  }, [allProducts]);
+
+  const saleProducts = useMemo(() => {
+    return allProducts
+      .filter((product) => {
+        // Kiểm tra có oldPrice trong details
+        const hasOldPrice = product.details?.some(
+          (detail) => detail.oldPrice !== null && detail.oldPrice !== undefined
+        );
+        // Kiểm tra có feature On Sale
+        const hasOnSaleFeature = Array.isArray(product.feature)
+          ? product.feature.includes("On Sale")
+          : product.feature === "On Sale";
+
+        return hasOldPrice || hasOnSaleFeature;
+      })
+      .slice(0, 8);
+  }, [allProducts]);
 
   /* Product Modal */
   const [selectedProductId, setSelectedProductId] = useState(null);
@@ -32,6 +58,10 @@ const HomeProduct = () => {
     () => allProducts.find((product) => product.id === selectedProductId),
     [allProducts, selectedProductId]
   );
+
+  const handleViewAll = (material) => {
+    navigate(`/shop?material=${material}`);
+  };
 
   if (loading) return <Loading />;
   if (error) return <div className="error-message">{error}</div>;
@@ -54,7 +84,10 @@ const HomeProduct = () => {
               <div className="info">
                 <h3 className="mb-0 hd">Resin Statues</h3>
               </div>
-              <Button className="viewAllBtn ml-auto">
+              <Button
+                className="viewAllBtn ml-auto"
+                onClick={() => handleViewAll("resin")}
+              >
                 View all <IoIosArrowRoundForward />
               </Button>
             </div>
@@ -103,7 +136,10 @@ const HomeProduct = () => {
               <div className="info">
                 <h3 className="mb-0 hd">PVC Figures</h3>
               </div>
-              <Button className="viewAllBtn ml-auto">
+              <Button
+                className="viewAllBtn ml-auto"
+                onClick={() => handleViewAll("pvc")}
+              >
                 View all <IoIosArrowRoundForward />
               </Button>
             </div>
@@ -167,12 +203,15 @@ const HomeProduct = () => {
               New products with updated stock.
             </p>
           </div>
-          <Button className="viewAllBtn ml-auto">
+          <Button
+            className="viewAllBtn ml-auto"
+            onClick={() => navigate("/shop")}
+          >
             View all <IoIosArrowRoundForward />
           </Button>
         </div>
         <div className="product_row productRow2 w-100 d-flex">
-          {allProducts.slice(0, 8).map((product) => (
+          {latestProducts.map((product) => (
             <div key={product.id}>
               <ProductItem
                 product={product}
@@ -189,12 +228,15 @@ const HomeProduct = () => {
               Sale products with special prices.
             </p>
           </div>
-          <Button className="viewAllBtn ml-auto">
+          <Button
+            className="viewAllBtn ml-auto"
+            onClick={() => navigate("/shop")}
+          >
             View all <IoIosArrowRoundForward />
           </Button>
         </div>
         <div className="product_row productRow3 w-100 d-flex">
-          {allProducts.slice(0, 8).map((product) => (
+          {saleProducts.map((product) => (
             <div key={product.id}>
               <ProductItem
                 product={product}

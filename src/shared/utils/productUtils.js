@@ -36,6 +36,8 @@ export const hasFiltersApplied = (
   selectedCategories,
   selectedItems,
   selectedStudios,
+  selectedFeatures,
+  selectedMaterials,
   selectedPhases,
   selectedScales,
   selectedStates,
@@ -49,6 +51,8 @@ export const hasFiltersApplied = (
     selectedCategories.size > 0 ||
     selectedItems.size > 0 ||
     selectedStudios.size > 0 ||
+    selectedMaterials.size > 0 ||
+    selectedFeatures.size > 0 ||
     selectedPhases.size > 0 ||
     selectedScales.size > 0 ||
     selectedStates.size > 0 ||
@@ -83,9 +87,23 @@ export const filterAndSortProducts = (
         if (filters.items.size === 0 || filters.items.has(itemKey)) {
           // Lọc sản phẩm trong item
           const filteredItemProducts = itemProducts.filter((product) => {
-            // Lọc theo các tiêu chí khác (studio, phase, scale, state, price, search, nsfw)
+            // Lọc theo các tiêu chí khác (studio, material, phase, scale, state, price, search, nsfw)
             const matchesStudio =
               filters.studios.size === 0 || filters.studios.has(product.brand);
+            const matchesFeature =
+              filters.features.size === 0 ||
+              (Array.isArray(product.feature)
+                ? product.feature.some((feature) =>
+                    filters.features.has(feature)
+                  )
+                : filters.features.has(product.feature));
+            const matchesMaterial =
+              filters.materials.size === 0 ||
+              (Array.isArray(product.material)
+                ? product.material.some((material) =>
+                    filters.materials.has(material)
+                  )
+                : filters.materials.has(product.material));
             const matchesPhase =
               filters.phases.size === 0 || filters.phases.has(product.phase);
             const matchesScale =
@@ -113,6 +131,8 @@ export const filterAndSortProducts = (
 
             return (
               matchesStudio &&
+              matchesFeature &&
+              matchesMaterial &&
               matchesPhase &&
               matchesScale &&
               matchesState &&
@@ -161,10 +181,10 @@ export const filterAndSortProducts = (
       return bMinPrice - aMinPrice;
     });
   } else {
-    // Mặc định: latest (sắp xếp theo ID đặc trưng của sản phẩm)
+    // Mặc định: latest (sắp xếp theo stt của sản phẩm)
     uniqueProducts.sort((a, b) => {
-      // So sánh ID dưới dạng chuỗi để đảm bảo sắp xếp chính xác
-      return b.id.localeCompare(a.id);
+      // So sánh stt dưới dạng số để đảm bảo sắp xếp chính xác
+      return (b.stt || 0) - (a.stt || 0);
     });
   }
 

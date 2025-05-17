@@ -121,7 +121,7 @@ const Support = () => {
 
     try {
       await new Promise((resolve) => setTimeout(resolve, 1500));
-      console.log("Form data:", formData);
+
       setSubmitSuccess(true);
 
       setTimeout(() => {

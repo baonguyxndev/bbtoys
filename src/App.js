@@ -13,6 +13,7 @@ import ScrollToTop from "./shared/hooks/ScrollToTop";
 import FAQs from "./features/faqs/FAQs";
 import ProductDetail from "./features/product/ProductDetail";
 import MustRead from "./shared/components/MustRead/MustRead";
+import LicenseDetail from "./features/licenses/LicenseDetail";
 
 function App() {
   return (
@@ -21,13 +22,29 @@ function App() {
       <ScrollHandler />
       <Header />
       <Routes>
+        {/*Home*/}
         <Route path="/" element={<Home />} />
+
+        {/*Shop*/}
         <Route path="/shop" element={<Shop />} />
+
+        {/*Product*/}
         <Route path="/product/:id" element={<ProductDetail />} />
+
+        {/*Licenses*/}
         <Route path="/licenses" element={<Licenses />} />
+        <Route path="/licenses/:licenseName" element={<LicenseDetail />} />
+
+        {/*Support*/}
         <Route path="/support" element={<Support />} />
+
+        {/*FAQs*/}
         <Route path="/faqs" element={<FAQs />} />
+
+        {/*Info*/}
         <Route path="/info" element={<Info />} />
+
+        {/*MustRead*/}
         <Route path="/must-read" element={<MustRead />} />
       </Routes>
       <Footer />

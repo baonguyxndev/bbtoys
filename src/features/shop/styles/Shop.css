@@ -258,8 +258,8 @@
 .category-item {
   display: flex;
   align-items: center;
-  padding: 8px 12px;
-  margin: 4px 0;
+  padding: 10px 20px;
+  margin: 10px 0;
   border-radius: 6px;
   transition: all 0.3s ease;
   position: relative;
@@ -268,8 +268,7 @@
 }
 
 .category-item:hover {
-  background-color: #2a2a2a;
-  border-color: #ba0000;
+  box-shadow: var(--box-shadow-primary);
 }
 
 .category-checkbox {
@@ -330,29 +329,19 @@
 }
 
 .subcategory-list {
-  margin-left: 32px;
+  margin-left: 10px;
   position: relative;
-  padding-left: 12px;
-  border-left: 2px solid #333;
-}
-
-.subcategory-list .category-item {
-  margin-left: 0;
-  background-color: #222;
-}
-
-.subcategory-list .category-item:hover {
-  background-color: #2a2a2a;
+  border-left: 2px solid #666;
 }
 
 .subcategory-list .category-item::before {
   content: "";
   position: absolute;
-  left: -12px;
+  left: -21px;
   top: 50%;
-  width: 12px;
-  height: 2px;
-  background-color: #333;
+  width: 21px;
+  height: 1px;
+  background-color: #666;
 }
 
 /* Price range */

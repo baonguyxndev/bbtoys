@@ -1,5 +1,6 @@
 import "./styles/HomeLicense.css";
 import React from "react";
+import { Link } from "react-router-dom";
 import useFetchLicenses from "../../shared/hooks/useFetchLicenses";
 import Loading from "../../shared/components/Loading/Loading";
 
@@ -33,8 +34,8 @@ const HomeLicense = () => {
                   {licenses.slice(0, 4).map((license) => (
                     <li key={license.id} className="col">
                       <div className="licenseCard">
-                        <a
-                          href={`/licenses/${license.name
+                        <Link
+                          to={`/licenses/${license.name
                             .toLowerCase()
                             .replace(/\s+/g, "-")}`}
                           className="licenseCard-link"
@@ -52,7 +53,7 @@ const HomeLicense = () => {
                               />
                             </div>
                           </div>
-                        </a>
+                        </Link>
                       </div>
                     </li>
                   ))}
@@ -65,8 +66,8 @@ const HomeLicense = () => {
                   {licenses.slice(4, 6).map((license) => (
                     <li key={license.id} className="col">
                       <div className="licenseCard">
-                        <a
-                          href={`/licenses/${license.name
+                        <Link
+                          to={`/licenses/${license.name
                             .toLowerCase()
                             .replace(/\s+/g, "-")}`}
                           className="licenseCard-link"
@@ -83,7 +84,7 @@ const HomeLicense = () => {
                               />
                             </div>
                           </div>
-                        </a>
+                        </Link>
                       </div>
                     </li>
                   ))}
@@ -92,7 +93,7 @@ const HomeLicense = () => {
                 <ul className="row">
                   <li className="col-12 allLicenseItem">
                     <div className="allLicenseCard">
-                      <a href="/licenses" className="cardAllLicenses">
+                      <Link to="/licenses" className="cardAllLicenses">
                         <div className="text">OTHER</div>
                         <div className="imageWrapper">
                           <img
@@ -101,7 +102,7 @@ const HomeLicense = () => {
                             className="img-fluid"
                           />
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </li>
                 </ul>

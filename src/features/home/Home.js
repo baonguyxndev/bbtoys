@@ -1,20 +1,16 @@
 import "./styles/Home.css";
-import React from "react";
 import HomeBanner from "./HomeBanner";
 import HomeProduct from "./HomeProduct";
-import HomeLicense from "./HomeLicense";
-import HomeCate from "./HomeCate";
+import HomeCate from "./HomeCategory";
+import HomeStudio from "./HomeStudio";
 import { Button } from "@mui/material";
 import { IoMailOutline } from "react-icons/io5";
-
 const Home = () => {
   return (
     <>
       <HomeBanner />
 
       <HomeProduct />
-
-      <HomeLicense />
 
       {/*LETTER*/}
       <section className="newLetter d-flex align-items-center">
@@ -45,6 +41,8 @@ const Home = () => {
       </section>
 
       <HomeCate />
+
+      <HomeStudio />
     </>
   );
 };

@@ -116,7 +116,7 @@ const Info = () => {
                 <img src={images.ensureSecurity} alt="Ensure Security" />
                 <ul>
                   <li>
-                    Very friendly cancellation policy. Some studios have been
+                    Very friendly cancellation policy. Some stusioes have been
                     known to experience long delays in producing products. If a
                     product is shipped more than three months after our preset
                     time, we will refund the customer in full and without any

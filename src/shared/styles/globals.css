@@ -3,10 +3,17 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css");
 @import "./variables.css";
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

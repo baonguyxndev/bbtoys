@@ -35,7 +35,7 @@ export const hasFiltersApplied = (
   products,
   selectedCategories,
   selectedItems,
-  selectedStudios,
+  selectedStusioes,
   selectedFeatures,
   selectedMaterials,
   selectedPhases,
@@ -50,7 +50,7 @@ export const hasFiltersApplied = (
   return (
     selectedCategories.size > 0 ||
     selectedItems.size > 0 ||
-    selectedStudios.size > 0 ||
+    selectedStusioes.size > 0 ||
     selectedMaterials.size > 0 ||
     selectedFeatures.size > 0 ||
     selectedPhases.size > 0 ||
@@ -89,7 +89,8 @@ export const filterAndSortProducts = (
           const filteredItemProducts = itemProducts.filter((product) => {
             // Lọc theo các tiêu chí khác (studio, material, phase, scale, state, price, search, nsfw)
             const matchesStudio =
-              filters.studios.size === 0 || filters.studios.has(product.brand);
+              filters.stusioes.size === 0 ||
+              filters.stusioes.has(product.brand);
             const matchesFeature =
               filters.features.size === 0 ||
               (Array.isArray(product.feature)

@@ -5010,7 +5010,7 @@
             "phase": "Pre-Order Open",
             "estSize": "H20-25 cm",
             "material": "resin",
-            "feature": "Bust Display",
+            "feature": "Bust",
             "details": [
               {
                 "scale": "1/2",
@@ -8748,7 +8748,7 @@
           {
             "id": "GI1",
             "name": "Yae Miko",
-            "brand": "Dragon x PoP Studio",
+            "brand": "Dragon x Pop Studio",
             "state": "Order",
             "phase": "Released",
             "material": "resin",

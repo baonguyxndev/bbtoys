@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./shared/components/Header/Header";
 import Home from "./features/home/Home";
 import Shop from "./features/shop/Shop";
-import Licenses from "./features/licenses/Licenses";
 import Support from "./features/support/Support";
 import Info from "./features/info/Info";
 import Footer from "./shared/components/Footer/Footer";
@@ -13,7 +12,6 @@ import ScrollToTop from "./shared/hooks/ScrollToTop";
 import FAQs from "./features/faqs/FAQs";
 import ProductDetail from "./features/product/ProductDetail";
 import MustRead from "./shared/components/MustRead/MustRead";
-import LicenseDetail from "./features/licenses/LicenseDetail";
 
 function App() {
   return (
@@ -30,10 +28,6 @@ function App() {
 
         {/*Product*/}
         <Route path="/product/:id" element={<ProductDetail />} />
-
-        {/*Licenses*/}
-        <Route path="/licenses" element={<Licenses />} />
-        <Route path="/licenses/:licenseName" element={<LicenseDetail />} />
 
         {/*Support*/}
         <Route path="/support" element={<Support />} />

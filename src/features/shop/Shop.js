@@ -54,7 +54,7 @@ const Shop = () => {
   // Trạng thái cho các bộ lọc
   const [selectedCategories, setSelectedCategories] = useState(new Set());
   const [selectedItems, setSelectedItems] = useState(new Set());
-  const [selectedStudios, setSelectedStudios] = useState(new Set());
+  const [selectedStusioes, setSelectedStusioes] = useState(new Set());
   const [selectedFeatures, setSelectedFeatures] = useState(new Set());
   const [selectedMaterials, setSelectedMaterials] = useState(new Set());
   const [selectedPhases, setSelectedPhases] = useState(new Set());
@@ -66,7 +66,7 @@ const Shop = () => {
   const [expandedCategories, setExpandedCategories] = useState(
     new Set(["PRODUCTS"])
   );
-  const [expandedStudios, setExpandedStudios] = useState(new Set());
+  const [expandedStusioes, setExpandedStusioes] = useState(new Set());
   const [expandedFeatures, setExpandedFeatures] = useState(new Set());
   const [expandedPhases, setExpandedPhases] = useState(new Set());
   const [expandedMaterials, setExpandedMaterials] = useState(new Set());
@@ -105,6 +105,15 @@ const Shop = () => {
     }
   }, [searchParams]);
 
+  // Xử lý tham số categoryKey từ URL
+  useEffect(() => {
+    const categoryKey = searchParams.get("categoryKey");
+    if (categoryKey) {
+      setSelectedCategories(new Set([categoryKey]));
+      setShowCategory(true);
+    }
+  }, [searchParams]);
+
   // Tạo cấu trúc cây cho các danh mục
   const categoryTree = useMemo(() => {
     if (!Array.isArray(products) || !products.length) return [];
@@ -123,7 +132,7 @@ const Shop = () => {
 
   const studioTree = useMemo(() => {
     if (!Array.isArray(products) || !products.length) return [];
-    const studios = new Set(
+    const stusioes = new Set(
       products
         .flatMap((category) =>
           Array.isArray(category.items)
@@ -136,7 +145,7 @@ const Shop = () => {
         )
         .filter(Boolean)
     );
-    return Array.from(studios).map((studio) => ({
+    return Array.from(stusioes).map((studio) => ({
       key: studio,
       items: [],
     }));
@@ -311,7 +320,7 @@ const Shop = () => {
       products,
       selectedCategories,
       selectedItems,
-      selectedStudios,
+      selectedStusioes,
       selectedFeatures,
       selectedMaterials,
       selectedPhases,
@@ -327,7 +336,7 @@ const Shop = () => {
     selectedCategories,
     selectedFeatures,
     selectedItems,
-    selectedStudios,
+    selectedStusioes,
     selectedMaterials,
     selectedPhases,
     selectedScales,
@@ -346,7 +355,7 @@ const Shop = () => {
         categories: selectedCategories,
         items: selectedItems,
         features: selectedFeatures,
-        studios: selectedStudios,
+        stusioes: selectedStusioes,
         materials: selectedMaterials,
         phases: selectedPhases,
         scales: selectedScales,
@@ -363,7 +372,7 @@ const Shop = () => {
     selectedCategories,
     selectedItems,
     selectedFeatures,
-    selectedStudios,
+    selectedStusioes,
     selectedMaterials,
     selectedPhases,
     selectedScales,
@@ -414,7 +423,7 @@ const Shop = () => {
     const hasActiveFilters =
       selectedCategories.size > 0 ||
       selectedItems.size > 0 ||
-      selectedStudios.size > 0 ||
+      selectedStusioes.size > 0 ||
       selectedFeatures.size > 0 ||
       selectedMaterials.size > 0 ||
       selectedPhases.size > 0 ||
@@ -433,7 +442,7 @@ const Shop = () => {
   }, [
     selectedCategories,
     selectedItems,
-    selectedStudios,
+    selectedStusioes,
     selectedFeatures,
     selectedMaterials,
     selectedPhases,
@@ -462,7 +471,7 @@ const Shop = () => {
   const toggleCategory = (type, key) => {
     const setExpanded = {
       categories: setExpandedCategories,
-      studios: setExpandedStudios,
+      stusioes: setExpandedStusioes,
       features: setExpandedFeatures,
       materials: setExpandedMaterials,
       phases: setExpandedPhases,
@@ -542,7 +551,7 @@ const Shop = () => {
       });
     } else {
       const setSelected = {
-        studios: setSelectedStudios,
+        stusioes: setSelectedStusioes,
         features: setSelectedFeatures,
         materials: setSelectedMaterials,
         phases: setSelectedPhases,
@@ -588,7 +597,7 @@ const Shop = () => {
     const isExpanded = {
       categories: expandedCategories,
       items: expandedCategories,
-      studios: expandedStudios,
+      stusioes: expandedStusioes,
       features: expandedFeatures,
       materials: expandedMaterials,
       phases: expandedPhases,
@@ -602,7 +611,7 @@ const Shop = () => {
         : {
             categories: selectedCategories,
             features: selectedFeatures,
-            studios: selectedStudios,
+            stusioes: selectedStusioes,
             materials: selectedMaterials,
             phases: selectedPhases,
             scales: selectedScales,
@@ -794,7 +803,7 @@ const Shop = () => {
                   <div className="sidebar-section">
                     <div className="category-tree scrollable">
                       {studioTree.map((studio) =>
-                        renderCategoryItem(studio, 0, null, "studios")
+                        renderCategoryItem(studio, 0, null, "stusioes")
                       )}
                     </div>
                   </div>
@@ -997,7 +1006,7 @@ const Shop = () => {
                 {/* Selected Filters */}
                 {(selectedCategories.size > 0 ||
                   selectedItems.size > 0 ||
-                  selectedStudios.size > 0 ||
+                  selectedStusioes.size > 0 ||
                   selectedFeatures.size > 0 ||
                   selectedMaterials.size > 0 ||
                   selectedPhases.size > 0 ||
@@ -1013,7 +1022,7 @@ const Shop = () => {
                           setSelectedItems(new Set());
                           setSelectedFeatures(new Set());
                           setSelectedMaterials(new Set());
-                          setSelectedStudios(new Set());
+                          setSelectedStusioes(new Set());
                           setSelectedPhases(new Set());
                           setSelectedScales(new Set());
                           setSelectedStates(new Set());
@@ -1048,14 +1057,14 @@ const Shop = () => {
                           </button>
                         </div>
                       ))}
-                      {Array.from(selectedStudios).map((studio) => (
+                      {Array.from(selectedStusioes).map((studio) => (
                         <div
                           key={`studio-${studio}`}
                           className="selected-category"
                         >
                           <span>{studio}</span>
                           <button
-                            onClick={() => toggleSelection("studios", studio)}
+                            onClick={() => toggleSelection("stusioes", studio)}
                           >
                             ×
                           </button>

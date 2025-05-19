@@ -5,88 +5,73 @@
     "items": [
       {
         "itemName": "Dragon Ball",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/Dragon_Ball_Z_Logo_C.png",
+        "itemImg": "https://static1.srcdn.com/wordpress/wp-content/uploads/2023/10/the-dragon-ball-super-cast-featured-image.jpg?q=70&fit=crop&w=1140&h=&dpr=1",
         "itemKey": "dragon-ball"
       },
       {
         "itemName": "One Piece",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/One-piece-2048x748.png",
+        "itemImg": "https://media.vov.vn/sites/default/files/styles/large/public/2022-10/4_6.jpeg.jpg",
         "itemKey": "one-piece"
       },
       {
         "itemName": "Naruto",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2024/11/pngimg.com-naruto_PNG47.png",
+        "itemImg": "https://wallpapers.com/images/high/sasuke-vs-naruto-final-battle-d5wo3u39knm4d2ak.webp",
         "itemKey": "naruto"
       },
       {
         "itemName": "Jujutsu Kaisen",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/Jujutsu-Kaisen.png",
+        "itemImg": "https://wibu.com.vn/wp-content/uploads/2024/09/jujutsu-kaisen-rotated.jpg",
         "itemKey": "jujutsu-kaisen"
       },
       {
         "itemName": "Attack On Titan",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/Attack-on-Titan.png",
+        "itemImg": "https://static1.srcdn.com/wordpress/wp-content/uploads/2024/09/how-eren-transformed-from-hero-to-villain-in-attack-on-titan-explained-featured-image.jpg?q=70&fit=crop&w=1140&h=&dpr=1",
         "itemKey": "attack-on-titan"
       },
       {
         "itemName": "Fairy Tail",
-        "itemImg": "https://upload.wikimedia.org/wikipedia/fr/7/77/Fairy_Tail_%282014%29_Logo.png?20170523181914",
+        "itemImg": "https://images6.alphacoders.com/735/thumb-1920-735658.png",
         "itemKey": "fairy-tail"
       },
       {
         "itemName": "Demon Slayer",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/Demon-Slayer-Logo.png",
+        "itemImg": "https://www.barbican.org.uk/sites/default/files/styles/hero_constrained_wide_2x_/public/images/2025-01/demon%20slayer%201600x900.png?itok=NXna2m37",
         "itemKey": "demon-slayer"
       },
       {
         "itemName": "Hunter x Hunter",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/HUNTER%C3%97HUNTER.png",
+        "itemImg": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0becdb9c-115e-49fc-9b38-1a38e813d168/ddggz7d-a6f407df-fa77-4732-93be-1141db769a08.jpg/v1/fill/w_1192,h_670,q_70,strp/theme_hunter_x_hunter_windows_10_by_marouaneenb_ddggz7d-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvMGJlY2RiOWMtMTE1ZS00OWZjLTliMzgtMWEzOGU4MTNkMTY4XC9kZGdnejdkLWE2ZjQwN2RmLWZhNzctNDczMi05M2JlLTExNDFkYjc2OWEwOC5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.zcF9Eo0KU2Ab9Cf75w6txR2x6NvzgkZZcZ9hJnITTIk  ",
         "itemKey": "hunter-x-hunter"
       },
       {
+        "itemName": "Solo Leveling",
+        "itemImg": "https://images.hdqwalls.com/download/sung-jin-woo-solo-leveling-8y-1440x900.jpg",
+        "itemKey": "solo-leveling"
+      },
+      {
         "itemName": "Spy x Family",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/SPY%C3%97FAMILY.png",
+        "itemImg": "https://a.storyblok.com/f/178900/640x360/152b9efd03/3ffe992794c7db80c68b36aa99fc0d5d1672875262_main.png/m/filters:quality(95)format(webp)",
         "itemKey": "spy-x-family"
       },
       {
         "itemName": "Berserk",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2024/07/vk0amsjhqjg61.png",
+        "itemImg": "https://preview.redd.it/saw-this-cool-looking-you-tube-thumbnail-v0-0yjj0ukmp6nd1.png?width=1080&crop=smart&auto=webp&s=78f8c81d89675d064e0855ef45c68c54344c5d12",
         "itemKey": "berserk"
       },
       {
         "itemName": "Chainsaw Man",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/Chainsaw-Man.png",
+        "itemImg": "https://images.steamusercontent.com/ugc/5098669332623069997/D37FD92B6B5B66D72114E02FACB3C9F10B4EC712/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
         "itemKey": "chainsaw-man"
       },
       {
-        "itemName": "Slam Dunk",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/Slam-Dunk.png",
-        "itemKey": "slam-dunk"
+        "itemName": "Bleach",
+        "itemImg": "https://w0.peakpx.com/wallpaper/70/1/HD-wallpaper-ichigo-vs-zangetsu-bleach-anime-soul-reaper-ichigo-zangetsu.jpg",
+        "itemKey": "bleach"
       },
       {
-        "itemName": "Cyberpunk",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/Cyberpunk-2077.png",
-        "itemKey": "cyberpunk"
-      },
-      {
-        "itemName": "Digimon Adventure",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/digimon_adventure_logo_by_sliter_dfiw4qd-fullview.png",
-        "itemKey": "digimon-adventure"
-      },
-      {
-        "itemName": "Saint Seiya",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/Saint-Seiya.png",
-        "itemKey": "saint-seiya"
-      },
-      {
-        "itemName": "Jojo",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2024/07/Jojos_Bizarre_Adventure_English_logo-2048x1290.png",
-        "itemKey": "jojo"
-      },
-      {
-        "itemName": "Fate Stay Night",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2024/07/48671a7bec5ac4a871f2c99bd2c67669.png",
-        "itemKey": "fate-stay-night"
+        "itemName": "One Punch Man",
+        "itemImg": "https://i.pinimg.com/736x/78/b4/7d/78b47d22202bdcfacb9d5c907fbb9f17.jpg",
+        "itemKey": "one-punch-man"
       }
     ]
   },
@@ -96,113 +81,78 @@
     "items": [
       {
         "itemName": "Genshin Impact",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/Genshin-I%EF%BD%8Dpact-_-logo-1080x675-1.png",
+        "itemImg": "https://i.pinimg.com/736x/d5/eb/2f/d5eb2f2c46d79b0a0d2f7f57b5033a41.jpg",
         "itemKey": "genshin-impact"
       },
       {
         "itemName": "Honkai Impact",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/honkai-impact.png",
+        "itemImg": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/08/honkai-impact-3rd-promotional-visual-main-cast.jpg?q=70&fit=crop&w=1140&h=&dpr=1",
         "itemKey": "honkai-impact"
       },
       {
         "itemName": "Honkai Star Rail",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/Honkai_Star_Rail_logo.png",
+        "itemImg": "https://assetsio.gnwcdn.com/Honkai-Star-Rail-new-year.jpg?width=690&quality=70&format=jpg&dpr=2&auto=webp",
         "itemKey": "honekai-star-rail"
       },
       {
         "itemName": "Blue Archive",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/Blue_Archive_logo.svg-1.png",
+        "itemImg": "https://c4.wallpaperflare.com/wallpaper/447/675/617/blue-archive-anime-girls-hd-wallpaper-preview.jpg",
         "itemKey": "blue-archive"
       },
       {
         "itemName": "Azur Lane",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/Azur_Lane_English_Release_Logo.png",
+        "itemImg": "https://c4.wallpaperflare.com/wallpaper/405/573/102/azur-lane-game-poster-video-game-art-video-games-anime-girls-hd-wallpaper-preview.jpg",
         "itemKey": "azur-lane"
       },
       {
-        "itemName": "Arknights",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/Arknights_English_Release_Logo.svg.png",
-        "itemKey": "arknights"
-      },
-      {
-        "itemName": "Zenless Zone Zero",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2024/07/50380b0324d6b0ac2f9eed1844d0a2e5.png",
-        "itemKey": "zenless-zone-zero"
-      },
-      {
-        "itemName": "Project Sekai",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/Project-Sekai.png",
-        "itemKey": "project-sekai"
-      },
-      {
-        "itemName": "Uma Musume Pretty Derby",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2024/07/logo.4c404883.png",
-        "itemKey": "uma-musume-pretty-derby"
-      },
-      {
-        "itemName": "Fate Grand Order",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2024/07/Fate_Grand_Order_logo.png",
-        "itemKey": "fate-grand-order"
-      },
-      {
-        "itemName": "GYEE",
-        "itemImg": "http://img.orzgk.com/wp-content/uploads/2023/11/gyee-logo.png",
-        "itemKey": "gyee"
-      },
-      {
         "itemName": "Elden Ring",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/6076036fdb272f49688c571013f3ede1.png",
+        "itemImg": "https://preview.redd.it/wzqo9olsot471.png?width=1080&crop=smart&auto=webp&s=25eb278ca618cb072df5f20c4e6791ae5b24b102",
         "itemKey": "elden-ring"
       },
       {
         "itemName": "Resident Evil",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/resident-evil.png",
+        "itemImg": "https://images7.alphacoders.com/130/thumb-1920-1306926.jpeg",
         "itemKey": "resident-evil"
       },
       {
         "itemName": "The Legend Of Zelda",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/Zelda_Logo.svg.png",
+        "itemImg": "https://file.hstatic.net/200000272737/article/10-zelda-thumbnail-1656359339431_5fe9161d86a249b38bcc91059f319b15_1024x1024.jpg",
         "itemKey": "the-legend-of-zelda"
       },
       {
         "itemName": "Final Fantasy",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/final-fantasy-logo_602113434b503.png",
+        "itemImg": "https://gamek.mediacdn.vn/thumb_w/640/133514250583805952/2024/2/7/final-fantasy-vii-rebirth-sephiroth-aerith-tifa-1707281043273-17072810434661587019207.jpg",
         "itemKey": "final-fantasy"
       },
       {
-        "itemName": "Nier:Automata",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/Nier-Automata-Logo-PNG-Pic.png",
+        "itemName": "NieR:Automata",
+        "itemImg": "https://wallpapers.com/images/hd/nier-automata-a2-2b-and-9s-v6p59gdsl0jptbaa.webp",
         "itemKey": "nier-automata"
       },
       {
         "itemName": "League Of Legend",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/League_of_Legends_2019_vector.svg.png",
+        "itemImg": "https://thanhnien.mediacdn.vn/Uploaded/anhth/2020_12_19/lien-minh-huyen-thoai-mmo01_TCAD.jpg?width=500",
         "itemKey": "league-of-legend"
       },
       {
-        "itemName": "Monter Hunter",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2024/07/Monster_Hunter_logo.png",
-        "itemKey": "monter-hunter"
-      },
-      {
         "itemName": "Dark Souls",
-        "itemImg": "http://img.orzgk.com/wp-content/uploads/2024/07/dfixtv0-1b50db79-9390-40c9-99ac-36d6e1e17ab0.png",
+        "itemImg": "https://i.pinimg.com/736x/54/76/60/547660f752963dbfaf1665b9447fee52.jpg",
         "itemKey": "dark-souls"
       },
       {
-        "itemName": "Baldur's Gate",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2024/07/logo-666a175a.png",
-        "itemKey": "baldurs-gate"
-      },
-      {
         "itemName": "Overwatch",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/overwatch-6.png",
+        "itemImg": "https://xboxwire.thesourcemediaassets.com/sites/2/2022/06/OW2_F2P_TrailerThumbnails_JP_ArtOnly_1920x1080-copy-d44faafe7a6070e338dd.jpg",
         "itemKey": "overwatch"
       },
       {
         "itemName": "Street Fighter",
-        "itemImg": "https://img.orzgk.com/wp-content/uploads/2023/11/580b57fcd9996e24bc43c341.png",
+        "itemImg": "https://i.pinimg.com/736x/82/ce/3e/82ce3e02adf3a3f93bc1755d475a22d2.jpg",
         "itemKey": "street-fighter"
+      },
+      {
+        "itemName": "King Of Fighter",
+        "itemImg": "https://i.pinimg.com/736x/a3/63/75/a3637510395d9110440932e0cebe346a.jpg",
+        "itemKey": "king-of-fighter"
       }
     ]
   },

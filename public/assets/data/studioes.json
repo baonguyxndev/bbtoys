@@ -1,0 +1,32 @@
+[
+  {
+    "studioKey": "prime-1-studio",
+    "studioName": "Prime 1 Studio",
+    "imgThumbnail": "https://scontent.fsgn8-3.fna.fbcdn.net/v/t1.6435-9/119458868_3418399158206702_5236652718961631021_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=6hu4NfSsIJoQ7kNvwG_mGMf&_nc_oc=AdndsbOV1_l_m1Us7A7SXMmy5EASsCpBcJ_hPkmQ8fo6RO0MAbFwBRdk7tPHJtNibI1Nl3-k0goBSVnDQegkYiXI&_nc_zt=23&_nc_ht=scontent.fsgn8-3.fna&_nc_gid=oaXMnp7V76ltrSFJhqhqeQ&oh=00_AfI8fldc-9edK7cyW13upaZPzoEIP9rEOJV76J8yOWVl9g&oe=6852980A",
+    "imgMain": "https://www.prime1studio.com/on/demandware.static/-/Sites-Prime1StudioEc-Library/default/dw56f1b7da/PageDesigner/News/6-3.jpg"
+  },
+  {
+    "studioKey": "tsume-art",
+    "studioName": "Tsume Art",
+    "imgThumbnail": "https://scontent.fsgn8-3.fna.fbcdn.net/v/t39.30808-6/339305350_767309451391094_5076162211023446880_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=t7fsjdA0Mx0Q7kNvwHFvZFq&_nc_oc=AdnmJBH4lNbgXBOrVBNUTFBmIE9aD8meipJ1jncg-TDTM71eqpTx2JkuZC-BPa9Wzu4-hDg_NL_E1ML_lokY1ROx&_nc_zt=23&_nc_ht=scontent.fsgn8-3.fna&_nc_gid=SeQ2CEpyZXqiy5VVhZakyQ&oh=00_AfI7bguprYO9t1u28teuKq47QPxXkYGYIhKh0_TN9aUQ7g&oe=68310A36",
+    "imgMain": "https://cdn-s-www.republicain-lorrain.fr/images/7D11AD57-3244-43EF-AF1C-7665DBDEC22B/NW_raw/photo-armand-flohr-1686318331.jpg"
+  },
+  {
+    "studioKey": "jimei-palace",
+    "studioName": "Jimei Palace",
+    "imgThumbnail": "https://www.figureart.store/cdn/shop/collections/jimei-palace-305389_1296x.jpg?v=1669017482",
+    "imgMain": "https://preview.redd.it/m5gfmnpqf4c91.jpg?width=1080&crop=smart&auto=webp&s=6f028673912c7edd6413a34176b29154182a7639"
+  },
+  {
+    "studioKey": "pure-arts",
+    "studioName": "Pure Arts",
+    "imgThumbnail": "https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/301972967_462243572593216_613906801552845418_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Dlqff-k-xZ8Q7kNvwHmPw9a&_nc_oc=AdmqNA7IZw1um2kU8Op2qcWctRTo_7838osS7MqThLgCdWr_e-D9TqV6Pl6eN9Z218FpAkgmA-bGCYGc4pFM72q0&_nc_zt=23&_nc_ht=scontent.fsgn8-4.fna&_nc_gid=6Bs9p4WzzHCFX6x3TM4rnQ&oh=00_AfJRGOw4ccX_pKFZxD6x9s2B6LVmrMth6x_kPADN-6r40Q&oe=6830F52B",
+    "imgMain": "https://scontent.fsgn8-3.fna.fbcdn.net/v/t1.6435-9/31907211_1896061553802489_1544009647348776960_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cf85f3&_nc_ohc=Q5FMU5I7MeYQ7kNvwEmQdmF&_nc_oc=AdkW4u_MpUs0zk4_gET20HdpITNJMBGjxbEnaE4vhm-5BMRibgX3JQ0qyX6i0GgiYDxWeXFUASyCqqUeJlkDg4_Z&_nc_zt=23&_nc_ht=scontent.fsgn8-3.fna&_nc_gid=7XZH3dq3v0Z9l0biH_4iJg&oh=00_AfKUM4VHvcq4WVCUbK8ZEyhawaTIbeGjCwrpuOzms-SYsw&oe=6852A3F8"
+  },
+  {
+    "studioKey": "infinity-studio",
+    "studioName": "Infinity Studio",
+    "imgThumbnail": "https://creationatworks.com/content/images/thumbs/0000140_infinity-studio_450.jpeg",
+    "imgMain": "https://statics.pancake.vn/web-media/64/66/9f/0a/2e5f03fa4e7932e98ff7b2414c197f8b1855ea8b469aa7c5dcfee061.jpg"
+  }
+]

@@ -14,7 +14,6 @@ import { FaQuestion } from "react-icons/fa6";
 import { IoInformationCircleOutline } from "react-icons/io5";
 import { IoStorefrontOutline } from "react-icons/io5";
 import { BiSupport } from "react-icons/bi";
-import { BiCopyright } from "react-icons/bi";
 import { IoSearch } from "react-icons/io5";
 import { LuPanelRightClose } from "react-icons/lu";
 
@@ -346,12 +345,6 @@ const Header = () => {
                     </Link>
                   </li>
                   <li className="list-inline-item">
-                    <Link to="/licenses">
-                      <BiCopyright />
-                      &nbsp;LICENSES
-                    </Link>
-                  </li>
-                  <li className="list-inline-item">
                     <Link to="/support">
                       <BiSupport />
                       &nbsp;SUPPORT
@@ -434,12 +427,6 @@ const Header = () => {
                       <Link to="/shop">
                         <IoStorefrontOutline />
                         &nbsp;SHOP
-                      </Link>
-                    </li>
-                    <li className="list-inline-item">
-                      <Link to="/license">
-                        <BiCopyright />
-                        &nbsp;LICENSE
                       </Link>
                     </li>
                     <li className="list-inline-item">

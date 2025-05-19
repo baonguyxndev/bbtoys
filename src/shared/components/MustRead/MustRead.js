@@ -165,7 +165,7 @@ const MustRead = () => {
               <ul>
                 <li>
                   The final product delivered to customers may differ from the
-                  Pre-Order images (as studios may make changes for better
+                  Pre-Order images (as stusioes may make changes for better
                   suitability).
                 </li>
                 <li>

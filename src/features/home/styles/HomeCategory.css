@@ -61,11 +61,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-.homeCategory .anime-wrapper .sub-title-wrapper .viewAllBtn:focus,
-.homeCategory .game-wrapper .sub-title-wrapper .viewAllBtn:focus {
-  outline: none;
-}
-
 .homeCategory .anime-wrapper .sub-title-wrapper .viewAllBtn:hover,
 .homeCategory .game-wrapper .sub-title-wrapper .viewAllBtn:hover {
   box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),

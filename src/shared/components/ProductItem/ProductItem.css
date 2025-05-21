@@ -116,10 +116,6 @@
   background: #444 !important;
 }
 
-.productCard .btnFullScreen button:focus {
-  outline: none;
-}
-
 .productCard .btnFullScreen svg {
   font-size: 17px;
   color: #fff;

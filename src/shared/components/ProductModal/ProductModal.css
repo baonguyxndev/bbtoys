@@ -166,10 +166,6 @@
   scrollbar-width: none; /* Firefox */
 }
 
-.productModal .modalRight::-webkit-scrollbar {
-  display: none; /* Chrome, Safari and Opera */
-}
-
 .productModal .price-section {
   margin-bottom: 15px;
 }
@@ -621,42 +617,4 @@
   to {
     opacity: 1;
   }
-}
-
-/* Bỏ outline cho tất cả các button và input trong modal */
-.productModal .productModalOverlay *:focus,
-.productModal .productModalOverlay button:focus,
-.productModal .productModalOverlay input:focus,
-.productModal .modalProduct *:focus,
-.productModal .modalProduct button:focus,
-.productModal .modalProduct input:focus,
-.productModal .fullscreen-overlay *:focus,
-.productModal .fullscreen-overlay button:focus {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* Bỏ outline cho các button cụ thể */
-.productModal .btnCloseProductModal:focus,
-.productModal .fullscreen-close:focus,
-.productModal .fullscreen-nav:focus,
-.productModal .option-button:focus,
-.productModal .quantity-btn:focus,
-.productModal .add-to-cart:focus,
-.productModal .action-button:focus {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* Bỏ outline cho các button trong thumbnails */
-.productModal .thumbnail:focus,
-.productModal .mainImage:focus {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* Bỏ outline cho các button Material-UI */
-.productModal .MuiButton-root:focus {
-  outline: none !important;
-  box-shadow: none !important;
 }

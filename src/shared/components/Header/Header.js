@@ -374,9 +374,6 @@ const Header = () => {
               <Button className="circle ml-3">
                 <PiGlobe />
               </Button>
-              <Button className="circle ml-3">
-                <FiUser />
-              </Button>
               <div className="cartTab d-flex align-items-center">
                 <div className="position-relative">
                   <Button className="circle">
@@ -385,6 +382,9 @@ const Header = () => {
                   <span className="count">0</span>
                 </div>
               </div>
+              <Button className="circle ml-3">
+                <FiUser />
+              </Button>
             </div>
           </div>
         </div>
@@ -459,9 +459,6 @@ const Header = () => {
                 <Button className="circle ml-3">
                   <PiGlobe />
                 </Button>
-                <Button className="circle ml-3">
-                  <FiUser />
-                </Button>
                 <div className="cartTab d-flex align-items-center">
                   <div className="position-relative">
                     <Button className="circle">
@@ -470,6 +467,9 @@ const Header = () => {
                     <span className="count">0</span>
                   </div>
                 </div>
+                <Button className="circle ml-3">
+                  <FiUser />
+                </Button>
               </div>
             </div>
           </div>

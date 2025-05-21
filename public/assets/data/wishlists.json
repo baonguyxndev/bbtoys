@@ -1,0 +1,14 @@
+[
+  {
+    "id": "WL001",
+    "customerId": 1,
+    "idProduct": ["PRO001", "PRO002", "PRO003"],
+    "createdAt": "2025-03-20"
+  },
+  {
+    "id": "WL002",
+    "customerId": 2,
+    "idProduct": ["PRO006", "PRO007", "PRO008"],
+    "createdAt": "2025-03-20"
+  }
+]

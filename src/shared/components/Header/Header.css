@@ -49,7 +49,6 @@
   width: 45px;
   height: 45px;
   border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
   color: #fff;
 }
 
@@ -57,10 +56,6 @@
   box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
     0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
   transform: scale(1.05);
-}
-
-.header .part3 .circle:focus {
-  outline: none;
 }
 
 .header .part3 .circle svg {
@@ -211,11 +206,6 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.header .cateWrapper .sideBarNav ul li button:focus,
-.small-header .cateWrapper .sideBarNav ul li button:focus {
-  outline: none;
-}
-
 .header .cateWrapper .sideBarNav .imgSubMenu,
 .small-header .cateWrapper .sideBarNav .imgSubMenu {
   display: flex;
@@ -262,11 +252,6 @@
 .small-header .allCateTab svg {
   color: #fff;
   font-size: 20px;
-}
-
-.header .allCateTab:focus,
-.small-header .allCateTab:focus {
-  outline: none;
 }
 
 .header .allCateTab::before,
@@ -324,10 +309,6 @@
   font-size: 22px;
 }
 
-.small-header .circle:focus {
-  outline: none;
-}
-
 /* Close Button */
 .close-btn {
   position: absolute;
@@ -355,10 +336,6 @@
   box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
     0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
   transform: scale(1.05);
-}
-
-.close-btn:focus {
-  outline: none;
 }
 
 .allCateTab:active,

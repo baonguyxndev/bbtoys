@@ -12,6 +12,8 @@ import ScrollToTop from "./shared/hooks/ScrollToTop";
 import FAQs from "./features/faqs/FAQs";
 import ProductDetail from "./features/product/ProductDetail";
 import MustRead from "./shared/components/MustRead/MustRead";
+import CustomerProfile from "./features/customer/CustomerProfile";
+import Auth from "./features/customer/Auth";
 
 function App() {
   return (
@@ -40,6 +42,11 @@ function App() {
 
         {/*MustRead*/}
         <Route path="/must-read" element={<MustRead />} />
+
+        {/*Customer*/}
+        <Route path="/customer/:id" element={<CustomerProfile />} />
+        <Route path="/login" element={<Auth />} />
+        <Route path="/register" element={<Auth />} />
       </Routes>
       <Footer />
     </BrowserRouter>

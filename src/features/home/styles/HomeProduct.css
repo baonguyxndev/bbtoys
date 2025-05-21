@@ -53,10 +53,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-.homeProducts .viewAllBtn:focus {
-  outline: none;
-}
-
 .homeProducts .viewAllBtn:hover {
   box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
     0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);

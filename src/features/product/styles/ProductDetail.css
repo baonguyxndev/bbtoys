@@ -606,22 +606,6 @@
   border-color: #ba0000;
 }
 
-/* Focus styles for accessibility */
-.product-detail .container *:focus {
-  outline: none;
-}
-
-.product-detail .fullscreen-close:focus,
-.product-detail .fullscreen-nav:focus {
-  outline: 2px solid #ba0000;
-  outline-offset: 2px;
-}
-
-.product-detail .thumbnails:focus {
-  outline: 2px solid #ba0000;
-  outline-offset: 2px;
-}
-
 /* Discount Badge in Gallery */
 .product-detail .product-gallery .discount-badge {
   position: absolute;

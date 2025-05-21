@@ -120,9 +120,8 @@
 }
 
 .shop .search .form-control:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.1);
-  border-color: #ba0000;
+  box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.1) !important;
+  border-color: #ba0000 !important;
 }
 
 /* Biểu tượng kính lúp */
@@ -152,12 +151,6 @@
   -moz-appearance: none;
   padding-right: 40px;
   color: #999;
-}
-
-.shop .sort .form-select:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.1);
-  border-color: #1890ff;
 }
 
 /* Biểu tượng mũi tên xuống */
@@ -197,12 +190,6 @@
   border-radius: 8px;
   font-size: 14px;
   transition: all 0.3s ease;
-}
-
-.sidebar-search input:focus {
-  outline: none;
-  border-color: #1890ff;
-  box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.1);
 }
 
 .sidebar-search .search-icon {
@@ -378,10 +365,6 @@
   transition: all 0.3s ease;
   background-color: #666;
   color: #fff;
-}
-
-.price-input:focus {
-  outline: none;
 }
 
 .price-slider {
@@ -659,8 +642,8 @@
 
 .shop .sidebar .search .form-control:focus,
 .shop .sidebar .sort .form-select:focus {
-  border-color: #ba0000;
-  box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.1);
+  border-color: #ba0000 !important;
+  box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.1) !important;
 }
 
 .shop .sidebar .search-icon,

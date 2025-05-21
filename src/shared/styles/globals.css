@@ -12,8 +12,16 @@
   list-style-type: none;
 }
 
-html {
-  scroll-behavior: smooth;
+*.active {
+  outline: none !important;
+}
+
+*:active {
+  outline: none !important;
+}
+
+*:focus {
+  outline: none !important;
 }
 
 body {
@@ -30,7 +38,6 @@ body {
 
 ::-webkit-scrollbar-track {
   background: transparent;
-  border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #666;

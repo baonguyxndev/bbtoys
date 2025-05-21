@@ -313,8 +313,8 @@ const MustRead = () => {
   };
 
   return (
-    <div className="must-read-section">
-      <h2 className="must-read-title">Must Read</h2>
+    <div className="must-read">
+      <h2 className="title">Must Read</h2>
       <div className="tabs-info-service">
         <button
           className={activeTab === "shipping" ? "tab active" : "tab"}

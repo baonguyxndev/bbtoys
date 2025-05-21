@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "username": "nguyenbao",
+    "password": "123123123",
+    "fullName": "Bao Nguyen",
+    "gender": "male",
+    "dateOfBirth": "2003-04-28",
+    "email": "nguyenbao@gmail.com",
+    "phone": "+1234567890",
+    "address": "Ho Chi Minh City, Vietnam",
+    "avatar": "https://i.pravatar.cc/150?img=1"
+  },
+  {
+    "id": 2,
+    "username": "tienporn",
+    "password": "123123123",
+    "fullName": "Tien Porn",
+    "gender": "male",
+    "dateOfBirth": "2000-10-10",
+    "email": "tienporn@gmail.com",
+    "phone": "+1234567890",
+    "address": "Ho Chi Minh City, Vietnam",
+    "avatar": "https://i.pravatar.cc/150?img=1"
+  }
+]

@@ -1,7 +1,7 @@
 @import "../../styles/variables.css";
 
 /* Container Styles */
-.must-read-section {
+.must-read {
   max-width: 80%;
   margin: 30px auto;
   padding: 30px;
@@ -10,7 +10,7 @@
   border: var(--border-primary);
 }
 
-.must-read-title {
+.must-read title {
   font-size: 30px;
   font-weight: bold;
   text-align: center;
@@ -19,7 +19,7 @@
 }
 
 /* Tab Navigation */
-.tabs-info-service {
+.must-read .tabs-info-service {
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -27,7 +27,7 @@
   flex-wrap: wrap;
 }
 
-.tab {
+.must-read .tab {
   flex: 1;
   min-width: 220px;
   display: flex;
@@ -46,17 +46,13 @@
   overflow: hidden;
 }
 
-.tab:focus {
-  outline: none;
-}
-
-.tab:hover {
+.must-read .tab:hover {
   background-color: #333;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(186, 0, 0, 0.2);
 }
 
-.tab.active {
+.must-read .tab.active {
   background-color: #ba0000;
   color: #fff;
   transform: translateY(-2px);
@@ -64,7 +60,7 @@
 }
 
 /* Content Container */
-.tab-content {
+.must-read .tab-content {
   background-color: #222;
   border-radius: 10px;
   padding: 2rem;
@@ -76,12 +72,12 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.tab-content > div {
+.must-read .tab-content > div {
   animation: fadeIn 0.3s ease-in;
 }
 
 /* Typography */
-.tab-content h3 {
+.must-read .tab-content h3 {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -92,7 +88,7 @@
   padding-bottom: 15px;
 }
 
-.tab-content h3:after {
+.must-read .tab-content h3:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -104,14 +100,14 @@
   border-radius: 5px;
 }
 
-.tab-content h4 {
+.must-read .tab-content h4 {
   font-size: 1.2rem;
   font-weight: 600;
   margin: 1.5rem 0 1rem;
   color: #fff;
 }
 
-.tab-content p {
+.must-read .tab-content p {
   margin-bottom: 1rem;
   line-height: 1.6;
   color: #ddd;
@@ -119,13 +115,13 @@
 }
 
 /* Lists */
-.tab-content ul {
+.must-read .tab-content ul {
   list-style-type: none;
   padding: 0;
   margin: 0 0 1.5rem 0;
 }
 
-.tab-content li {
+must-read .tab-content li {
   margin-bottom: 0.8rem;
   padding-left: 1.5rem;
   position: relative;
@@ -133,7 +129,7 @@
   color: #ddd;
 }
 
-.tab-content li:before {
+.must-read .tab-content li:before {
   content: "•";
   position: absolute;
   left: 0;
@@ -142,7 +138,7 @@
 }
 
 /* Tables */
-.tab-content table {
+.must-read .tab-content table {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
@@ -152,7 +148,7 @@
   table-layout: auto;
 }
 
-.tab-content th {
+.must-read .tab-content th {
   background: #444;
   color: #fff;
   font-weight: bold;
@@ -167,7 +163,7 @@
   width: fit-content;
 }
 
-.tab-content td {
+.must-read .tab-content td {
   padding: 20px;
   border: 1px solid #666;
   color: #fff;
@@ -175,12 +171,12 @@
   white-space: normal;
 }
 
-.tab-content tr:nth-child(even) {
+.must-read .tab-content tr:nth-child(even) {
   background: #2a2a2a;
 }
 
 /* Highlight Boxes */
-.highlight-box {
+.must-read .highlight-box {
   background: #333;
   border-radius: 8px;
   padding: 1.5rem;
@@ -188,63 +184,25 @@
   border-left: 4px solid #ba0000;
 }
 
-.highlight-box h4 {
+.must-read .highlight-box h4 {
   color: #fff;
   margin-top: 0;
 }
 
-.highlight-box p {
+.must-read .highlight-box p {
   margin-bottom: 0;
 }
 
 /* Notes */
-.shipping-note {
+.must-read .shipping-note {
   color: #ba0000;
   font-style: italic;
   margin: 10px 0;
 }
 
-.table-note {
+.must-read .table-note {
   color: #ba0000;
   font-style: italic;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .must-read-section {
-    max-width: 95%;
-    padding: 15px;
-  }
-
-  .tabs-info-service {
-    flex-direction: column;
-  }
-
-  .tab {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .tab-content {
-    padding: 1rem;
-  }
-
-  .tab-content h3 {
-    font-size: 1.5rem;
-  }
-
-  .tab-content table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-    margin: 15px 0;
-  }
-
-  .tab-content th,
-  .tab-content td {
-    padding: 8px;
-    font-size: 0.9em;
-  }
 }
 
 @keyframes fadeIn {

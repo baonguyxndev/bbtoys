@@ -1,0 +1,247 @@
+@import "../../../shared/styles/variables.css";
+
+.register {
+  background-color: #222;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register .container {
+  position: relative;
+  width: 850px;
+  height: 550px;
+  background-color: #222;
+  border-radius: 30px;
+  box-shadow: var(--box-shadow-primary);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.register .form-wrapper {
+  display: flex;
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #222;
+  align-items: center;
+  text-align: center;
+  border-radius: 30px 0px 0px 30px;
+  z-index: 2;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  backface-visibility: hidden;
+}
+
+.register .form-wrapper.slide-right {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.register form {
+  width: 100%;
+  padding: 0 30px;
+}
+
+.register .container h1 {
+  margin: 10px 0px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.register .input-wrapper {
+  position: relative;
+  margin: 20px 0;
+}
+
+.register .input-wrapper input {
+  width: 100%;
+  padding: 13px;
+  background-color: #444;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.register .input-wrapper input:focus {
+  border-color: #ba0000;
+  background-color: #555;
+}
+
+.register .input-wrapper svg {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.register .input-wrapper input:focus + svg {
+  color: #ba0000;
+}
+
+.register .input-wrapper input.error {
+  border-color: #ff0000;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.register .input-wrapper input.error + svg {
+  color: #ff0000;
+}
+
+.register .input-wrapper input.error::placeholder {
+  color: #ff0000;
+}
+
+.register .error-text {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  font-size: 12px;
+  color: #ff0000;
+}
+
+.register .fogot-password-link {
+  text-align: right;
+  margin: 10px 0;
+}
+
+.register .fogot-password-link a {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.register .fogot-password-link a:hover {
+  color: #ba0000;
+}
+
+.register .btn-register {
+  width: 100%;
+  padding: 12px;
+  background-color: #ba0000 !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+  font-size: 16px !important;
+  text-transform: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.register .btn-register:hover {
+  box-shadow: var(--box-shadow-primary);
+}
+
+.register p {
+  color: #888;
+  margin: 0;
+  padding: 10px 0px;
+}
+
+.register .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.register .social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.register .social-icons a:hover {
+  box-shadow: var(--box-shadow-primary);
+}
+
+.register .toggle-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  perspective: 1000px;
+  z-index: 2;
+}
+
+.register .toggle-wrapper::before {
+  content: "";
+  position: absolute;
+  right: -250%;
+  width: 300%;
+  height: 100%;
+  background-color: #111;
+  border-radius: 150px;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(0);
+  backface-visibility: hidden;
+}
+
+.register .toggle-wrapper.slide-right::before {
+  transform: translateX(-100%);
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.register .toggle-panel {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  right: 80px;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  backface-visibility: hidden;
+}
+
+.register .toggle-panel.slide-right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.register .toggle-panel p {
+  margin-bottom: 20px;
+}
+
+.register .toggle-panel .btn-login {
+  background-color: #ba0000;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  text-transform: none;
+}
+
+.register .toggle-panel .btn-login:hover {
+  box-shadow: var(--box-shadow-primary);
+}

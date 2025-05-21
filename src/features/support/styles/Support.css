@@ -312,11 +312,6 @@
   transform: scale(1.1);
 }
 
-.support .file-preview-item .remove-file:focus {
-  outline: none;
-  box-shadow: none;
-}
-
 .support .file-preview-item.document {
   display: flex;
   align-items: center;
@@ -347,35 +342,12 @@
   border-color: var(--support-border);
 }
 
-.support .btn-danger:focus {
-  outline: none;
-  box-shadow: none;
-}
-
 /* Ticket List Styles */
 .support .tickets-list {
   margin-top: 1.5rem;
   overflow-y: auto;
   padding-right: 0.5rem;
   max-height: calc(100vh - 200px);
-}
-
-.support .tickets-list::-webkit-scrollbar {
-  width: 6px;
-}
-
-.support .tickets-list::-webkit-scrollbar-track {
-  background: var(--support-bg);
-  border-radius: 10px;
-}
-
-.support .tickets-list::-webkit-scrollbar-thumb {
-  background: var(--support-border);
-  border-radius: 10px;
-}
-
-.support .tickets-list::-webkit-scrollbar-thumb:hover {
-  background: var(--support-text-muted);
 }
 
 .support .ticket-item {

@@ -1,0 +1,186 @@
+[
+  {
+    "id": "ORD001",
+    "customerId": 1,
+    "product": [
+      { "idProduct": "PRO001", "quantity": 2, "totalPrice": 800 },
+      { "idProduct": "PRO002", "quantity": 1, "totalPrice": 300 }
+    ],
+    "total": 1100,
+    "status": "failed",
+    "createdAt": "2025-03-20"
+  },
+  {
+    "id": "ORD002",
+    "customerId": 1,
+    "product": [
+      { "idProduct": "PRO003", "quantity": 1, "totalPrice": 100 },
+      { "idProduct": "PRO004", "quantity": 1, "totalPrice": 200 }
+    ],
+    "total": 300,
+    "status": "processing",
+    "createdAt": "2025-03-30"
+  },
+  {
+    "id": "ORD003",
+    "customerId": 1,
+    "product": [
+      { "idProduct": "PRO005", "quantity": 1, "totalPrice": 200 },
+      { "idProduct": "PRO006", "quantity": 1, "totalPrice": 200 }
+    ],
+    "total": 400,
+    "status": "shipping",
+    "createdAt": "2025-04-05"
+  },
+  {
+    "id": "ORD004",
+    "customerId": 1,
+    "product": [
+      { "idProduct": "PRO007", "quantity": 1, "totalPrice": 200 },
+      { "idProduct": "PRO008", "quantity": 1, "totalPrice": 400 }
+    ],
+    "total": 600,
+    "status": "delivered",
+    "createdAt": "2025-04-26"
+  },
+  {
+    "id": "ORD005",
+    "customerId": 1,
+    "product": [{ "idProduct": "PRO009", "quantity": 1, "totalPrice": 500 }],
+    "total": 500,
+    "status": "pending",
+    "createdAt": "2025-05-01"
+  },
+  {
+    "id": "ORD006",
+    "customerId": 1,
+    "product": [{ "idProduct": "PRO010", "quantity": 1, "totalPrice": 600 }],
+    "total": 600,
+    "status": "packed",
+    "createdAt": "2025-05-10"
+  },
+  {
+    "id": "ORD007",
+    "customerId": 1,
+    "product": [{ "idProduct": "PRO011", "quantity": 1, "totalPrice": 300 }],
+    "total": 300,
+    "status": "cancelled",
+    "createdAt": "2025-05-15"
+  },
+  {
+    "id": "ORD008",
+    "customerId": 1,
+    "product": [{ "idProduct": "PRO012", "quantity": 1, "totalPrice": 700 }],
+    "total": 700,
+    "status": "refunded",
+    "createdAt": "2025-05-20"
+  },
+  {
+    "id": "ORD009",
+    "customerId": 1,
+    "product": [{ "idProduct": "PRO013", "quantity": 1, "totalPrice": 450 }],
+    "total": 450,
+    "status": "returned",
+    "createdAt": "2025-05-25"
+  },
+  {
+    "id": "ORD010",
+    "customerId": 1,
+    "product": [{ "idProduct": "PRO014", "quantity": 1, "totalPrice": 100 }],
+    "total": 100,
+    "status": "delivered",
+    "createdAt": "2025-05-26"
+  },
+  {
+    "id": "ORD011",
+    "customerId": 2,
+    "product": [
+      { "idProduct": "PRO001", "quantity": 2, "totalPrice": 800 },
+      { "idProduct": "PRO002", "quantity": 1, "totalPrice": 300 }
+    ],
+    "total": 1100,
+    "status": "failed",
+    "createdAt": "2025-03-20"
+  },
+  {
+    "id": "ORD012",
+    "customerId": 2,
+    "product": [
+      { "idProduct": "PRO003", "quantity": 1, "totalPrice": 100 },
+      { "idProduct": "PRO004", "quantity": 1, "totalPrice": 200 }
+    ],
+    "total": 300,
+    "status": "processing",
+    "createdAt": "2025-03-30"
+  },
+  {
+    "id": "ORD013",
+    "customerId": 2,
+    "product": [
+      { "idProduct": "PRO005", "quantity": 1, "totalPrice": 200 },
+      { "idProduct": "PRO006", "quantity": 1, "totalPrice": 200 }
+    ],
+    "total": 400,
+    "status": "shipping",
+    "createdAt": "2025-04-20"
+  },
+  {
+    "id": "ORD014",
+    "customerId": 2,
+    "product": [
+      { "idProduct": "PRO007", "quantity": 1, "totalPrice": 200 },
+      { "idProduct": "PRO008", "quantity": 1, "totalPrice": 400 }
+    ],
+    "total": 600,
+    "status": "delivered",
+    "createdAt": "2025-04-26"
+  },
+  {
+    "id": "ORD015",
+    "customerId": 2,
+    "product": [{ "idProduct": "PRO009", "quantity": 1, "totalPrice": 500 }],
+    "total": 500,
+    "status": "pending",
+    "createdAt": "2025-05-01"
+  },
+  {
+    "id": "ORD016",
+    "customerId": 2,
+    "product": [{ "idProduct": "PRO010", "quantity": 1, "totalPrice": 600 }],
+    "total": 600,
+    "status": "packed",
+    "createdAt": "2025-05-10"
+  },
+  {
+    "id": "ORD017",
+    "customerId": 2,
+    "product": [{ "idProduct": "PRO011", "quantity": 1, "totalPrice": 300 }],
+    "total": 300,
+    "status": "cancelled",
+    "createdAt": "2025-05-15"
+  },
+  {
+    "id": "ORD018",
+    "customerId": 2,
+    "product": [{ "idProduct": "PRO012", "quantity": 1, "totalPrice": 700 }],
+    "total": 700,
+    "status": "refunded",
+    "createdAt": "2025-05-20"
+  },
+  {
+    "id": "ORD019",
+    "customerId": 2,
+    "product": [{ "idProduct": "PRO013", "quantity": 1, "totalPrice": 450 }],
+    "total": 450,
+    "status": "returned",
+    "createdAt": "2025-05-25"
+  },
+  {
+    "id": "ORD020",
+    "customerId": 2,
+    "product": [{ "idProduct": "PRO014", "quantity": 1, "totalPrice": 100 }],
+    "total": 100,
+    "status": "delivered",
+    "createdAt": "2025-05-26"
+  }
+]

@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import { flattenProducts } from "../utils/productUtils";
 
 const useFetchProducts = () => {
   const [products, setProducts] = useState([]);
+  const [flattenedProducts, setFlattenedProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -13,8 +15,12 @@ const useFetchProducts = () => {
           throw new Error("Failed to fetch products");
         }
         const data = await response.json();
-        await new Promise((resolve) => setTimeout(resolve, 500));
+
+        // Tạo bản đồ sản phẩm để truy xuất nhanh
+        const flattened = flattenProducts(data);
+
         setProducts(data);
+        setFlattenedProducts(flattened);
         setLoading(false);
       } catch (error) {
         setError("Error fetching products");
@@ -23,9 +29,19 @@ const useFetchProducts = () => {
     };
 
     fetchProducts();
-  }, []); // Mảng dependency rỗng, không cần thêm `loading`
+  }, []);
 
-  return { products, loading, error };
+  const getProductById = (id) => {
+    return flattenedProducts.find((product) => product.id === id) || null;
+  };
+
+  return {
+    products,
+    flattenedProducts,
+    getProductById,
+    loading,
+    error,
+  };
 };
 
 export default useFetchProducts;

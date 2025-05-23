@@ -14,42 +14,45 @@ import ProductDetail from "./features/product/ProductDetail";
 import MustRead from "./shared/components/MustRead/MustRead";
 import CustomerProfile from "./features/customer/CustomerProfile";
 import Auth from "./features/customer/Auth";
+import { AuthProvider } from "./shared/contexts/AuthContext";
 
 function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <ScrollHandler />
-      <Header />
-      <Routes>
-        {/*Home*/}
-        <Route path="/" element={<Home />} />
+    <AuthProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <ScrollHandler />
+        <Header />
+        <Routes>
+          {/*Home*/}
+          <Route path="/" element={<Home />} />
 
-        {/*Shop*/}
-        <Route path="/shop" element={<Shop />} />
+          {/*Shop*/}
+          <Route path="/shop" element={<Shop />} />
 
-        {/*Product*/}
-        <Route path="/product/:id" element={<ProductDetail />} />
+          {/*Product*/}
+          <Route path="/product/:id" element={<ProductDetail />} />
 
-        {/*Support*/}
-        <Route path="/support" element={<Support />} />
+          {/*Support*/}
+          <Route path="/support" element={<Support />} />
 
-        {/*FAQs*/}
-        <Route path="/faqs" element={<FAQs />} />
+          {/*FAQs*/}
+          <Route path="/faqs" element={<FAQs />} />
 
-        {/*Info*/}
-        <Route path="/info" element={<Info />} />
+          {/*Info*/}
+          <Route path="/info" element={<Info />} />
 
-        {/*MustRead*/}
-        <Route path="/must-read" element={<MustRead />} />
+          {/*MustRead*/}
+          <Route path="/must-read" element={<MustRead />} />
 
-        {/*Customer*/}
-        <Route path="/customer/:id" element={<CustomerProfile />} />
-        <Route path="/login" element={<Auth />} />
-        <Route path="/register" element={<Auth />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+          {/*Customer*/}
+          <Route path="/customer/:id" element={<CustomerProfile />} />
+          <Route path="/login" element={<Auth />} />
+          <Route path="/register" element={<Auth />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 

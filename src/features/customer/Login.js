@@ -6,8 +6,12 @@ import { FaGoogle } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { useState } from "react";
 import { CircularProgress } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../shared/contexts/AuthContext";
 
 const Login = ({ onToggle }) => {
+  const navigate = useNavigate();
+  const { login } = useAuth();
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -44,7 +48,6 @@ const Login = ({ onToggle }) => {
       ...prev,
       [name]: value,
     }));
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors((prev) => ({
         ...prev,
@@ -59,18 +62,38 @@ const Login = ({ onToggle }) => {
 
     setIsLoading(true);
     try {
-      // TODO: Implement your login API call here
-      await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulated API call
-      console.log("Login successful", formData);
+      const response = await fetch("/assets/data/customers.json");
+      if (!response.ok) {
+        throw new Error("Failed to fetch customer data");
+      }
+      const customers = await response.json();
+      const user = customers.find(
+        (customer) =>
+          customer.username === formData.username &&
+          customer.password === formData.password
+      );
+
+      if (user) {
+        login(user);
+        navigate(`/customer/${user.id}`);
+      } else {
+        setErrors({
+          username: "Invalid username or password",
+          password: "Invalid username or password",
+        });
+      }
     } catch (error) {
       console.error("Login failed:", error);
+      setErrors({
+        username: "An error occurred during login",
+        password: "An error occurred during login",
+      });
     } finally {
       setIsLoading(false);
     }
   };
 
   const handleSocialLogin = (platform) => {
-    // TODO: Implement social login
     console.log(`Login with ${platform}`);
   };
 

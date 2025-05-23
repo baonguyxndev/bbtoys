@@ -2,13 +2,13 @@
   {
     "id": "WIS001",
     "customerId": 1,
-    "idProduct": ["PRO001", "PRO002", "PRO003"],
+    "idProduct": ["OP3", "DB6", "JK4", "OP1", "DB1", "JK1"],
     "createdAt": "2025-05-21"
   },
   {
     "id": "WIS002",
     "customerId": 2,
-    "idProduct": ["PRO004", "PRO005", "PRO006"],
+    "idProduct": ["OP2", "DB2", "JK2", "OP3", "DB3", "JK3"],
     "createdAt": "2025-05-21"
   }
 ]

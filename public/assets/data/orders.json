@@ -1,185 +1,241 @@
 [
   {
-    "id": "ORD001",
+    "id": 1,
     "customerId": 1,
     "product": [
-      { "idProduct": "PRO001", "quantity": 2, "totalPrice": 800 },
-      { "idProduct": "PRO002", "quantity": 1, "totalPrice": 300 }
+      { "idProduct": "OP1", "quantity": 2, "totalPrice": 800 },
+      { "idProduct": "OP3", "quantity": 1, "totalPrice": 300 }
     ],
-    "total": 1100,
+    "totalOrder": 1100,
     "status": "failed",
     "createdAt": "2025-03-20"
   },
   {
-    "id": "ORD002",
+    "id": 2,
     "customerId": 1,
     "product": [
-      { "idProduct": "PRO003", "quantity": 1, "totalPrice": 100 },
-      { "idProduct": "PRO004", "quantity": 1, "totalPrice": 200 }
+      { "idProduct": "DB1", "quantity": 1, "totalPrice": 100 },
+      { "idProduct": "DB5", "quantity": 1, "totalPrice": 200 }
     ],
-    "total": 300,
+    "totalOrder": 300,
     "status": "processing",
-    "createdAt": "2025-03-30"
+    "createdAt": "2025-03-20"
   },
   {
-    "id": "ORD003",
+    "id": 3,
     "customerId": 1,
     "product": [
-      { "idProduct": "PRO005", "quantity": 1, "totalPrice": 200 },
-      { "idProduct": "PRO006", "quantity": 1, "totalPrice": 200 }
+      { "idProduct": "N1", "quantity": 1, "totalPrice": 200 },
+      { "idProduct": "N2", "quantity": 1, "totalPrice": 200 }
     ],
-    "total": 400,
+    "totalOrder": 400,
     "status": "shipping",
     "createdAt": "2025-04-05"
   },
   {
-    "id": "ORD004",
+    "id": 4,
     "customerId": 1,
     "product": [
-      { "idProduct": "PRO007", "quantity": 1, "totalPrice": 200 },
-      { "idProduct": "PRO008", "quantity": 1, "totalPrice": 400 }
+      { "idProduct": "JK1", "quantity": 1, "totalPrice": 200 },
+      { "idProduct": "JK6", "quantity": 1, "totalPrice": 400 }
     ],
-    "total": 600,
+    "totalOrder": 600,
     "status": "delivered",
     "createdAt": "2025-04-26"
   },
   {
-    "id": "ORD005",
+    "id": 5,
     "customerId": 1,
-    "product": [{ "idProduct": "PRO009", "quantity": 1, "totalPrice": 500 }],
-    "total": 500,
+    "product": [{ "idProduct": "CS1", "quantity": 1, "totalPrice": 500 }],
+    "totalOrder": 500,
     "status": "pending",
-    "createdAt": "2025-05-01"
+    "createdAt": "2025-04-26"
   },
   {
-    "id": "ORD006",
+    "id": 6,
     "customerId": 1,
-    "product": [{ "idProduct": "PRO010", "quantity": 1, "totalPrice": 600 }],
-    "total": 600,
+    "product": [{ "idProduct": "FT1", "quantity": 1, "totalPrice": 600 }],
+    "totalOrder": 600,
     "status": "packed",
-    "createdAt": "2025-05-10"
+    "createdAt": "2025-04-26"
   },
   {
-    "id": "ORD007",
+    "id": 7,
     "customerId": 1,
-    "product": [{ "idProduct": "PRO011", "quantity": 1, "totalPrice": 300 }],
-    "total": 300,
+    "product": [{ "idProduct": "HxH1", "quantity": 1, "totalPrice": 300 }],
+    "totalOrder": 300,
     "status": "cancelled",
     "createdAt": "2025-05-15"
   },
   {
-    "id": "ORD008",
+    "id": 8,
     "customerId": 1,
-    "product": [{ "idProduct": "PRO012", "quantity": 1, "totalPrice": 700 }],
-    "total": 700,
+    "product": [{ "idProduct": "DS1", "quantity": 1, "totalPrice": 700 }],
+    "totalOrder": 700,
     "status": "refunded",
     "createdAt": "2025-05-20"
   },
   {
-    "id": "ORD009",
+    "id": 9,
     "customerId": 1,
-    "product": [{ "idProduct": "PRO013", "quantity": 1, "totalPrice": 450 }],
-    "total": 450,
+    "product": [{ "idProduct": "AoT1", "quantity": 1, "totalPrice": 450 }],
+    "totalOrder": 450,
     "status": "returned",
     "createdAt": "2025-05-25"
   },
   {
-    "id": "ORD010",
+    "id": 10,
     "customerId": 1,
-    "product": [{ "idProduct": "PRO014", "quantity": 1, "totalPrice": 100 }],
-    "total": 100,
+    "product": [{ "idProduct": "OPM1", "quantity": 1, "totalPrice": 100 }],
+    "totalOrder": 100,
     "status": "delivered",
     "createdAt": "2025-05-26"
   },
   {
-    "id": "ORD011",
+    "id": 11,
     "customerId": 2,
     "product": [
-      { "idProduct": "PRO001", "quantity": 2, "totalPrice": 800 },
-      { "idProduct": "PRO002", "quantity": 1, "totalPrice": 300 }
+      { "idProduct": "SxF1", "quantity": 2, "totalPrice": 800 },
+      { "idProduct": "SxF5", "quantity": 1, "totalPrice": 300 }
     ],
-    "total": 1100,
+    "totalOrder": 1100,
     "status": "failed",
     "createdAt": "2025-03-20"
   },
   {
-    "id": "ORD012",
+    "id": 12,
     "customerId": 2,
     "product": [
-      { "idProduct": "PRO003", "quantity": 1, "totalPrice": 100 },
-      { "idProduct": "PRO004", "quantity": 1, "totalPrice": 200 }
+      { "idProduct": "ER1", "quantity": 1, "totalPrice": 100 },
+      { "idProduct": "ER5", "quantity": 1, "totalPrice": 200 }
     ],
-    "total": 300,
+    "totalOrder": 300,
     "status": "processing",
     "createdAt": "2025-03-30"
   },
   {
-    "id": "ORD013",
+    "id": 13,
     "customerId": 2,
     "product": [
-      { "idProduct": "PRO005", "quantity": 1, "totalPrice": 200 },
-      { "idProduct": "PRO006", "quantity": 1, "totalPrice": 200 }
+      { "idProduct": "RE1", "quantity": 1, "totalPrice": 200 },
+      { "idProduct": "RE2", "quantity": 1, "totalPrice": 200 }
     ],
-    "total": 400,
+    "totalOrder": 400,
     "status": "shipping",
     "createdAt": "2025-04-20"
   },
   {
-    "id": "ORD014",
+    "id": 14,
     "customerId": 2,
     "product": [
-      { "idProduct": "PRO007", "quantity": 1, "totalPrice": 200 },
-      { "idProduct": "PRO008", "quantity": 1, "totalPrice": 400 }
+      { "idProduct": "Z3", "quantity": 1, "totalPrice": 200 },
+      { "idProduct": "Z4", "quantity": 1, "totalPrice": 400 }
     ],
-    "total": 600,
+    "totalOrder": 600,
     "status": "delivered",
     "createdAt": "2025-04-26"
   },
   {
-    "id": "ORD015",
+    "id": 15,
     "customerId": 2,
-    "product": [{ "idProduct": "PRO009", "quantity": 1, "totalPrice": 500 }],
-    "total": 500,
+    "product": [{ "idProduct": "FF1", "quantity": 1, "totalPrice": 500 }],
+    "totalOrder": 500,
     "status": "pending",
     "createdAt": "2025-05-01"
   },
   {
-    "id": "ORD016",
+    "id": 16,
     "customerId": 2,
-    "product": [{ "idProduct": "PRO010", "quantity": 1, "totalPrice": 600 }],
-    "total": 600,
+    "product": [{ "idProduct": "DSs1", "quantity": 1, "totalPrice": 600 }],
+    "totalOrder": 600,
     "status": "packed",
     "createdAt": "2025-05-10"
   },
   {
-    "id": "ORD017",
+    "id": 17,
     "customerId": 2,
-    "product": [{ "idProduct": "PRO011", "quantity": 1, "totalPrice": 300 }],
-    "total": 300,
+    "product": [{ "idProduct": "NA3", "quantity": 1, "totalPrice": 300 }],
+    "totalOrder": 300,
     "status": "cancelled",
     "createdAt": "2025-05-15"
   },
   {
-    "id": "ORD018",
+    "id": 18,
     "customerId": 2,
-    "product": [{ "idProduct": "PRO012", "quantity": 1, "totalPrice": 700 }],
-    "total": 700,
+    "product": [{ "idProduct": "SF1", "quantity": 1, "totalPrice": 700 }],
+    "totalOrder": 700,
     "status": "refunded",
     "createdAt": "2025-05-20"
   },
   {
-    "id": "ORD019",
+    "id": 19,
     "customerId": 2,
-    "product": [{ "idProduct": "PRO013", "quantity": 1, "totalPrice": 450 }],
-    "total": 450,
+    "product": [{ "idProduct": "KOF1", "quantity": 1, "totalPrice": 450 }],
+    "totalOrder": 450,
     "status": "returned",
     "createdAt": "2025-05-25"
   },
   {
-    "id": "ORD020",
+    "id": 20,
     "customerId": 2,
-    "product": [{ "idProduct": "PRO014", "quantity": 1, "totalPrice": 100 }],
-    "total": 100,
+    "product": [{ "idProduct": "LOL1", "quantity": 1, "totalPrice": 100 }],
+    "totalOrder": 100,
+    "status": "delivered",
+    "createdAt": "2025-05-26"
+  },
+  {
+    "id": 21,
+    "customerId": 2,
+    "product": [{ "idProduct": "O1", "quantity": 1, "totalPrice": 100 }],
+    "totalOrder": 100,
+    "status": "delivered",
+    "createdAt": "2025-05-26"
+  },
+  {
+    "id": 22,
+    "customerId": 2,
+    "product": [{ "idProduct": "GI1", "quantity": 1, "totalPrice": 100 }],
+    "totalOrder": 100,
+    "status": "delivered",
+    "createdAt": "2025-05-26"
+  },
+  {
+    "id": 23,
+    "customerId": 2,
+    "product": [{ "idProduct": "HKIPSR1", "quantity": 1, "totalPrice": 100 }],
+    "totalOrder": 100,
+    "status": "delivered",
+    "createdAt": "2025-05-26"
+  },
+  {
+    "id": 24,
+    "customerId": 2,
+    "product": [{ "idProduct": "HKIPSR19", "quantity": 1, "totalPrice": 100 }],
+    "totalOrder": 100,
+    "status": "delivered",
+    "createdAt": "2025-05-26"
+  },
+  {
+    "id": 25,
+    "customerId": 2,
+    "product": [{ "idProduct": "BA1", "quantity": 1, "totalPrice": 100 }],
+    "totalOrder": 100,
+    "status": "delivered",
+    "createdAt": "2025-05-26"
+  },
+  {
+    "id": 26,
+    "customerId": 2,
+    "product": [{ "idProduct": "AL1", "quantity": 1, "totalPrice": 100 }],
+    "totalOrder": 100,
+    "status": "delivered",
+    "createdAt": "2025-05-26"
+  },
+  {
+    "id": 27,
+    "customerId": 2,
+    "product": [{ "idProduct": "DC1", "quantity": 1, "totalPrice": 100 }],
+    "totalOrder": 100,
     "status": "delivered",
     "createdAt": "2025-05-26"
   }

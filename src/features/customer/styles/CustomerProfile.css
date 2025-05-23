@@ -77,12 +77,14 @@
 }
 
 .customer-profile .profile-header-wrapper {
-  margin-bottom: 30px;
-  padding-bottom: 20px;
+  padding: 0px 20px 30px 20px;
   border-bottom: 1px solid var(--color-line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.customer-profile .profile-header-wrapper .profile-header {
+.customer-profile .profile-header-wrapper .profile-header-left {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -117,6 +119,24 @@
   color: var(--color-text-light);
   margin: 8px 0 0;
   font-weight: 500;
+}
+
+.customer-profile .profile-header-wrapper .profile-header-right .btn-logout {
+  font-size: 15px;
+  background-color: var(--color-primary) !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  gap: 10px !important;
+  color: var(--color-text-primary) !important;
+  text-transform: none !important;
+}
+
+.customer-profile
+  .profile-header-wrapper
+  .profile-header-right
+  .btn-logout:hover {
+  box-shadow: var(--box-shadow-primary);
 }
 
 /* Info Section Styles */
@@ -232,7 +252,6 @@
 }
 
 .customer-profile .ticket-item,
-.customer-profile .order-item,
 .customer-profile .wishlist-item {
   background-color: var(--color-background-secondary);
   border-radius: 12px;
@@ -242,7 +261,6 @@
 }
 
 .customer-profile .ticket-item:hover,
-.customer-profile .order-item:hover,
 .customer-profile .wishlist-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -250,8 +268,7 @@
 }
 
 /* Header Styles */
-.customer-profile .ticket-header,
-.customer-profile .order-header {
+.customer-profile .ticket-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -260,8 +277,7 @@
   border-bottom: 1px solid var(--color-line);
 }
 
-.customer-profile .ticket-id,
-.customer-profile .order-id {
+.customer-profile .ticket-id {
   font-weight: 600;
   color: var(--color-primary);
   font-size: var(--font-size-text);

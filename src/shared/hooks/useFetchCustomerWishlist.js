@@ -9,7 +9,7 @@ const useFetchCustomerWishlist = (customerId) => {
     const fetchWishlist = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`/assets/data/wishlists.json`);
+        const response = await fetch(`/assets/data/wishlist.json`);
         if (!response.ok) {
           throw new Error("Không thể tải danh sách yêu thích");
         }

@@ -1,0 +1,254 @@
+.customer-tickets {
+  padding: 30px;
+  background-color: var(--color-background-primary);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.customer-tickets__title {
+  font-size: var(--font-size-sub-title);
+  color: var(--color-text-primary);
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 15px;
+  font-weight: 700;
+}
+
+.customer-tickets__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 3px;
+  animation: slideIn 0.3s ease;
+}
+
+.customer-tickets__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.customer-tickets__card {
+  background: var(--color-background-secondary);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.customer-tickets__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  transition: all 0.3s ease;
+}
+
+.customer-tickets__card--processing::before {
+  background-color: #3b82f6;
+}
+.customer-tickets__card--completed::before {
+  background-color: #22c55e;
+}
+.customer-tickets__card--refused::before {
+  background-color: #ef4444;
+}
+.customer-tickets__card--sent::before {
+  background-color: #f59e0b;
+}
+.customer-tickets__card--default::before {
+  background-color: #9ca3af;
+}
+
+.customer-tickets__card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-color: var(--color-primary);
+}
+
+.customer-tickets__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.customer-tickets__id {
+  font-weight: 600;
+  color: var(--color-primary);
+  font-size: var(--font-size-text);
+}
+
+.customer-tickets__status {
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  color: var(--color-text-light);
+}
+
+.customer-tickets__content {
+  margin: 10px 0;
+}
+
+.customer-tickets__subject {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-text);
+  margin-bottom: 6px;
+}
+
+.customer-tickets__message {
+  color: var(--color-text-light);
+  font-size: var(--font-size-small);
+}
+
+.customer-tickets__footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid var(--color-line);
+}
+
+.customer-tickets__date {
+  color: var(--color-text-light);
+  font-size: var(--font-size-small);
+}
+
+.customer-tickets__empty {
+  text-align: center;
+  padding: 40px;
+  color: var(--color-text-light);
+  font-size: var(--font-size-text);
+  background-color: var(--color-background-secondary);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.3s ease;
+}
+
+.customer-tickets__error {
+  color: var(--color-primary);
+  text-align: center;
+  font-size: var(--font-size-text);
+  padding: 20px;
+  background-color: rgba(186, 0, 0, 0.1);
+  border-radius: 12px;
+  margin: 20px 0;
+  border: 1px solid var(--color-primary);
+  animation: fadeIn 0.3s ease;
+}
+
+.customer-tickets__badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.customer-tickets__badge--processing {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+.customer-tickets__badge--completed {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+}
+.customer-tickets__badge--refused {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+.customer-tickets__badge--sent {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+.customer-tickets__badge--default {
+  background-color: rgba(156, 163, 175, 0.1);
+  color: #9ca3af;
+}
+
+.customer-tickets__header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.customer-tickets__groups {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.customer-tickets__group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.customer-tickets__group-header {
+  padding: 8px 16px;
+  background-color: var(--color-background-secondary);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.customer-tickets__group-date {
+  font-size: var(--font-size-text);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.customer-tickets__button {
+  padding: 8px 16px;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.customer-tickets__button:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}

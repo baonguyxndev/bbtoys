@@ -16,8 +16,12 @@ import { IoStorefrontOutline } from "react-icons/io5";
 import { BiSupport } from "react-icons/bi";
 import { IoSearch } from "react-icons/io5";
 import { LuPanelRightClose } from "react-icons/lu";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../contexts/AuthContext";
 
 const Header = () => {
+  const navigate = useNavigate();
+  const { currentUser } = useAuth();
   const [isScrolled, setIsScrolled] = useState(false);
   const [showSmallHeader, setShowSmallHeader] = useState(false);
   const [isOpenSideBarNav, setIsOpenSideBarNav] = useState(false);
@@ -43,6 +47,14 @@ const Header = () => {
       }, 600);
     } else {
       setIsOpenSideBarNav(true);
+    }
+  };
+
+  const handleUserClick = () => {
+    if (currentUser) {
+      navigate(`/customer/${currentUser.id}`);
+    } else {
+      navigate("/login");
     }
   };
 
@@ -382,8 +394,11 @@ const Header = () => {
                   <span className="count">0</span>
                 </div>
               </div>
-              <Button className="circle ml-3">
+              <Button className="circle ml-3" onClick={handleUserClick}>
                 <FiUser />
+                {currentUser && (
+                  <span className="user-name">{currentUser.firstName}</span>
+                )}
               </Button>
             </div>
           </div>
@@ -467,8 +482,11 @@ const Header = () => {
                     <span className="count">0</span>
                   </div>
                 </div>
-                <Button className="circle ml-3">
+                <Button className="circle ml-3" onClick={handleUserClick}>
                   <FiUser />
+                  {currentUser && (
+                    <span className="user-name">{currentUser.firstName}</span>
+                  )}
                 </Button>
               </div>
             </div>

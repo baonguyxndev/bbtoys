@@ -42,24 +42,36 @@
 }
 
 /* Part3 (Right-side icons) - Only in Header */
-.header .part3 .circle {
+.header .part3 .circle,
+.small-header .part3 .circle {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
+
+  gap: 10px;
+  padding: 10px 20px;
   border-radius: 30px;
   color: #fff;
+  transition: all 0.3s ease;
 }
 
-.header .part3 .circle:hover {
+.header .part3 .circle:hover,
+.small-header .part3 .circle:hover {
   box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
     0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
   transform: scale(1.05);
 }
 
-.header .part3 .circle svg {
+.header .part3 .circle svg,
+.small-header .part3 .circle svg {
   font-size: 22px;
+}
+
+.header .part3 .circle .user-name,
+.small-header .part3 .circle .user-name {
+  font-size: 15px;
+  color: var(--color-primary);
+  text-transform: none !important;
 }
 
 .header .cartTab,
@@ -301,7 +313,6 @@
   width: 45px;
   height: 45px;
   border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
   color: #fff;
 }
 

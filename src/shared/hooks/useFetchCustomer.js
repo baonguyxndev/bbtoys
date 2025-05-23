@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useFetchCustomer = (customerId) => {
+const useFetchCustomer = (id) => {
   const [customer, setCustomer] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -8,30 +8,32 @@ const useFetchCustomer = (customerId) => {
   useEffect(() => {
     const fetchCustomer = async () => {
       try {
+        setLoading(true);
         const response = await fetch("/assets/data/customers.json");
         if (!response.ok) {
           throw new Error("Failed to fetch customer data");
         }
         const data = await response.json();
-        const foundCustomer = data.find((c) => c.id === parseInt(customerId));
+        const foundCustomer = data.find((c) => c.id === parseInt(id));
 
         if (!foundCustomer) {
-          throw new Error("Không tìm thấy thông tin khách hàng");
+          throw new Error("Customer not found");
         }
 
-        await new Promise((resolve) => setTimeout(resolve, 500));
         setCustomer(foundCustomer);
-        setLoading(false);
-      } catch (error) {
-        setError(error.message);
+        setError(null);
+      } catch (err) {
+        setError(err.message);
+        setCustomer(null);
+      } finally {
         setLoading(false);
       }
     };
 
-    if (customerId) {
+    if (id) {
       fetchCustomer();
     }
-  }, [customerId]);
+  }, [id]);
 
   return { customer, loading, error };
 };

@@ -153,16 +153,37 @@
   transition: all 0.3s ease;
 }
 
-.customer-profile .info-section:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  border-color: var(--color-primary);
+.customer-profile .info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.customer-profile .btn-edit {
+  min-width: 32px !important;
+  width: 32px !important;
+  height: 32px !important;
+  padding: 0 !important;
+  border-radius: 8px !important;
+  background-color: var(--color-background-primary) !important;
+  color: var(--color-text-light) !important;
+  transition: all 0.3s ease !important;
+}
+
+.customer-profile .btn-edit:hover {
+  background-color: var(--color-primary) !important;
+  color: #fff !important;
+  transform: scale(1.05);
+}
+
+.customer-profile .btn-edit svg {
+  font-size: 16px;
 }
 
 .customer-profile .info-label {
   font-size: var(--font-size-small);
   color: var(--color-text-light);
-  margin-bottom: 8px;
   font-weight: 500;
 }
 

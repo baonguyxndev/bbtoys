@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 
-const useFetchCustomerOrders = (customerId) => {
+const useFetchCustomerOrders = (customerId, orderId) => {
   const [orders, setOrders] = useState([]);
+  const [order, setOrder] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -14,11 +15,23 @@ const useFetchCustomerOrders = (customerId) => {
           throw new Error("Không thể tải danh sách đơn hàng");
         }
         const data = await response.json();
-        // Lọc orders theo customerId và chuyển đổi số
-        const customerOrders = data.filter(
-          (order) => order.customerId === Number(customerId)
-        );
-        setOrders(customerOrders);
+
+        if (orderId) {
+          // Nếu có orderId, tìm đơn hàng cụ thể
+          const foundOrder = data.find(
+            (order) => order.id === parseInt(orderId)
+          );
+          if (!foundOrder) {
+            throw new Error("Không tìm thấy đơn hàng");
+          }
+          setOrder(foundOrder);
+        } else if (customerId) {
+          // Nếu có customerId, lọc đơn hàng theo customer
+          const customerOrders = data.filter(
+            (order) => order.customerId === Number(customerId)
+          );
+          setOrders(customerOrders);
+        }
       } catch (err) {
         setError(err.message);
       } finally {
@@ -26,12 +39,12 @@ const useFetchCustomerOrders = (customerId) => {
       }
     };
 
-    if (customerId) {
+    if (customerId || orderId) {
       fetchOrders();
     }
-  }, [customerId]);
+  }, [customerId, orderId]);
 
-  return { orders, loading, error };
+  return { orders, order, loading, error };
 };
 
 export default useFetchCustomerOrders;

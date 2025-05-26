@@ -15,6 +15,8 @@ import MustRead from "./shared/components/MustRead/MustRead";
 import CustomerProfile from "./features/customer/CustomerProfile";
 import Auth from "./features/customer/Auth";
 import { AuthProvider } from "./shared/contexts/AuthContext";
+import OrderDetail from "./features/order/OrderDetail";
+import TicketDetail from "./features/ticket/TicketDetail";
 
 function App() {
   return (
@@ -49,6 +51,12 @@ function App() {
           <Route path="/customer/:id" element={<CustomerProfile />} />
           <Route path="/login" element={<Auth />} />
           <Route path="/register" element={<Auth />} />
+
+          {/*Order*/}
+          <Route path="/order/:id" element={<OrderDetail />} />
+
+          {/*Ticket*/}
+          <Route path="/ticket/:id" element={<TicketDetail />} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
-import { FiUser } from "react-icons/fi";
+import { LuUser, LuUserCog } from "react-icons/lu";
 import { IoBagOutline } from "react-icons/io5";
 import { PiGlobe } from "react-icons/pi";
 import { TbHome } from "react-icons/tb";
@@ -391,15 +391,19 @@ const Header = () => {
                   <Button className="circle">
                     <IoBagOutline />
                   </Button>
-                  <span className="count">0</span>
+                  <span className="cart-count">0</span>
                 </div>
               </div>
-              <Button className="circle ml-3" onClick={handleUserClick}>
-                <FiUser />
-                {currentUser && (
-                  <span className="user-name">{currentUser.firstName}</span>
-                )}
-              </Button>
+              <div className="userTab d-flex align-items-center">
+                <div className="position-relative">
+                  <Button className="circle" onClick={handleUserClick}>
+                    {currentUser ? <LuUserCog /> : <LuUser />}
+                  </Button>
+                  {currentUser && (
+                    <span className="user-name">{currentUser.lastName}</span>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -479,15 +483,19 @@ const Header = () => {
                     <Button className="circle">
                       <IoBagOutline />
                     </Button>
-                    <span className="count">0</span>
+                    <span className="cart-count">0</span>
                   </div>
                 </div>
-                <Button className="circle ml-3" onClick={handleUserClick}>
-                  <FiUser />
-                  {currentUser && (
-                    <span className="user-name">{currentUser.firstName}</span>
-                  )}
-                </Button>
+                <div className="userTab d-flex align-items-center">
+                  <div className="position-relative">
+                    <Button className="circle" onClick={handleUserClick}>
+                      {currentUser ? <LuUserCog /> : <LuUser />}
+                    </Button>
+                    {currentUser && (
+                      <span className="user-name">{currentUser.lastName}</span>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
           </div>

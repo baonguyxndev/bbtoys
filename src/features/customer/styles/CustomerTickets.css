@@ -1,8 +1,11 @@
+@import "../../../shared/styles/variables.css";
+
+/* Layout */
 .customer-tickets {
   padding: 30px;
   background-color: var(--color-background-primary);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: var(--border-primary);
 }
 
 .customer-tickets__title {
@@ -26,6 +29,54 @@
   animation: slideIn 0.3s ease;
 }
 
+.customer-tickets__groups {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.customer-tickets__group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.customer-tickets__group-header {
+  background-color: var(--color-background-secondary);
+  border-radius: 10px;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+}
+
+.customer-tickets__group-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  transition: all 0.3s ease;
+  background-color: var(--color-primary);
+  border-radius: 10px 0 0 10px;
+}
+
+.customer-tickets__group-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  transition: all 0.3s ease;
+  background-color: var(--color-primary);
+  border-radius: 0 10px 10px 0;
+}
+
 .customer-tickets__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -33,6 +84,7 @@
   align-items: start;
 }
 
+/* Card */
 .customer-tickets__card {
   background: var(--color-background-secondary);
   border-radius: 12px;
@@ -57,6 +109,7 @@
   transition: all 0.3s ease;
 }
 
+/* Card Status Colors */
 .customer-tickets__card--processing::before {
   background-color: #3b82f6;
 }
@@ -73,12 +126,7 @@
   background-color: #9ca3af;
 }
 
-.customer-tickets__card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  border-color: var(--color-primary);
-}
-
+/* Header */
 .customer-tickets__header {
   display: flex;
   justify-content: space-between;
@@ -87,40 +135,168 @@
   border-bottom: 1px solid var(--color-line);
 }
 
-.customer-tickets__id {
+.customer-tickets__header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Content */
+.customer-tickets__content {
+  margin: 10px 0;
+}
+
+.customer-tickets__info {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.customer-tickets__info-item {
+  padding: 10px 15px;
+  background-color: var(--color-background-primary);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.customer-tickets__info-label {
+  font-size: var(--font-size-small);
+  color: var(--color-text-light);
+  min-width: 70px;
+}
+
+.customer-tickets__info-value {
+  font-size: var(--font-size-text);
+  color: var(--color-text-primary);
+  font-weight: 500;
+  flex: 1;
+}
+
+/* Order Table */
+.customer-tickets__order {
+  margin-top: 15px;
+  background-color: var(--color-background-primary);
+  border-radius: 10px;
+}
+
+.customer-tickets__table-container {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.customer-tickets__table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-background-primary);
+}
+
+.customer-tickets__table-header {
+  background-color: var(--color-background-secondary);
+}
+
+.customer-tickets__table-cell {
+  padding: 15px 20px;
+  text-align: center;
+  font-weight: bold;
+  background-color: var(--color-background-primary) !important;
+}
+
+/* Table Column Widths */
+.customer-tickets__table-cell--image,
+.customer-tickets__product-cell--image {
+  width: 100px;
+}
+
+.customer-tickets__table-cell--name,
+.customer-tickets__product-cell--name {
+  width: 40%;
+}
+
+.customer-tickets__table-cell--quantity,
+.customer-tickets__table-cell--price,
+.customer-tickets__table-cell--total,
+.customer-tickets__product-cell--quantity,
+.customer-tickets__product-cell--price,
+.customer-tickets__product-cell--total {
+  width: 15%;
+}
+
+/* Table Rows */
+.customer-tickets__product-row {
+  transition: all 0.3s ease;
+}
+
+.customer-tickets__product-cell {
+  padding: 15px 20px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Product Image */
+.customer-tickets__product-image-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: var(--border-primary);
+}
+
+.customer-tickets__product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Product Info */
+.customer-tickets__product-name {
+  font-weight: 500;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-text);
+  line-height: 1.4;
+}
+
+.customer-tickets__product-quantity-value,
+.customer-tickets__product-price-value {
+  font-weight: 500;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-text);
+}
+
+.customer-tickets__product-total-value {
   font-weight: 600;
   color: var(--color-primary);
   font-size: var(--font-size-text);
 }
 
-.customer-tickets__status {
-  font-size: var(--font-size-small);
-  font-weight: 500;
-  color: var(--color-text-light);
-}
-
-.customer-tickets__content {
-  margin: 10px 0;
-}
-
-.customer-tickets__subject {
-  font-weight: 600;
-  color: var(--color-text-primary);
-  font-size: var(--font-size-text);
-  margin-bottom: 6px;
-}
-
-.customer-tickets__message {
-  color: var(--color-text-light);
-  font-size: var(--font-size-small);
-}
-
+/* Footer */
 .customer-tickets__footer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
+  padding: 10px 30px;
   border-top: 1px solid var(--color-line);
+}
+
+.customer-tickets__total-order {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.customer-tickets__total-label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.customer-tickets__total-price {
+  font-weight: bold;
+  color: var(--color-primary);
+  font-size: 25px;
 }
 
 .customer-tickets__date {
@@ -128,29 +304,7 @@
   font-size: var(--font-size-small);
 }
 
-.customer-tickets__empty {
-  text-align: center;
-  padding: 40px;
-  color: var(--color-text-light);
-  font-size: var(--font-size-text);
-  background-color: var(--color-background-secondary);
-  border-radius: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  animation: fadeIn 0.3s ease;
-}
-
-.customer-tickets__error {
-  color: var(--color-primary);
-  text-align: center;
-  font-size: var(--font-size-text);
-  padding: 20px;
-  background-color: rgba(186, 0, 0, 0.1);
-  border-radius: 12px;
-  margin: 20px 0;
-  border: 1px solid var(--color-primary);
-  animation: fadeIn 0.3s ease;
-}
-
+/* Status Badges */
 .customer-tickets__badge {
   display: inline-block;
   padding: 6px 12px;
@@ -164,54 +318,68 @@
   background-color: rgba(59, 130, 246, 0.1);
   color: #3b82f6;
 }
+
 .customer-tickets__badge--completed {
   background-color: rgba(34, 197, 94, 0.1);
   color: #22c55e;
 }
+
 .customer-tickets__badge--refused {
   background-color: rgba(239, 68, 68, 0.1);
   color: #ef4444;
 }
+
 .customer-tickets__badge--sent {
   background-color: rgba(245, 158, 11, 0.1);
   color: #f59e0b;
 }
+
 .customer-tickets__badge--default {
   background-color: rgba(156, 163, 175, 0.1);
   color: #9ca3af;
 }
 
-.customer-tickets__header-right {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+/* Buttons */
+.customer-tickets__view-button {
+  background-color: var(--color-primary) !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  gap: 10px !important;
+  color: var(--color-text-primary) !important;
+  text-transform: none !important;
+  padding: 10px 20px !important;
 }
 
-.customer-tickets__groups {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
+.customer-tickets__view-button:hover {
+  box-shadow: var(--box-shadow-primary);
 }
 
-.customer-tickets__group {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.customer-tickets__group-header {
-  padding: 8px 16px;
-  background-color: var(--color-background-secondary);
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.customer-tickets__group-date {
+/* States */
+.customer-tickets__empty {
+  text-align: center;
+  padding: 40px;
+  color: var(--color-text-light);
   font-size: var(--font-size-text);
-  font-weight: 600;
-  color: var(--color-text-primary);
+  background-color: var(--color-background-secondary);
+  border-radius: 12px;
+  border: var(--border-primary);
+  animation: fadeIn 0.3s ease;
 }
 
+.customer-tickets__error {
+  color: var(--color-primary);
+  text-align: center;
+  font-size: var(--font-size-text);
+  padding: 20px;
+  background-color: rgba(186, 0, 0, 0.1);
+  border-radius: 12px;
+  margin: 20px 0;
+  border: var(--border-primary);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -230,25 +398,4 @@
   to {
     transform: scaleX(1);
   }
-}
-
-.customer-tickets__button {
-  padding: 8px 16px;
-  background-color: var(--color-primary);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: var(--font-size-small);
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.customer-tickets__button:hover {
-  background-color: var(--color-primary-dark);
-  transform: translateY(-2px);
 }

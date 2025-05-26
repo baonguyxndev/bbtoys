@@ -3,8 +3,12 @@ import React, { useState, useEffect, useRef } from "react";
 import { TbPhotoCancel } from "react-icons/tb";
 import { IoIosArrowDown } from "react-icons/io";
 import Loading from "../../shared/components/Loading/Loading";
+import useFetchCustomerTickets from "../../shared/hooks/useFetchCustomerTickets";
+import useFetchCustomerOrders from "../../shared/hooks/useFetchCustomerOrders";
+import { useAuth } from "../../shared/contexts/AuthContext";
 
 const Support = () => {
+  const { currentUser } = useAuth();
   const [formData, setFormData] = useState({
     topic: "",
     subject: "",
@@ -14,14 +18,24 @@ const Support = () => {
   });
 
   const [showTickets, setShowTickets] = useState(false);
-  const [tickets, setTickets] = useState([]);
   const [filePreviewUrls, setFilePreviewUrls] = useState([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [orders, setOrders] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   const fileInputRef = useRef(null);
+
+  // Chỉ fetch dữ liệu khi có user
+  const {
+    tickets,
+    loading: ticketsLoading,
+    error: ticketsError,
+  } = useFetchCustomerTickets(currentUser?.id || null);
+
+  const {
+    orders,
+    loading: ordersLoading,
+    error: ordersError,
+  } = useFetchCustomerOrders(currentUser?.id || null);
 
   useEffect(() => {
     // Cleanup file preview URLs when component unmounts
@@ -29,91 +43,6 @@ const Support = () => {
       filePreviewUrls.forEach((url) => URL.revokeObjectURL(url));
     };
   }, [filePreviewUrls]);
-
-  // Giả lập lấy danh sách đơn hàng từ API
-  useEffect(() => {
-    const fetchOrders = async () => {
-      try {
-        // Thay thế bằng API call thực tế
-        const mockOrders = [
-          {
-            id: "ORD001",
-            date: "2024-03-20",
-            total: "1,500,000đ",
-            items: ["Mô hình Naruto", "Mô hình Sasuke"],
-          },
-          {
-            id: "ORD002",
-            date: "2024-03-15",
-            total: "2,300,000đ",
-            items: ["Mô hình Luffy", "Mô hình Zoro"],
-          },
-          {
-            id: "ORD003",
-            date: "2024-03-10",
-            total: "1,800,000đ",
-            items: ["Mô hình Goku", "Mô hình Vegeta"],
-          },
-        ];
-        setOrders(mockOrders);
-      } catch (error) {
-        console.error("Error fetching orders:", error);
-      }
-    };
-
-    fetchOrders();
-  }, []);
-
-  useEffect(() => {
-    // Mock data cho tickets
-    const mockTickets = [
-      {
-        id: "TK001",
-        date: "2024-03-20",
-        subject: "Vấn đề về đơn hàng ORD001",
-        status: "processing",
-        topic: "Payment & Refund",
-      },
-      {
-        id: "TK002",
-        date: "2024-03-15",
-        subject: "Theo dõi đơn hàng ORD002",
-        status: "completed",
-        topic: "Account & Data safety",
-      },
-      {
-        id: "TK003",
-        date: "2024-03-10",
-        subject: "Theo dõi đơn hàng ORD003",
-        status: "refused",
-        topic: "Shipping",
-      },
-      {
-        id: "TK004",
-        date: "2024-03-20",
-        subject: "Vấn đề về đơn hàng ORD004",
-        status: "wating reply",
-        topic: "Payment & Refund",
-      },
-      {
-        id: "TK005",
-        date: "2024-03-20",
-        subject: "Vấn đề về đơn hàng ORD005",
-        status: "sent",
-        topic: "Payment & Refund",
-      },
-    ];
-    setTickets(mockTickets);
-  }, []);
-
-  useEffect(() => {
-    // Giả lập loading
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -234,7 +163,27 @@ const Support = () => {
     return new Date(dateString).toLocaleDateString("vi-VN", options);
   };
 
-  if (loading) return <Loading />;
+  // Hiển thị loading chỉ khi đang fetch dữ liệu và có user
+  if (currentUser && (ticketsLoading || ordersLoading)) {
+    return (
+      <div className="support">
+        <div className="loading-container">
+          <Loading />
+        </div>
+      </div>
+    );
+  }
+
+  // Hiển thị lỗi nếu có
+  if (ticketsError || ordersError) {
+    return (
+      <div className="support">
+        <div className="error-message">
+          {ticketsError || ordersError || "Có lỗi xảy ra khi tải dữ liệu"}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="support">
@@ -311,11 +260,11 @@ const Support = () => {
                       onChange={handleChange}
                     >
                       <option value="">Select an order</option>
-                      {orders.map((order) => (
+                      {orders?.map((order) => (
                         <option key={order.id} value={order.id}>
-                          {`${order.id} - ${order.date} - ${
-                            order.total
-                          } - ${order.items.join(", ")}`}
+                          {`ORD${order.id} - ${formatDate(
+                            order.createdAt
+                          )} - $${order.totalOrder.toLocaleString()}`}
                         </option>
                       ))}
                     </select>
@@ -326,9 +275,11 @@ const Support = () => {
                       <div className="mt-2 text-muted">
                         Selected order details:
                         {orders
-                          .find((o) => o.id === formData.saleOrder)
-                          ?.items.map((item, index) => (
-                            <div key={index}>• {item}</div>
+                          ?.find((o) => o.id === parseInt(formData.saleOrder))
+                          ?.product?.map((item, index) => (
+                            <div key={index}>
+                              • {item.name || `Product #${item.idProduct}`}
+                            </div>
                           ))}
                       </div>
                     )}
@@ -432,17 +383,17 @@ const Support = () => {
 
               {showTickets && (
                 <div className="tickets-list">
-                  {tickets.map((ticket) => (
+                  {tickets?.map((ticket) => (
                     <div
                       key={ticket.id}
                       className="ticket-item bg-light border rounded-3 p-3 mb-2"
                     >
                       <div className="d-flex justify-content-between align-items-center mb-2">
                         <span className="text-danger fw-semibold">
-                          {ticket.id}
+                          #{ticket.id}
                         </span>
                         <span className="text-muted small">
-                          {formatDate(ticket.date)}
+                          {formatDate(ticket.createdAt)}
                         </span>
                       </div>
                       <div className="fw-medium mb-2">{ticket.subject}</div>

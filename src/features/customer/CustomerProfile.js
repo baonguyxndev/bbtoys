@@ -8,6 +8,7 @@ import CustomerOrders from "./CustomerOrders.js";
 import CustomerWishList from "./CustomerWishList.js";
 import CustomerTikets from "./CustomerTickets.js";
 import { FiLogOut } from "react-icons/fi";
+import { FiEdit2 } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../shared/contexts/AuthContext";
 
@@ -90,7 +91,12 @@ const CustomerProfile = () => {
         <div className="row">
           <div className="col-md-6">
             <div className="info-section">
-              <div className="info-label">Email</div>
+              <div className="info-header">
+                <div className="info-label">Email</div>
+                <Button className="btn-edit">
+                  <FiEdit2 />
+                </Button>
+              </div>
               <div className="info-value">
                 <a
                   href={`mailto:${customer.email}`}
@@ -101,7 +107,12 @@ const CustomerProfile = () => {
               </div>
             </div>
             <div className="info-section">
-              <div className="info-label">Number Phone</div>
+              <div className="info-header">
+                <div className="info-label">Number Phone</div>
+                <Button className="btn-edit">
+                  <FiEdit2 />
+                </Button>
+              </div>
               <div className="info-value">
                 <a
                   href={`tel:${customer.phone}`}
@@ -112,20 +123,35 @@ const CustomerProfile = () => {
               </div>
             </div>
             <div className="info-section">
-              <div className="info-label">Address</div>
+              <div className="info-header">
+                <div className="info-label">Address</div>
+                <Button className="btn-edit">
+                  <FiEdit2 />
+                </Button>
+              </div>
               <div className="info-value">{customer.address}</div>
             </div>
           </div>
 
           <div className="col-md-6">
             <div className="info-section">
-              <div className="info-label">Gender</div>
+              <div className="info-header">
+                <div className="info-label">Gender</div>
+                <Button className="btn-edit">
+                  <FiEdit2 />
+                </Button>
+              </div>
               <div className="info-value">
                 {customer.gender === "male" ? "Male" : "Female"}
               </div>
             </div>
             <div className="info-section">
-              <div className="info-label">Date of Birth</div>
+              <div className="info-header">
+                <div className="info-label">Date of Birth</div>
+                <Button className="btn-edit">
+                  <FiEdit2 />
+                </Button>
+              </div>
               <div className="info-value">
                 {new Date(customer.birthday).toLocaleDateString("vi-VN", {
                   year: "numeric",

@@ -37,33 +37,51 @@ const OrderProduct = ({ item, productDetails }) => {
   const productImage = productDetails?.img?.[0] || defaultImage;
 
   return (
-    <div className="customer-orders__product">
-      <img
-        src={productImage}
-        alt={productName}
-        className="customer-orders__product-image"
-        onError={(e) => {
-          e.target.onerror = null;
-          e.target.src = defaultImage;
-        }}
-      />
-      <div className="customer-orders__product-info">
-        <div className="customer-orders__product-details">
-          <span className="customer-orders__product-name">{productName}</span>
-          <span className="customer-orders__product-quantity">
-            Quantity: {item.quantity || 0}
+    <tr className="customer-orders__product-row">
+      <td className="customer-orders__product-cell customer-orders__product-cell--image">
+        <div className="customer-orders__product-image-container">
+          <img
+            src={productImage}
+            alt={productName}
+            className="customer-orders__product-image"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = defaultImage;
+            }}
+          />
+        </div>
+      </td>
+      <td className="customer-orders__product-cell customer-orders__product-cell--name">
+        <div className="customer-orders__product-name">{productName}</div>
+      </td>
+      <td className="customer-orders__product-cell customer-orders__product-cell--quantity">
+        <div className="customer-orders__product-quantity">
+          <span className="customer-orders__product-quantity-value">
+            {item.quantity || 0}
           </span>
         </div>
-        <span className="customer-orders__product-price">
-          ${(item.totalPrice || 0).toLocaleString()}
-        </span>
-      </div>
-    </div>
+      </td>
+      <td className="customer-orders__product-cell customer-orders__product-cell--price">
+        <div className="customer-orders__product-price">
+          <span className="customer-orders__product-price-value">
+            ${(item.totalPrice / item.quantity || 0).toLocaleString()}
+          </span>
+        </div>
+      </td>
+      <td className="customer-orders__product-cell customer-orders__product-cell--total">
+        <div className="customer-orders__product-total">
+          <span className="customer-orders__product-total-value">
+            ${(item.totalPrice || 0).toLocaleString()}
+          </span>
+        </div>
+      </td>
+    </tr>
   );
 };
 
 const OrderCard = ({ order, getProductDetails }) => {
   const navigate = useNavigate();
+
   return (
     <div
       className={`customer-orders__card customer-orders__card--${
@@ -74,28 +92,54 @@ const OrderCard = ({ order, getProductDetails }) => {
         <div className="customer-orders__header-right">
           <OrderStatus status={order.status} />
         </div>
-        <div className="customer-orders__actions">
+        <div className="customer-orders__left">
           <Button
             className="customer-orders__view-button"
-            onClick={() => navigate(`/orders/${order.id}`)}
+            onClick={() => navigate(`/order/${order.id}`)}
           >
             <FaEye />
             Details
           </Button>
         </div>
       </div>
-      <div className="customer-orders__products">
-        {order.product?.map((item, index) => (
-          <OrderProduct
-            key={index}
-            item={item}
-            productDetails={getProductDetails(item.idProduct)}
-          />
-        ))}
+      <div className="customer-orders__table-container">
+        <table className="customer-orders__table">
+          <thead className="customer-orders__table-header">
+            <tr>
+              <th className="customer-orders__table-cell customer-orders__table-cell--image">
+                Image
+              </th>
+              <th className="customer-orders__table-cell customer-orders__table-cell--name">
+                Product
+              </th>
+              <th className="customer-orders__table-cell customer-orders__table-cell--quantity">
+                Quantity
+              </th>
+              <th className="customer-orders__table-cell customer-orders__table-cell--price">
+                Price
+              </th>
+              <th className="customer-orders__table-cell customer-orders__table-cell--total">
+                Total
+              </th>
+            </tr>
+          </thead>
+          <tbody className="customer-orders__table-body">
+            {order.product?.map((item, index) => (
+              <OrderProduct
+                key={index}
+                item={item}
+                productDetails={getProductDetails(item.idProduct)}
+              />
+            ))}
+          </tbody>
+        </table>
       </div>
+
       <div className="customer-orders__footer">
-        <div className="customer-orders__total-order">
-          <span className="customer-orders__total-text">Total: </span>
+        <div className="customer-orders__total-order-left">
+          <span className="customer-orders__total-label">Total: </span>
+        </div>
+        <div className="customer-orders__total-order-right">
           <span className="customer-order__total-price">
             ${(order.totalOrder || 0).toLocaleString()}
           </span>

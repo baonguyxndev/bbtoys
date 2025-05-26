@@ -41,13 +41,12 @@
   height: auto;
 }
 
-/* Part3 (Right-side icons) - Only in Header */
+/* Part3 (Right-side icons) */
 .header .part3 .circle,
 .small-header .part3 .circle {
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 10px;
   padding: 10px 20px;
   border-radius: 30px;
@@ -67,32 +66,45 @@
   font-size: 22px;
 }
 
-.header .part3 .circle .user-name,
-.small-header .part3 .circle .user-name {
-  font-size: 15px;
-  color: var(--color-primary);
-  text-transform: none !important;
-}
-
+/* Cart and User Tabs */
 .header .cartTab,
-.small-header .cartTab {
+.small-header .cartTab,
+.header .userTab,
+.small-header .userTab {
   margin-left: 16px;
 }
 
-.header .cartTab .count,
-.small-header .cartTab .count {
+/* Badge Styles */
+.header .cartTab .cart-count,
+.small-header .cartTab .cart-count,
+.header .userTab .user-name,
+.small-header .userTab .user-name {
   position: absolute;
   top: -6px;
   right: -4px;
   background-color: #ea2b0f;
   color: #fff;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
+  height: 20px;
+}
+
+/* Cart Badge Specific */
+.header .cartTab .cart-count,
+.small-header .cartTab .cart-count {
+  border-radius: 50%;
+  width: 20px;
+}
+
+/* User Badge Specific */
+.header .userTab .user-name,
+.small-header .userTab .user-name {
+  border-radius: 10px;
+  padding: 0 8px;
+  white-space: nowrap;
+  min-width: 20px;
 }
 
 /* Shared Navigation Styles */

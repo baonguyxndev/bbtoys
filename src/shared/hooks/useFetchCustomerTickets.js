@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 
-const useFetchCustomerTickets = (customerId) => {
+const useFetchCustomerTickets = (customerId, ticketId) => {
   const [tickets, setTickets] = useState([]);
+  const [ticket, setTicket] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -14,11 +15,23 @@ const useFetchCustomerTickets = (customerId) => {
           throw new Error("Không thể tải danh sách ticket");
         }
         const data = await response.json();
-        // Lọc tickets theo customerId và chuyển đổi số
-        const customerTickets = data.filter(
-          (ticket) => ticket.customerId === Number(customerId)
-        );
-        setTickets(customerTickets);
+
+        if (ticketId) {
+          // Nếu có ticketId, tìm ticket cụ thể
+          const foundTicket = data.find(
+            (ticket) => ticket.id === parseInt(ticketId)
+          );
+          if (!foundTicket) {
+            throw new Error("Không tìm thấy ticket");
+          }
+          setTicket(foundTicket);
+        } else if (customerId) {
+          // Nếu có customerId, lọc ticket theo customer
+          const customerTickets = data.filter(
+            (ticket) => ticket.customerId === Number(customerId)
+          );
+          setTickets(customerTickets);
+        }
       } catch (err) {
         setError(err.message);
       } finally {
@@ -26,12 +39,12 @@ const useFetchCustomerTickets = (customerId) => {
       }
     };
 
-    if (customerId) {
+    if (customerId || ticketId) {
       fetchTickets();
     }
-  }, [customerId]);
+  }, [customerId, ticketId]);
 
-  return { tickets, loading, error };
+  return { tickets, ticket, loading, error };
 };
 
 export default useFetchCustomerTickets;

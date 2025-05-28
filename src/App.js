@@ -17,49 +17,56 @@ import Auth from "./features/customer/Auth";
 import { AuthProvider } from "./shared/contexts/AuthContext";
 import OrderDetail from "./features/order/OrderDetail";
 import TicketDetail from "./features/ticket/TicketDetail";
+import Cart from "./features/cart/Cart";
+import { CartProvider } from "./shared/contexts/CartContext";
 
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
-        <ScrollToTop />
-        <ScrollHandler />
-        <Header />
-        <Routes>
-          {/*Home*/}
-          <Route path="/" element={<Home />} />
+      <CartProvider>
+        <BrowserRouter>
+          <ScrollToTop />
+          <ScrollHandler />
+          <Header />
+          <Routes>
+            {/*Home*/}
+            <Route path="/" element={<Home />} />
 
-          {/*Shop*/}
-          <Route path="/shop" element={<Shop />} />
+            {/*Shop*/}
+            <Route path="/shop" element={<Shop />} />
 
-          {/*Product*/}
-          <Route path="/product/:id" element={<ProductDetail />} />
+            {/*Product*/}
+            <Route path="/product/:id" element={<ProductDetail />} />
 
-          {/*Support*/}
-          <Route path="/support" element={<Support />} />
+            {/*Support*/}
+            <Route path="/support" element={<Support />} />
 
-          {/*FAQs*/}
-          <Route path="/faqs" element={<FAQs />} />
+            {/*FAQs*/}
+            <Route path="/faqs" element={<FAQs />} />
 
-          {/*Info*/}
-          <Route path="/info" element={<Info />} />
+            {/*Info*/}
+            <Route path="/info" element={<Info />} />
 
-          {/*MustRead*/}
-          <Route path="/must-read" element={<MustRead />} />
+            {/*MustRead*/}
+            <Route path="/must-read" element={<MustRead />} />
 
-          {/*Customer*/}
-          <Route path="/customer/:id" element={<CustomerProfile />} />
-          <Route path="/login" element={<Auth />} />
-          <Route path="/register" element={<Auth />} />
+            {/*Customer*/}
+            <Route path="/customer/:id" element={<CustomerProfile />} />
+            <Route path="/login" element={<Auth />} />
+            <Route path="/register" element={<Auth />} />
 
-          {/*Order*/}
-          <Route path="/order/:id" element={<OrderDetail />} />
+            {/*Order*/}
+            <Route path="/order/:id" element={<OrderDetail />} />
 
-          {/*Ticket*/}
-          <Route path="/ticket/:id" element={<TicketDetail />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+            {/*Ticket*/}
+            <Route path="/ticket/:id" element={<TicketDetail />} />
+
+            {/*Cart*/}
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </CartProvider>
     </AuthProvider>
   );
 }

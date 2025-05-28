@@ -1,10 +1,6 @@
 @import "../../../shared/styles/variables.css";
 
 /* Base Layout */
-.faqs {
-  padding: 20px 0;
-}
-
 .faqs .title {
   display: flex;
   align-items: center;
@@ -15,7 +11,7 @@
   color: var(--color-text-primary);
 }
 
-.faqs .title h2 {
+.faqs .title h1 {
   display: flex;
   align-items: center;
   width: 100%;

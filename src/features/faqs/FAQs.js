@@ -539,12 +539,12 @@ const FAQs = () => {
 
   return (
     <div className="faqs">
-      <div className="title mt-2">
-        <h2>
+      <div className="title">
+        <h1>
           <div className="line"></div>
           <span className="titleMain">FAQs</span>
           <div className="line"></div>
-        </h2>
+        </h1>
       </div>
       <div className="container-full mx-5">
         <div className="row">

@@ -168,6 +168,13 @@ const CustomerProfile = () => {
 
   return (
     <div className="customer-profile">
+      <div className="title">
+        <h1>
+          <div className="line"></div>
+          <span className="titleMain">Profile</span>
+          <div className="line"></div>
+        </h1>
+      </div>
       <div className="container">
         <div className="profile-tabs">
           <div className="tabs-header">

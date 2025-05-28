@@ -187,12 +187,12 @@ const Support = () => {
 
   return (
     <div className="support">
-      <div className="title mt-2">
-        <h2 className="title">
+      <div className="title">
+        <h1>
           <div className="line"></div>
           <span className="titleMain">Support</span>
           <div className="line"></div>
-        </h2>
+        </h1>
       </div>
       <div className="container">
         <div className="row">
@@ -272,7 +272,7 @@ const Support = () => {
                   </div>
                   <div className="orders-selected">
                     {formData.saleOrder && (
-                      <div className="mt-2 text-muted">
+                      <div className="text-muted">
                         Selected order details:
                         {orders
                           ?.find((o) => o.id === parseInt(formData.saleOrder))

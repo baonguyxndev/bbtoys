@@ -6,17 +6,19 @@ import { flattenProducts } from "../../shared/utils/productUtils";
 import { MdFavoriteBorder, MdShare } from "react-icons/md";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { Button } from "@mui/material";
+import { Button, Snackbar, Alert } from "@mui/material";
 import LatestProducts from "../../shared/components/LatestProducts/LatestProducts";
 import RelatedProducts from "../../shared/components/RelatedProducts/RelatedProducts";
 import MustRead from "../../shared/components/MustRead/MustRead.js";
 import Loading from "../../shared/components/Loading/Loading.js";
 import useNsfwGuard from "../../shared/hooks/useNsfwGuard.js";
 import NsfwWarningOverlay from "../../shared/components/NsfwWarningOverlay/NsfwWarningOverlay.js";
+import { useCart } from "../../shared/contexts/CartContext";
 
 const ProductDetail = () => {
   const { id } = useParams();
   const { products, loading, error } = useFetchProducts();
+  const { addToCart } = useCart();
   const allProducts = useMemo(() => flattenProducts(products), [products]);
   const product = useMemo(
     () => allProducts.find((p) => p.id === id),
@@ -31,6 +33,11 @@ const ProductDetail = () => {
   const [selectedVersion, setSelectedVersion] = useState(null);
   const [selectedDetail, setSelectedDetail] = useState(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [notification, setNotification] = useState({
+    open: false,
+    message: "",
+    severity: "success",
+  });
 
   const { showNsfwWarning, handleEnterNsfw, handleExitNsfw } =
     useNsfwGuard(product);
@@ -188,7 +195,25 @@ const ProductDetail = () => {
     setSelectedVersion(null);
   };
 
-  const handleAddToCart = () => {};
+  const handleAddToCart = () => {
+    if (!selectedDetail) return;
+    addToCart({
+      id: product.id,
+      scale: selectedScale || null,
+      model: selectedModel || null,
+      version: selectedVersion || null,
+      quantity: quantity,
+    });
+    setNotification({
+      open: true,
+      message: "Sản phẩm đã được thêm vào giỏ hàng",
+      severity: "success",
+    });
+  };
+
+  const handleCloseNotification = () => {
+    setNotification((prev) => ({ ...prev, open: false }));
+  };
 
   const handleMouseMove = (e) => {
     const image = e.currentTarget;
@@ -542,7 +567,7 @@ const ProductDetail = () => {
                   onClick={handleAddToCart}
                 >
                   {product.state === "Sold-Out"
-                    ? "Out of Stock"
+                    ? "Contact"
                     : product.state === "Pre-Order"
                     ? "Pre-Order Now"
                     : product.state === "Order"
@@ -572,6 +597,20 @@ const ProductDetail = () => {
       <section className="latest-product-section">
         <LatestProducts />
       </section>
+
+      <Snackbar
+        open={notification.open}
+        autoHideDuration={3000}
+        onClose={handleCloseNotification}
+      >
+        <Alert
+          onClose={handleCloseNotification}
+          severity={notification.severity}
+          sx={{ width: "100%" }}
+        >
+          {notification.message}
+        </Alert>
+      </Snackbar>
     </div>
   );
 };

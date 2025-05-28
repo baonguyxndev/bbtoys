@@ -1,0 +1,48 @@
+{
+  "carts": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "items": [
+        {
+          "idProduct": "OP1",
+          "quantity": 2,
+          "price": 29.99,
+          "totalPrice": 59.98
+        },
+        {
+          "idProduct": "OP3",
+          "quantity": 1,
+          "price": 39.99,
+          "totalPrice": 39.99
+        }
+      ],
+      "totalItems": 3,
+      "totalAmount": 99.97,
+      "createdAt": "2024-03-15T08:30:00Z",
+      "updatedAt": "2024-03-15T08:30:00Z"
+    },
+    {
+      "id": 2,
+      "customerId": 2,
+      "items": [
+        {
+          "idProduct": "DB1",
+          "quantity": 1,
+          "price": 49.99,
+          "totalPrice": 49.99
+        },
+        {
+          "idProduct": "DB2",
+          "quantity": 3,
+          "price": 19.99,
+          "totalPrice": 59.97
+        }
+      ],
+      "totalItems": 4,
+      "totalAmount": 109.96,
+      "createdAt": "2024-03-15T09:15:00Z",
+      "updatedAt": "2024-03-15T09:15:00Z"
+    }
+  ]
+}

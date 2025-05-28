@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 import { LuUser, LuUserCog } from "react-icons/lu";
 import { IoBagOutline } from "react-icons/io5";
@@ -16,9 +16,8 @@ import { IoStorefrontOutline } from "react-icons/io5";
 import { BiSupport } from "react-icons/bi";
 import { IoSearch } from "react-icons/io5";
 import { LuPanelRightClose } from "react-icons/lu";
-import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
-
+import { useCart } from "../../contexts/CartContext";
 const Header = () => {
   const navigate = useNavigate();
   const { currentUser } = useAuth();
@@ -27,6 +26,10 @@ const Header = () => {
   const [isOpenSideBarNav, setIsOpenSideBarNav] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [hoveredImage, setHoveredImage] = useState("");
+  const { cartItems } = useCart();
+
+  // Đếm tổng số lượng sản phẩm trong giỏ hàng
+  const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,6 +59,10 @@ const Header = () => {
     } else {
       navigate("/login");
     }
+  };
+
+  const handleCartClick = () => {
+    navigate("/cart");
   };
 
   const renderSideBarNav = () => (
@@ -388,10 +395,10 @@ const Header = () => {
               </Button>
               <div className="cartTab d-flex align-items-center">
                 <div className="position-relative">
-                  <Button className="circle">
+                  <Button className="circle" onClick={handleCartClick}>
                     <IoBagOutline />
                   </Button>
-                  <span className="cart-count">0</span>
+                  <span className="cart-count">{cartCount}</span>
                 </div>
               </div>
               <div className="userTab d-flex align-items-center">
@@ -480,10 +487,10 @@ const Header = () => {
                 </Button>
                 <div className="cartTab d-flex align-items-center">
                   <div className="position-relative">
-                    <Button className="circle">
+                    <Button className="circle" onClick={handleCartClick}>
                       <IoBagOutline />
                     </Button>
-                    <span className="cart-count">0</span>
+                    <span className="cart-count">{cartCount}</span>
                   </div>
                 </div>
                 <div className="userTab d-flex align-items-center">

@@ -31,7 +31,7 @@ const HomeCategory = () => {
     <div className="homeCategory">
       <div className="container-full">
         {/* Title */}
-        <div className="title mt-2">
+        <div className="title">
           <h2>
             <div className="line"></div>
             <span className="titleMain">Category</span>

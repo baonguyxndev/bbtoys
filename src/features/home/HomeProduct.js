@@ -69,7 +69,7 @@ const HomeProduct = () => {
   return (
     <div className="homeProducts">
       {/* TITLE */}
-      <div className="title mt-2">
+      <div className="title">
         <h2>
           <div className="line"></div>
           <span className="titleMain">Types Of Materials</span>
@@ -188,7 +188,7 @@ const HomeProduct = () => {
         </div>
       </div>
       {/* NEW PRODUCTS */}
-      <div className="title mt-2">
+      <div className="title">
         <h2>
           <div className="line"></div>
           <span className="titleMain">PRODUCTS</span>

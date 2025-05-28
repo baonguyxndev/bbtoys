@@ -35,12 +35,12 @@ const Info = () => {
 
   return (
     <div className="info">
-      <div className="title mt-2">
-        <h2>
+      <div className="title">
+        <h1>
           <div className="line"></div>
           <span className="titleMain">INFO</span>
           <div className="line"></div>
-        </h2>
+        </h1>
       </div>
       <div className="container ">
         <div className="brief-introduction">

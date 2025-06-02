@@ -73,9 +73,7 @@ const Register = ({ onToggle }) => {
 
     setIsLoading(true);
     try {
-      // TODO: Implement your Register API call here
-      await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulated API call
-      console.log("Register successful", formData);
+      await new Promise((resolve) => setTimeout(resolve, 1000));
     } catch (error) {
       console.error("Register failed:", error);
     } finally {
@@ -84,7 +82,6 @@ const Register = ({ onToggle }) => {
   };
 
   const handleSocialRegister = (platform) => {
-    // TODO: Implement social register
     console.log(`Register with ${platform}`);
   };
 

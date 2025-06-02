@@ -22,7 +22,7 @@
     0 0 30px rgba(186, 0, 0, 0.3);
 
   --transition-primary: all 0.3s ease;
-  --transform-hover: scale(1.05);
+  --transform-hover: translateY(-3px);
   --transfrom-active: scale(0.95);
 
   /* Border */

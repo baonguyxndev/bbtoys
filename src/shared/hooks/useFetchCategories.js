@@ -10,11 +10,9 @@ const useFetchCategories = () => {
       try {
         const response = await fetch("/assets/data/categories.json");
         const data = await response.json();
-        console.log("Categories data:", data);
         setCategories(data);
         setLoading(false);
       } catch (error) {
-        console.error("Error fetching categories:", error);
         setError("Error fetching categories");
         setLoading(false);
       }

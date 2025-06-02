@@ -41,14 +41,12 @@
 .customer-profile .profile-tabs {
   background-color: var(--color-background-secondary);
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: var(--border-primary);
 }
 
 .customer-profile .tabs-header {
   display: flex;
-  background-color: var(--color-background-primary);
   border-bottom: 1px solid var(--color-line);
   padding: 0;
   justify-content: center;
@@ -94,7 +92,6 @@
 
 /* Profile Card Styles */
 .customer-profile .profile-card {
-  background-color: var(--color-background-primary);
   padding: 30px;
   border: 1px solid rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
@@ -146,7 +143,16 @@
   font-weight: 500;
 }
 
-.customer-profile .profile-header-wrapper .profile-header-right .btn-logout {
+.customer-profile .profile-header-wrapper .profile-header-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0px 20px;
+}
+
+.customer-profile .profile-header-wrapper .profile-header-right .btn-logout,
+.customer-profile .profile-header-wrapper .profile-header-right .btn-edit {
   font-size: 15px;
   background-color: var(--color-primary) !important;
   border-radius: 10px !important;
@@ -160,7 +166,11 @@
 .customer-profile
   .profile-header-wrapper
   .profile-header-right
-  .btn-logout:hover {
+  .btn-logout:hover,
+.customer-profile
+  .profile-header-wrapper
+  .profile-header-right
+  .btn-edit:hover {
   box-shadow: var(--box-shadow-primary);
 }
 
@@ -172,7 +182,7 @@
 .customer-profile .info-section {
   margin-bottom: 20px;
   padding: 20px;
-  background-color: var(--color-background-secondary);
+  background-color: #444;
   border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
@@ -183,27 +193,6 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 8px;
-}
-
-.customer-profile .btn-edit {
-  min-width: 32px !important;
-  width: 32px !important;
-  height: 32px !important;
-  padding: 0 !important;
-  border-radius: 8px !important;
-  background-color: var(--color-background-primary) !important;
-  color: var(--color-text-light) !important;
-  transition: all 0.3s ease !important;
-}
-
-.customer-profile .btn-edit:hover {
-  background-color: var(--color-primary) !important;
-  color: #fff !important;
-  transform: scale(1.05);
-}
-
-.customer-profile .btn-edit svg {
-  font-size: 16px;
 }
 
 .customer-profile .info-label {

@@ -7,11 +7,11 @@ import { FaFacebookF } from "react-icons/fa";
 import { useState } from "react";
 import { CircularProgress } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../shared/contexts/AuthContext";
+import { useUserSessionManager } from "../../shared/state/userSessionManager";
 
 const Login = ({ onToggle }) => {
   const navigate = useNavigate();
-  const { login } = useAuth();
+  const login = useUserSessionManager((state) => state.login);
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -74,7 +74,7 @@ const Login = ({ onToggle }) => {
       );
 
       if (user) {
-        login(user);
+        await login(user);
         navigate(`/customer/${user.id}`);
       } else {
         setErrors({

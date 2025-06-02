@@ -7,6 +7,10 @@ const useFetchCustomerOrders = (customerId, orderId) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    if (!customerId && !orderId) {
+      setLoading(false);
+      return;
+    }
     const fetchOrders = async () => {
       try {
         setLoading(true);

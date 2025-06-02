@@ -3,9 +3,6 @@
 /* Layout */
 .customer-tickets {
   padding: 30px;
-  background-color: var(--color-background-primary);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  border: var(--border-primary);
 }
 
 .customer-tickets__title {
@@ -42,7 +39,7 @@
 }
 
 .customer-tickets__group-header {
-  background-color: var(--color-background-secondary);
+  background-color: #444;
   border-radius: 10px;
   padding: 10px 0px;
   display: flex;
@@ -86,7 +83,7 @@
 
 /* Card */
 .customer-tickets__card {
-  background: var(--color-background-secondary);
+  background: #444;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -155,7 +152,7 @@
 
 .customer-tickets__info-item {
   padding: 10px 15px;
-  background-color: var(--color-background-primary);
+  background-color: #333;
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.05);
   display: flex;
@@ -179,31 +176,23 @@
 /* Order Table */
 .customer-tickets__order {
   margin-top: 15px;
-  background-color: var(--color-background-primary);
   border-radius: 10px;
-}
-
-.customer-tickets__table-container {
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
+  background-color: #333;
   overflow: hidden;
 }
 
 .customer-tickets__table {
   width: 100%;
   border-collapse: collapse;
-  background-color: var(--color-background-primary);
-}
-
-.customer-tickets__table-header {
-  background-color: var(--color-background-secondary);
+  background-color: #333;
 }
 
 .customer-tickets__table-cell {
   padding: 15px 20px;
   text-align: center;
   font-weight: bold;
-  background-color: var(--color-background-primary) !important;
+  background-color: #333;
+  border-bottom: 1px solid var(--color-line);
 }
 
 /* Table Column Widths */

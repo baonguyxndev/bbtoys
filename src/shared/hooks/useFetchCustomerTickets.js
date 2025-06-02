@@ -7,6 +7,10 @@ const useFetchCustomerTickets = (customerId, ticketId) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    if (!customerId && !ticketId) {
+      setLoading(false);
+      return;
+    }
     const fetchTickets = async () => {
       try {
         setLoading(true);

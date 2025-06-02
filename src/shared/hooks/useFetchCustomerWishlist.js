@@ -6,6 +6,10 @@ const useFetchCustomerWishlist = (customerId) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    if (!customerId) {
+      setLoading(false);
+      return;
+    }
     const fetchWishlist = async () => {
       try {
         setLoading(true);

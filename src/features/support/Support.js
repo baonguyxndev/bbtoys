@@ -5,10 +5,10 @@ import { IoIosArrowDown } from "react-icons/io";
 import Loading from "../../shared/components/Loading/Loading";
 import useFetchCustomerTickets from "../../shared/hooks/useFetchCustomerTickets";
 import useFetchCustomerOrders from "../../shared/hooks/useFetchCustomerOrders";
-import { useAuth } from "../../shared/contexts/AuthContext";
+import { useUserSessionManager } from "../../shared/state/userSessionManager";
 
 const Support = () => {
-  const { currentUser } = useAuth();
+  const currentUser = useUserSessionManager((state) => state.currentUser);
   const [formData, setFormData] = useState({
     topic: "",
     subject: "",

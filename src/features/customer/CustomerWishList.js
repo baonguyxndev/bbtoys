@@ -4,13 +4,16 @@ import useFetchProducts from "../../shared/hooks/useFetchProducts";
 import React from "react";
 import Loading from "../../shared/components/Loading/Loading.js";
 import ProductItem from "../../shared/components/ProductItem/ProductItem";
+import { useUserSessionManager } from "../../shared/state/userSessionManager";
 
-const CustomerWishList = ({ id }) => {
+const CustomerWishList = () => {
+  const currentUser = useUserSessionManager((state) => state.currentUser);
+  const customerId = currentUser?.id;
   const {
     wishlist,
     loading: wishlistLoading,
     error: wishlistError,
-  } = useFetchCustomerWishlist(id);
+  } = useFetchCustomerWishlist(customerId);
   const {
     getProductById,
     loading: productsLoading,

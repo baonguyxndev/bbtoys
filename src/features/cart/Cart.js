@@ -1,23 +1,19 @@
-import React, { useState } from "react";
-import { useAuth } from "../../shared/contexts/AuthContext";
+import React from "react";
+import { useUserSessionManager } from "../../shared/state/userSessionManager";
 import useFetchCustomer from "../../shared/hooks/useFetchCustomer";
 import useFetchProducts from "../../shared/hooks/useFetchProducts";
-import { useCart } from "../../shared/contexts/CartContext";
+import { useShoppingCartHandler } from "../../shared/state/shoppingCartHandler";
 import Loading from "../../shared/components/Loading/Loading";
 import { useNavigate } from "react-router-dom";
 import "./styles/Cart.css";
-import { Button, Snackbar, Alert } from "@mui/material";
+import { Button } from "@mui/material";
 import { IoBagRemoveOutline } from "react-icons/io5";
 
 const Cart = () => {
-  const { currentUser } = useAuth();
+  const currentUser = useUserSessionManager((state) => state.currentUser);
   const navigate = useNavigate();
-  const { cartItems, updateQuantity, removeFromCart } = useCart();
-  const [notification, setNotification] = useState({
-    open: false,
-    message: "",
-    severity: "success",
-  });
+  const { cartItems, updateQuantity, removeFromCart } =
+    useShoppingCartHandler();
 
   // Get customer info from current user
   const customerId = currentUser?.id;
@@ -50,25 +46,11 @@ const Cart = () => {
         item.version,
         newQuantity
       );
-      setNotification({
-        open: true,
-        message: "Cart updated successfully",
-        severity: "success",
-      });
     }
   };
 
   const handleRemoveItem = (item) => {
     removeFromCart(item.id, item.scale, item.model, item.version);
-    setNotification({
-      open: true,
-      message: "Item removed from cart",
-      severity: "info",
-    });
-  };
-
-  const handleCloseNotification = () => {
-    setNotification((prev) => ({ ...prev, open: false }));
   };
 
   if (!currentUser) {
@@ -217,25 +199,16 @@ const Cart = () => {
               <span>Grand total:</span>
               <span className="grand-total">${grandTotal.toFixed(2)}</span>
             </div>
-            <Button className="checkout-btn" fullWidth>
+            <Button
+              className="checkout-btn"
+              fullWidth
+              onClick={() => navigate("/checkout")}
+            >
               Proceed To Checkout →
             </Button>
           </div>
         </div>
       </div>
-      <Snackbar
-        open={notification.open}
-        autoHideDuration={3000}
-        onClose={handleCloseNotification}
-      >
-        <Alert
-          onClose={handleCloseNotification}
-          severity={notification.severity}
-          sx={{ width: "100%" }}
-        >
-          {notification.message}
-        </Alert>
-      </Snackbar>
     </div>
   );
 };

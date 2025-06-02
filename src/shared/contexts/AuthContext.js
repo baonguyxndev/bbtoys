@@ -1,29 +1,30 @@
-import React, { createContext, useState, useContext } from "react";
-
-const AuthContext = createContext(null);
+import { useState, useEffect } from "react";
 
 export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
 
+  useEffect(() => {
+    try {
+      const userId = sessionStorage.getItem("userId");
+      if (userId) setCurrentUser({ id: userId });
+    } catch (error) {
+      setCurrentUser(null);
+    }
+  }, []);
+
   const login = (user) => {
     setCurrentUser(user);
+    try {
+      sessionStorage.setItem("userId", user.id);
+    } catch {}
   };
 
   const logout = () => {
     setCurrentUser(null);
+    try {
+      sessionStorage.removeItem("userId");
+    } catch {}
   };
 
-  return (
-    <AuthContext.Provider value={{ currentUser, login, logout }}>
-      {children}
-    </AuthContext.Provider>
-  );
-};
-
-export const useAuth = () => {
-  const context = useContext(AuthContext);
-  if (!context) {
-    throw new Error("useAuth must be used within an AuthProvider");
-  }
-  return context;
+  // ...return Provider như cũ
 };

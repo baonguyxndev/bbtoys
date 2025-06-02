@@ -13,11 +13,9 @@ const useFetchStudio = () => {
           throw new Error("Failed to fetch materials");
         }
         const data = await response.json();
-        console.log("Studioes data:", data);
         setStudioes(data);
         setLoading(false);
       } catch (error) {
-        console.error("Error fetching studioes:", error);
         setError("Error fetching studioes");
         setLoading(false);
       }

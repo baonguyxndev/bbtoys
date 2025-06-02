@@ -2,9 +2,6 @@
 
 .customer-wishlist {
   padding: 30px;
-  background-color: var(--color-background-primary);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .customer-wishlist__title {

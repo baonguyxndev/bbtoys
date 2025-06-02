@@ -6,6 +6,7 @@ import useFetchProducts from "../../shared/hooks/useFetchProducts";
 import Loading from "../../shared/components/Loading/Loading.js";
 import { FaEye } from "react-icons/fa";
 import { Button } from "@mui/material";
+import { useUserSessionManager } from "../../shared/state/userSessionManager";
 
 const OrderStatus = ({ status }) => {
   const statusConfig = {
@@ -168,12 +169,14 @@ const OrderGroup = ({ date, orders, getProductDetails }) => {
   );
 };
 
-const CustomerOrders = ({ id }) => {
+const CustomerOrders = () => {
+  const currentUser = useUserSessionManager((state) => state.currentUser);
+  const customerId = currentUser?.id;
   const {
     orders,
     loading: ordersLoading,
     error: ordersError,
-  } = useFetchCustomerOrders(id);
+  } = useFetchCustomerOrders(customerId);
   const {
     getProductById,
     loading: productsLoading,

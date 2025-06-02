@@ -1,0 +1,180 @@
+@import "../../../../shared/styles/variables.css";
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #333;
+  padding: 40px 30px;
+  border-radius: 10px;
+  width: 100%;
+  border: var(--border-primary);
+}
+
+.payment-title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.payment-methods-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: stretch;
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+.payment-method-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #444;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 18px 0 12px 0;
+  min-width: 110px;
+  min-height: 100px;
+  width: 100%;
+  max-width: 140px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  outline: none;
+}
+
+.payment-method-btn.selected {
+  box-shadow: var(--box-shadow-primary);
+}
+
+.payment-method-btn:hover {
+  box-shadow: var(--box-shadow-primary);
+}
+
+.payment-method-btn svg,
+.payment-method-btn span[style] {
+  font-size: 2.2rem !important;
+  margin-bottom: 4px;
+}
+
+.payment-method-label {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 2px;
+  text-align: center;
+  transition: color 0.2s;
+}
+
+.payment-card-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 18px 0 0 0;
+}
+
+.payment-row {
+  display: flex;
+  gap: 12px;
+}
+
+.payment-input {
+  flex: 1;
+  padding: 14px;
+  background: #222;
+  border-radius: 8px;
+  border: 2px solid #444;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.payment-input:focus {
+  border-color: #ba0000;
+  box-shadow: 0 0 8px rgba(186, 0, 0, 0.15);
+}
+
+.payment-info-box {
+  background: #222;
+  color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 18px 0 0 0;
+  font-size: 1rem;
+  text-align: center;
+  border: 1px solid #444;
+}
+
+.payment-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.btn-back {
+  flex: 1;
+  padding: 14px;
+  border: 2px solid #ba0000 !important;
+  color: #ba0000 !important;
+  border-radius: 12px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  background: transparent !important;
+}
+
+.btn-back:hover {
+  background-color: rgba(186, 0, 0, 0.1) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(186, 0, 0, 0.2);
+}
+
+.btn-continue {
+  flex: 1;
+  padding: 14px;
+  background: linear-gradient(45deg, #ba0000, #ff0000) !important;
+  color: #fff !important;
+  border-radius: 12px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border: none !important;
+}
+
+.btn-continue:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(186, 0, 0, 0.3);
+  background: linear-gradient(45deg, #ff0000, #ba0000) !important;
+}
+
+@media (max-width: 1100px) {
+  .payment-methods-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .payment-methods-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .payment-method-btn {
+    min-width: 90px;
+    min-height: 80px;
+    max-width: 120px;
+    padding: 12px 0 8px 0;
+  }
+  .payment-method-label {
+    font-size: 0.92rem;
+  }
+}

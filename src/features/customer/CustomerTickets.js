@@ -7,6 +7,7 @@ import Loading from "../../shared/components/Loading/Loading.js";
 import { Button } from "@mui/material";
 import { FaEye } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { useUserSessionManager } from "../../shared/state/userSessionManager";
 
 const statusConfig = {
   processing: { text: "Processing", color: "processing" },
@@ -181,12 +182,14 @@ const TicketGroup = ({ date, tickets, getProductDetails }) => {
   );
 };
 
-const CustomerTickets = ({ id }) => {
+const CustomerTickets = () => {
+  const currentUser = useUserSessionManager((state) => state.currentUser);
+  const customerId = currentUser?.id;
   const {
     tickets,
     loading: ticketsLoading,
     error: ticketsError,
-  } = useFetchCustomerTickets(id);
+  } = useFetchCustomerTickets(customerId);
   const {
     getProductById,
     loading: productsLoading,

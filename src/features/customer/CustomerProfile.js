@@ -10,10 +10,10 @@ import CustomerTikets from "./CustomerTickets.js";
 import { FiLogOut } from "react-icons/fi";
 import { FiEdit2 } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../shared/contexts/AuthContext";
+import { useUserSessionManager } from "../../shared/state/userSessionManager";
 
 const CustomerProfile = () => {
-  const { logout } = useAuth();
+  const logout = useUserSessionManager((state) => state.logout);
   const navigate = useNavigate();
   const { id } = useParams();
   const [activeTab, setActiveTab] = useState("profile");
@@ -81,6 +81,9 @@ const CustomerProfile = () => {
           </div>
         </div>
         <div className="profile-header-right">
+          <Button className="btn-edit" onClick={handleLogout}>
+            Edit <FiEdit2 />
+          </Button>
           <Button className="btn-logout" onClick={handleLogout}>
             Log Out <FiLogOut />
           </Button>
@@ -93,9 +96,6 @@ const CustomerProfile = () => {
             <div className="info-section">
               <div className="info-header">
                 <div className="info-label">Email</div>
-                <Button className="btn-edit">
-                  <FiEdit2 />
-                </Button>
               </div>
               <div className="info-value">
                 <a
@@ -109,9 +109,6 @@ const CustomerProfile = () => {
             <div className="info-section">
               <div className="info-header">
                 <div className="info-label">Number Phone</div>
-                <Button className="btn-edit">
-                  <FiEdit2 />
-                </Button>
               </div>
               <div className="info-value">
                 <a
@@ -125,9 +122,6 @@ const CustomerProfile = () => {
             <div className="info-section">
               <div className="info-header">
                 <div className="info-label">Address</div>
-                <Button className="btn-edit">
-                  <FiEdit2 />
-                </Button>
               </div>
               <div className="info-value">{customer.address}</div>
             </div>
@@ -137,9 +131,6 @@ const CustomerProfile = () => {
             <div className="info-section">
               <div className="info-header">
                 <div className="info-label">Gender</div>
-                <Button className="btn-edit">
-                  <FiEdit2 />
-                </Button>
               </div>
               <div className="info-value">
                 {customer.gender === "male" ? "Male" : "Female"}
@@ -148,9 +139,6 @@ const CustomerProfile = () => {
             <div className="info-section">
               <div className="info-header">
                 <div className="info-label">Date of Birth</div>
-                <Button className="btn-edit">
-                  <FiEdit2 />
-                </Button>
               </div>
               <div className="info-value">
                 {new Date(customer.birthday).toLocaleDateString("vi-VN", {
@@ -210,11 +198,11 @@ const CustomerProfile = () => {
             </Button>
           </div>
 
-          <div className="tab-content">
+          <div className="tabs-content">
             {activeTab === "profile" && renderProfileTab()}
-            {activeTab === "orders" && <CustomerOrders id={id} />}
-            {activeTab === "wishlist" && <CustomerWishList id={id} />}
-            {activeTab === "tickets" && <CustomerTikets id={id} />}
+            {activeTab === "orders" && <CustomerOrders />}
+            {activeTab === "wishlist" && <CustomerWishList />}
+            {activeTab === "tickets" && <CustomerTikets />}
           </div>
         </div>
       </div>

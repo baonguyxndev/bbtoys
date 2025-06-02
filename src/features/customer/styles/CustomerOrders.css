@@ -3,7 +3,7 @@
 /* Layout */
 .customer-orders {
   padding: 30px;
-  background-color: var(--color-background-primary);
+  background-color: var(--color-background-secondary);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -21,7 +21,7 @@
 }
 
 .customer-orders__group-header {
-  background-color: var(--color-background-secondary);
+  background-color: #444;
   border-radius: 10px;
   padding: 10px 0px;
   display: flex;
@@ -93,7 +93,7 @@
 
 /* Card */
 .customer-orders__card {
-  background: var(--color-background-secondary);
+  background: #444;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -178,7 +178,7 @@
 .customer-orders__table {
   width: 100%;
   border-collapse: collapse;
-  background-color: var(--color-background-primary);
+  background-color: #333;
 }
 
 .customer-orders__table-header {
@@ -189,8 +189,7 @@
   padding: 15px 20px;
   text-align: center;
   font-weight: bold;
-  border-bottom: var(--border-primary) !important;
-  background-color: var(--color-background-primary) !important;
+  border-bottom: 1px solid var(--color-line) !important;
 }
 
 /* Table Column Widths */
@@ -272,7 +271,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: var(--color-background-secondary);
   border-top: 1px solid var(--color-line);
 }
 

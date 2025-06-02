@@ -16,17 +16,18 @@ import { IoStorefrontOutline } from "react-icons/io5";
 import { BiSupport } from "react-icons/bi";
 import { IoSearch } from "react-icons/io5";
 import { LuPanelRightClose } from "react-icons/lu";
-import { useAuth } from "../../contexts/AuthContext";
-import { useCart } from "../../contexts/CartContext";
+import { useUserSessionManager } from "../../state/userSessionManager";
+import { useShoppingCartHandler } from "../../state/shoppingCartHandler";
+
 const Header = () => {
   const navigate = useNavigate();
-  const { currentUser } = useAuth();
+  const currentUser = useUserSessionManager((state) => state.currentUser);
+  const cartItems = useShoppingCartHandler((state) => state.cartItems);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showSmallHeader, setShowSmallHeader] = useState(false);
   const [isOpenSideBarNav, setIsOpenSideBarNav] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [hoveredImage, setHoveredImage] = useState("");
-  const { cartItems } = useCart();
 
   // Đếm tổng số lượng sản phẩm trong giỏ hàng
   const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);

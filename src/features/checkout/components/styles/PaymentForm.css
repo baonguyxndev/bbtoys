@@ -158,6 +158,21 @@
   background: linear-gradient(45deg, #ff0000, #ba0000) !important;
 }
 
+.payment-card-box .payment-input[name="number"] {
+  font-family: inherit;
+  letter-spacing: normal;
+  font-size: 1rem;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.error-message {
+  color: #ff5252;
+  font-size: 0.95em;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+
 @media (max-width: 1100px) {
   .payment-methods-row {
     grid-template-columns: repeat(3, 1fr);

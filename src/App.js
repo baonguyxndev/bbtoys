@@ -21,6 +21,7 @@ import { useUserSessionManager } from "./shared/state/userSessionManager";
 import { useShoppingCartHandler } from "./shared/state/shoppingCartHandler";
 import MainLayout from "./layouts/MainLayout";
 import CheckoutLayout from "./layouts/CheckoutLayout";
+import { NotificationProvider } from "./shared/context/NotificationContext";
 
 function AppContent() {
   const initializeAuth = useUserSessionManager((state) => state.initialize);
@@ -64,9 +65,11 @@ function AppContent() {
 
 function App() {
   return (
-    <BrowserRouter>
-      <AppContent />
-    </BrowserRouter>
+    <NotificationProvider>
+      <BrowserRouter>
+        <AppContent />
+      </BrowserRouter>
+    </NotificationProvider>
   );
 }
 

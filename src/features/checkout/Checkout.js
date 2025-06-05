@@ -8,11 +8,14 @@ import PaymentForm from "./components/PaymentForm";
 import ConfirmInfo from "./components/ConfirmInfo";
 import PaymentResult from "./components/PaymentResult";
 import { FaCheck } from "react-icons/fa";
+import { useNotification } from "../../shared/context/NotificationContext";
 import "./styles/Checkout.css";
 
 const steps = ["Customer", "Shipping", "Payment", "Confirm"];
 
 const Checkout = () => {
+  const { showNotification } = useNotification();
+
   // Cart logic
   const { cartItems } = useShoppingCartHandler();
   const { getProductById } = useFetchProducts();
@@ -37,6 +40,33 @@ const Checkout = () => {
     setFormData({ ...formData, ...data });
     setActiveStep((prev) => prev + 1);
     window.scrollTo(0, 0);
+
+    // Show notifications for each step
+    const stepMessages = {
+      0: {
+        message: "Customer information updated successfully!",
+        severity: "success",
+      },
+      1: {
+        message: "Shipping information updated successfully!",
+        severity: "success",
+      },
+      2: {
+        message: "Payment information updated successfully!",
+        severity: "success",
+      },
+      3: {
+        message: "Order confirmed successfully!",
+        severity: "success",
+      },
+    };
+
+    if (stepMessages[activeStep]) {
+      showNotification(
+        stepMessages[activeStep].message,
+        stepMessages[activeStep].severity
+      );
+    }
   };
   const handleBack = () => {
     setActiveStep((prev) => prev - 1);

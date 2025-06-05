@@ -14,6 +14,7 @@ import Loading from "../../shared/components/Loading/Loading.js";
 import useNsfwGuard from "../../shared/hooks/useNsfwGuard.js";
 import NsfwWarningOverlay from "../../shared/components/NsfwWarningOverlay/NsfwWarningOverlay.js";
 import { useShoppingCartHandler } from "../../shared/state/shoppingCartHandler";
+import { useNotification } from "../../shared/context/NotificationContext";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -36,6 +37,8 @@ const ProductDetail = () => {
 
   const { showNsfwWarning, handleEnterNsfw, handleExitNsfw } =
     useNsfwGuard(product);
+
+  const { showNotification } = useNotification();
 
   // Xử lý các lựa chọn sản phẩm
   const productOptions = useMemo(() => {
@@ -192,13 +195,54 @@ const ProductDetail = () => {
 
   const handleAddToCart = () => {
     if (!selectedDetail) return;
-    addToCart({
-      id: product.id,
-      scale: selectedScale || null,
-      model: selectedModel || null,
-      version: selectedVersion || null,
-      quantity: quantity,
-    });
+
+    const productState = product.state?.toLowerCase();
+    let message = "";
+    let severity = "success";
+
+    switch (productState) {
+      case "available":
+        addToCart({
+          id: product.id,
+          scale: selectedScale || null,
+          model: selectedModel || null,
+          version: selectedVersion || null,
+          quantity: quantity,
+        });
+        message = "Product added to cart successfully!";
+        break;
+      case "sold out":
+        message = "Please contact us for more information!";
+        severity = "warning";
+        break;
+      case "pre-order":
+        addToCart({
+          id: product.id,
+          scale: selectedScale || null,
+          model: selectedModel || null,
+          version: selectedVersion || null,
+          quantity: quantity,
+          type: "pre-order",
+        });
+        message = "Product added to pre-order list!";
+        break;
+      case "order":
+        addToCart({
+          id: product.id,
+          scale: selectedScale || null,
+          model: selectedModel || null,
+          version: selectedVersion || null,
+          quantity: quantity,
+          type: "order",
+        });
+        message = "Product added to order list!";
+        break;
+      default:
+        message = "An error occurred!";
+        severity = "error";
+    }
+
+    showNotification(message, severity);
   };
 
   const handleMouseMove = (e) => {
@@ -210,13 +254,27 @@ const ProductDetail = () => {
     image.style.setProperty("--mouse-y", `${y}%`);
   };
 
+  const getButtonText = () => {
+    const productState = product.state?.toLowerCase();
+    switch (productState) {
+      case "available":
+        return "Add to Cart";
+      case "sold out":
+        return "Please contact us for more information!";
+      case "pre-order":
+        return "Pre-Order Now";
+      case "order":
+        return "Order Now";
+      default:
+        return "Add to Cart";
+    }
+  };
+
   if (loading) return <Loading />;
   if (error) return <div className="error-state">{error}</div>;
   if (!product)
     return (
-      <div className="not-found-state">
-        Không tìm thấy sản phẩm với ID: {id}
-      </div>
+      <div className="not-found-state">Product not found with ID: {id}</div>
     );
 
   if (showNsfwWarning) {
@@ -546,19 +604,12 @@ const ProductDetail = () => {
 
               <div className="product-actions">
                 <Button
-                  className={`add-to-cart-btn ${
-                    product.state === "Sold-Out" ? "disabled" : ""
-                  }`}
-                  disabled={product.state === "Sold-Out"}
+                  variant="contained"
+                  color="primary"
                   onClick={handleAddToCart}
+                  className="add-to-cart-btn"
                 >
-                  {product.state === "Sold-Out"
-                    ? "Contact"
-                    : product.state === "Pre-Order"
-                    ? "Pre-Order Now"
-                    : product.state === "Order"
-                    ? "Order Now"
-                    : "Add to Cart"}
+                  {getButtonText()}
                 </Button>
                 <Button className="wishlist-btn">
                   <MdFavoriteBorder />

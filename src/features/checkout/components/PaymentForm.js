@@ -65,19 +65,105 @@ const PaymentForm = ({ onBack, onNext, defaultValues }) => {
         ? `${defaultValues.firstName} ${defaultValues.lastName}`
         : "",
   });
+  const [paypalEmail, setPaypalEmail] = useState("");
+  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
-    setCard({ ...card, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    if (name === "number") {
+      // Only allow digits while typing
+      let digits = value.replace(/\D/g, "");
+      setCard({ ...card, [name]: digits });
+      if (errors.number) setErrors((prev) => ({ ...prev, number: "" }));
+    } else {
+      setCard({ ...card, [name]: value });
+      if (errors[name]) setErrors((prev) => ({ ...prev, [name]: "" }));
+    }
+  };
+
+  const handleCardNumberBlur = () => {
+    // Format as 4-digit groups on blur
+    let formatted = card.number.replace(/(.{4})/g, "$1 ").trim();
+    setCard((prev) => ({ ...prev, number: formatted }));
+  };
+
+  const handlePaypalChange = (e) => {
+    setPaypalEmail(e.target.value);
+    if (errors.paypalEmail) {
+      setErrors((prev) => ({ ...prev, paypalEmail: "" }));
+    }
   };
 
   const handleMethod = (id) => {
     setMethod(id);
+    setErrors({});
+  };
+
+  // Validate cho thẻ
+  const validateCard = () => {
+    const newErrors = {};
+    // Remove all non-digits for card number
+    const numberNoSpace = card.number.replace(/\D/g, "");
+    // Card number: 16 digits, Luhn check
+    if (!/^\d{16}$/.test(numberNoSpace) || !luhnCheck(numberNoSpace)) {
+      newErrors.number = "Card number must be 16 digits and valid";
+    }
+    // Name: allow letters (with accents) and spaces
+    if (!/^[a-zA-ZÀ-ỹà-ỹ\s]+$/.test(card.name.trim()) || !card.name.trim()) {
+      newErrors.name = "Name is required and must be letters only";
+    }
+    // Expiry: MM/YY, not expired
+    if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(card.expiry)) {
+      newErrors.expiry = "Expiry must be MM/YY";
+    } else if (isExpired(card.expiry)) {
+      newErrors.expiry = "Card is expired";
+    }
+    // CVV: 3 or 4 digits
+    if (!/^\d{3,4}$/.test(card.cvv)) {
+      newErrors.cvv = "CVV must be 3 or 4 digits";
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  function luhnCheck(number) {
+    let arr = (number + "")
+      .split("")
+      .reverse()
+      .map((x) => parseInt(x));
+    let sum = arr.reduce(
+      (acc, val, idx) =>
+        idx % 2 ? acc + ((val *= 2) > 9 ? val - 9 : val) : acc + val,
+      0
+    );
+    return sum % 10 === 0;
+  }
+
+  function isExpired(expiry) {
+    const [mm, yy] = expiry.split("/");
+    const expDate = new Date(`20${yy}`, parseInt(mm), 0); // last day of month
+    const now = new Date();
+    expDate.setHours(23, 59, 59, 999);
+    return expDate < now;
+  }
+
+  // Validate cho PayPal
+  const validatePaypal = () => {
+    const newErrors = {};
+    if (!paypalEmail.trim()) {
+      newErrors.paypalEmail = "Email là bắt buộc";
+    } else if (!/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(paypalEmail)) {
+      newErrors.paypalEmail = "Email không hợp lệ";
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     let nextData = {};
     if (isCard) {
+      if (!validateCard()) return;
       nextData = {
         paymentMethod: "card",
         cardInfo: {
@@ -86,6 +172,12 @@ const PaymentForm = ({ onBack, onNext, defaultValues }) => {
           expiry: card.expiry,
           name: card.name,
         },
+      };
+    } else if (method === "paypal") {
+      if (!validatePaypal()) return;
+      nextData = {
+        paymentMethod: "paypal",
+        paypalEmail,
       };
     } else {
       nextData = {
@@ -97,6 +189,49 @@ const PaymentForm = ({ onBack, onNext, defaultValues }) => {
 
   // Card methods
   const isCard = ["visa", "mastercard"].includes(method);
+
+  // Hàm render card mô phỏng
+  const renderVirtualCard = () => (
+    <div className="payment-card">
+      <div
+        className={`virtual-card ${
+          method === "mastercard" ? "mastercard" : ""
+        }`}
+      >
+        <div className="card-top-row">
+          <span className="card-label">Credit Card</span>
+          <span className="bank-name">Bank Name</span>
+        </div>
+        <div className="card-chip-row">
+          <div className="card-chip"></div>
+        </div>
+        <div className="card-number-row">
+          <span className="card-number">
+            {card.number
+              ? card.number.replace(/(\d{4})(?=\d)/g, "$1 ").trim()
+              : "xxxx xxxx xxxx xxxx"}
+          </span>
+        </div>
+        <div className="card-bottom-row">
+          <div className="card-holder-block">
+            <span className="card-holder-label">Name</span>
+            <span className="card-holder">{card.name || "Your Name"}</span>
+          </div>
+          <div className="card-expiry-block">
+            <span className="valid-thru">VALID THRU</span>
+            <span className="expiry-date">{card.expiry || "MM/YY"}</span>
+          </div>
+          <div className="card-logo">
+            {method === "visa" ? (
+              <span className="visa-logo">VISA</span>
+            ) : method === "mastercard" ? (
+              <span className="mastercard-logo">MASTERCARD</span>
+            ) : null}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <form className="payment-form" onSubmit={handleSubmit}>
@@ -118,46 +253,68 @@ const PaymentForm = ({ onBack, onNext, defaultValues }) => {
         ))}
       </div>
       {isCard && (
-        <div className="payment-card-box">
-          <input
-            className="payment-input"
-            name="number"
-            placeholder="Card number"
-            value={card.number}
-            onChange={handleChange}
-            required
-          />
-          <div className="payment-row">
+        <>
+          {renderVirtualCard()}
+          <div className="payment-card-box">
             <input
-              className="payment-input"
-              name="expiry"
-              placeholder="Expiration (MM/YY)"
-              value={card.expiry}
+              className={`payment-input${errors.number ? " error" : ""}`}
+              name="number"
+              placeholder="Card number"
+              value={card.number}
+              onChange={handleChange}
+              onBlur={handleCardNumberBlur}
+              maxLength={19}
+              required
+            />
+            {errors.number && (
+              <div className="error-message">{errors.number}</div>
+            )}
+            <div className="payment-row">
+              <input
+                className={`payment-input${errors.expiry ? " error" : ""}`}
+                name="expiry"
+                placeholder="Expiration (MM/YY)"
+                value={card.expiry}
+                onChange={handleChange}
+                maxLength={5}
+                required
+              />
+              {errors.expiry && (
+                <div className="error-message">{errors.expiry}</div>
+              )}
+              <input
+                className={`payment-input${errors.cvv ? " error" : ""}`}
+                name="cvv"
+                placeholder="CVV"
+                value={card.cvv}
+                onChange={handleChange}
+                maxLength={4}
+                required
+              />
+              {errors.cvv && <div className="error-message">{errors.cvv}</div>}
+            </div>
+            <input
+              className={`payment-input${errors.name ? " error" : ""}`}
+              name="name"
+              placeholder="Name on card"
+              value={card.name}
               onChange={handleChange}
               required
             />
-            <input
-              className="payment-input"
-              name="cvv"
-              placeholder="CVV"
-              value={card.cvv}
-              onChange={handleChange}
-              required
-            />
+            {errors.name && <div className="error-message">{errors.name}</div>}
           </div>
-          <input
-            className="payment-input"
-            name="name"
-            placeholder="Name on card"
-            value={card.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
+        </>
       )}
       {method === "paypal" && (
-        <div className="payment-info-box">
-          You will be redirected to PayPal to complete your payment.
+        <div className="payment-card-box">
+          <input
+            className={`payment-input${errors.paypalEmail ? " error" : ""}`}
+            name="paypalEmail"
+            placeholder={errors.paypalEmail || "PayPal Email"}
+            value={paypalEmail}
+            onChange={handlePaypalChange}
+            required
+          />
         </div>
       )}
       {method === "applepay" && (

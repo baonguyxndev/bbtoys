@@ -1,145 +1,231 @@
 import React from "react";
+import { FaCheck } from "react-icons/fa";
 import QR from "../../../shared/components/SVG/PaymentMethod/QR";
 import Paypal from "../../../shared/components/SVG/PaymentMethod/Paypal";
 import ApplePay from "../../../shared/components/SVG/PaymentMethod/ApplePay";
 import GooglePay from "../../../shared/components/SVG/PaymentMethod/GooglePay";
 import WechatPay from "../../../shared/components/SVG/PaymentMethod/WechatPay";
-import { FaCcVisa, FaCcMastercard, FaMoneyBillWave } from "react-icons/fa";
+import { FaMoneyBillWave } from "react-icons/fa";
 import { Button } from "@mui/material";
 import "./styles/PaymentResult.css";
+import { useNavigate } from "react-router-dom";
+import { useShoppingCartHandler } from "../../../shared/state/shoppingCartHandler";
 
-const PaymentResult = ({ formData = {}, onBack }) => {
+const PaymentResult = ({ formData = {} }) => {
   const paymentMethod = formData.paymentMethod;
   const cardInfo = formData.cardInfo || {};
+  const navigate = useNavigate();
+  const { clearCart } = useShoppingCartHandler();
 
+  const handleConfirmPayment = () => {
+    clearCart();
+    navigate("/");
+  };
+
+  // Render QR Payment Method
+  const renderQRPayment = () => (
+    <div className="payment-qr">
+      <h3>QR Code Payment</h3>
+      <div className="qr-container">
+        <QR size={220} />
+        <div className="qr-actions">
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => navigator.clipboard.writeText("QR_CODE_DATA")}
+          >
+            Copy QR Code
+          </Button>
+          <Button variant="outlined" color="primary">
+            Download QR
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+
+  // Render PayPal Payment Method
+  const renderPayPalPayment = () => (
+    <div className="payment-paypal">
+      <h3>PayPal Payment</h3>
+      <div className="payment-button paypal large">
+        <Paypal className="payment-icon" />
+        <span>Continue with PayPal</span>
+      </div>
+    </div>
+  );
+
+  // Render Apple Pay Method
+  const renderApplePay = () => (
+    <div className="payment-applepay">
+      <h3>Apple Pay</h3>
+      <div className="payment-button apple large">
+        <ApplePay className="payment-icon" />
+        <span>Continue with Apple Pay</span>
+      </div>
+    </div>
+  );
+
+  // Render Google Pay Method
+  const renderGooglePay = () => (
+    <div className="payment-googlepay">
+      <h3>Google Pay</h3>
+      <div className="payment-button google large">
+        <GooglePay className="payment-icon" />
+        <span>Continue with Google Pay</span>
+      </div>
+    </div>
+  );
+
+  // Render WeChat Pay Method
+  const renderWeChatPay = () => (
+    <div className="payment-wechatpay">
+      <h3>WeChat Pay</h3>
+      <div className="payment-button wechat large">
+        <WechatPay className="payment-icon" />
+        <span>Continue with WeChat Pay</span>
+      </div>
+    </div>
+  );
+
+  // Render Card Payment Method
+  const renderCardPayment = () => (
+    <div className="payment-card">
+      <h3>Card Payment</h3>
+      <div
+        className={`virtual-card ${
+          cardInfo.type === "mastercard" ? "mastercard" : ""
+        }`}
+      >
+        <div className="card-top-row">
+          <span className="card-label">Credit Card</span>
+          <span className="bank-name">{cardInfo.bank || "Bank Name"}</span>
+        </div>
+        <div className="card-chip-row">
+          <div className="card-chip"></div>
+        </div>
+        <div className="card-number-row">
+          <span className="card-number">
+            {cardInfo.number
+              ? cardInfo.number.replace(/(\d{4})(?=\d)/g, "$1 ").trim()
+              : "1234 5678 9012 3456"}
+          </span>
+        </div>
+        <div className="card-bottom-row">
+          <div className="card-holder-block">
+            <span className="card-holder-label">Name</span>
+            <span className="card-holder">
+              {cardInfo.name || "Name Surname"}
+            </span>
+          </div>
+          <div className="card-expiry-block">
+            <span className="valid-thru">VALID THRU</span>
+            <span className="expiry-date">{cardInfo.expiry || "01/80"}</span>
+          </div>
+          <div className="card-logo">
+            {cardInfo.type === "visa" ? (
+              <span className="visa-logo">VISA</span>
+            ) : (
+              <span className="mastercard-logo">MASTERCARD</span>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  // Render COD Payment Method
+  const renderCODPayment = () => (
+    <div className="payment-cod">
+      <h3>Cash on Delivery</h3>
+      <div className="cod-icon-box">
+        <FaMoneyBillWave className="cod-icon" />
+      </div>
+    </div>
+  );
+
+  // Render Payment Method based on type
   const renderPaymentMethod = () => {
     switch (paymentMethod) {
       case "qr":
-        return (
-          <div className="payment-qr">
-            <h3>Scan QR Code to Pay</h3>
-            <div className="qr-container">
-              <QR size={220} />
-              <div className="qr-actions">
-                <Button
-                  variant="contained"
-                  color="primary"
-                  onClick={() => navigator.clipboard.writeText("QR_CODE_DATA")}
-                >
-                  Copy QR Code
-                </Button>
-                <Button
-                  variant="outlined"
-                  color="primary"
-                  style={{ marginLeft: 8 }}
-                >
-                  Download QR
-                </Button>
-              </div>
-              <p className="qr-instruction">
-                Please scan the QR code with your banking app to complete the
-                payment.
-              </p>
-            </div>
-          </div>
-        );
+        return renderQRPayment();
       case "paypal":
-        return (
-          <div className="payment-paypal">
-            <h3>Pay with PayPal</h3>
-            <div className="payment-button paypal large">
-              <Paypal className="payment-icon" />
-              <span>Proceed to PayPal</span>
-            </div>
-            <p className="payment-note">
-              You will be redirected to PayPal to complete your payment.
-            </p>
-          </div>
-        );
+        return renderPayPalPayment();
       case "applepay":
-        return (
-          <div className="payment-applepay">
-            <h3>Pay with Apple Pay</h3>
-            <div className="payment-button apple large">
-              <ApplePay className="payment-icon" />
-              <span>Proceed with Apple Pay</span>
-            </div>
-            <p className="payment-note">
-              Fast checkout with Apple Pay on supported devices.
-            </p>
-          </div>
-        );
+        return renderApplePay();
       case "googlepay":
-        return (
-          <div className="payment-googlepay">
-            <h3>Pay with Google Pay</h3>
-            <div className="payment-button google large">
-              <GooglePay className="payment-icon" />
-              <span>Proceed with Google Pay</span>
-            </div>
-            <p className="payment-note">
-              Fast checkout with Google Pay on supported devices.
-            </p>
-          </div>
-        );
+        return renderGooglePay();
       case "wechatpay":
-        return (
-          <div className="payment-wechatpay">
-            <h3>Pay with WeChat Pay</h3>
-            <div className="payment-button wechat large">
-              <WechatPay className="payment-icon" />
-              <span>Proceed with WeChat Pay</span>
-            </div>
-            <p className="payment-note">
-              Scan the QR code or open WeChat app to pay.
-            </p>
-          </div>
-        );
+        return renderWeChatPay();
       case "card":
-        return (
-          <div className="payment-card">
-            <h3>Payment Card Information</h3>
-            <div className="virtual-card modern">
-              <div className="card-header">
-                {cardInfo.type === "visa" ? (
-                  <FaCcVisa className="card-type-icon visa" />
-                ) : (
-                  <FaCcMastercard className="card-type-icon mastercard" />
-                )}
-              </div>
-              <div className="card-number">{cardInfo.number}</div>
-              <div className="card-details">
-                <div className="card-name">
-                  <span>Card Holder</span>
-                  <p>{cardInfo.name}</p>
-                </div>
-                <div className="card-expiry">
-                  <span>Expires</span>
-                  <p>{cardInfo.expiry}</p>
-                </div>
-              </div>
-            </div>
-            <p className="payment-note">
-              Your card will be charged after order confirmation.
-            </p>
-          </div>
-        );
+        return renderCardPayment();
       case "cod":
-        return (
-          <div className="payment-cod">
-            <h3>Cash on Delivery</h3>
-            <div className="cod-icon-box">
-              <FaMoneyBillWave className="cod-icon" />
-            </div>
-            <p className="payment-note">
-              Please prepare the exact amount. You will pay when you receive
-              your order.
-            </p>
-          </div>
-        );
+        return renderCODPayment();
       default:
-        return <div className="payment-unknown">Unknown payment method</div>;
+        return <div className="payment-unknown">Invalid payment method</div>;
     }
+  };
+
+  // Render Payment Instructions based on method
+  const renderPaymentInstructions = (method) => {
+    const instructions = {
+      qr: [
+        "Scan the QR code using your banking app",
+        "Verify the amount and recipient information before payment",
+        "Payment will be processed within 15 minutes",
+        "You will receive a confirmation email after successful payment",
+      ],
+      paypal: [
+        "You will be redirected to the PayPal payment page",
+        "Log in to your PayPal account",
+        "Confirm the amount and payment details",
+        "Click 'Pay' to complete the transaction",
+      ],
+      applepay: [
+        "Authenticate using Face ID or Touch ID",
+        "Verify your saved card information",
+        "Confirm the payment amount",
+        "Wait for transaction confirmation",
+      ],
+      googlepay: [
+        "Authenticate using password or fingerprint",
+        "Verify your saved card information",
+        "Confirm the payment amount",
+        "Wait for transaction confirmation",
+      ],
+      wechatpay: [
+        "Open the WeChat Pay app",
+        "Scan QR code or enter payment code",
+        "Confirm the amount and payment details",
+        "Enter WeChat Pay password to complete",
+      ],
+      card: [
+        "Your card will be charged after order confirmation",
+        "Ensure sufficient card balance",
+        "Check transaction confirmation email",
+        "Keep the payment receipt",
+      ],
+      cod: [
+        "Prepare the exact payment amount",
+        "Verify the order before payment",
+        "Request receipt from the delivery person",
+        "Pay in cash upon delivery",
+      ],
+    };
+
+    return (
+      <ul>
+        {(
+          instructions[method] || [
+            "Please complete your payment within 15 minutes",
+            "Your order will be processed after successful payment",
+            "You will receive a confirmation email after payment",
+          ]
+        ).map((instruction, index) => (
+          <li key={index}>{instruction}</li>
+        ))}
+      </ul>
+    );
   };
 
   return (
@@ -147,16 +233,15 @@ const PaymentResult = ({ formData = {}, onBack }) => {
       <div className="payment-result-content">
         {renderPaymentMethod()}
         <div className="payment-instructions">
-          <h4>Payment Instructions</h4>
-          <ul>
-            <li>Please complete your payment within 15 minutes</li>
-            <li>Your order will be processed after successful payment</li>
-            <li>You will receive a confirmation email after payment</li>
-          </ul>
+          {renderPaymentInstructions(paymentMethod)}
         </div>
         <div className="payment-actions">
-          <Button variant="outlined" onClick={onBack} className="back-button">
-            Back
+          <Button
+            onClick={handleConfirmPayment}
+            className="confirm-button"
+            startIcon={<FaCheck />}
+          >
+            Confirm Payment
           </Button>
         </div>
       </div>

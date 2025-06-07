@@ -46,18 +46,18 @@
 
 /* Sidebar */
 .shop .sidebar {
-  background-color: #121212;
+  background-color: #111;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
+  transition: var(--transition-primary);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 /* Sidebar sections */
 .sidebar-section {
   padding: 15px;
-  border-bottom: 1px solid #333;
+  border-bottom: var(--border);
   width: 100%;
   flex: 1;
   display: flex;
@@ -240,16 +240,18 @@
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  margin: 10px 0;
-  border-radius: 6px;
-  transition: all 0.3s ease;
+  margin: 20px 0;
+  border-radius: 10px;
+  transition: var(--transition-primary);
   position: relative;
-  background-color: #1a1a1a;
-  border: 1px solid #333;
+  background-color: var(--color-background-secondary);
+  border: var(--border);
 }
 
 .category-item:hover {
   box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
+  background-color: var(--color-primary);
 }
 
 .category-checkbox {
@@ -295,18 +297,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   margin-right: 8px;
-  color: #666;
   cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 4px;
+  transition: var(--transition-primary);
+  border-radius: 10px;
 }
 
 .expand-icon:hover {
-  color: #ba0000;
-  background-color: rgba(186, 0, 0, 0.1);
+  transform: scale(1.1);
 }
 
 .subcategory-list {
@@ -409,17 +409,20 @@
 .clear-filters {
   background: none;
   border: none;
-  color: var(--color-primary);
+  color: #888;
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
-  padding: 0;
+  padding: 5px 10px;
   transition: var(--transition-primary);
+  border-radius: 10px;
 }
 
 .clear-filters:hover {
-  transform: scale(1.2);
-  color: #ff4d4f;
+  transform: var(--transform-hover);
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
+  box-shadow: var(--box-shadow-primary);
 }
 
 .selected-categories {
@@ -447,139 +450,25 @@
 }
 
 .selected-category button {
-  background: none;
-  border: none;
-  color: var(--color-primary);
-  font-size: 20px;
-  padding: 0;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 20px;
+  padding: 5px 10px;
   width: 20px;
   height: 20px;
-  transition: all 0.3s ease;
+  transition: var(--transition-primary);
+  border-radius: 5px;
 }
 
 .selected-category button:hover {
-  color: #ff4d4f;
-  transform: var(--transform-hover);
-}
-
-/* Product Grid */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  padding: 0;
-}
-
-/* Product Item */
-.product-item {
-  border-radius: 12px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-}
-
-.product-item:hover {
-  transform: translateY(-5px);
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
   box-shadow: var(--box-shadow-primary);
-}
-
-/* Product Image Container */
-.product-image-container {
-  position: relative;
-  width: 100%;
-  padding-top: 100%; /* Tạo container hình vuông */
-  overflow: hidden;
-}
-
-.product-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* Giữ tỷ lệ ảnh */
-  padding: 10px;
-}
-
-/* Product Content */
-.product-content {
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  gap: 10px;
-  background-color: #333;
-}
-
-.product-title {
-  font-size: 15px;
-  font-weight: 500;
-  color: #fff;
-  margin: 0;
-  line-height: 1.4;
-  max-height: 2.8em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  line-clamp: 2;
-}
-
-.product-brand {
-  font-size: 15px;
-  color: #ccc;
-  margin: 0;
-}
-
-.product-price {
-  font-size: 15px;
-  font-weight: 600;
-  color: #1890ff;
-  margin: 0;
-  margin-top: auto;
-}
-
-/* Pagination */
-.pagination {
-  margin-top: 30px;
-}
-
-.pagination .page-link {
-  color: #333;
-  border: none;
-  padding: 8px 16px;
-  margin: 0 4px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-.pagination .page-item.active .page-link {
-  background-color: #333;
-  color: white;
-}
-
-.pagination .page-item.disabled .page-link {
-  color: #999;
-  pointer-events: none;
-  background: none;
-}
-
-.pagination .page-link:hover:not(.disabled) {
-  background-color: #f5f5f5;
-  color: #333;
-}
-
-/* Loading Spinner */
-.spinner-border {
-  width: 50px;
-  height: 50px;
-  color: #333;
 }
 
 /* No Results Message */
@@ -755,15 +644,21 @@
 
 /* Customize pagination buttons */
 .MuiPaginationItem-root {
-  color: #fff !important;
-  border-color: #333 !important;
+  color: var(--color-text-primary) !important;
+  border: var(--border) !important;
 }
 
 .MuiPaginationItem-root.Mui-selected {
-  background-color: #ba0000 !important;
-  border-color: #ba0000 !important;
+  background-color: var(--color-primary) !important;
+  box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-active);
+  border-color: var(--color-primary) !important;
 }
 
 .MuiPaginationItem-root:hover {
-  background-color: rgba(186, 0, 0, 0.2) !important;
+  background-color: var(--color-primary) !important;
+  color: var(--color-text-primary) !important;
+  box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
+  border-color: var(--color-primary) !important;
 }

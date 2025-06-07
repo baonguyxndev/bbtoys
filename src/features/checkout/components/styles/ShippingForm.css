@@ -123,6 +123,7 @@
 
 .btn-continue:hover {
   box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
 }
 
 .delivery-methods-row {
@@ -154,6 +155,7 @@
 
 .delivery-method-btn:hover {
   transform: var(--transform-hover);
+  box-shadow: var(--box-shadow-primary);
 }
 
 .delivery-method-label {

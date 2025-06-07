@@ -56,9 +56,8 @@
 
 .header .part3 .circle:hover,
 .small-header .part3 .circle:hover {
-  box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
-    0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
-  transform: scale(1.05);
+  box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
 }
 
 .header .part3 .circle svg,
@@ -138,9 +137,8 @@
 
 .header .part2 .navPart2 ul li a:hover,
 .small-header .part2 .navPart2 ul li a:hover {
-  box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
-    0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
-  transform: scale(1.1);
+  box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
 }
 
 .header .part2 .navPart2 ul li a:active,
@@ -267,9 +265,8 @@
 
 .header .allCateTab:hover,
 .small-header .allCateTab:hover {
-  box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
-    0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
-  transform: scale(1.05);
+  box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
 }
 
 .header .allCateTab svg,
@@ -356,9 +353,8 @@
 }
 
 .close-btn:hover {
-  box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
-    0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
-  transform: scale(1.05);
+  box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
 }
 
 .allCateTab:active,

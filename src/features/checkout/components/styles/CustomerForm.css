@@ -91,6 +91,7 @@
 
 .btn-continue:hover {
   box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
 }
 
 @media (max-width: 600px) {

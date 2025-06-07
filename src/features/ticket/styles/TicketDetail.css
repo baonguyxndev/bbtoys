@@ -154,6 +154,7 @@
 
 .ticket-detail__button--primary:hover {
   box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
 }
 
 .ticket-detail__button--secondary {
@@ -164,7 +165,7 @@
 
 .ticket-detail__button--secondary:hover {
   background-color: var(--color-background-secondary);
-  transform: translateY(-2px);
+  transform: var(--transform-hover);
 }
 
 .ticket-detail__actions {
@@ -204,7 +205,8 @@
 }
 
 .ticket-detail__product-row:hover {
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: var(--color-background-secondary);
+  transform: var(--transform-hover);
 }
 
 .ticket-detail__product-cell {

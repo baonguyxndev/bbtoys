@@ -143,6 +143,7 @@
 
 .checkout .cart-summary-heading .edit-cart-btn:hover {
   box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
 }
 
 .checkout .cart-summary-item-list {

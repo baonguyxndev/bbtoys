@@ -342,6 +342,7 @@
 
 .customer-tickets__view-button:hover {
   box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
 }
 
 /* States */

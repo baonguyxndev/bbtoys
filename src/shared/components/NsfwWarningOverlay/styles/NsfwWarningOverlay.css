@@ -93,6 +93,7 @@
 
 .nsfw-warning-actions button:active {
   transform: var(--transfrom-active);
+  box-shadow: var(--box-shadow-primary);
 }
 
 @keyframes fadeIn {

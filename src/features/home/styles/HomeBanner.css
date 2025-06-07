@@ -89,7 +89,7 @@
 
 .homeBannerSection .swiper-button-prev:hover,
 .homeBannerSection .swiper-button-next:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 .homeBannerSection .swiper-button-prev::after,

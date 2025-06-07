@@ -32,8 +32,9 @@
 .info .tabs {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  padding: 20px 0;
+  gap: 30px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .info .tab {
@@ -54,14 +55,13 @@
 }
 
 .info .tab:hover {
-  box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
-    0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
+  box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
 }
 
 .info .tab.active {
-  box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
-    0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
-  transform: scale(0.9);
+  box-shadow: var(--box-shadow-primary);
+  transform: var(--transfrom-active);
 }
 
 .info .tab-content {
@@ -158,9 +158,8 @@
 }
 
 .info .media-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  border-color: #ba0000;
+  box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
 }
 
 .info .media-item .icon {
@@ -172,7 +171,7 @@
 }
 
 .info .media-item:hover .icon {
-  transform: scale(1.1);
+  transform: var(--transform-hover);
 }
 
 .info .media-item .mailIcon {

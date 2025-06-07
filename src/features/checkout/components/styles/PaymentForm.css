@@ -56,6 +56,7 @@
 
 .payment-method-btn:hover {
   box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
 }
 
 .payment-method-btn svg,
@@ -135,8 +136,8 @@
 
 .btn-back:hover {
   background-color: rgba(186, 0, 0, 0.1) !important;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(186, 0, 0, 0.2);
+  transform: var(--transform-hover);
+  box-shadow: var(--box-shadow-primary);
 }
 
 .btn-continue {
@@ -153,9 +154,9 @@
 }
 
 .btn-continue:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(186, 0, 0, 0.3);
-  background: linear-gradient(45deg, #ff0000, #ba0000) !important;
+  transform: var(--transform-hover);
+  box-shadow: var(--box-shadow-primary);
+  background-color: var(--color-primary) !important;
 }
 
 .payment-card-box .payment-input[name="number"] {

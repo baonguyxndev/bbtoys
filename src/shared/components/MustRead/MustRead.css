@@ -47,9 +47,9 @@
 }
 
 .must-read .tab:hover {
-  background-color: #333;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(186, 0, 0, 0.2);
+  background-color: var(--color-primary);
+  transform: var(--transform-hover);
+  box-shadow: var(--box-shadow-primary);
 }
 
 .must-read .tab.active {

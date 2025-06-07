@@ -120,6 +120,7 @@
 
 .notification-close:hover {
   background: var(--color-primary) !important;
+  transform: var(--transform-hover);
 }
 
 .notification-progress {

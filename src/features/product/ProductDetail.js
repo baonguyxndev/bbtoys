@@ -15,6 +15,7 @@ import useNsfwGuard from "../../shared/hooks/useNsfwGuard.js";
 import NsfwWarningOverlay from "../../shared/components/NsfwWarningOverlay/NsfwWarningOverlay.js";
 import { useShoppingCartHandler } from "../../shared/state/shoppingCartHandler";
 import { useNotification } from "../../shared/context/NotificationContext";
+import { IoClose } from "react-icons/io5";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -297,10 +298,17 @@ const ProductDetail = () => {
               <span
                 className={`status-tag ${product.state
                   ?.toLowerCase()
-                  .replace(/[- ]/g, "")}`}
+                  .replace("-", "")
+                  .replace(" ", "")}`}
               >
-                {product.state}
-              </span>
+                {product.state === "Available"
+                  ? "【AVAILABLE】"
+                  : product.state === "Order"
+                  ? "【ORDER】"
+                  : product.state === "Pre-Order"
+                  ? "【PRE-ORDER】"
+                  : "【SOLD-OUT】"}
+              </span>{" "}
             </div>
           </div>
         </div>
@@ -349,14 +357,13 @@ const ProductDetail = () => {
                 </div>
               </div>
               <div className="options-wrap">
-                <div className="line"></div>
                 {productOptions.hasMultipleScales &&
                   productOptions.scales.length > 0 && (
                     <div className="option-group">
                       <label>Scale</label>
                       <div className="scale-options">
                         {productOptions.scales.map((scale) => (
-                          <button
+                          <Button
                             key={scale}
                             className={`scale-option ${
                               selectedScale === scale ? "selected" : ""
@@ -364,7 +371,7 @@ const ProductDetail = () => {
                             onClick={() => handleScaleChange(scale)}
                           >
                             {scale}
-                          </button>
+                          </Button>
                         ))}
                       </div>
                     </div>
@@ -376,7 +383,7 @@ const ProductDetail = () => {
                       <label>Model</label>
                       <div className="model-options">
                         {productOptions.availableModels.map((model) => (
-                          <button
+                          <Button
                             key={model}
                             className={`model-option ${
                               selectedModel === model ? "selected" : ""
@@ -384,7 +391,7 @@ const ProductDetail = () => {
                             onClick={() => handleModelChange(model)}
                           >
                             {model}
-                          </button>
+                          </Button>
                         ))}
                       </div>
                     </div>
@@ -396,7 +403,7 @@ const ProductDetail = () => {
                       <label>Version</label>
                       <div className="version-options">
                         {productOptions.availableVersions.map((version) => (
-                          <button
+                          <Button
                             key={version}
                             className={`version-option ${
                               selectedVersion === version ? "selected" : ""
@@ -404,7 +411,7 @@ const ProductDetail = () => {
                             onClick={() => setSelectedVersion(version)}
                           >
                             {version}
-                          </button>
+                          </Button>
                         ))}
                       </div>
                     </div>
@@ -428,16 +435,18 @@ const ProductDetail = () => {
                 src={product.img?.[selectedImage] || ""}
                 alt={product.name}
               />
-              <button
+              <Button
                 className="fullscreen-close"
                 onClick={() => setIsFullscreen(false)}
-              ></button>
-              <button className="fullscreen-nav prev" onClick={handlePrevImage}>
+              >
+                <IoClose />
+              </Button>
+              <Button className="fullscreen-nav prev" onClick={handlePrevImage}>
                 <IoIosArrowBack />
-              </button>
-              <button className="fullscreen-nav next" onClick={handleNextImage}>
+              </Button>
+              <Button className="fullscreen-nav next" onClick={handleNextImage}>
                 <IoIosArrowForward />
-              </button>
+              </Button>
               <div className="fullscreen-counter">
                 {selectedImage + 1} / {product.img?.length}
               </div>
@@ -585,30 +594,25 @@ const ProductDetail = () => {
 
               <div className="quantity-section">
                 <div className="quantity-controls">
-                  <button
+                  <Button
                     className="quantity-btn"
                     onClick={() => handleQuantityChange(-1)}
                     disabled={quantity <= 1}
                   >
                     <AiOutlineMinus />
-                  </button>
+                  </Button>
                   <span className="quantity-value">{quantity}</span>
-                  <button
+                  <Button
                     className="quantity-btn"
                     onClick={() => handleQuantityChange(1)}
                   >
                     <AiOutlinePlus />
-                  </button>
+                  </Button>
                 </div>
               </div>
 
-              <div className="product-actions">
-                <Button
-                  variant="contained"
-                  color="primary"
-                  onClick={handleAddToCart}
-                  className="add-to-cart-btn"
-                >
+              <div className="action-buttons">
+                <Button onClick={handleAddToCart} className="add-to-cart-btn">
                   {getButtonText()}
                 </Button>
                 <Button className="wishlist-btn">

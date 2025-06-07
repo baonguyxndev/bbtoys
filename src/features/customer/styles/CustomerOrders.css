@@ -299,6 +299,7 @@
 
 .customer-orders__view-button:hover {
   box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
 }
 
 /* Status Badges */
@@ -312,8 +313,8 @@
 }
 
 .customer-orders__badge:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: var(--transform-hover);
+  box-shadow: var(--box-shadow-primary);
 }
 
 /* Status Badge Colors */

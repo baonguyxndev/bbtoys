@@ -74,6 +74,7 @@
 .customer-profile .tab-button:hover {
   color: var(--color-primary);
   background-color: rgba(186, 0, 0, 0.05);
+  transform: var(--transform-hover);
 }
 
 .customer-profile .tab-button.active {
@@ -409,7 +410,7 @@
 
 .customer-profile .wishlist-product:hover {
   background-color: rgba(186, 0, 0, 0.05);
-  transform: translateX(5px);
+  transform: var(--transform-hover);
   border-color: var(--color-primary);
 }
 
@@ -424,8 +425,8 @@
 }
 
 .customer-profile .badge:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: var(--transform-hover);
+  box-shadow: var(--box-shadow-primary);
 }
 
 .customer-profile .badge.bg-processing {

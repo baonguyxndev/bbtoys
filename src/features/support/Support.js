@@ -6,6 +6,7 @@ import Loading from "../../shared/components/Loading/Loading";
 import useFetchCustomerTickets from "../../shared/hooks/useFetchCustomerTickets";
 import useFetchCustomerOrders from "../../shared/hooks/useFetchCustomerOrders";
 import { useUserSessionManager } from "../../shared/state/userSessionManager";
+import { Button } from "@mui/material";
 
 const Support = () => {
   const currentUser = useUserSessionManager((state) => state.currentUser);
@@ -314,9 +315,9 @@ const Support = () => {
                       accept="image/*,.pdf,.doc,.docx"
                     />
                     <div className="d-flex align-items-center justify-content-center">
-                      <button type="button" className="file-upload-button ">
+                      <Button className="file-upload-button">
                         Choose Files
-                      </button>
+                      </Button>
                       <span className="file-upload-text">
                         {formData.files.length > 0
                           ? `${formData.files.length} file(s) selected`
@@ -337,30 +338,32 @@ const Support = () => {
                             <img src={file.url} alt={file.name} />
                           )}
                           <div className="file-name">{file.name}</div>
-                          <button
+                          <Button
                             className="remove-file"
                             onClick={() => handleRemoveFile(index)}
                             title="Remove file"
                           >
                             <TbPhotoCancel />
-                          </button>
+                          </Button>
                         </div>
                       ))}
                     </div>
                   )}
                 </div>
 
-                <button
-                  type="submit"
-                  className="btn btn-danger submit-btn"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting
-                    ? "Submitting..."
-                    : submitSuccess
-                    ? "Submitted!"
-                    : "Submit"}
-                </button>
+                <div className="btn-submit-wrapper">
+                  <Button
+                    type="submit"
+                    className="submit-btn"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting
+                      ? "Submitting..."
+                      : submitSuccess
+                      ? "Submitted!"
+                      : "Submit"}
+                  </Button>
+                </div>
               </form>
             </div>
           </div>
@@ -373,13 +376,14 @@ const Support = () => {
                 All your support tickets will be displayed here. You can track
                 the status and content of each ticket.
               </p>
-              <button
-                type="button"
-                className="btn btn-danger w-100 mb-4"
-                onClick={() => setShowTickets(!showTickets)}
-              >
-                {showTickets ? "Hide My Tickets" : "View My Tickets"}
-              </button>
+              <div className="btn-ticket-wrapper">
+                <Button
+                  className="ticket-button w-100"
+                  onClick={() => setShowTickets(!showTickets)}
+                >
+                  {showTickets ? "Hide My Tickets" : "View My Tickets"}
+                </Button>
+              </div>
 
               {showTickets && (
                 <div className="tickets-list">

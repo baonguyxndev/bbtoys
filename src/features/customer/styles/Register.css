@@ -118,7 +118,8 @@
 }
 
 .register .fogot-password-link a:hover {
-  color: #ba0000;
+  color: var(--color-primary);
+  transform: var(--transform-hover);
 }
 
 .register .btn-register {
@@ -134,6 +135,7 @@
 
 .register .btn-register:hover {
   box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
 }
 
 .register p {
@@ -164,6 +166,9 @@
 
 .register .social-icons a:hover {
   box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
 }
 
 .register .toggle-wrapper {
@@ -238,4 +243,5 @@
 
 .register .toggle-panel .btn-login:hover {
   box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
 }

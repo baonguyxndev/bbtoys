@@ -1,16 +1,5 @@
 /* Variables */
-:root {
-  --support-primary: #dc3545;
-  --support-primary-hover: #c82333;
-  --support-text: #ffffff;
-  --support-text-muted: #bbbbbb;
-  --support-border: #333333;
-  --support-bg: #222222;
-  --support-shadow: rgba(0, 0, 0, 0.3);
-  --support-radius-sm: 8px;
-  --support-radius-lg: 12px;
-  --support-transition: all 0.3s ease-in-out;
-}
+@import "../../../shared/styles/variables.css";
 
 .support .title {
   display: flex;
@@ -57,10 +46,9 @@
 .support .ticket-container,
 .support .ticket-list-container {
   background-color: #333 !important;
-  border-radius: var(--support-radius-lg) !important;
-  box-shadow: 0 2px 10px var(--support-shadow) !important;
-  padding: 2rem !important;
-  border: 1px solid #333;
+  border-radius: 10px !important;
+  padding: 30px 40px !important;
+  border: var(--border);
   margin-top: 50px;
   height: auto;
   overflow: visible;
@@ -75,10 +63,9 @@
 /* Heading Styles */
 .support h2,
 .support h3 {
-  color: var(--support-text);
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
   position: relative;
 }
 
@@ -90,39 +77,38 @@
   left: 0;
   width: 60px;
   height: 3px;
-  background-color: var(--support-primary);
+  background-color: var(--color-primary);
   border-radius: 3px;
 }
 
 /* Form Control Styles */
 .support .form-label {
-  font-weight: 500;
-  color: var(--support-text);
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
   display: flex;
   align-items: center;
 }
 
 .support .form-label:not(.optional)::after {
   content: "*";
-  color: var(--support-primary);
+  color: var(--color-primary);
   margin-left: 4px;
   font-size: 1rem;
 }
 
 .support .form-control,
 .support .form-select {
-  border: 1.5px solid var(--support-border);
-  border-radius: var(--support-radius-sm);
+  border: var(--border);
+  border-radius: 10px;
   padding-left: 1rem;
-  font-size: 0.95rem;
-  color: var(--support-text);
-  transition: var(--support-transition);
+  font-size: 16px;
+  transition: var(--transition-primary);
   outline: none;
   height: 45px;
   width: 100%;
   background-color: #444;
+  color: var(--color-text-light);
 }
 
 .support .form-group {
@@ -146,13 +132,12 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  border: 1.5px solid var(--support-border);
-  border-radius: var(--support-radius-sm);
+  border: var(--border);
+  border-radius: 10px;
   padding-left: 1rem;
-  padding-right: 2.5rem; /* Space for the icon */
-  font-size: 0.95rem;
-  color: var(--support-text);
-  transition: var(--support-transition);
+  padding-right: 2.5rem;
+  font-size: 16px;
+  transition: var(--transition-primary);
   outline: none;
   height: 45px;
   width: 100%;
@@ -170,59 +155,102 @@
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--support-text);
-  font-size: 1rem;
-  pointer-events: none; /* Prevent icon from interfering with select clicks */
+  font-size: 16px;
+  pointer-events: none;
 }
 
 /* Placeholder Styles */
 .support .form-control::placeholder {
-  color: var(--support-text-muted);
-  opacity: 0.8;
+  color: var(--color-text-light) !important;
+  padding: 10px !important;
 }
 
 /* File Upload Styles */
 .support .file-upload-container {
-  border: 2px dashed var(--support-border);
-  border-radius: var(--support-radius-sm);
+  border: var(--border);
+  border-radius: 10px;
   border-color: #444;
   padding: 1.5rem;
   text-align: center;
   cursor: pointer;
   background-color: #333;
-  transition: var(--support-transition);
+  transition: var(--transition-primary);
   margin: 1rem 0;
 }
 
 .support .file-upload-container:hover {
-  border-color: var(--support-primary);
+  border-color: var(--color-primary);
   background-color: #444;
 }
 
 .support .file-upload-button {
-  background-color: var(--support-primary);
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--support-radius-sm);
-  border: none;
-  font-size: 0.95rem;
-  font-weight: 500;
-  min-width: 120px;
-  transition: var(--support-transition);
-  margin-bottom: 0.75rem;
+  background-color: var(--color-primary) !important;
+  color: var(--color-text-primary) !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  min-width: 120px !important;
+  transition: var(--transition-primary) !important;
+  border-radius: 10px !important;
+  border: var(--border) !important;
+  border-color: var(--color-primary) !important;
 }
 
 .support .file-upload-button:hover {
-  background-color: var(--support-primary-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 6px rgba(220, 53, 69, 0.2);
+  box-shadow: var(--box-shadow-primary) !important;
+  transform: var(--transform-hover) !important;
 }
 
 .support .file-upload-text {
-  color: var(--support-text-muted);
+  color: var(--color-text-light);
   margin-left: 1rem;
-  font-size: 0.95rem;
+  font-size: 16px;
   white-space: nowrap;
+}
+
+.support .btn-submit-wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.support .submit-btn {
+  background-color: var(--color-primary) !important;
+  color: var(--color-text-primary) !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  min-width: 120px !important;
+  transition: var(--transition-primary) !important;
+  border-radius: 10px !important;
+  border: var(--border) !important;
+  border-color: var(--color-primary) !important;
+}
+
+.support .submit-btn:hover {
+  box-shadow: var(--box-shadow-primary) !important;
+  transform: var(--transform-hover) !important;
+}
+
+.support .btn-ticket-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.support .ticket-button {
+  background-color: var(--color-primary) !important;
+  color: var(--color-text-primary) !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  transition: var(--transition-primary) !important;
+  border-radius: 10px !important;
+  border: var(--border) !important;
+  border-color: var(--color-primary) !important;
+}
+
+.support .ticket-button:hover {
+  box-shadow: var(--box-shadow-primary) !important;
+  transform: var(--transform-hover) !important;
 }
 
 /* File Preview Styles */
@@ -249,16 +277,15 @@
 .support .file-preview-item {
   position: relative;
   aspect-ratio: 1;
-  border-radius: var(--support-radius-sm);
+  border-radius: 10px;
   overflow: hidden;
-  border: 1px solid var(--support-border);
-  background-color: var(--support-bg);
-  transition: var(--support-transition);
+  border: var(--border);
+  transition: var(--transition-primary);
 }
 
 .support .file-preview-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px var(--support-shadow);
+  transform: var(--transform-hover);
+  box-shadow: var(--box-shadow-primary);
 }
 
 .support .file-preview-item img {
@@ -284,32 +311,32 @@
 
 .support .file-preview-item .remove-file {
   position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  width: 1.75rem;
-  height: 1.75rem;
+  top: 10px;
+  right: 5px;
+  min-width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(220, 53, 69, 0.9);
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
   border: none;
-  border-radius: 50%;
+  border-radius: 10px;
   padding: 0;
   cursor: pointer;
-  transition: var(--support-transition);
+  transition: var(--transition-primary);
   backdrop-filter: blur(4px);
   z-index: 1;
 }
 
 .support .file-preview-item .remove-file svg {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 20px;
+  height: 20px;
 }
 
 .support .file-preview-item .remove-file:hover {
-  background-color: var(--support-primary);
-  transform: scale(1.1);
+  box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
 }
 
 .support .file-preview-item.document {
@@ -324,24 +351,6 @@
   font-size: 2.5rem;
 }
 
-/* Button Styles */
-.support .btn-danger {
-  padding: 0.75rem 1.5rem;
-  font-weight: 500;
-  border-radius: var(--support-radius-sm);
-  transition: var(--support-transition);
-}
-
-.support .btn-danger:hover:not(:disabled) {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.25);
-}
-
-.support .btn-danger:disabled {
-  background-color: var(--support-border);
-  border-color: var(--support-border);
-}
-
 /* Ticket List Styles */
 .support .tickets-list {
   margin-top: 1.5rem;
@@ -352,11 +361,11 @@
 
 .support .ticket-item {
   background-color: #444 !important;
-  border: 1px solid var(--support-border) !important;
-  border-radius: var(--support-radius-sm) !important;
+  border: var(--border) !important;
+  border-radius: 10px !important;
   padding: 1rem !important;
   margin-bottom: 0.75rem !important;
-  transition: var(--support-transition) !important;
+  transition: var(--transition-primary) !important;
 }
 
 .support .ticket-item:last-child {
@@ -364,8 +373,8 @@
 }
 
 .support .ticket-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px var(--support-shadow);
+  transform: var(--transform-hover);
+  box-shadow: var(--box-shadow-primary);
 }
 
 .support .ticket-item .ticket-header {
@@ -377,12 +386,11 @@
 
 .support .ticket-item .ticket-id {
   font-weight: 600;
-  color: var(--support-text);
 }
 
 .support .ticket-item .ticket-date {
   font-size: 0.85rem;
-  color: var(--support-text-muted);
+  color: var(--color-text-light);
 }
 
 .support .ticket-item .ticket-subject {
@@ -420,67 +428,4 @@
 .support .badge.bg-refused {
   background-color: #333 !important;
   color: #ef4444 !important;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .support {
-    padding: 1.5rem 0;
-  }
-
-  .support .ticket-container,
-  .support .ticket-list-container {
-    padding: 1.5rem;
-  }
-
-  .support .ticket-list-container {
-    margin-top: 1.5rem;
-  }
-
-  .support .tickets-list {
-    max-height: 500px;
-  }
-
-  .support .file-preview-container {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  }
-}
-
-@media (max-width: 576px) {
-  .support .ticket-container,
-  .support .ticket-list-container {
-    padding: 1.25rem;
-  }
-
-  .support .form-control,
-  .support .form-select,
-  .support .file-upload-text {
-    font-size: 0.9rem;
-  }
-
-  .support .form-control,
-  .support .form-select {
-    padding: 0.625rem 0.875rem;
-  }
-
-  .support .file-upload-container {
-    padding: 1rem;
-  }
-
-  .support .file-upload-button {
-    padding: 0.5rem 1rem;
-    min-width: 100px;
-  }
-}
-
-@media (min-width: 768px) {
-  .support .row {
-    display: flex;
-    align-items: flex-start;
-  }
-
-  .support .ticket-list-container {
-    position: sticky;
-    top: 1rem;
-  }
 }

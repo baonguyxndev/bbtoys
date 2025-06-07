@@ -135,15 +135,15 @@
   border-radius: 6px;
   font-size: 18px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: var(--transition-primary);
 }
 
 .cart .cart-quantity button:hover {
   box-shadow: var(--box-shadow-primary);
-  transform: translateY(-3px);
+  transform: var(--transform-hover);
 }
 
-.cart .cart-quantity span {
+.cart .cart-quantity .quantity-value {
   font-size: 20px;
   font-weight: bold;
   text-align: center;
@@ -176,7 +176,7 @@
 
 .cart .delete-btn:hover {
   box-shadow: var(--box-shadow-primary);
-  transform: translateY(-3px);
+  transform: var(--transform-hover);
 }
 
 .cart .cart-right {
@@ -217,7 +217,6 @@
 }
 
 .cart .summary-row.grand-total-wrapper {
-  margin-top: 20px;
   color: var(--color-text-primary);
   font-size: 20px;
   font-weight: bold;
@@ -270,7 +269,7 @@
 
 .cart .coupon-btn:hover {
   box-shadow: var(--box-shadow-primary) !important;
-  transform: translateY(-3px);
+  transform: var(--transform-hover);
 }
 
 .cart .checkout-btn {
@@ -287,7 +286,7 @@
 
 .cart .checkout-btn:hover {
   box-shadow: var(--box-shadow-primary) !important;
-  transform: translateY(-3px) !important;
+  transform: var(--transform-hover) !important;
 }
 
 .cart-empty,
@@ -324,7 +323,7 @@
 .cart-empty .buy-btn:hover,
 .cart-non-login .login-btn:hover {
   box-shadow: var(--box-shadow-primary);
-  transform: translateY(-3px);
+  transform: var(--transform-hover);
 }
 
 .cart .info-product-wrapper {

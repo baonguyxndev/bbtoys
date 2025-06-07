@@ -714,7 +714,7 @@ const Shop = () => {
       ) : (
         <div className="container-full">
           <div className="row">
-            <div className="col-md-3 hidden">
+            <div className="col-md-3">
               <div className="sidebar">
                 <div className="sidebar-section">
                   <div className="search position-relative mb-3">
@@ -1013,7 +1013,7 @@ const Shop = () => {
                   selectedScales.size > 0 ||
                   selectedStates.size > 0) && (
                   <div className="sidebar-section selected-filters">
-                    <div className="d-flex justify-content-between align-items-center mb-2">
+                    <div className="d-flex justify-content-between align-items-center">
                       <h6 className="m-0">The selected filters</h6>
                       <button
                         className="clear-filters"

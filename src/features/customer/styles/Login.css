@@ -118,7 +118,8 @@
 }
 
 .login .fogot-password-link a:hover {
-  color: #ba0000;
+  color: var(--color-primary);
+  transform: var(--transform-hover);
 }
 
 .login .btn-login {
@@ -134,6 +135,7 @@
 
 .login .btn-login:hover {
   box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
 }
 
 .login p {
@@ -152,7 +154,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #888;
+  color: var(--color-text-light);
   font-size: 24px;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -163,6 +165,9 @@
 
 .login .social-icons a:hover {
   box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
 }
 
 .login .toggle-wrapper {
@@ -241,4 +246,5 @@
 
 .login .toggle-panel .btn-register:hover {
   box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-hover);
 }

@@ -1,12 +1,13 @@
 import "./ProductModal.css";
 import React, { useState, useEffect, useMemo, useCallback } from "react";
 import { IoClose } from "react-icons/io5";
-import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
-import { FiHeart } from "react-icons/fi";
-import { BiGitCompare } from "react-icons/bi";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { MdFavoriteBorder, MdShare } from "react-icons/md";
 import useNsfwGuard from "../../hooks/useNsfwGuard";
 import NsfwWarningOverlay from "../NsfwWarningOverlay/NsfwWarningOverlay";
+import { Button } from "@mui/material";
+import { useShoppingCartHandler } from "../../state/shoppingCartHandler";
+import { useNotification } from "../../context/NotificationContext";
 
 const ProductModal = ({ product, isOpen, onClose }) => {
   // Quản lý trạng thái scroll của body
@@ -30,9 +31,12 @@ const ProductModal = ({ product, isOpen, onClose }) => {
   const [selectedVersion, setSelectedVersion] = useState(null);
   const [selectedDetail, setSelectedDetail] = useState(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const addToCart = useShoppingCartHandler((state) => state.addToCart);
 
   const { showNsfwWarning, handleEnterNsfw, handleExitNsfw } =
     useNsfwGuard(product);
+
+  const { showNotification } = useNotification();
 
   // Xử lý khi người dùng chọn Under 18
   const handleExitNsfwAndCloseModal = () => {
@@ -201,6 +205,15 @@ const ProductModal = ({ product, isOpen, onClose }) => {
     setSelectedVersion(null);
   };
 
+  const handleMouseMove = (e) => {
+    const image = e.currentTarget;
+    const rect = image.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    image.style.setProperty("--mouse-x", `${x}%`);
+    image.style.setProperty("--mouse-y", `${y}%`);
+  };
+
   if (showNsfwWarning) {
     return (
       <NsfwWarningOverlay
@@ -210,14 +223,82 @@ const ProductModal = ({ product, isOpen, onClose }) => {
     );
   }
 
+  const handleAddToCart = () => {
+    if (!selectedDetail) return;
+
+    const productState = product.state?.toLowerCase();
+    let message = "";
+    let severity = "success";
+
+    switch (productState) {
+      case "available":
+        addToCart({
+          id: product.id,
+          scale: selectedScale || null,
+          model: selectedModel || null,
+          version: selectedVersion || null,
+          quantity: quantity,
+        });
+        message = "Product added to cart successfully!";
+        break;
+      case "sold out":
+        message = "Please contact us for more information!";
+        severity = "warning";
+        break;
+      case "pre-order":
+        addToCart({
+          id: product.id,
+          scale: selectedScale || null,
+          model: selectedModel || null,
+          version: selectedVersion || null,
+          quantity: quantity,
+          type: "pre-order",
+        });
+        message = "Product added to pre-order list!";
+        break;
+      case "order":
+        addToCart({
+          id: product.id,
+          scale: selectedScale || null,
+          model: selectedModel || null,
+          version: selectedVersion || null,
+          quantity: quantity,
+          type: "order",
+        });
+        message = "Product added to order list!";
+        break;
+      default:
+        message = "An error occurred!";
+        severity = "error";
+    }
+
+    showNotification(message, severity);
+  };
+
+  const getButtonText = () => {
+    const productState = product.state?.toLowerCase();
+    switch (productState) {
+      case "available":
+        return "Add to Cart";
+      case "sold out":
+        return "Please contact us for more information!";
+      case "pre-order":
+        return "Pre-Order Now";
+      case "order":
+        return "Order Now";
+      default:
+        return "Add to Cart";
+    }
+  };
+
   if (!isOpen || !product) return null;
 
   return (
     <div className="productModalOverlay" onClick={onClose}>
       <div className="productModal" onClick={(e) => e.stopPropagation()}>
-        <button className="btnCloseProductModal" onClick={onClose}>
+        <Button className="btnCloseProductModal" onClick={onClose}>
           <IoClose />
-        </button>
+        </Button>
 
         <h1 className="productName">{product.name}</h1>
 
@@ -230,9 +311,16 @@ const ProductModal = ({ product, isOpen, onClose }) => {
             <span
               className={`stock-status ${product.state
                 ?.toLowerCase()
-                .replace(/[- ]/g, "")}`}
+                .replace("-", "")
+                .replace(" ", "")}`}
             >
-              {product.state || "IN STOCK"}
+              {product.state === "Available"
+                ? "【AVAILABLE】"
+                : product.state === "Order"
+                ? "【ORDER】"
+                : product.state === "Pre-Order"
+                ? "【PRE-ORDER】"
+                : "【SOLD-OUT】"}
             </span>
           </div>
         </div>
@@ -250,8 +338,14 @@ const ProductModal = ({ product, isOpen, onClose }) => {
               </div>
             )}
             <div className="productImages">
-              <div className="mainImage" onClick={() => setIsFullscreen(true)}>
-                <img src={product.img[selectedImage]} alt={product.name} />
+              <div
+                className="mainImage"
+                onClick={() => setIsFullscreen(true)}
+                onMouseMove={handleMouseMove}
+              >
+                <div className="image-container">
+                  <img src={product.img[selectedImage]} alt={product.name} />
+                </div>
                 <div className="zoom-hint">
                   <span>Click để phóng to</span>
                 </div>
@@ -273,203 +367,181 @@ const ProductModal = ({ product, isOpen, onClose }) => {
           </div>
 
           <div className="modalRight">
-            {/* Scale Selection */}
-            {productOptions.hasMultipleScales &&
-              productOptions.scales.length > 0 && (
-                <div className="option-selector">
-                  <div className="option-label">Scale</div>
-                  <div className="option-buttons">
-                    {productOptions.scales.map((scale, index) => (
-                      <button
-                        key={index}
-                        className={`option-button ${
-                          selectedScale === scale ? "selected" : ""
-                        }`}
-                        onClick={() => handleScaleChange(scale)}
-                      >
-                        {scale}
-                      </button>
-                    ))}
+            <div className="option-wrap">
+              {/* Scale Selection */}
+              {productOptions.hasMultipleScales &&
+                productOptions.scales.length > 0 && (
+                  <div className="option-group">
+                    <label>Scale</label>
+                    <div className="scale-options">
+                      {productOptions.scales.map((scale, index) => (
+                        <Button
+                          key={index}
+                          className={`scale-option ${
+                            selectedScale === scale ? "selected" : ""
+                          }`}
+                          onClick={() => handleScaleChange(scale)}
+                        >
+                          {scale}
+                        </Button>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
 
-            {/* Model Selection */}
-            {productOptions.hasMultipleModels &&
-              productOptions.availableModels.length > 0 && (
-                <div className="option-selector">
-                  <div className="option-label">Model</div>
-                  <div className="option-buttons">
-                    {productOptions.availableModels.map((model, index) => (
-                      <button
-                        key={index}
-                        className={`option-button ${
-                          selectedModel === model ? "selected" : ""
-                        }`}
-                        onClick={() => handleModelChange(model)}
-                      >
-                        {model}
-                      </button>
-                    ))}
+              {/* Model Selection */}
+              {productOptions.hasMultipleModels &&
+                productOptions.availableModels.length > 0 && (
+                  <div className="option-group">
+                    <label>Model</label>
+                    <div className="model-options">
+                      {productOptions.availableModels.map((model, index) => (
+                        <Button
+                          key={index}
+                          className={`model-option ${
+                            selectedModel === model ? "selected" : ""
+                          }`}
+                          onClick={() => handleModelChange(model)}
+                        >
+                          {model}
+                        </Button>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
 
-            {/* Version Selection */}
-            {productOptions.hasMultipleVersions &&
-              productOptions.availableVersions.length > 0 && (
-                <div className="option-selector">
-                  <div className="option-label">Version</div>
-                  <div className="option-buttons">
-                    {productOptions.availableVersions.map((version, index) => (
-                      <button
-                        key={index}
-                        className={`option-button ${
-                          selectedVersion === version ? "selected" : ""
-                        }`}
-                        onClick={() => setSelectedVersion(version)}
-                      >
-                        {version}
-                      </button>
-                    ))}
+              {/* Version Selection */}
+              {productOptions.hasMultipleVersions &&
+                productOptions.availableVersions.length > 0 && (
+                  <div className="option-group">
+                    <label>Version</label>
+                    <div className="version-options">
+                      {productOptions.availableVersions.map(
+                        (version, index) => (
+                          <Button
+                            key={index}
+                            className={`version-option ${
+                              selectedVersion === version ? "selected" : ""
+                            }`}
+                            onClick={() => setSelectedVersion(version)}
+                          >
+                            {version}
+                          </Button>
+                        )
+                      )}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
 
-            {/* Price and Actions */}
-            {selectedDetail && (
-              <>
-                <div className="price-section">
-                  {selectedDetail.oldPrice && (
-                    <span className="oldPrice">
-                      ${selectedDetail.oldPrice.toLocaleString()}
-                    </span>
-                  )}
-                  <span className="currentPrice">
-                    ${selectedDetail.price.toLocaleString()}
-                  </span>
-                </div>
-
-                <p className="description">
-                  {product.description ||
-                    "Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent"}
-                </p>
-
-                <div className="quantity-section">
-                  <button
-                    className="quantity-btn minus"
-                    onClick={() => handleQuantityChange(-1)}
-                    disabled={quantity <= 1}
-                  >
-                    <AiOutlineMinus />
-                  </button>
-                  <span className="quantity-value">{quantity}</span>
-                  <button
-                    className="quantity-btn plus"
-                    onClick={() => handleQuantityChange(1)}
-                  >
-                    <AiOutlinePlus />
-                  </button>
-                  <button
-                    className={`add-to-cart ${
-                      product.state === "Sold-Out" ? "disabled" : ""
-                    }`}
-                    disabled={product.state === "Sold-Out"}
-                  >
-                    {product.state === "Sold-Out"
-                      ? "OUT OF STOCK"
-                      : product.state === "Pre-Order"
-                      ? "PRE-ORDER NOW"
-                      : product.state === "Order"
-                      ? "ORDER NOW"
-                      : "ADD TO CART"}
-                  </button>
-                </div>
-              </>
-            )}
-
-            <div className="action-buttons">
-              <button className="action-button wishlist">
-                <FiHeart />
-                ADD TO WISHLIST
-              </button>
-              <button className="action-button compare">
-                <BiGitCompare />
-                COMPARE
-              </button>
-            </div>
-
-            {/* Product Details */}
-            <div className="product-details">
+              {/* Price and Actions */}
               {selectedDetail && (
                 <>
-                  {selectedDetail.scale && (
-                    <div className="detail-item">
-                      <span className="detail-icon">✓</span>
-                      <span className="detail-label">Scale:</span>
-                      <span className="detail-value">
-                        {selectedDetail.scale}
+                  <div className="quantity-section">
+                    <div className="control-quantity">
+                      <Button onClick={() => handleQuantityChange(-1)}>
+                        -
+                      </Button>
+                      <span className="quantity-value">{quantity}</span>
+                      <Button onClick={() => handleQuantityChange(1)}>+</Button>
+                    </div>
+                    <div className="price-section">
+                      {selectedDetail.oldPrice && (
+                        <span className="oldPrice">
+                          ${selectedDetail.oldPrice.toLocaleString()}
+                        </span>
+                      )}
+                      <span className="currentPrice">
+                        ${selectedDetail.price.toLocaleString()}
                       </span>
                     </div>
-                  )}
-
-                  {selectedDetail.model && (
-                    <div className="detail-item">
-                      <span className="detail-icon">✓</span>
-                      <span className="detail-label">Model:</span>
-                      <span className="detail-value">
-                        {selectedDetail.model}
-                      </span>
-                    </div>
-                  )}
-
-                  {selectedDetail.version && (
-                    <div className="detail-item">
-                      <span className="detail-icon">✓</span>
-                      <span className="detail-label">Version:</span>
-                      <span className="detail-value">
-                        {selectedDetail.version}
-                      </span>
-                    </div>
-                  )}
+                  </div>
                 </>
               )}
 
-              {product.estSize && (
-                <div className="detail-item">
-                  <span className="detail-icon">✓</span>
-                  <span className="detail-label">Estimated Size:</span>
-                  <span className="detail-value">{product.estSize}</span>
-                </div>
-              )}
+              <div className="action-buttons">
+                <Button onClick={handleAddToCart} className="add-to-cart-btn">
+                  {getButtonText()}
+                </Button>
+                <Button className="wishlist-btn">
+                  <MdFavoriteBorder />
+                </Button>
+                <Button className="share-btn">
+                  <MdShare />
+                </Button>
+              </div>
 
-              {product.material && (
-                <div className="detail-item">
-                  <span className="detail-icon">✓</span>
-                  <span className="detail-label">Material:</span>
-                  <span className="detail-value">{product.material}</span>
-                </div>
-              )}
+              {/* Product Details */}
+              <div className="product-details">
+                {selectedDetail && (
+                  <>
+                    {selectedDetail.scale && (
+                      <div className="detail-item">
+                        <span className="detail-icon">✓</span>
+                        <span className="detail-label">Scale:</span>
+                        <span className="detail-value">
+                          {selectedDetail.scale}
+                        </span>
+                      </div>
+                    )}
 
-              {product.feature && (
-                <div className="detail-item">
-                  <span className="detail-icon">✓</span>
-                  <span className="detail-label">Features:</span>
-                  <span className="detail-value">
-                    {Array.isArray(product.feature)
-                      ? product.feature.join(", ")
-                      : product.feature}
-                  </span>
-                </div>
-              )}
+                    {selectedDetail.model && (
+                      <div className="detail-item">
+                        <span className="detail-icon">✓</span>
+                        <span className="detail-label">Model:</span>
+                        <span className="detail-value">
+                          {selectedDetail.model}
+                        </span>
+                      </div>
+                    )}
 
-              {product.phase && (
-                <div className="detail-item">
-                  <span className="detail-icon">✓</span>
-                  <span className="detail-label">Phase:</span>
-                  <span className="detail-value">{product.phase}</span>
-                </div>
-              )}
+                    {selectedDetail.version && (
+                      <div className="detail-item">
+                        <span className="detail-icon">✓</span>
+                        <span className="detail-label">Version:</span>
+                        <span className="detail-value">
+                          {selectedDetail.version}
+                        </span>
+                      </div>
+                    )}
+                  </>
+                )}
+
+                {product.estSize && (
+                  <div className="detail-item">
+                    <span className="detail-icon">✓</span>
+                    <span className="detail-label">Estimated Size:</span>
+                    <span className="detail-value">{product.estSize}</span>
+                  </div>
+                )}
+
+                {product.material && (
+                  <div className="detail-item">
+                    <span className="detail-icon">✓</span>
+                    <span className="detail-label">Material:</span>
+                    <span className="detail-value">{product.material}</span>
+                  </div>
+                )}
+
+                {product.feature && (
+                  <div className="detail-item">
+                    <span className="detail-icon">✓</span>
+                    <span className="detail-label">Features:</span>
+                    <span className="detail-value">
+                      {Array.isArray(product.feature)
+                        ? product.feature.join(", ")
+                        : product.feature}
+                    </span>
+                  </div>
+                )}
+
+                {product.phase && (
+                  <div className="detail-item">
+                    <span className="detail-icon">✓</span>
+                    <span className="detail-label">Phase:</span>
+                    <span className="detail-value">{product.phase}</span>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -479,14 +551,14 @@ const ProductModal = ({ product, isOpen, onClose }) => {
             className="fullscreen-overlay"
             onClick={() => setIsFullscreen(false)}
           >
-            <button
+            <Button
               className="fullscreen-close"
               onClick={() => setIsFullscreen(false)}
             >
               <IoClose />
-            </button>
+            </Button>
 
-            <button
+            <Button
               className="fullscreen-nav prev"
               onClick={(e) => {
                 e.stopPropagation();
@@ -494,7 +566,7 @@ const ProductModal = ({ product, isOpen, onClose }) => {
               }}
             >
               <IoIosArrowBack />
-            </button>
+            </Button>
 
             <div
               className="fullscreen-image"
@@ -506,7 +578,7 @@ const ProductModal = ({ product, isOpen, onClose }) => {
               />
             </div>
 
-            <button
+            <Button
               className="fullscreen-nav next"
               onClick={(e) => {
                 e.stopPropagation();
@@ -514,7 +586,7 @@ const ProductModal = ({ product, isOpen, onClose }) => {
               }}
             >
               <IoIosArrowForward />
-            </button>
+            </Button>
 
             <div className="fullscreen-counter">
               {selectedImage + 1} / {product.img.length}

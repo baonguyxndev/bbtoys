@@ -63,10 +63,9 @@
 
 .homeCategory .anime-wrapper .sub-title-wrapper .viewAllBtn:hover,
 .homeCategory .game-wrapper .sub-title-wrapper .viewAllBtn:hover {
-  box-shadow: 0 0 5px rgb(186, 0, 0), 0 0 10px rgb(186, 0, 0, 0.7),
-    0 0 20px rgba(186, 0, 0, 0.5), 0 0 30px rgba(186, 0, 0, 0.3);
-  background-color: #666 !important;
-  transform: scale(1.1);
+  box-shadow: var(--box-shadow-primary);
+  background-color: var(--color-primary) !important;
+  transform: var(--transform-hover);
 }
 
 .homeCategory .swiper_container {

@@ -298,7 +298,7 @@
 }
 
 .checkout-confirm .map-address:hover {
-  transform: translateY(-5px);
+  transform: var(--transform-hover);
 }
 
 .checkout-confirm .map-address .address-text {
@@ -386,7 +386,7 @@
 }
 
 .checkout-confirm .method-content:hover {
-  transform: translateY(-2px);
+  transform: var(--transform-hover);
 }
 
 .checkout-confirm .method-icon {
@@ -411,7 +411,7 @@
 
 .checkout-confirm .method-content:hover .method-icon {
   background: rgba(186, 0, 0, 0.2);
-  transform: scale(1.1);
+  transform: var(--transform-hover);
 }
 
 .checkout-confirm .method-info {
@@ -479,7 +479,7 @@
 
 .checkout-confirm .btn-back:hover {
   background-color: rgba(186, 0, 0, 0.1) !important;
-  transform: translateY(-2px);
+  transform: var(--transform-hover);
   box-shadow: 0 4px 20px rgba(186, 0, 0, 0.13);
 }
 
@@ -497,9 +497,9 @@
 }
 
 .checkout-confirm .btn-confirm:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(186, 0, 0, 0.18);
-  background: linear-gradient(45deg, #ff0000, #ba0000) !important;
+  transform: var(--transform-hover);
+  box-shadow: var(--box-shadow-primary);
+  background-color: var(--color-primary) !important;
 }
 
 .checkout-confirm .card-logo {

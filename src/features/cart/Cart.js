@@ -33,9 +33,6 @@ const Cart = () => {
     return total + (detail?.price || 0) * item.quantity;
   }, 0);
 
-  const shippingCost = 50;
-  const grandTotal = totalProductCost + shippingCost;
-
   const handleQuantityChange = (item, change) => {
     const newQuantity = item.quantity + change;
     if (newQuantity >= 1) {
@@ -142,7 +139,7 @@ const Cart = () => {
                         <Button onClick={() => handleQuantityChange(item, -1)}>
                           -
                         </Button>
-                        <span>{item.quantity}</span>
+                        <span className="quantity-value">{item.quantity}</span>
                         <Button onClick={() => handleQuantityChange(item, 1)}>
                           +
                         </Button>
@@ -174,30 +171,11 @@ const Cart = () => {
         </div>
         <div className="cart-right">
           <div className="cart-summary">
-            <div className="summary-row">
-              <span>Total Product Cost:</span>
-              <span className="total-product-cost">
-                ${totalProductCost.toFixed(2)}
-              </span>
-            </div>
-            <div className="summary-row">
-              <span>Shipping Cost:</span>
-              <span className="shipping-cost">$50</span>
-            </div>
-            <div className="summary-row">
-              <span>Coupon Code:</span>
-            </div>
-            <div className="summary-row">
-              <div className="coupon-row">
-                <input type="text" placeholder="Enter code" />
-                <Button className="coupon-btn" variant="contained" size="small">
-                  ✓
-                </Button>
-              </div>
-            </div>
             <div className="summary-row grand-total-wrapper">
               <span>Grand total:</span>
-              <span className="grand-total">${grandTotal.toFixed(2)}</span>
+              <span className="grand-total">
+                ${totalProductCost.toFixed(2)}
+              </span>
             </div>
             <Button
               className="checkout-btn"

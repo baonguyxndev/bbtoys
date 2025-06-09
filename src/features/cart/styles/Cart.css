@@ -187,10 +187,13 @@
 }
 
 .cart .cart-summary {
+  position: relative;
+  top: 50px;
+  padding: 30px;
+  margin-bottom: 50px;
   background: var(--color-background-secondary);
   border-radius: var(--border-radius-primary);
-  padding: 30px;
-  transition: all 0.3s ease;
+  transition: var(--transition-primary);
   width: 400px;
 }
 
@@ -255,23 +258,6 @@
   font-size: 14px;
 }
 
-.cart .coupon-btn {
-  background: var(--color-primary) !important;
-  border: none !important;
-  border-radius: 8px !important;
-  color: var(--color-text-primary) !important;
-  font-size: 15px !important;
-  height: 35px !important;
-  min-width: 35px !important;
-  cursor: pointer !important;
-  transition: all 0.3s ease !important;
-}
-
-.cart .coupon-btn:hover {
-  box-shadow: var(--box-shadow-primary) !important;
-  transform: var(--transform-hover);
-}
-
 .cart .checkout-btn {
   background: var(--color-primary) !important;
   color: var(--color-text-primary) !important;
@@ -282,11 +268,21 @@
   cursor: pointer !important;
   transition: all 0.3s ease !important;
   text-transform: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .cart .checkout-btn:hover {
   box-shadow: var(--box-shadow-primary) !important;
   transform: var(--transform-hover) !important;
+}
+
+.cart .checkout-btn-wrapper .checkout-icon {
+  position: relative;
+  top: -2px;
+  font-size: 20px !important;
 }
 
 .cart-empty,

@@ -79,6 +79,39 @@ export const useUserSessionManager = create((set) => ({
       const encryptedUserId = encryptData(user.id);
       setSessionStorage(USER_ID_KEY, encryptedUserId);
       set({ currentUser: user, error: null });
+
+      // --- Merge cart_items_guest vào cart_items_{userId} nếu có ---
+      const guestCart = localStorage.getItem("cart_items_guest");
+      if (guestCart) {
+        const userCartKey = `cart_items_${user.id}`;
+        const userCart = localStorage.getItem(userCartKey);
+        let mergedCart = [];
+        if (userCart) {
+          // Gộp 2 mảng, cộng dồn quantity nếu trùng sản phẩm
+          const guestArr = JSON.parse(guestCart);
+          const userArr = JSON.parse(userCart);
+          mergedCart = [...userArr];
+          guestArr.forEach((guestItem) => {
+            const idx = mergedCart.findIndex(
+              (item) =>
+                item.id === guestItem.id &&
+                item.scale === guestItem.scale &&
+                item.model === guestItem.model &&
+                item.version === guestItem.version
+            );
+            if (idx > -1) {
+              mergedCart[idx].quantity += guestItem.quantity;
+            } else {
+              mergedCart.push(guestItem);
+            }
+          });
+        } else {
+          mergedCart = JSON.parse(guestCart);
+        }
+        localStorage.setItem(userCartKey, JSON.stringify(mergedCart));
+        localStorage.removeItem("cart_items_guest");
+      }
+      // --- END MERGE ---
     } catch (error) {
       console.error("Lỗi đăng nhập:", error);
       set({ error: error.message });

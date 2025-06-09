@@ -1,0 +1,145 @@
+.profile-tab .profile-card {
+  padding: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+.profile-tab .profile-header-wrapper {
+  padding: 0px 20px 30px 20px;
+  border-bottom: 1px solid var(--color-line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile-tab .profile-header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0px 20px;
+}
+.profile-tab .profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--color-primary);
+  box-shadow: 0 4px 20px rgba(186, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+.profile-tab .profile-avatar:hover {
+  transform: scale(1.05) rotate(5deg);
+  border-color: var(--color-primary-dark);
+}
+.profile-tab .profile-name {
+  font-size: var(--font-size-title);
+  color: var(--color-text-primary);
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.profile-tab .profile-username {
+  font-size: var(--font-size-text);
+  color: var(--color-text-light);
+  margin: 8px 0 0;
+  font-weight: 500;
+}
+.profile-tab .profile-header-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0px 20px;
+}
+.profile-tab .btn-edit,
+.profile-tab .btn-save,
+.profile-tab .btn-logout {
+  font-size: 15px;
+  background-color: var(--color-primary) !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  gap: 10px !important;
+  color: var(--color-text-primary) !important;
+  text-transform: none !important;
+}
+.profile-tab .btn-edit:hover,
+.profile-tab .btn-save:hover,
+.profile-tab .btn-logout:hover {
+  box-shadow: var(--box-shadow-primary);
+}
+.profile-tab .profile-info {
+  padding: 20px 0;
+}
+.profile-tab .info-section {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #444;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+.profile-tab .info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.profile-tab .info-label {
+  font-size: var(--font-size-small);
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+.profile-tab .info-value {
+  font-size: var(--font-size-text);
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+.profile-tab .edit-name-fields {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.profile-tab .edit-name-fields .MuiTextField-root {
+  background-color: var(--color-background-secondary);
+  border-radius: 8px;
+}
+.profile-tab .edit-name-fields .MuiTextField-root .MuiOutlinedInput-root {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-title);
+  font-weight: 700;
+}
+.profile-tab
+  .edit-name-fields
+  .MuiTextField-root
+  .MuiOutlinedInput-notchedOutline {
+  border-color: var(--color-line);
+}
+.profile-tab
+  .edit-name-fields
+  .MuiTextField-root:hover
+  .MuiOutlinedInput-notchedOutline {
+  border-color: var(--color-primary);
+}
+.profile-tab .info-section .MuiTextField-root {
+  background-color: var(--color-background-secondary);
+  border-radius: 8px;
+}
+.profile-tab .info-section .MuiTextField-root .MuiOutlinedInput-root {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-text);
+  font-weight: 600;
+}
+.profile-tab .info-section .MuiTextField-root .MuiOutlinedInput-notchedOutline {
+  border-color: var(--color-line);
+}
+.profile-tab
+  .info-section
+  .MuiTextField-root:hover
+  .MuiOutlinedInput-notchedOutline {
+  border-color: var(--color-primary);
+}
+.profile-tab .info-section .MuiTextField-root .MuiSelect-select {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-text);
+  font-weight: 600;
+}

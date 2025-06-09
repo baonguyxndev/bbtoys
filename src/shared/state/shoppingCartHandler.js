@@ -1,7 +1,8 @@
 import { create } from "zustand";
 import { useUserSessionManager } from "./userSessionManager";
 
-const getStorageKey = (userId) => `cart_items_${userId}`;
+const getStorageKey = (userId) =>
+  userId ? `cart_items_${userId}` : "cart_items_guest";
 
 // Hàm kiểm tra và xử lý localStorage
 const getLocalStorage = (key) => {
@@ -44,12 +45,7 @@ export const useShoppingCartHandler = create((set, get) => ({
   initialize: () => {
     try {
       const { currentUser } = useUserSessionManager.getState();
-      if (!currentUser) {
-        set({ cartItems: [], isLoading: false });
-        return;
-      }
-
-      const storageKey = getStorageKey(currentUser.id);
+      const storageKey = getStorageKey(currentUser?.id);
       const storedCart = getLocalStorage(storageKey);
       set({
         cartItems: storedCart ? JSON.parse(storedCart) : [],
@@ -63,17 +59,12 @@ export const useShoppingCartHandler = create((set, get) => ({
 
   saveToStorage: () => {
     const { currentUser } = useUserSessionManager.getState();
-    if (!currentUser) return;
-
     const { cartItems } = get();
-    const storageKey = getStorageKey(currentUser.id);
+    const storageKey = getStorageKey(currentUser?.id);
     setLocalStorage(storageKey, JSON.stringify(cartItems));
   },
 
   addToCart: ({ id, scale, model, version, quantity }) => {
-    const { currentUser } = useUserSessionManager.getState();
-    if (!currentUser) return;
-
     set((state) => {
       const existingItem = state.cartItems.find(
         (item) =>
@@ -107,9 +98,6 @@ export const useShoppingCartHandler = create((set, get) => ({
   },
 
   removeFromCart: (id, scale, model, version) => {
-    const { currentUser } = useUserSessionManager.getState();
-    if (!currentUser) return;
-
     set((state) => ({
       cartItems: state.cartItems.filter(
         (item) =>
@@ -126,9 +114,7 @@ export const useShoppingCartHandler = create((set, get) => ({
   },
 
   updateQuantity: (id, scale, model, version, quantity) => {
-    const { currentUser } = useUserSessionManager.getState();
-    if (!currentUser || quantity < 1) return;
-
+    if (quantity < 1) return;
     set((state) => ({
       cartItems: state.cartItems.map((item) =>
         item.id === id &&
@@ -144,11 +130,9 @@ export const useShoppingCartHandler = create((set, get) => ({
   },
 
   clearCart: () => {
-    const { currentUser } = useUserSessionManager.getState();
-    if (!currentUser) return;
-
     set({ cartItems: [] });
-    const storageKey = getStorageKey(currentUser.id);
+    const { currentUser } = useUserSessionManager.getState();
+    const storageKey = getStorageKey(currentUser?.id);
     removeLocalStorage(storageKey);
   },
 

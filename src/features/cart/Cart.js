@@ -7,7 +7,7 @@ import Loading from "../../shared/components/Loading/Loading";
 import { useNavigate } from "react-router-dom";
 import "./styles/Cart.css";
 import { Button } from "@mui/material";
-import { IoBagRemoveOutline } from "react-icons/io5";
+import { IoBagRemoveOutline, IoBagCheckOutline } from "react-icons/io5";
 
 const Cart = () => {
   const currentUser = useUserSessionManager((state) => state.currentUser);
@@ -47,21 +47,16 @@ const Cart = () => {
   };
 
   const handleRemoveItem = (item) => {
-    removeFromCart(item.id, item.scale, item.model, item.version);
+    if (
+      window.confirm("Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng?")
+    ) {
+      removeFromCart(item.id, item.scale, item.model, item.version);
+    }
   };
 
-  if (!currentUser) {
-    return (
-      <div className="cart-non-login">
-        <h2 className="cart-title">Please login first</h2>
-        <Button className="login-btn" onClick={() => navigate("/login")}>
-          Login
-        </Button>
-      </div>
-    );
-  }
-
-  if (customerLoading || productsLoading) return <Loading />;
+  // Chỉ loading khi có user và đang fetch thông tin customer
+  if (currentUser && customerLoading) return <Loading />;
+  if (productsLoading) return <Loading />;
 
   if (!cartItems.length)
     return (
@@ -177,13 +172,18 @@ const Cart = () => {
                 ${totalProductCost.toFixed(2)}
               </span>
             </div>
-            <Button
-              className="checkout-btn"
-              fullWidth
-              onClick={() => navigate("/checkout")}
-            >
-              Proceed To Checkout →
-            </Button>
+            <div className="checkout-btn-wrapper">
+              <Button
+                className="checkout-btn"
+                fullWidth
+                onClick={() => navigate("/checkout")}
+              >
+                Proceed To Checkout
+                <span className="checkout-icon">
+                  <IoBagCheckOutline />
+                </span>
+              </Button>
+            </div>
           </div>
         </div>
       </div>

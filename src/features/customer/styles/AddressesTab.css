@@ -1,0 +1,130 @@
+@import "../../../shared/styles/variables.css";
+
+.addresses-tab {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 50px;
+}
+.addresses-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+.addresses-item,
+.addresses-form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  box-sizing: border-box;
+  background: var(--color-background-secondary);
+  border-radius: 12px;
+  color: var(--color-text-primary);
+  transition: var(--transition-primary);
+}
+
+.addresses-new-box {
+  width: 300px;
+  height: 250px;
+  border: 1px solid var(--color-line);
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  box-sizing: border-box;
+  background: var(--color-background-secondary);
+  border-radius: 12px;
+  color: var(--color-text-primary);
+  transition: var(--transition-primary);
+}
+
+.addresses-new-box:hover {
+  box-shadow: var(--box-shadow-primary);
+  border-color: var(--color-primary);
+}
+.addresses-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+.addresses-phone {
+  font-size: 15px;
+  margin-top: 10px;
+}
+.addresses-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+.addresses-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.addresses-new-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-primary);
+}
+.addresses-plus-icon {
+  margin-bottom: 10px;
+  color: var(--color-primary);
+}
+.addresses-new-label {
+  font-weight: bold;
+  font-size: 20px;
+}
+.addresses-tab .MuiTextField-root {
+  margin-bottom: 10px;
+  background: var(--color-background-secondary);
+  border-radius: 10px;
+}
+.addresses-tab .MuiTextField-root .MuiOutlinedInput-root {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-text);
+  font-weight: bold;
+}
+.addresses-tab .MuiTextField-root .MuiOutlinedInput-notchedOutline {
+  border-color: var(--color-line);
+}
+.addresses-tab .MuiTextField-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: var(--color-primary);
+}
+.addresses-tab .btn-edit,
+.addresses-tab .btn-save,
+.addresses-tab .btn-logout {
+  min-width: 100px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-right: 4px;
+  text-transform: none;
+  transition: all 0.2s;
+}
+.addresses-tab .btn-edit {
+  background-color: var(--color-primary) !important;
+  color: var(--color-text-primary) !important;
+  box-shadow: none;
+}
+.addresses-tab .btn-save {
+  background: var(--color-primary) !important;
+  color: var(--color-text-primary) !important;
+  box-shadow: none;
+}
+.addresses-tab .btn-logout {
+  background-color: var(--color-primary) !important;
+  color: var(--color-text-primary) !important;
+  box-shadow: none;
+}
+.addresses-tab .btn-edit:hover,
+.addresses-tab .btn-logout:hover {
+  box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-primary);
+}
+.addresses-tab .btn-save:hover {
+  box-shadow: var(--box-shadow-primary);
+  transform: var(--transform-primary);
+}

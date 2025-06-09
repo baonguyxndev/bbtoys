@@ -488,3 +488,81 @@
   background-color: rgba(245, 158, 11, 0.1);
   color: #f59e0b;
 }
+
+/* Edit Mode Styles */
+.customer-profile .edit-name-fields {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.customer-profile .edit-name-fields .MuiTextField-root {
+  background-color: var(--color-background-secondary);
+  border-radius: 8px;
+}
+
+.customer-profile .edit-name-fields .MuiTextField-root .MuiOutlinedInput-root {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-title);
+  font-weight: 700;
+}
+
+.customer-profile
+  .edit-name-fields
+  .MuiTextField-root
+  .MuiOutlinedInput-notchedOutline {
+  border-color: var(--color-line);
+}
+
+.customer-profile
+  .edit-name-fields
+  .MuiTextField-root:hover
+  .MuiOutlinedInput-notchedOutline {
+  border-color: var(--color-primary);
+}
+
+.customer-profile .info-section .MuiTextField-root {
+  background-color: var(--color-background-secondary);
+  border-radius: 8px;
+}
+
+.customer-profile .info-section .MuiTextField-root .MuiOutlinedInput-root {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-text);
+  font-weight: 600;
+}
+
+.customer-profile
+  .info-section
+  .MuiTextField-root
+  .MuiOutlinedInput-notchedOutline {
+  border-color: var(--color-line);
+}
+
+.customer-profile
+  .info-section
+  .MuiTextField-root:hover
+  .MuiOutlinedInput-notchedOutline {
+  border-color: var(--color-primary);
+}
+
+.customer-profile .info-section .MuiTextField-root .MuiSelect-select {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-text);
+  font-weight: 600;
+}
+
+.customer-profile .btn-save {
+  font-size: 15px !important;
+  background-color: var(--color-primary) !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  gap: 10px !important;
+  color: var(--color-text-primary) !important;
+  text-transform: none !important;
+}
+
+.customer-profile .btn-save:hover {
+  box-shadow: var(--box-shadow-primary);
+}

@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useFetchProducts from "../../shared/hooks/useFetchProducts";
 import { useShoppingCartHandler } from "../../shared/state/shoppingCartHandler";
+import { useUserSessionManager } from "../../shared/state/userSessionManager";
+import useFetchCustomer from "../../shared/hooks/useFetchCustomer";
 import { Button } from "@mui/material";
 import CustomerForm from "./components/CustomerForm";
 import ShippingForm from "./components/ShippingForm";
@@ -15,6 +17,9 @@ const steps = ["Customer", "Shipping", "Payment", "Confirm"];
 
 const Checkout = () => {
   const { showNotification } = useNotification();
+  const currentUser = useUserSessionManager((state) => state.currentUser);
+  const customerId = currentUser?.id;
+  const { customer } = useFetchCustomer(customerId);
 
   // Cart logic
   const { cartItems } = useShoppingCartHandler();
@@ -36,6 +41,23 @@ const Checkout = () => {
   // Checkout logic
   const [activeStep, setActiveStep] = useState(0);
   const [formData, setFormData] = useState({});
+
+  useEffect(() => {
+    if (customer) {
+      setFormData({
+        firstName: customer.firstName || "",
+        lastName: customer.lastName || "",
+        email: customer.email || "",
+        phone: customer.phone || "",
+        address: customer.address || "",
+        city: customer.city || "",
+        state: customer.state || "",
+        zipCode: customer.zipCode || "",
+        country: customer.country || "",
+      });
+    }
+  }, [customer]);
+
   const handleNext = (data) => {
     setFormData({ ...formData, ...data });
     setActiveStep((prev) => prev + 1);
